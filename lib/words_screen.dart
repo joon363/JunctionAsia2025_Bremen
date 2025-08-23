@@ -63,16 +63,49 @@ class _WordListPageState extends State<WordListPage> {
           itemCount: _words.length,
           itemBuilder: (context, index) {
             return ListTile(
-              title: Text(_words[index].word),
+              title: Text(_words[index].word, style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+              ),
               subtitle: Text(_words[index].wordMeaning, overflow: TextOverflow.ellipsis,),
               onTap: () {
                 // 단어를 탭하면 상세 페이지로 이동
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => WordDetailPage(word: _words[index]),
-                  ),
+                showDialog(context: context, builder: (dialogContext) =>
+                  AlertDialog(
+                    backgroundColor: Colors.white,
+                    //title:
+                    content: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      spacing: 4,
+                      children: [
+                        Text(_words[index].word, style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),),
+                        SizedBox(height: 4,),
+                        Text(_words[index].wordMeaning),
+                        SizedBox(height: 8,),
+                        Text("예문", style: TextStyle(fontWeight: FontWeight.bold)),
+                        Text("• ${_words[index].exampleEng}"),
+                        Text("• ${_words[index].exampleKor}"),
+                      ],
+                    ),
+                    actions: [
+                      Column(
+                        children: [
+                          Divider(),
+                          TextButton(
+                            onPressed: () {
+                              Navigator.pop(dialogContext);
+                            },
+                            child: const Text('OK', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
+                          ),
+                        ],
+                      )
+                    ],
+                    actionsAlignment: MainAxisAlignment.center,
+                  )
                 );
+
               },
             );
           },
