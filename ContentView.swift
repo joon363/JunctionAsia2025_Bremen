@@ -255,7 +255,7 @@ struct PostFullScreenCard: View {
                 // Don't show dots if there's only one page
                 if post.pages.count > 1 {
                     PageDots(count: post.pages.count, index: selectedPage)
-                        .padding(.bottom, 120)
+                        .padding(.bottom, 90)
                 }
             }
         }
@@ -315,7 +315,7 @@ struct WrappingHStack: Layout {
 }
 
 
-// MARK: - Page Cell (Corrected)
+// MARK: - Page Cell
 struct PageCell: View {
     let page: Page
     @State private var highlightedWords: Set<String> = []
@@ -326,7 +326,7 @@ struct PageCell: View {
             if !page.title.isEmpty {
                 Spacer()
                 Text(page.title)
-                    .font(.system(size: 48, weight: .bold, design: .serif))
+                    .font(.system(size: 36, weight: .bold, design: .serif))
                     .foregroundStyle(.black)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 24)
@@ -338,7 +338,7 @@ struct PageCell: View {
                     .components(separatedBy: .whitespacesAndNewlines)
                     .filter { !$0.isEmpty }
 
-                WrappingHStack(hSpacing: 6, vSpacing: 10) {
+                WrappingHStack(hSpacing: 6, vSpacing: 0) {
                     ForEach(tokens, id: \.self) { word in
                         let cleaned = word.trimmingCharacters(in: .punctuationCharacters)
                         WordTokenView(originalWord: word, cleaned: cleaned, highlighted: $highlightedWords)
@@ -347,17 +347,13 @@ struct PageCell: View {
                 .padding(.horizontal, 24)
                 .frame(maxWidth: .infinity, alignment: .leading)
             }
-            
-            // If the cell is only for body content, this spacer pushes it up.
-            // If it has a title, this gives some space at the bottom.
+
             if !page.title.isEmpty || !page.body.isEmpty {
                  Spacer(minLength: 0)
             }
            
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        // Note: The background is already set by the parent views,
-        // so you don't need to set it again here unless it's a different color.
     }
 }
 
@@ -517,6 +513,7 @@ private struct PostHeader: View {
                 Text(author)
                     .foregroundStyle(.black.opacity(0.8))
                     .font(.system(size: 20))
+                    .bold()
                 Spacer()
             }
             .padding(.horizontal, 20)
