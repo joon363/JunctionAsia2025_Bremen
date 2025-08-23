@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
-import 'theme.dart';
+import '../theme.dart';
 import 'package:flutter/material.dart';
 
 class QuizWidget extends StatefulWidget {
