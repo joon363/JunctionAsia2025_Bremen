@@ -15,22 +15,26 @@ struct FirstView: View {
                 Image("logo")
                     .resizable()
                     .frame(width: 360, height: 360)
-                Text("한줄설명을 적어주세요")
-                .font(.title3)
-                .fontWeight(.medium)
-                .foregroundColor(Color("CustomOrange"))
-                .multilineTextAlignment(.center)
-                Divider().opacity(0).frame(height: 48*2)
+                    .padding(.top, 50)
+                Text("Enjoy every fandom,\nnow in English.")
+                    .padding(.top, -50)
+                    .font(.system(size: 26))
+                    .fontWeight(.medium)
+                    .foregroundColor(Color("Navy"))
+                    .multilineTextAlignment(.center)
+                Divider().opacity(0).frame(height: 24)
                 NavigationLink(destination: SecondView()) {
                     Text("시작하기")
                         .bold()
                         .foregroundColor(.white)
                         .padding()
+                        .padding(.horizontal, 24)
                         .background(Color("CustomOrange"))
                         .cornerRadius(20)
                 }
                 .padding(.bottom, 12)
                 .padding()
+                Spacer()
             }
         }
     }
@@ -89,7 +93,7 @@ struct SecondView: View {
                         .font(.system(size: 16))
                     Divider().padding(.vertical, 12)
                     
-                    LazyVGrid(columns: [GridItem(.adaptive(minimum: 100))], spacing: 10) {
+                    HFlow(alignment: .center, itemSpacing: 10, rowSpacing: 10) {
                         ForEach(interests.indices, id: \.self) { index in
                             Text(interests[index].name)
                                 .padding(.vertical, 10)
@@ -283,22 +287,26 @@ struct FourthView: View {
                 Image("logo")
                     .resizable()
                     .frame(width: 360, height: 360)
-                Text("한줄설명을 적어주세요")
-                .font(.title3)
-                .fontWeight(.medium)
-                .foregroundColor(Color("CustomOrange"))
-                .multilineTextAlignment(.center)
-                Divider().opacity(0).frame(height: 48*2)
-                NavigationLink(destination: ContentView()) {
+                    .padding(.top, 50)
+                Text("Let's start learning now!")
+                    .padding(.top, -50)
+                    .font(.system(size: 24))
+                    .fontWeight(.medium)
+                    .foregroundColor(Color("Navy"))
+                    .multilineTextAlignment(.center)
+                Divider().opacity(0).frame(height: 24)
+                NavigationLink(destination: SecondView()) {
                     Text("시작하기")
                         .bold()
                         .foregroundColor(.white)
                         .padding()
+                        .padding(.horizontal, 24)
                         .background(Color("CustomOrange"))
                         .cornerRadius(20)
                 }
                 .padding(.bottom, 12)
                 .padding()
+                Spacer()
             }
         }
         .navigationBarBackButtonHidden(true)
@@ -306,5 +314,5 @@ struct FourthView: View {
 }
 
 #Preview {
-    FirstView()
+    FourthView()
 }
