@@ -2,9 +2,9 @@ import 'dart:convert';
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'quiz_widget.dart';
-import 'post_widget.dart';
-import 'theme.dart';
+import '../widgets/quiz_widget.dart';
+import '../widgets/post_widget.dart';
+import '../theme.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

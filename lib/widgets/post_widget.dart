@@ -222,7 +222,7 @@ class _BodyPageWithTooltipState extends State<_BodyPageWithTooltip> {
   String shortenString(String? text) {
     if (text == null) return "";
     if (text.length <= 8) return text;
-    return text.substring(0, 8) + "..";
+    return "${text.substring(0, 8)}..";
   }
 
   void showTooltip(BuildContext context, String word, Offset position) {
@@ -439,7 +439,7 @@ class _CommentsPageState extends State<_CommentsPage> {
   String shortenString(String? text) {
     if (text == null) return "";
     if (text.length <= 8) return text;
-    return text.substring(0, 8) + "..";
+    return "${text.substring(0, 8)}..";
   }
 
   void showTooltip(BuildContext context, String word, Offset position) {

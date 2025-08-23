@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'words_screen.dart';
-import 'home_screen.dart';
+import 'screens/words_screen.dart';
+import 'screens/home_screen.dart';
 import 'theme.dart';
-import 'statistics_screen.dart';
+import 'screens/statistics_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -70,7 +70,7 @@ class _MainScreenState extends State<MainScreen> {
               Text(_appBarTitles[_selectedIndex],
                 style: TextStyle(
                   fontWeight: FontWeight.w700,
-                  color: primaryOrange
+                  color: Colors.black
                 ),
               ),
               EyeToggleButton()
@@ -135,7 +135,7 @@ class EyeToggleButton extends StatefulWidget {
   const EyeToggleButton({super.key});
 
   @override
-  _EyeToggleButtonState createState() => _EyeToggleButtonState();
+  State<EyeToggleButton> createState() => _EyeToggleButtonState();
 }
 
 class _EyeToggleButtonState extends State<EyeToggleButton> {

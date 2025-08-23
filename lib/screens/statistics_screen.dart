@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'dart:math';
-import 'theme.dart';
+import '../theme.dart';
 
 final random = Random();
 Color getRandomBlue() {
   double opacity = (random.nextInt(5) + 1) * 0.2;
-  return Colors.blue.withOpacity(opacity);
+  return Colors.blue.withAlpha((opacity * 255).round());
 }
 
 class ProfileScreen extends StatelessWidget {
@@ -261,11 +261,11 @@ class LineChartWidget extends StatelessWidget {
           drawVerticalLine: false,
           verticalInterval: 1,
           getDrawingHorizontalLine: (value) => FlLine(
-            color: Colors.grey.withOpacity(0.3),
+            color: Colors.grey.withAlpha((0.3 * 255).round()),
             strokeWidth: 1,
           ),
           getDrawingVerticalLine: (value) => FlLine(
-            color: Colors.grey.withOpacity(0.3),
+            color: Colors.grey.withAlpha((0.3 * 255).round()),
             strokeWidth: 1,
           ),
         ),
