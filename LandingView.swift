@@ -128,6 +128,7 @@ struct SecondView: View {
                         }
                     }
                     .padding(.horizontal)
+                    .padding(.vertical, 12)
                 }
                 
                 Spacer()
