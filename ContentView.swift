@@ -343,9 +343,11 @@ struct QuizPageView: View {
     let page: QuizPage
     var body: some View {
         VStack(spacing: 20) {
-            Image(systemName: !page.title.isEmpty ? "questionmark.app" : "exclamationmark.square")
-                .font(.system(size: 80))
-                .foregroundStyle(Color("Ivory"))
+            Image(!page.title.isEmpty ? "YBMpencil" : "YBMcheers")
+                .resizable()
+                .frame(width: 200, height: 200)
+                //.font(.system(size: 80))
+                //.foregroundStyle(Color("Ivory"))
             if !page.title.isEmpty {
                 Text(page.title)
                     .font(.system(size: 40, weight: .bold, design: .serif))
