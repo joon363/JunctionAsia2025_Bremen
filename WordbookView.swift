@@ -38,8 +38,16 @@ let sampleWords: [Word] = [
             "A concise email is easier to read."
           ],
           synonyms: ["brief", "succinct", "terse"]),
-    .init(text: "concise",
-          meaning: "간결한",
+    .init(text: "abandon",
+          meaning: "낮추다",
+          partOfSpeech: "adjective",
+          pronunciation: "con·CISE",
+          examples: [
+            "The president is not willing to abase himself before the nation, and admit that he made a mistake"
+          ],
+          synonyms: ["brief", "succinct", "terse"]),
+    .init(text: "abbreviate",
+          meaning: "생략하다",
           partOfSpeech: "adjective",
           pronunciation: "con·CISE",
           examples: [
@@ -47,8 +55,16 @@ let sampleWords: [Word] = [
             "A concise email is easier to read."
           ],
           synonyms: ["brief", "succinct", "terse"]),
-    .init(text: "concise",
-          meaning: "간결한",
+    .init(text: "baker",
+          meaning: "빵 제조 판매인",
+          partOfSpeech: "adjective",
+          pronunciation: "con·CISE",
+          examples: [
+            "The baker gets up early every morning to make fresh bread"
+          ],
+          synonyms: ["brief", "succinct", "terse"]),
+    .init(text: "cacophony",
+          meaning: "불협화음",
           partOfSpeech: "adjective",
           pronunciation: "con·CISE",
           examples: [
@@ -56,8 +72,16 @@ let sampleWords: [Word] = [
             "A concise email is easier to read."
           ],
           synonyms: ["brief", "succinct", "terse"]),
-    .init(text: "concise",
-          meaning: "간결한",
+    .init(text: "dainty",
+          meaning: "맛 좋은",
+          partOfSpeech: "adjective",
+          pronunciation: "con·CISE",
+          examples: [
+            "We were given tea, and some dainty little cakes"
+          ],
+          synonyms: ["brief", "succinct", "terse"]),
+    .init(text: "easygoing",
+          meaning: "태평한",
           partOfSpeech: "adjective",
           pronunciation: "con·CISE",
           examples: [
@@ -65,8 +89,8 @@ let sampleWords: [Word] = [
             "A concise email is easier to read."
           ],
           synonyms: ["brief", "succinct", "terse"]),
-    .init(text: "concise",
-          meaning: "간결한",
+    .init(text: "ecclesiastic",
+          meaning: "성직자",
           partOfSpeech: "adjective",
           pronunciation: "con·CISE",
           examples: [
@@ -74,8 +98,8 @@ let sampleWords: [Word] = [
             "A concise email is easier to read."
           ],
           synonyms: ["brief", "succinct", "terse"]),
-    .init(text: "concise",
-          meaning: "간결한",
+    .init(text: "eclecticism",
+          meaning: "절충주의",
           partOfSpeech: "adjective",
           pronunciation: "con·CISE",
           examples: [
@@ -83,35 +107,8 @@ let sampleWords: [Word] = [
             "A concise email is easier to read."
           ],
           synonyms: ["brief", "succinct", "terse"]),
-    .init(text: "concise",
-          meaning: "간결한",
-          partOfSpeech: "adjective",
-          pronunciation: "con·CISE",
-          examples: [
-            "Please write concise explanations.",
-            "A concise email is easier to read."
-          ],
-          synonyms: ["brief", "succinct", "terse"]),
-    .init(text: "concise",
-          meaning: "간결한",
-          partOfSpeech: "adjective",
-          pronunciation: "con·CISE",
-          examples: [
-            "Please write concise explanations.",
-            "A concise email is easier to read."
-          ],
-          synonyms: ["brief", "succinct", "terse"]),
-    .init(text: "concise",
-          meaning: "간결한",
-          partOfSpeech: "adjective",
-          pronunciation: "con·CISE",
-          examples: [
-            "Please write concise explanations.",
-            "A concise email is easier to read."
-          ],
-          synonyms: ["brief", "succinct", "terse"]),
-    .init(text: "concise",
-          meaning: "간결한",
+    .init(text: "gallant",
+          meaning: "용감한",
           partOfSpeech: "adjective",
           pronunciation: "con·CISE",
           examples: [
