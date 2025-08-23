@@ -27,11 +27,13 @@ struct StaticsView: View {
                 HStack {
                     Text("학습 단어 수")
                         .font(.system(size: 24))
+                        .bold()
                     Spacer()
                     Text("187개")
                         .bold()
                         .foregroundStyle(Color("Orange"))
                         .font(.system(size: 32))
+                    
                 }.padding(.horizontal, 12)
 
 
@@ -44,6 +46,8 @@ struct StaticsView: View {
                 HStack{
                     Text("읽은 포스트 수")
                         .font(.system(size: 24))
+                        .bold()
+
                     Spacer()
                     Text("213개")
                         .bold()
