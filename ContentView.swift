@@ -186,10 +186,28 @@ enum TopBarView {
     case notifications
 }
 
+enum Tab {
+    case stats
+    case study
+    case wordbook
+}
+
 //MARK: 컨텐츠뷰 루트
 struct ContentView: View {
     
     @State private var selectedTopView: TopBarView = .study
+    @State private var selectedTab: Tab = .study
+    
+    var selectedTabTitle: String {
+        switch selectedTab {
+        case .stats:
+            return "Statistics"
+        case .study:
+            return "Study"
+        case .wordbook:
+            return "Wordbook"
+        }
+    }
     
     var body: some View {
         VStack(spacing: 0) {
@@ -199,8 +217,9 @@ struct ContentView: View {
                 Button(action: {
                     self.selectedTopView = .profile
                 }) {
-                    Image(systemName: "person.circle")
-                        .font(.title)
+                    Image(systemName: "gear")
+                        //.font(.title)
+                        .font(.system(size: 20))
                         .foregroundColor(selectedTopView == .profile ? .blue : .primary)
                 }
                 
@@ -209,9 +228,10 @@ struct ContentView: View {
                 Button(action: {
                     self.selectedTopView = .study
                 }) {
-                    Text("Study")
-                        .font(.headline)
-                        .font(.system(size: 32))
+                    Text(selectedTabTitle)
+                        //.font(.headline)
+                        .font(.system(size: 20))
+                        .bold()
                         .foregroundColor(Color.orange)
                 }
                 
@@ -222,7 +242,8 @@ struct ContentView: View {
                 }) {
                     Image(systemName: "bell")
                         .font(.title2)
-                        .foregroundColor(selectedTopView == .notifications ? .blue : .primary)
+                        .foregroundColor(.white) // hide icon
+                        //.foregroundColor(selectedTopView == .notifications ? .blue : .primary)
                 }
             }
             .padding()
@@ -231,24 +252,24 @@ struct ContentView: View {
             switch selectedTopView {
             case .study:
                 // MARK: 탭뷰
-                TabView {
+                TabView(selection: $selectedTab) {
                     StaticsView()
                         .tabItem {
                             Image(systemName: "chart.bar")
                             Text("Statistics")
-                        }
+                        }.tag(Tab.stats)
                     
                     StudyTabView()
                         .tabItem {
                             Image(systemName: "highlighter")
                             Text("Study")
-                        }
+                        }.tag(Tab.study)
                     
                     WordbookView()
                         .tabItem {
                             Image(systemName: "book")
                             Text("Wordbook")
-                        }
+                        }.tag(Tab.wordbook)
                 }.tint(.orange)
                 
             case .profile:
