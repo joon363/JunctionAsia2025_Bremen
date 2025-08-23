@@ -28,6 +28,7 @@ struct ContentView: View {
     
     @State private var selectedTopView: TopBarView = .study
     @State private var selectedTab: Tab = .study
+    @State private var isOn = false
     
     var selectedTabTitle: String {
         switch selectedTab {
@@ -46,13 +47,15 @@ struct ContentView: View {
             // MARK: 맨 위 네비게이션
             HStack {
                 Button(action: {
-                    self.selectedTopView = .profile
+                    //self.selectedTopView = .profile
                 }) {
-                    Image(systemName: "gear")
+                    Image(systemName: "gearshape.fill")
                         //.font(.title)
                         .font(.system(size: 20))
-                        .foregroundColor(selectedTopView == .profile ? .blue : .primary)
+                        .foregroundColor(.white)
+//                        .foregroundColor(selectedTopView == .profile ? .blue : .primary)
                 }
+//                .frame(width: 44)
                 
                 Spacer()
                 
@@ -64,19 +67,33 @@ struct ContentView: View {
                         //.font(.headline)
                         .font(.system(size: 20))
                         .bold()
-                        .foregroundColor(Color.orange)
+                        .foregroundColor(.black)
 
                 }
                 
                 Spacer()
                 
                 Button(action: {
-                    self.selectedTopView = .notifications
+                    //self.selectedTopView = .notifications
                 }) {
-                    Image(systemName: "bell")
-                        .font(.title2)
-                        .foregroundColor(.white) // hide icon
-                        //.foregroundColor(selectedTopView == .notifications ? .blue : .primary)
+//                    Image(systemName: "bell")
+//                        .font(.title2)
+//                        .foregroundColor(.white) // hide icon
+//                        //.foregroundColor(selectedTopView == .notifications ? .blue : .primary)
+                    Button(action: {
+                        isOn.toggle()
+                    }) {
+                        if selectedTab == .study {
+                            Image(systemName: isOn ? "eye.fill" : "eye.slash.fill")
+                                .font(.system(size: 20))
+                                .foregroundColor(isOn ? Color(red: 1, green: 63/255, blue: 52/255) : .gray)
+    //                            .frame(width: 44)
+                        } else {
+                            Image(systemName: isOn ? "eye.fill" : "eye.slash.fill")
+                                .font(.system(size: 20))
+                                .foregroundColor(.white)
+                        }
+                    }
                 }
             }
             .padding()
@@ -804,5 +821,5 @@ struct WordDetailSheet: View {
 //}
 
 #Preview {
-    QuizView()
+    ContentView()
 }
