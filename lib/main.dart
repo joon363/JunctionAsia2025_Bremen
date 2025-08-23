@@ -143,14 +143,12 @@ class _EyeToggleButtonState extends State<EyeToggleButton> {
 
   void _onTap() {
     setState(() {
-      _toggled = !_toggled; // 상태 토글
-    });
+        _toggled = !_toggled;
+      });
 
     if (_toggled) {
-      // 0.5초 후에 원하는 동작 계속 유지 (혹은 초기화)
       Future.delayed(const Duration(milliseconds: 300), () {
-        // 예: 색상이나 아이콘을 유지하고 싶으면 여기서 추가 변경 없음
-      });
+        });
     }
   }
 
@@ -165,7 +163,7 @@ class _EyeToggleButtonState extends State<EyeToggleButton> {
         },
         child: Icon(
           _toggled ? CupertinoIcons.eye : CupertinoIcons.eye_slash,
-          key: ValueKey<bool>(_toggled), // 상태 변경 감지
+          key: ValueKey<bool>(_toggled),
           color: _toggled ? Colors.orange : Colors.grey,
           size: 24,
         ),

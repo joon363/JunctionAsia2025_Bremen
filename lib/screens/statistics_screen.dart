@@ -48,7 +48,6 @@ class ProfileScreen extends StatelessWidget {
             child: LineChartWidget(),
           ),
           const SizedBox(height: 8),
-          //Divider(),
           const SizedBox(height: 2),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

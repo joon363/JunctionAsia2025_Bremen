@@ -60,7 +60,6 @@ class _PostWidgetState extends State<PostWidget> {
             alignment: Alignment.center,
             child:
             Container(
-              //height: MediaQuery.of(context).size.width * (4 / 3),
               color: widget.backgroundColor,
               child: PageView.builder(
                 controller: _pageController,
@@ -154,7 +153,7 @@ class _TitlePage extends StatelessWidget {
             fontWeight: FontWeight.bold,
             color: textColor,
             letterSpacing: -1,
-            fontFamily: 'serif', // 기본 Serif 계열
+            fontFamily: 'serif',
           ),
         ),
       ),
@@ -351,10 +350,8 @@ class _BodyPageWithTooltipState extends State<_BodyPageWithTooltip> {
                     onLongPress: () {
                       setState(() {
                           if (highlightedWords.contains(word)) {
-                            // 이미 있으면 제거
                             highlightedWords.remove(word);
                           } else {
-                            // 없으면 추가
                             highlightedWords.add(word);
                           }
                         });
@@ -582,10 +579,8 @@ class _CommentsPageState extends State<_CommentsPage> {
                                   onLongPress: () {
                                     setState(() {
                                         if (highlightedWords.contains(word)) {
-                                          // 이미 있으면 제거
                                           highlightedWords.remove(word);
                                         } else {
-                                          // 없으면 추가
                                           highlightedWords.add(word);
                                         }
                                       });
