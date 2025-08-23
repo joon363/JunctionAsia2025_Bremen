@@ -35,7 +35,7 @@ struct ContentView: View {
         case .stats:
             return "Statistics"
         case .study:
-            return "Study"
+            return "Feed"
         case .wordbook:
             return "Wordbook"
         }
@@ -111,8 +111,8 @@ struct ContentView: View {
                     
                     StudyFeedView()
                         .tabItem {
-                            Image(systemName: "highlighter")
-                            Text("Study")
+                            Image(systemName: "text.page")
+                            Text("Feed")
                         }.tag(Tab.study)
                     
                     WordbookView()
@@ -364,9 +364,9 @@ struct QuizPageView: View {
                     .foregroundStyle(Color("Ivory"))
                     .multilineTextAlignment(.center)
                     //.padding(.horizontal)
-                Text("넘겨서 뜻 보기")
+                Text("넘겨서 다음 문제 보기")
                     .font(.system(size: 20))
-                    .foregroundStyle(Color("Lightgr"))
+                    .foregroundStyle(Color("Ivory"))
             }
             Divider().opacity(0).padding(.vertical, 12)
         }
@@ -665,7 +665,7 @@ struct WordTokenView: View {
                         Button {
                             showDetail = true
                         } label: {
-                            Image(systemName: "plus.circle")
+                            Image(systemName: "questionmark.circle")
                                 .font(.system(size: 18, weight: .semibold))
                         }
                         .buttonStyle(.plain)
@@ -738,6 +738,7 @@ struct WordDetailSheet: View {
                     // 제목
                     Text(info.word)
                         .font(.system(size: 28, weight: .heavy))
+                        .padding(.top, 12)
 
                     // 1) 의미 리스트
                     if !info.meanings.isEmpty {
@@ -767,8 +768,8 @@ struct WordDetailSheet: View {
                             VStack(alignment: .leading, spacing: 6) {
                                 ForEach(info.examples, id: \.self) { ex in
                                     HStack(alignment: .top, spacing: 8) {
-                                        Text("•")
-                                        Text(ex)
+                                        Text("• \(ex)")
+                                            .fixedSize(horizontal: false, vertical: true)
                                     }
                                 }
                             }
