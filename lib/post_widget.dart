@@ -24,10 +24,10 @@ class _PostWidgetState extends State<PostWidget> {
 
   Future<void> _loadUnknownWords() async {
     final String jsonString =
-    await rootBundle.loadString('assets/voca_user.json');
+      await rootBundle.loadString('assets/voca_user.json');
     final List<dynamic> jsonList = json.decode(jsonString);
     final List<String> words = jsonList.map((item) => item['word'] as String).toList();
-    unknownWords= words;
+    unknownWords = words;
   }
 
   @override
@@ -54,62 +54,79 @@ class _PostWidgetState extends State<PostWidget> {
     const int pageCount = 3;
 
     return Center(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: Stack(
         children: [
-          Container(
-            height: MediaQuery.of(context).size.width * (4 / 3),
-            color: widget.backgroundColor,
-            child: PageView.builder(
-              controller: _pageController,
-              itemCount: pageCount,
-              itemBuilder: (context, index) {
-                switch (index) {
-                  case 0:
-                    return _TitlePage(
-                      title: widget.post['title'],
-                      textColor: widget.textColor
-                    );
-                  case 1:
-                    return _BodyPageWithTooltip(
-                      body: widget.post['body'],
-                      subreddit: widget.post['subreddit'],
-                      textColor: widget.textColor
-                    );
-                  case 2:
-                    return _CommentsPage(
-                      comments: widget.post['comments'],
-                      subreddit: widget.post['subreddit'],
-                      textColor: widget.textColor,
-                      unknownWords: unknownWords,
-                    );
-                  default:
-                  return const SizedBox.shrink();
-                }
-              },
+          Align(
+            alignment: Alignment.center,
+            child:
+            Container(
+              //height: MediaQuery.of(context).size.width * (4 / 3),
+              color: widget.backgroundColor,
+              child: PageView.builder(
+                controller: _pageController,
+                itemCount: pageCount,
+                itemBuilder: (context, index) {
+                  switch (index) {
+                    case 0:
+                      return _TitlePage(
+                        title: widget.post['title'],
+                        textColor: widget.textColor
+                      );
+                    case 1:
+                      return _BodyPageWithTooltip(
+                        body: widget.post['body'],
+                        subreddit: widget.post['subreddit'],
+                        textColor: widget.textColor
+                      );
+                    case 2:
+                      return _CommentsPage(
+                        comments: widget.post['comments'],
+                        subreddit: widget.post['subreddit'],
+                        textColor: widget.textColor,
+                        unknownWords: unknownWords,
+                      );
+                    default:
+                    return const SizedBox.shrink();
+                  }
+                },
+              ),
             ),
           ),
-          Padding(
-            padding:
-            const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: List.generate(pageCount, (index) {
-                  return Container(
-                    width: 8.0,
-                    height: 8.0,
-                    margin: const EdgeInsets.symmetric(horizontal: 2.0),
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: _currentPage == index
-                        ? Colors.blue
-                        : Colors.grey.shade400,
-                    ),
-                  );
-                }),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Padding(
+              padding:
+              const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: List.generate(pageCount, (index) {
+                    return Container(
+                      width: 8.0,
+                      height: 8.0,
+                      margin: const EdgeInsets.symmetric(horizontal: 2.0),
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: _currentPage == index
+                          ? Colors.blue
+                          : Colors.grey.shade400,
+                      ),
+                    );
+                  }),
+              ),
             ),
           ),
+          Align(
+            alignment: Alignment.topCenter,
+            child: Padding(padding: EdgeInsets.all(8),
+              child: Column(
+                children: [
+                  SizedBox(height: 16),
+                  _PostHeading(subreddit: widget.post['subreddit'], textColor: widget.textColor),
+                  Divider(color: widget.textColor,),
+                  SizedBox(height: 4,),
+                ],
+              ),)
+          )
         ],
       ),
     );
@@ -134,7 +151,7 @@ class _TitlePage extends StatelessWidget {
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 30,
-            fontWeight: FontWeight.bold,
+            fontWeight: FontWeight.w700,
             fontFamily: "Nanum",
             color: textColor,
           ),
@@ -157,8 +174,8 @@ class _BodyPageWithTooltip extends StatefulWidget {
 class _BodyPageWithTooltipState extends State<_BodyPageWithTooltip> {
   Map<String, Map<String, dynamic>> wordDataAll = {};
   Map<String, dynamic> wordData = {};
-  List<String> highlightedWords=[];
-  List<String> words=[];
+  List<String> highlightedWords = [];
+  List<String> words = [];
   OverlayEntry? _overlayEntry;
   Timer? _hideTimer;
   double x = 0;
@@ -183,19 +200,19 @@ class _BodyPageWithTooltipState extends State<_BodyPageWithTooltip> {
 
   Future<void> loadBodyAndHighlight() async {
     words = widget.body
-        .split(RegExp(r'\s+'))
-        .map((w) => w.trim())
-        .where((w) => w.isNotEmpty)
-        .toList();
+      .split(RegExp(r'\s+'))
+      .map((w) => w.trim())
+      .where((w) => w.isNotEmpty)
+      .toList();
     final unknownWords = await _loadUnknownWords();
     setState(() {
-      highlightedWords = words.where((w) => unknownWords.contains(w)).toList();
-    });
+        highlightedWords = words.where((w) => unknownWords.contains(w)).toList();
+      });
   }
 
   Future<List<String>> _loadUnknownWords() async {
     final String jsonString =
-    await rootBundle.loadString('assets/voca_user.json');
+      await rootBundle.loadString('assets/voca_user.json');
     final List<dynamic> jsonList = json.decode(jsonString);
     final List<String> words = jsonList.map((item) => item['word'] as String).toList();
     return words;
@@ -237,9 +254,9 @@ class _BodyPageWithTooltipState extends State<_BodyPageWithTooltip> {
                       child: Row(
                         children: [
                           Flexible(child: Text(
-                            shortenString(wordData['word_meaning'] ?? ""),
-                            style: TextStyle(fontSize: 18),
-                          ),),
+                              shortenString(wordData['word_meaning'] ?? ""),
+                              style: TextStyle(fontSize: 18),
+                            ),),
                           IconButton(
                             onPressed: () {
                               hideTooltip();
@@ -317,52 +334,46 @@ class _BodyPageWithTooltipState extends State<_BodyPageWithTooltip> {
         hideTooltip();
       },
       child: Container(
+        alignment: Alignment.center,
         padding: const EdgeInsets.all(16.0),
-        child: Column(
-          children: [
-            _PostHeading(subreddit: widget.subreddit, textColor: widget.textColor),
-            Divider(color: widget.textColor,),
-            SizedBox(height: 4,),
-            Wrap(
-              spacing: 4,
-              children: words.map((word) {
-                  return Builder(
-                    builder: (wordContext) {
-                      return GestureDetector(
-                        onTap: () {
-                          final RenderBox box = wordContext.findRenderObject() as RenderBox;
-                          final position = box.localToGlobal(Offset(box.size.width / 2, 0));
-                          showTooltip(wordContext, word, position);
-                        },
-                        onLongPress: () {
-                          setState(() {
-                              if (highlightedWords.contains(word)) {
-                                // 이미 있으면 제거
-                                highlightedWords.remove(word);
-                              } else {
-                                // 없으면 추가
-                                highlightedWords.add(word);
-                              }
-                            });
-                        },
-                        child: Container(
-                          color: highlightedWords.contains(word)
-                            ? widget.textColor==Colors.black? primaryGreen.withOpacity(0.5):Colors.yellow.withOpacity(0.5)
-                            : Colors.transparent,
-                          child: Text(word, style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w700,
-                              fontFamily: "Nanum",
-                              color: widget.textColor
-                            )),
-                        ),
-                      );
+        child: Wrap(
+          spacing: 4,
+          children: words.map((word) {
+              return Builder(
+                builder: (wordContext) {
+                  return GestureDetector(
+                    onTap: () {
+                      final RenderBox box = wordContext.findRenderObject() as RenderBox;
+                      final position = box.localToGlobal(Offset(box.size.width / 2, 0));
+                      showTooltip(wordContext, word, position);
                     },
+                    onLongPress: () {
+                      setState(() {
+                          if (highlightedWords.contains(word)) {
+                            // 이미 있으면 제거
+                            highlightedWords.remove(word);
+                          } else {
+                            // 없으면 추가
+                            highlightedWords.add(word);
+                          }
+                        });
+                    },
+                    child: Container(
+                      color: highlightedWords.contains(word)
+                        ? widget.textColor == Colors.black ? primaryGreen.withOpacity(0.5) : Colors.yellow.withOpacity(0.5)
+                        : Colors.transparent,
+                      child: Text(word, style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w700,
+                          fontFamily: "Nanum",
+                          color: widget.textColor
+                        )),
+                    ),
                   );
-                }).toList(),
-            ),
-          ],
-        )
+                },
+              );
+            }).toList(),
+        ),
       )
     );
   }
@@ -388,7 +399,7 @@ class _CommentsPageState extends State<_CommentsPage> {
 
   Map<String, Map<String, dynamic>> wordDataAll = {};
   Map<String, dynamic> wordData = {};
-  List<String> highlightedWords=[];
+  List<String> highlightedWords = [];
   OverlayEntry? _overlayEntry;
   Timer? _hideTimer;
   double x = 0;
@@ -411,18 +422,17 @@ class _CommentsPageState extends State<_CommentsPage> {
       });
   }
 
-
   Future<void> loadBodyAndHighlight() async {
     final List<String> words = widget.comments
-        .cast<String>()
-        .expand((comment) => comment
-        .split(RegExp(r'\s+'))
-        .map((w) => w.trim())
-        .where((w) => w.isNotEmpty))
-        .toList();
+      .cast<String>()
+      .expand((comment) => comment
+          .split(RegExp(r'\s+'))
+          .map((w) => w.trim())
+          .where((w) => w.isNotEmpty))
+      .toList();
     setState(() {
-      highlightedWords = words.where((w) => widget.unknownWords.contains(w)).toList();
-    });
+        highlightedWords = words.where((w) => widget.unknownWords.contains(w)).toList();
+      });
   }
 
   String shortenString(String? text) {
@@ -539,75 +549,67 @@ class _CommentsPageState extends State<_CommentsPage> {
       },
       child: Container(
         padding: const EdgeInsets.all(16.0),
-        child: Column(
-          children: [
-            _PostHeading(subreddit: widget.subreddit, textColor: widget.textColor),
-            Divider(color: widget.textColor,),
-            Expanded(
-              child: Container(
-                padding: const EdgeInsets.symmetric(vertical: 4.0),
-                child: ListView.builder(
-                  physics: const NeverScrollableScrollPhysics(),
-                  itemCount: widget.comments.length,
-                  itemBuilder: (context, index) {
-                    final String comment = widget.comments[index] as String;
-                    return Padding(
-                      padding: EdgeInsets.only(bottom: 16),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Icon(Icons.comment, color: widget.textColor, size: 20),
-                          const SizedBox(width: 12),
-                          Expanded(child: Wrap(
-                              spacing: 4,
-                              children: comment.split(RegExp(r'\s+'))
-                                .map((w) => w.trim())
-                                .where((w) => w.isNotEmpty)
-                                .toList().map((word) {
-                                    return Builder(
-                                      builder: (wordContext) {
-                                        return GestureDetector(
-                                          onTap: () {
-                                            final RenderBox box = wordContext.findRenderObject() as RenderBox;
-                                            final position = box.localToGlobal(Offset(box.size.width / 2, 0));
+        alignment: Alignment.center,
+        child: ListView.builder(
+          shrinkWrap: true,
+          physics: const NeverScrollableScrollPhysics(),
+          itemCount: widget.comments.length,
+          itemBuilder: (context, index) {
+            final String comment = widget.comments[index] as String;
+            return Padding(
+              padding: EdgeInsets.only(bottom: 16),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Icon(Icons.comment, color: widget.textColor, size: 20),
+                  const SizedBox(width: 12),
+                  Expanded(child: Wrap(
+                      spacing: 4,
+                      children: comment.split(RegExp(r'\s+'))
+                        .map((w) => w.trim())
+                        .where((w) => w.isNotEmpty)
+                        .toList().map((word) {
+                            return Builder(
+                              builder: (wordContext) {
+                                return GestureDetector(
+                                  onTap: () {
+                                    final RenderBox box = wordContext.findRenderObject() as RenderBox;
+                                    final position = box.localToGlobal(Offset(box.size.width / 2, 0));
 
-                                            showTooltip(wordContext, word, position);
-                                          },
-                                          onLongPress: () {
-                                            setState(() {
-                                              if (highlightedWords.contains(word)) {
-                                                // 이미 있으면 제거
-                                                highlightedWords.remove(word);
-                                              } else {
-                                                // 없으면 추가
-                                                highlightedWords.add(word);
-                                              }
-                                              });
-                                          },
-                                          child: Container(
-                                            color: highlightedWords.contains(word)
-                                                ? widget.textColor==Colors.black? primaryGreen.withOpacity(0.5):Colors.yellow.withOpacity(0.5)
-                                                : Colors.transparent,
-                                            child: Text(word, style: TextStyle(
-                                                fontSize: 18,
-                                                fontWeight: FontWeight.w700,
-                                                fontFamily: "Nanum",
-                                                color: widget.textColor
-                                              )),
-                                          ),
-                                        );
-                                      },
-                                    );
-                                  }).toList(),
-                            ),)
-                        ],
-                      ),
-                    );
-                  },
-                ),
-              ))
-          ],
-        )
+                                    showTooltip(wordContext, word, position);
+                                  },
+                                  onLongPress: () {
+                                    setState(() {
+                                        if (highlightedWords.contains(word)) {
+                                          // 이미 있으면 제거
+                                          highlightedWords.remove(word);
+                                        } else {
+                                          // 없으면 추가
+                                          highlightedWords.add(word);
+                                        }
+                                      });
+                                  },
+                                  child: Container(
+                                    color: highlightedWords.contains(word)
+                                      ? widget.textColor == Colors.black ? primaryGreen.withOpacity(0.5) : Colors.yellow.withOpacity(0.5)
+                                      : Colors.transparent,
+                                    child: Text(word, style: TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w700,
+                                        fontFamily: "Nanum",
+                                        color: widget.textColor
+                                      )),
+                                  ),
+                                );
+                              },
+                            );
+                          }).toList(),
+                    ),)
+                ],
+              ),
+            );
+          },
+        ),
       )
     );
   }
@@ -628,8 +630,8 @@ class _PostHeading extends StatelessWidget {
       children: [
         const CircleAvatar(
           radius: 18,
-          backgroundColor: Colors.grey,
-          child: Icon(Icons.person, color: Colors.white),
+          backgroundColor: Colors.transparent,
+          backgroundImage: AssetImage('assets/reddit_logo.png'),
         ),
         const SizedBox(width: 10),
         Expanded(
@@ -643,7 +645,6 @@ class _PostHeading extends StatelessWidget {
             ),
           ),
         ),
-        Icon(Icons.more_horiz, color: textColor,),
       ],
     );
   }

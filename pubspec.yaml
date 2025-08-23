@@ -63,6 +63,7 @@ flutter:
   - assets/selected_posts.json
   - assets/voca_user.json
   - assets/voca_all.json
+  - assets/reddit_logo.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:reelstudy/theme.dart';
 
 class Word {
   final String word;
@@ -54,55 +55,81 @@ class _WordListPageState extends State<WordListPage> {
     return Scaffold(
       body: _words.isEmpty
         ? const Center(child: CircularProgressIndicator())
-        : ListView.builder(
-          itemCount: _words.length,
-          itemBuilder: (context, index) {
-            return ListTile(
-              title: Text(_words[index].word, style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
+        : Column(
+          children: [
+            Column(
+              children: [
+                Divider(),
+                Text("단어 수: 187개", style: TextStyle(
+                    fontSize: 16, fontWeight: FontWeight.w700),
                 ),
-              ),
-              subtitle: Text(_words[index].wordMeaning, overflow: TextOverflow.ellipsis,),
-              onTap: () {
-                showDialog(context: context, builder: (dialogContext) =>
-                  AlertDialog(
-                    backgroundColor: Colors.white,
-                    content: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      spacing: 4,
-                      children: [
-                        Text(_words[index].word, style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),),
-                        SizedBox(height: 4,),
-                        Text(_words[index].wordMeaning),
-                        SizedBox(height: 8,),
-                        Text("예문", style: TextStyle(fontWeight: FontWeight.bold)),
-                        Text("• ${_words[index].exampleEng}"),
-                        Text("• ${_words[index].exampleKor}"),
-                      ],
-                    ),
-                    actions: [
-                      Column(
-                        children: [
-                          Divider(),
-                          TextButton(
-                            onPressed: () {
-                              Navigator.pop(dialogContext);
-                            },
-                            child: const Text('OK', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
-                          ),
-                        ],
-                      )
-                    ],
-                    actionsAlignment: MainAxisAlignment.center,
-                  )
-                );
+                Divider(),
 
-              },
-            );
-          },
-        ),
+              ],
+            ),
+            Expanded(child: ListView.builder(
+                itemCount: _words.length,
+                itemBuilder: (context, index) {
+                  return Material(
+                    elevation: 5,
+                    child: Container(
+                      margin: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                      decoration: BoxDecoration(
+                        color: primaryLightOrange,
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      child: ListTile(
+                        title: Text(_words[index].word, style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        subtitle: Text(_words[index].wordMeaning, overflow: TextOverflow.ellipsis,),
+                        onTap: () {
+                          showDialog(context: context, builder: (dialogContext) =>
+                            AlertDialog(
+                              backgroundColor: Colors.white,
+                              content: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                spacing: 4,
+                                children: [
+                                  Text(_words[index].word, style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),),
+                                  Divider(),
+                                  Text("뜻"),
+                                  Text(_words[index].wordMeaning),
+                                  Divider(),
+                                  Text("예문", style: TextStyle(fontWeight: FontWeight.bold)),
+                                  Text("• ${_words[index].exampleEng}"),
+                                  Text("• ${_words[index].exampleKor}"),
+                                ],
+                              ),
+                              actions: [
+                                Column(
+                                  children: [
+                                    Divider(),
+                                    TextButton(
+                                      onPressed: () {
+                                        Navigator.pop(dialogContext);
+                                      },
+                                      child: const Text('OK', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
+                                    ),
+                                  ],
+                                )
+                              ],
+                              actionsAlignment: MainAxisAlignment.center,
+                            )
+                          );
+
+                        },
+                      ),
+                    ),
+                  );
+                },
+              ),)
+
+          ],
+        )
     );
   }
 }

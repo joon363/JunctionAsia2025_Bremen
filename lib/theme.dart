@@ -8,7 +8,7 @@ Color getRandomColorBetween(Color start, Color end) {
 }
 
 const Color primaryOrange = Color(0xFFFFB823);
-const Color primaryLightOrange = Color(0xFFFFF1CA);
+const Color primaryLightOrange = Color(0xFFFFF9EB);
 const Color primaryGreen = Color(0xFF708A58);
 const Color primaryDarkGreen = Color(0xFF2D4F2B);
 

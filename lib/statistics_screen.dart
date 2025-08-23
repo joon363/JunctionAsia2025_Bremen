@@ -23,24 +23,92 @@ class ProfileScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               const Text(
-                'Unknown words per sentence',
-                style: TextStyle(fontSize: 16, letterSpacing: 0),
+                '문장당 모르는 단어',
+                style: TextStyle(fontSize: 16, letterSpacing: 0, fontWeight: FontWeight.w700),
               ),
               const Text(
-                '0.8',
-                style: TextStyle(fontSize: 30, color: primaryOrange, fontWeight: FontWeight.w700),
+                '0.8개',
+                style: TextStyle(fontSize: 28, color: primaryOrange, fontWeight: FontWeight.w700),
               ),
             ],
           ),
           const SizedBox(height: 16),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            spacing: 2,
+            children: [
+              Icon(Icons.circle, color: primaryGreen, size: 20,),
+              Text("User Average", style: TextStyle(fontSize: 12)),
+              Icon(Icons.circle, color: primaryOrange, size: 20),
+              Text("Me", style: TextStyle(fontSize: 12)),
+            ],
+          ),
           SizedBox(
             height: 150,
             child: LineChartWidget(),
           ),
-          const SizedBox(height: 32),
-          const Text(
-            'Learning History',
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          const SizedBox(height: 8),
+          //Divider(),
+          const SizedBox(height: 2),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Text(
+                '학습 단어',
+                style: TextStyle(fontSize: 16, letterSpacing: 0, fontWeight: FontWeight.w700),
+              ),
+              Column(
+                children: [
+                  const Text(
+                    '187개',
+                    style: TextStyle(fontSize: 24, color: primaryOrange, fontWeight: FontWeight.w700),
+                  ), const Text(
+                    '(상위 3.7%)',
+                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+                  ),
+                ],
+              )
+            ],
+          ),
+          const SizedBox(height: 2),
+          Divider(),
+          const SizedBox(height: 2),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Text(
+                '읽은 포스트',
+                style: TextStyle(fontSize: 16, letterSpacing: 0, fontWeight: FontWeight.w700),
+              ),
+              Column(
+                children: [
+                  const Text(
+                    '213개',
+                    style: TextStyle(fontSize: 24, color: primaryOrange, fontWeight: FontWeight.w700),
+                  ), const Text(
+                    '(상위 5.3%)',
+                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+                  ),
+                ],
+              )
+            ],
+          ),
+          const SizedBox(height: 2),
+          Divider(),
+          const SizedBox(height: 2),
+
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Text(
+                '학습 기록',
+                style: TextStyle(fontSize: 16, letterSpacing: 0, fontWeight: FontWeight.w700),
+              ),
+              const Text(
+                'D+86',
+                style: TextStyle(fontSize: 24, color: primaryOrange, fontWeight: FontWeight.w900),
+              ),
+            ],
           ),
           const SizedBox(height: 16),
           Row(

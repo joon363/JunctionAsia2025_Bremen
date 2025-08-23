@@ -1,3 +1,5 @@
+import 'package:flutter/cupertino.dart';
+
 import 'theme.dart';
 import 'package:flutter/material.dart';
 
@@ -38,22 +40,11 @@ class _QuizWidgetState extends State<QuizWidget> {
     const int pageCount = 6;
 
     return Center(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: Stack(
         children: [
           Container(
-            height: MediaQuery.of(context).size.width * (4 / 3),
             decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  primaryOrange,
-                  primaryLightOrange,
-                ],
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-              ),
-              borderRadius: BorderRadius.circular(12),
+              color: primaryGreen
             ),
             child: PageView.builder(
               controller: _pageController,
@@ -66,14 +57,12 @@ class _QuizWidgetState extends State<QuizWidget> {
                   case 4:
                     return QuizPage(
                       title: word['word'],
-                      textColor: Colors.black
                     );
                   case 1:
                   case 3:
                   case 5:
-                    return QuizPage(
+                    return AnswerPage(
                       title: word['word_meaning'],
-                      textColor: Colors.black
                     );
                   default:
                   return const SizedBox.shrink();
@@ -81,26 +70,29 @@ class _QuizWidgetState extends State<QuizWidget> {
               },
             ),
           ),
-          Padding(
-            padding:
-            const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: List.generate(pageCount, (index) {
-                  return Container(
-                    width: 8.0,
-                    height: 8.0,
-                    margin: const EdgeInsets.symmetric(horizontal: 2.0),
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: _currentPage == index
-                        ? Colors.blue
-                        : Colors.grey.shade400,
-                    ),
-                  );
-                }),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Padding(
+              padding:
+              const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: List.generate(pageCount, (index) {
+                    return Container(
+                      width: 8.0,
+                      height: 8.0,
+                      margin: const EdgeInsets.symmetric(horizontal: 2.0),
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: _currentPage == index
+                          ? Colors.blue
+                          : Colors.grey.shade400,
+                      ),
+                    );
+                  }),
+              ),
             ),
-          ),
+          )
         ],
       ),
     );
@@ -110,42 +102,70 @@ class _QuizWidgetState extends State<QuizWidget> {
 
 class QuizPage extends StatelessWidget {
   final String title;
-  final Color textColor;
   const QuizPage({super.key, 
     required this.title,
-    required this.textColor
   });
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Align(
-          alignment: Alignment.topCenter,
-          child: Padding(padding: EdgeInsets.symmetric(vertical: 15),
-            child: Text(
-              "── Review Session ──",
-              style: TextStyle(
-                fontSize: 25,
-                fontWeight: FontWeight.bold,
-                fontFamily: "Nanum",
-                color: textColor,
-              ),
-            ),)
-        ),
-        Align(
-          alignment: Alignment.center,
-          child: Text(
-            title,
-            style: TextStyle(
-              fontSize: 45,
-              fontWeight: FontWeight.bold,
-              fontFamily: "Nanum",
-              color: textColor,
-            ),
+        Icon(CupertinoIcons.question_square, size: 80, color: primaryLightOrange,),
+        Text(
+          title,
+          style: TextStyle(
+            fontSize: 45,
+            fontWeight: FontWeight.bold,
+            fontFamily: "Nanum",
+            color: primaryLightOrange,
           ),
         ),
-      ]
+        Text(
+          "넘겨서 뜻 보기",
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.w500,
+            fontFamily: "Nanum",
+            color: primaryLightOrange,
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class AnswerPage extends StatelessWidget {
+  final String title;
+  const AnswerPage({super.key,
+    required this.title,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Icon(CupertinoIcons.exclamationmark_square_fill, size: 80, color: primaryLightOrange,),
+        Text(
+          title,
+          style: TextStyle(
+            fontSize: 30,
+            fontWeight: FontWeight.bold,
+            fontFamily: "Nanum",
+            color: primaryLightOrange,
+          ),
+        ),
+        Text(
+          "넘겨서 다음 퀴즈 보기",
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.w500,
+            fontFamily: "Nanum",
+            color: primaryLightOrange,
+          ),
+        ),
+      ],
     );
   }
 }
