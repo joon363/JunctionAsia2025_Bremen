@@ -8,35 +8,6 @@
 
 import SwiftUI
 
-//MARK: 프로필 뷰
-struct ProfileView: View {
-    var body: some View {
-        VStack {
-            Text("Profile View")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-            Image(systemName: "person.circle.fill")
-                .font(.system(size: 100))
-        }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.gray.opacity(0.1))
-    }
-}
-
-//MARK: 알람 뷰
-struct NotificationsView: View {
-    var body: some View {
-        VStack {
-            Text("Notifications View")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-            Image(systemName: "bell.fill")
-                .font(.system(size: 100))
-        }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.gray.opacity(0.1))
-    }
-}
 //바 관련 enum
 enum TopBarView {
     case study
@@ -146,7 +117,35 @@ struct ContentView: View {
     }
 }
 
+//MARK: 프로필 뷰
+struct ProfileView: View {
+    var body: some View {
+        VStack {
+            Text("Profile View")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+            Image(systemName: "person.circle.fill")
+                .font(.system(size: 100))
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.gray.opacity(0.1))
+    }
+}
 
+//MARK: 알람 뷰
+struct NotificationsView: View {
+    var body: some View {
+        VStack {
+            Text("Notifications View")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+            Image(systemName: "bell.fill")
+                .font(.system(size: 100))
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.gray.opacity(0.1))
+    }
+}
 
 // MARK: - Models
 struct Page: Identifiable, Hashable {
@@ -225,6 +224,12 @@ struct StudyFeedView: View {
                         .containerRelativeFrame(.vertical) // Makes each card fill the viewport height
                         .id(post.id)
                 }
+                //퀴즈뷰 추가
+                QuizView()
+                    .containerRelativeFrame(.vertical)
+                //최종 화면 추가
+                EndView()
+                    .containerRelativeFrame(.vertical)
             }
         }
         .scrollIndicators(.hidden)
@@ -234,6 +239,136 @@ struct StudyFeedView: View {
         .background(Color("Ivory"))
     }
 }
+
+// MARK: - 마지막 화면에 쓸 데이터와 뷰
+struct EndPage: Identifiable, Hashable {
+    let id = UUID()
+    let title: String
+    let text: String
+    let iconName: String
+}
+
+// MARK: - 초록색 퀴즈뷰 화면에 쓸 데이터와 뷰
+struct QuizPage: Identifiable, Hashable {
+    let id = UUID()
+    let title: String
+    let text: String
+}
+
+// 마지막 화면에 표시할 페이지 데이터
+let endOfFeedPages: [EndPage] = [
+    EndPage(title: "오늘의 학습 완료!", text: "오늘 학습할 콘텐츠를 완벽하게 학습하셨습니다.", iconName: "checkmark.circle.fill"),
+    EndPage(title: "다음 학습은?", text: "단어장을 복습하거나 통계 화면으로 이동해 보세요.", iconName: "arrow.forward.circle.fill"),
+    EndPage(title: "새로운 콘텐츠", text: "새로운 학습 콘텐츠는 매일 업데이트 됩니다.", iconName: "sparkles")
+]
+
+// 초록색 퀴즈뷰에 표시할 페이지 데이터
+let quizOfFeedPages: [QuizPage] = [
+    QuizPage(title: "Reminiscence", text: ""),
+    QuizPage(title: "", text: "추억, 회상"),
+
+]
+
+// 마지막 화면의 콘텐츠 뷰 (페이지별)
+struct EndPageView: View {
+    let page: EndPage
+    var body: some View {
+        VStack(spacing: 20) {
+            Image(systemName: page.iconName)
+                .font(.system(size: 80))
+                .foregroundStyle(Color.orange.opacity(0.8))
+            Text(page.title)
+                .font(.system(size: 32, weight: .bold, design: .serif))
+            Text(page.text)
+                .font(.system(size: 20))
+                .multilineTextAlignment(.center)
+                .padding(.horizontal)
+        }
+        .padding(.bottom,100)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
+}
+
+
+// 마지막 화면의 전체 컨테이너 뷰 (가로 스와이프 기능 포함)
+struct EndView: View {
+    @State private var selectedPage: Int = 0
+    private let pages = endOfFeedPages
+
+    var body: some View {
+        ZStack {
+            TabView(selection: $selectedPage) {
+                ForEach(Array(pages.enumerated()), id: \.element.id) { idx, page in
+                    EndPageView(page: page)
+                        .tag(idx)
+                }
+            }
+            .tabViewStyle(.page(indexDisplayMode: .never))
+
+            // 페이지 인디케이터 (점)
+            VStack {
+                Spacer()
+                if pages.count > 1 {
+                    PageDots(count: pages.count, index: selectedPage)
+                        .padding(.bottom, 90)
+                }
+            }
+        }
+    }
+}
+
+
+
+// 퀴즈뷰 화면의 콘텐츠 뷰 (페이지별)
+struct QuizPageView: View {
+    let page: QuizPage
+    var body: some View {
+        VStack(spacing: 20) {
+            Image(systemName: "questionmark.app")
+                .resizable()
+                .frame(width: 100, height: 100)
+            Text(page.title)
+                .font(.system(size: 40, weight: .bold, design: .serif))
+            Text(page.text)
+                .font(.system(size: 40, weight: .bold, design:.serif))
+                //.multilineTextAlignment(.center)
+                //.padding(.horizontal)
+        }
+        .padding()
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
+}
+
+
+// 퀴즈 화면의 전체 컨테이너 뷰 (가로 스와이프 기능 포함)
+struct QuizView: View {
+    @State private var selectedPage: Int = 0
+    private let pages = quizOfFeedPages
+
+    var body: some View {
+        ZStack {
+            TabView(selection: $selectedPage) {
+                ForEach(Array(pages.enumerated()), id: \.element.id) { idx, page in
+                    QuizPageView(page: page)
+                        .tag(idx)
+                }
+            }
+            .tabViewStyle(.page(indexDisplayMode: .never))
+
+            // 페이지 인디케이터 (점)
+            VStack {
+                Spacer()
+                if pages.count > 1 {
+                    PageDots(count: pages.count, index: selectedPage)
+                        .padding(.bottom, 90)
+                }
+            }
+        }
+        .background(Color("Lightgr"))
+
+    }
+}
+
 // MARK: - Post Card (Corrected)
 struct PostFullScreenCard: View {
     let post: Post
@@ -252,7 +387,6 @@ struct PostFullScreenCard: View {
 
             VStack {
                 Spacer()
-                // Don't show dots if there's only one page
                 if post.pages.count > 1 {
                     PageDots(count: post.pages.count, index: selectedPage)
                         .padding(.bottom, 90)
