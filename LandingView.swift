@@ -58,12 +58,18 @@ struct Interest: Identifiable {
 struct SecondView: View {
     @State private var selectedButton: Int? = nil
     @Environment(\.dismiss) var dismiss
-    let interestNames = [
-            "Travel", "Photos", "Health", "Movies", "Art",
-            "Gaming", "Music", "Cooking", "Reading", "Hiking"
+    var interestNames = [
+        "Travel", "Photos", "Health", "Movies", "Art",
+        "Gaming", "Music", "Cooking", "Reading", "Hiking", "Humor",
+        "K-Pop", "Racing", "Animations", "Drama", "Beauty",
+        "Technology", "Finance", "Cryptocurrency", "MBTI",
+        "Sports", "AI", "Pet", "Science", "Politics", "Art",
+        "Cat", "Baseball", "Programming", "Psychology", "Astronomy", 
+        "Movie", "NFT", "Studying"
     ]
     @State private var interests: [Interest]
     init() {
+        interestNames.shuffle()
         _interests = State(initialValue: interestNames.map { Interest(name: $0) })
     }
     
@@ -213,7 +219,7 @@ func tokenizeSimple(_ text: String) -> [InlineHighlightView.WordItem] {
 struct ThirdView: View {
     @State private var selectedButton: Int? = nil
     @Environment(\.dismiss) var dismiss
-    var paragraph: String = "Every time I get the newest iPhone the battery seems to die faster than my old one did when it was new. Within a few months I'm charging way more often. Do newer iPhones actually have worse batteries or could it be that phones are doing more in the background now maybe the brighter screens and heavier apps drain battery quicker even though the capacity is better?"
+    var paragraph: String = "Education plays a vital role in the development of any nation. It not only equips individuals with knowledge and skills but also fosters critical thinking and innovation. A well-educated population contributes to economic growth, social stability, and better health outcomes. However, access to quality education remains a challenge in many parts of the world due to financial, geographical, and social barriers. Governments and communities must work together to ensure that education opportunities are inclusive and equitable for all."
     
     var body: some View {
         NavigationStack {
@@ -325,5 +331,5 @@ struct FourthView: View {
 }
 
 #Preview {
-    ThirdView()
+    FirstView()
 }
