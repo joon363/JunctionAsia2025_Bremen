@@ -36,7 +36,7 @@ struct NotificationsView: View {
         .background(Color.gray.opacity(0.1))
     }
 }
-
+//바 관련 enum
 enum TopBarView {
     case study
     case profile
