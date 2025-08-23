@@ -73,7 +73,7 @@ class _MainScreenState extends State<MainScreen> {
                   color: primaryOrange
                 ),
               ),
-              Icon(CupertinoIcons.bell),
+              EyeToggleButton()
             ],
           )
 
@@ -131,3 +131,45 @@ class _MainScreenState extends State<MainScreen> {
   }
 }
 
+class EyeToggleButton extends StatefulWidget {
+  const EyeToggleButton({super.key});
+
+  @override
+  _EyeToggleButtonState createState() => _EyeToggleButtonState();
+}
+
+class _EyeToggleButtonState extends State<EyeToggleButton> {
+  bool _toggled = false;
+
+  void _onTap() {
+    setState(() {
+      _toggled = !_toggled; // 상태 토글
+    });
+
+    if (_toggled) {
+      // 0.5초 후에 원하는 동작 계속 유지 (혹은 초기화)
+      Future.delayed(const Duration(milliseconds: 300), () {
+        // 예: 색상이나 아이콘을 유지하고 싶으면 여기서 추가 변경 없음
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: _onTap,
+      child: AnimatedSwitcher(
+        duration: const Duration(milliseconds: 500),
+        transitionBuilder: (child, animation) {
+          return FadeTransition(opacity: animation, child: child);
+        },
+        child: Icon(
+          _toggled ? CupertinoIcons.eye : CupertinoIcons.eye_slash,
+          key: ValueKey<bool>(_toggled), // 상태 변경 감지
+          color: _toggled ? Colors.orange : Colors.grey,
+          size: 24,
+        ),
+      ),
+    );
+  }
+}

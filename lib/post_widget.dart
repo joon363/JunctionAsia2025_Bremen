@@ -150,10 +150,11 @@ class _TitlePage extends StatelessWidget {
           title,
           textAlign: TextAlign.center,
           style: TextStyle(
-            fontSize: 30,
-            fontWeight: FontWeight.w700,
-            fontFamily: "Nanum",
+            fontSize: 32,
+            fontWeight: FontWeight.bold,
             color: textColor,
+            letterSpacing: -1,
+            fontFamily: 'serif', // 기본 Serif 계열
           ),
         ),
       ),
@@ -360,10 +361,10 @@ class _BodyPageWithTooltipState extends State<_BodyPageWithTooltip> {
                     },
                     child: Container(
                       color: highlightedWords.contains(word)
-                        ? widget.textColor == Colors.black ? primaryGreen.withOpacity(0.5) : Colors.yellow.withOpacity(0.5)
+                        ? widget.textColor == Colors.black ? primaryGreen.withAlpha((0.5 * 255).round()) : Colors.yellow.withAlpha((0.5 * 255).round())
                         : Colors.transparent,
                       child: Text(word, style: TextStyle(
-                          fontSize: 18,
+                          fontSize: 20,
                           fontWeight: FontWeight.w700,
                           fontFamily: "Nanum",
                           color: widget.textColor
@@ -591,7 +592,7 @@ class _CommentsPageState extends State<_CommentsPage> {
                                   },
                                   child: Container(
                                     color: highlightedWords.contains(word)
-                                      ? widget.textColor == Colors.black ? primaryGreen.withOpacity(0.5) : Colors.yellow.withOpacity(0.5)
+                                      ? widget.textColor == Colors.black ? primaryGreen.withAlpha((0.5 * 255).round()) : Colors.yellow.withAlpha((0.5 * 255).round())
                                       : Colors.transparent,
                                     child: Text(word, style: TextStyle(
                                         fontSize: 18,
