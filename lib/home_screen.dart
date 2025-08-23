@@ -41,6 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
     jsonList.shuffle(Random());
     return jsonList.take(3).toList();
   }
+
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(

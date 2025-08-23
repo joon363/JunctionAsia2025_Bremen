@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:reelstudy/theme.dart';
 class PostWidget extends StatefulWidget {
   final Map<String, dynamic> post;
   final Color backgroundColor;
@@ -19,6 +20,16 @@ class PostWidget extends StatefulWidget {
 class _PostWidgetState extends State<PostWidget> {
   final PageController _pageController = PageController();
   int _currentPage = 0;
+  List<String> unknownWords = [];
+
+  Future<void> _loadUnknownWords() async {
+    final String jsonString =
+    await rootBundle.loadString('assets/voca_user.json');
+    final List<dynamic> jsonList = json.decode(jsonString);
+    final List<String> words = jsonList.map((item) => item['word'] as String).toList();
+    unknownWords= words;
+  }
+
   @override
   void initState() {
     super.initState();
@@ -29,6 +40,7 @@ class _PostWidgetState extends State<PostWidget> {
             });
         }
       });
+    _loadUnknownWords();
   }
 
   @override
@@ -70,6 +82,7 @@ class _PostWidgetState extends State<PostWidget> {
                       comments: widget.post['comments'],
                       subreddit: widget.post['subreddit'],
                       textColor: widget.textColor,
+                      unknownWords: unknownWords,
                     );
                   default:
                   return const SizedBox.shrink();
@@ -144,7 +157,8 @@ class _BodyPageWithTooltip extends StatefulWidget {
 class _BodyPageWithTooltipState extends State<_BodyPageWithTooltip> {
   Map<String, Map<String, dynamic>> wordDataAll = {};
   Map<String, dynamic> wordData = {};
-  String? highlightedWord;
+  List<String> highlightedWords=[];
+  List<String> words=[];
   OverlayEntry? _overlayEntry;
   Timer? _hideTimer;
   double x = 0;
@@ -153,6 +167,7 @@ class _BodyPageWithTooltipState extends State<_BodyPageWithTooltip> {
   void initState() {
     super.initState();
     loadVoca();
+    loadBodyAndHighlight();
   }
 
   Future<void> loadVoca() async {
@@ -164,6 +179,32 @@ class _BodyPageWithTooltipState extends State<_BodyPageWithTooltip> {
     setState(() {
         wordDataAll = wordMap;
       });
+  }
+
+  Future<void> loadBodyAndHighlight() async {
+    words = widget.body
+        .split(RegExp(r'\s+'))
+        .map((w) => w.trim())
+        .where((w) => w.isNotEmpty)
+        .toList();
+    final unknownWords = await _loadUnknownWords();
+    setState(() {
+      highlightedWords = words.where((w) => unknownWords.contains(w)).toList();
+    });
+  }
+
+  Future<List<String>> _loadUnknownWords() async {
+    final String jsonString =
+    await rootBundle.loadString('assets/voca_user.json');
+    final List<dynamic> jsonList = json.decode(jsonString);
+    final List<String> words = jsonList.map((item) => item['word'] as String).toList();
+    return words;
+  }
+
+  String shortenString(String? text) {
+    if (text == null) return "";
+    if (text.length <= 8) return text;
+    return text.substring(0, 8) + "..";
   }
 
   void showTooltip(BuildContext context, String word, Offset position) {
@@ -194,12 +235,11 @@ class _BodyPageWithTooltipState extends State<_BodyPageWithTooltip> {
                       ),
                       alignment: Alignment.centerRight,
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text(
-                            wordData['word_meaning'] ?? "",
+                          Flexible(child: Text(
+                            shortenString(wordData['word_meaning'] ?? ""),
                             style: TextStyle(fontSize: 18),
-                          ),
+                          ),),
                           IconButton(
                             onPressed: () {
                               hideTooltip();
@@ -292,17 +332,22 @@ class _BodyPageWithTooltipState extends State<_BodyPageWithTooltip> {
                         onTap: () {
                           final RenderBox box = wordContext.findRenderObject() as RenderBox;
                           final position = box.localToGlobal(Offset(box.size.width / 2, 0));
-
                           showTooltip(wordContext, word, position);
                         },
                         onLongPress: () {
                           setState(() {
-                              highlightedWord = highlightedWord == word ? null : word;
+                              if (highlightedWords.contains(word)) {
+                                // 이미 있으면 제거
+                                highlightedWords.remove(word);
+                              } else {
+                                // 없으면 추가
+                                highlightedWords.add(word);
+                              }
                             });
                         },
                         child: Container(
-                          color: highlightedWord == word
-                            ? Colors.yellow.withOpacity(0.5)
+                          color: highlightedWords.contains(word)
+                            ? widget.textColor==Colors.black? primaryGreen.withOpacity(0.5):Colors.yellow.withOpacity(0.5)
                             : Colors.transparent,
                           child: Text(word, style: TextStyle(
                               fontSize: 18,
@@ -328,10 +373,12 @@ class _CommentsPage extends StatefulWidget {
     required this.subreddit,
     required this.textColor,
     required this.comments,
+    required this.unknownWords,
   });
   final List<dynamic> comments;
   final String subreddit;
   final Color textColor;
+  final List<String> unknownWords;
 
   @override
   State<_CommentsPage> createState() => _CommentsPageState();
@@ -341,7 +388,7 @@ class _CommentsPageState extends State<_CommentsPage> {
 
   Map<String, Map<String, dynamic>> wordDataAll = {};
   Map<String, dynamic> wordData = {};
-  String? highlightedWord;
+  List<String> highlightedWords=[];
   OverlayEntry? _overlayEntry;
   Timer? _hideTimer;
   double x = 0;
@@ -350,6 +397,7 @@ class _CommentsPageState extends State<_CommentsPage> {
   void initState() {
     super.initState();
     loadVoca();
+    loadBodyAndHighlight();
   }
 
   Future<void> loadVoca() async {
@@ -361,6 +409,26 @@ class _CommentsPageState extends State<_CommentsPage> {
     setState(() {
         wordDataAll = wordMap;
       });
+  }
+
+
+  Future<void> loadBodyAndHighlight() async {
+    final List<String> words = widget.comments
+        .cast<String>()
+        .expand((comment) => comment
+        .split(RegExp(r'\s+'))
+        .map((w) => w.trim())
+        .where((w) => w.isNotEmpty))
+        .toList();
+    setState(() {
+      highlightedWords = words.where((w) => widget.unknownWords.contains(w)).toList();
+    });
+  }
+
+  String shortenString(String? text) {
+    if (text == null) return "";
+    if (text.length <= 8) return text;
+    return text.substring(0, 8) + "..";
   }
 
   void showTooltip(BuildContext context, String word, Offset position) {
@@ -394,7 +462,7 @@ class _CommentsPageState extends State<_CommentsPage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            wordData['word_meaning'] ?? "",
+                            shortenString(wordData['word_meaning'] ?? ""),
                             style: TextStyle(fontSize: 18),
                           ),
                           IconButton(
@@ -479,6 +547,7 @@ class _CommentsPageState extends State<_CommentsPage> {
               child: Container(
                 padding: const EdgeInsets.symmetric(vertical: 4.0),
                 child: ListView.builder(
+                  physics: const NeverScrollableScrollPhysics(),
                   itemCount: widget.comments.length,
                   itemBuilder: (context, index) {
                     final String comment = widget.comments[index] as String;
@@ -506,13 +575,19 @@ class _CommentsPageState extends State<_CommentsPage> {
                                           },
                                           onLongPress: () {
                                             setState(() {
-                                                highlightedWord = highlightedWord == word ? null : word;
+                                              if (highlightedWords.contains(word)) {
+                                                // 이미 있으면 제거
+                                                highlightedWords.remove(word);
+                                              } else {
+                                                // 없으면 추가
+                                                highlightedWords.add(word);
+                                              }
                                               });
                                           },
                                           child: Container(
-                                            color: highlightedWord == word
-                                              ? Colors.yellow.withOpacity(0.5)
-                                              : Colors.transparent,
+                                            color: highlightedWords.contains(word)
+                                                ? widget.textColor==Colors.black? primaryGreen.withOpacity(0.5):Colors.yellow.withOpacity(0.5)
+                                                : Colors.transparent,
                                             child: Text(word, style: TextStyle(
                                                 fontSize: 18,
                                                 fontWeight: FontWeight.w700,

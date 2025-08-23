@@ -912,14 +912,6 @@
     }
   },
   {
-    "word": "know",
-    "word_meaning": "알다",
-    "example": {
-      "example_eng": "She knows the names of every kid in the school.",
-      "example_kor": "그녀는 학교 아이들의 이름을 다 알고 있다."
-    }
-  },
-  {
     "word": "knowing",
     "word_meaning": "빈틈 없는, 아는 체하는",
     "example": {
@@ -2029,6 +2021,150 @@
     "example": {
       "example_eng": "His work in zoology focused on the primates of Africa.",
       "example_kor": "그의 동물학 연구는 아프리카의 영장류에 초점을 맞추었다."
+    }
+  },
+  {
+    "word": "tactic",
+    "word_meaning": "전술, 전략",
+    "example": {
+      "example_eng": "He used a clever tactic to win the game.",
+      "example_kor": "그는 경기를 이기기 위해 영리한 전술을 사용했다."
+    }
+  },
+  {
+    "word": "online",
+    "word_meaning": "온라인의, 인터넷상의",
+    "example": {
+      "example_eng": "She bought clothes online.",
+      "example_kor": "그녀는 옷을 온라인으로 샀다."
+    }
+  },
+  {
+    "word": "obvious",
+    "word_meaning": "분명한, 명백한",
+    "example": {
+      "example_eng": "It was obvious that he was tired.",
+      "example_kor": "그가 피곤하다는 것은 분명했다."
+    }
+  },
+  {
+    "word": "optical",
+    "word_meaning": "광학의, 시각적인",
+    "example": {
+      "example_eng": "The microscope uses an optical lens.",
+      "example_kor": "그 현미경은 광학 렌즈를 사용한다."
+    }
+  },
+  {
+    "word": "photodiode",
+    "word_meaning": "포토다이오드 (빛에 반응하는 반도체 소자)",
+    "example": {
+      "example_eng": "The photodiode detects light intensity.",
+      "example_kor": "포토다이오드는 빛의 세기를 감지한다."
+    }
+  },
+  {
+    "word": "crumpled",
+    "word_meaning": "구겨진, 쭈글쭈글한",
+    "example": {
+      "example_eng": "He threw a crumpled paper into the bin.",
+      "example_kor": "그는 구겨진 종이를 휴지통에 던졌다."
+    }
+  },
+  {
+    "word": "cigarette",
+    "word_meaning": "담배",
+    "example": {
+      "example_eng": "Smoking a cigarette is harmful to health.",
+      "example_kor": "담배를 피우는 것은 건강에 해롭다."
+    }
+  },
+  {
+    "word": "stain",
+    "word_meaning": "얼룩, 더럽히다",
+    "example": {
+      "example_eng": "There is a coffee stain on the shirt.",
+      "example_kor": "셔츠에 커피 얼룩이 있다."
+    }
+  },
+  {
+    "word": "prenups",
+    "word_meaning": "혼전 계약서",
+    "example": {
+      "example_eng": "They signed prenups before marriage.",
+      "example_kor": "그들은 결혼 전에 혼전 계약서를 작성했다."
+    }
+  },
+  {
+    "word": "inheritance",
+    "word_meaning": "상속, 유산",
+    "example": {
+      "example_eng": "She received a house as her inheritance.",
+      "example_kor": "그녀는 유산으로 집을 물려받았다."
+    }
+  },
+  {
+    "word": "assets",
+    "word_meaning": "자산, 재산",
+    "example": {
+      "example_eng": "The company has many valuable assets.",
+      "example_kor": "그 회사는 많은 귀중한 자산을 가지고 있다."
+    }
+  },
+  {
+    "word": "decipher",
+    "word_meaning": "해독하다, 판독하다",
+    "example": {
+      "example_eng": "He tried to decipher the old handwriting.",
+      "example_kor": "그는 오래된 필체를 해독하려 했다."
+    }
+  },
+  {
+    "word": "drain",
+    "word_meaning": "배수하다, 고갈시키다",
+    "example": {
+      "example_eng": "The work began to drain his energy.",
+      "example_kor": "그 일은 그의 에너지를 고갈시키기 시작했다."
+    }
+  },
+  {
+    "word": "appetites",
+    "word_meaning": "식욕, 욕구",
+    "example": {
+      "example_eng": "The meal increased our appetites.",
+      "example_kor": "그 식사는 우리의 식욕을 자극했다."
+    }
+  },
+  {
+    "word": "doomscrolling",
+    "word_meaning": "부정적인 뉴스만 계속해서 읽는 행위",
+    "example": {
+      "example_eng": "He stayed up late doomscrolling on his phone.",
+      "example_kor": "그는 휴대폰으로 부정적인 뉴스만 보며 늦게까지 깨어 있었다."
+    }
+  },
+  {
+    "word": "flesh",
+    "word_meaning": "살, 고기",
+    "example": {
+      "example_eng": "The dog tore the meat from the bone and ate the flesh.",
+      "example_kor": "개가 뼈에서 고기를 뜯어내 살을 먹었다."
+    }
+  },
+  {
+    "word": "instinct",
+    "word_meaning": "본능, 직감",
+    "example": {
+      "example_eng": "Birds build nests by instinct.",
+      "example_kor": "새들은 본능적으로 둥지를 짓는다."
+    }
+  },
+  {
+    "word": "numeric",
+    "word_meaning": "숫자의, 수와 관련된",
+    "example": {
+      "example_eng": "The data is stored in numeric form.",
+      "example_kor": "그 데이터는 숫자 형태로 저장되어 있다."
     }
   }
 ]
