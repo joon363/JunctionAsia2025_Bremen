@@ -191,7 +191,7 @@ struct StudyFeedView: View {
                     ForEach(Array(demoPosts.enumerated()), id: \.offset) { idx, post in
                         PostFullScreenCard(post: post, screenSize: geo.size)
                             .frame(width: geo.size.width, height: geo.size.height) // 한 화면
-                            .background(Color(red: 0.98, green: 0.98, blue: 0.94))
+                            .background(Color("Ivory"))
                             .ignoresSafeArea()
                             .id(idx) // 위치 식별
                     }
@@ -240,6 +240,7 @@ struct PostFullScreenCard: View {
                 .padding(.horizontal, 20)
                 .padding(.top, 60)
                 Divider()
+                    .padding(.top, 20)
                 //Spacer()  //뭔가 이거 진짜 제거라는데
             }
            // 헤더 VStack의 실제 높이 측정
@@ -325,44 +326,90 @@ struct PageCell: View {
     var topInset: CGFloat = 0
     @State private var highlightedWords: Set<String> = []
 
+//    var body: some View {
+//        VStack(spacing: 16) {
+//            // 제목
+//            Color.clear.frame(height: topInset)
+//            Spacer()
+//            Text(page.title)
+//                .font(.system(size: 48, weight: .bold, design: .serif))
+//                .foregroundStyle(.black)
+//                .multilineTextAlignment(.center)
+//                .padding(.horizontal, 24)
+//            Spacer()
+//
+//            let tokens = page.body
+//                .components(separatedBy: .whitespacesAndNewlines)
+//                .filter { !$0.isEmpty }
+//
+//            WrappingHStack(hSpacing: 6, vSpacing: 10) {
+//                ForEach(tokens, id: \.self) { word in
+//                    let cleaned = word.trimmingCharacters(in: .punctuationCharacters)
+//
+//                    Text(word)
+//                        .font(.system(size: 24))
+//                        .padding(3)
+//                        .background(
+//                            highlightedWords.contains(cleaned) ? Color.yellow.opacity(0.5) : Color.clear
+//                        )
+//                        .clipShape(RoundedRectangle(cornerRadius: 5))
+//                        .onTapGesture { toggleHighlight(for: word) }
+//                }
+//            }
+//            .padding(.horizontal, 24)
+//            .padding(.top, 5)
+//            .frame(maxWidth: .infinity, alignment: .leading)
+//
+//            Spacer(minLength: 0) // 필요 없으면 이거도 제거 가능
+//        }//
+//        .frame(maxWidth: .infinity, maxHeight: .infinity)
+//        .background(Color("red: 0.98, green: 0.98, blue: 0.94"))
+//    }
     var body: some View {
         VStack(spacing: 16) {
-            // 제목
+            // Safe Area 고려 (상단 inset)
             Color.clear.frame(height: topInset)
+
+            // 제목 (세로 중앙 배치)
+            Spacer()
             Text(page.title)
                 .font(.system(size: 48, weight: .bold, design: .serif))
                 .foregroundStyle(.black)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 24)
+            Spacer()
 
-            let tokens = page.body
-                .components(separatedBy: .whitespacesAndNewlines)
-                .filter { !$0.isEmpty }
+            // 본문 (조금 더 위쪽에서 시작)
+            VStack {
+                let tokens = page.body
+                    .components(separatedBy: .whitespacesAndNewlines)
+                    .filter { !$0.isEmpty }
 
-            WrappingHStack(hSpacing: 6, vSpacing: 10) {
-                ForEach(tokens, id: \.self) { word in
-                    let cleaned = word.trimmingCharacters(in: .punctuationCharacters)
+                WrappingHStack(hSpacing: 6, vSpacing: 10) {
+                    ForEach(tokens, id: \.self) { word in
+                        let cleaned = word.trimmingCharacters(in: .punctuationCharacters)
 
-                    Text(word)
-                        .font(.system(size: 24))
-                        .padding(3)
-                        .background(
-                            highlightedWords.contains(cleaned) ? Color.yellow.opacity(0.5) : Color.clear
-                        )
-                        .clipShape(RoundedRectangle(cornerRadius: 5))
-                        .onTapGesture { toggleHighlight(for: word) }
+                        Text(word)
+                            .font(.system(size: 24))
+                            .padding(3)
+                            .background(
+                                highlightedWords.contains(cleaned) ? Color.yellow.opacity(0.5) : Color.clear
+                            )
+                            .clipShape(RoundedRectangle(cornerRadius: 5))
+                            .onTapGesture { toggleHighlight(for: word) }
+                    }
                 }
+                .padding(.horizontal, 24)
+                .padding(.top, 5)
+                .frame(maxWidth: .infinity, alignment: .leading)
             }
-            .padding(.horizontal, 24)
-            .padding(.top, 5)
-            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(.top, -150) // ← 제목과 너무 멀면 위로
 
-            Spacer(minLength: 0) // 필요 없으면 이거도 제거 가능
+            Spacer(minLength: 0)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color(red: 0.98, green: 0.98, blue: 0.94))
+        .background(Color("red: 0.98, green: 0.98, blue: 0.94"))
     }
-
     private func toggleHighlight(for word: String) {
         let cleanedWord = word.trimmingCharacters(in: .punctuationCharacters)
         guard !cleanedWord.isEmpty else { return }
