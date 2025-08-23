@@ -4,6 +4,7 @@
 //  Created by 임유리 on 8/23/25.
 //
 //
+//
 
 import SwiftUI
 
@@ -162,110 +163,105 @@ struct Post: Identifiable, Hashable {
 
 //MARK: 데이터 더 추가하기
 let demoPosts: [Post] = [
-    Post(author: "NameNameName", pages: [
-        Page(title: "This is an interesting title.", body: ""),
-        Page(title: "", body: "Lord is simply dummy text of the printing and typesetting industry Lord is simply dummy text of the printing and typesetting industry. Lord is simply dummy text of the printing and typesetting industry Lord is simply dummy text of the printing and typesetting industry."),
-        Page(title: "", body: "there are many apples.  Lord is simply dummy text of the printing and typesetting industry Lord is simply dummy text of the printing and typesetting industry. Lord is simply dummy text of the printing and typesetting industry Lord is simply dummy text of the printing and typesetting industry.")
+    Post(author: "Reddit", pages: [
+            Page(title: "Why did the CEO gave me a deck of cards to organize during the interview?", body: ""),
+            Page(title: "", body: "I’m just here to learn something. I’ve never seen this tactic before and cannot find anything about it online."),
+            Page(title: "", body: "What was the point of me organizing the deck of cards other that to just see if I could? There was a 6 missing also. ")
+        ]),
+        Post(author: "Reddit", pages: [
+            Page(title: "How hard would it likely be for alien to figure out how to play it?", body: ""),
+            Page(title: "", body: "i guess i’m wondering how obvious the design of a dvd player could be from just having a DVD itself to work off of")
+        ]),
+        Post(author: "Reddit", pages: [
+            Page(title: "Is my husband using drugs?", body: ""),
+            Page(title: "", body: "I found empty cigarette packs with used rubber gloves crumpled up inside. Some of the gloves look like they have blood inside. I've never seen any track marks on him and I've never known him to do this, but as we all know, every one has their secrets."),
+            Page(title: "", body: "Each empty pack has one or two gloves inside. They are all different colours. He doesn't use rubber gloves for work or at home. Does any one know if this is for drug use?"),
+            
+        ]),
+    Post(author: "Reddit", pages: [
+        Page(title: "Why do people get prenups?", body: ""),
+        Page(title: "", body: "So I've been seeing posts about prenups and I'm confused. Isn't it weird to plan for divorce before marriage?"),
+        Page(title: "", body: "I get it's for protecting assets, inheritance, or a business, but can't you just not put your spouse's name on things?"),
+        Page(title: "", body: "Also, how do you bring it up without killing the vibe? Is this mostly for rich people, or do regular folks do it too? "),
+        Page(title: "", body: "I've heard it can make divorce easier, but shouldn't the focus be on not getting divorced? Not judging, just trying to understand. ELI5 please."),
     ]),
-    Post(author: "NameNameName", pages: [
-        Page(title: "Title 2-1", body: ""),
-        Page(title: "", body: "Another page content for the same post. Lord is simply dummy text of the printing and typesetting industry Lord is simply dummy text of the printing and typesetting industry. Lord is simply dummy text of the printing and typesetting industry Lord is simply dummy text of the printing and typesetting industry.")
+    Post(author: "Reddit", pages: [
+        Page(title: "I’ve read that if you hit a parked car you should leave a note on the windshield.", body: ""),
+        Page(title: "", body: "What if the note blows away in the wind before the owner of the hit car returns? Can you get in trouble then?")
     ]),
-    Post(author: "NameNameName", pages: [
-        Page(title: "Title 3-1", body: ""),
-        Page(title: "", body: "Lord is simply dummy text of the printing and typesetting industry Lord is simply dummy text of the printing and typesetting industry. Lord is simply dummy text of the printing and typesetting industry Lord is simply dummy text of the printing and typesetting industry. Swipe vertically for next post."),
-        Page(title: "", body: "Swipe horizontally for parts.Lord is simply dummy text of the printing and typesetting industry Lord is simply dummy text of the printing and typesetting industry. Lord is simply dummy text of the printing and typesetting industry Lord is simply dummy text of the printing and typesetting industry."),
-        Page(title: "", body: "Lord is simply dummy text of the printing and typesetting industry Lord is simply dummy text of the printing and typesetting industry. Lord is simply dummy text of the printing and typesetting industry Lord is simply dummy text of the printing and typesetting industry.Swipe horizontally for parts.")
-    ])
+    Post(author: "Reddit", pages: [
+        Page(title: "Are hotel room cleaners happy when they see a “Do not disturb” sign?", body: ""),
+        Page(title: "", body: "I never care about getting my hotel room cleaned if I’m just there for a night or two. I don’t need new towels or my bed made. How can I make the lives of the cleaning staff easier?")
+    ]),
+        Post(author: "Reddit", pages: [
+            Page(title: "How do guys with butt chins shave the crack?", body: ""),
+            Page(title: "", body: "Do they have to pull the skin out or smth?")
+        ]),
+        Post(author: "Reddit", pages: [
+            Page(title: "Do new iPhones actually have worse batteries or am I just overthinking it?", body: ""),
+            Page(title: "", body: "Every time I get the newest iPhone the battery seems to die faster than my old one did when it was new. Within a few months I'm charging way more often."),
+            Page(title: "", body: "Do newer iPhones actually have worse batteries or could it be that phones are doing more in the background now maybe the brighter screens and heavier apps drain battery quicker even though the capacity is better"),
+            Page(title: "", body: "it feels like each upgrade comes with a battery downgrade. Has anyone else noticed this?")
+        ]),
+        Post(author: "Reddit", pages: [
+            Page(title: "Why don't they make weed-eaters with steel cable instead of plastic string?", body: ""),
+            Page(title: "", body: "Super dangerous, metal is both more likely to tear up flesh, but also more likely to break into dangerous splinters of metal as opposed to less harmful plastic. so people dont get maimed")
+        ])
 ]
 
-// MARK: - 스터디 피드 뷰 Root
-struct StudyFeedView: View {
-    @State private var currentPostIndex: Int = 0
 
+
+
+
+// MARK: - 스터디 피드 뷰 (Corrected)
+
+struct StudyFeedView: View {
     var body: some View {
-        GeometryReader { geo in
-            //MARK: 세로 넘어가기
-            ScrollView(.vertical) {
-                LazyVStack(spacing: 0) {
-                    ForEach(Array(demoPosts.enumerated()), id: \.offset) { idx, post in
-                        PostFullScreenCard(post: post, screenSize: geo.size)
-                            .frame(width: geo.size.width, height: geo.size.height) // 한 화면
-                            .background(Color("Ivory"))
-                            .ignoresSafeArea()
-                            .id(idx) // 위치 식별
-                    }
+        ScrollView(.vertical) {
+            LazyVStack(spacing: 0) {
+                ForEach(demoPosts) { post in
+                    
+                    PostFullScreenCard(post: post)
+                        .containerRelativeFrame(.vertical) // Makes each card fill the viewport height
+                        .id(post.id)
                 }
             }
-            .scrollIndicators(.hidden)
-            .scrollTargetLayout()
-            .scrollTargetBehavior(.paging) // 세로 페이징
         }
+        .scrollIndicators(.hidden)
+        .scrollTargetLayout()
+        .scrollTargetBehavior(.paging)
+        .ignoresSafeArea() // Ignore safe area at the top level
+        .background(Color("Ivory"))
     }
 }
-
-//수정용으로
+// MARK: - Post Card (Corrected)
 struct PostFullScreenCard: View {
     let post: Post
-    let screenSize: CGSize
-
     @State private var selectedPage: Int = 0
-    @State private var headerHeight: CGFloat = 0   //  헤더 실제 높이 저장
 
     var body: some View {
-        ZStack(alignment: .top) {
-            // 탭뷰 사용해서 넘기기
+        ZStack {
             TabView(selection: $selectedPage) {
                 ForEach(Array(post.pages.enumerated()), id: \.element.id) { idx, page in
-
-                    PageCell(page: page, topInset: headerHeight + CGFloat(50))
+                   
+                    PageCell(page: page)
                         .tag(idx)
-                        .frame(width: screenSize.width, height: screenSize.height)
-                        .contentShape(Rectangle())
                 }
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
-            .ignoresSafeArea()
 
-            //MARK: 상단 작성자 영역
-
-            VStack(spacing: 0) {
-                HStack(spacing: 12) {
-                    Circle().fill(Color.gray.opacity(0.4)).frame(width: 26, height: 26)
-                    Text(post.author)
-                        .foregroundStyle(.black.opacity(0.8))
-                        .font(.system(size: 20))
-                    Spacer()
-                }
-                .padding(.horizontal, 20)
-                .padding(.top, 60)
-                Divider()
-                    .padding(.top, 20)
-                //Spacer()  //뭔가 이거 진짜 제거라는데
-            }
-           // 헤더 VStack의 실제 높이 측정
-//            .background(
-//                GeometryReader { proxy in
-//                    Color.clear
-//                        .onAppear { headerHeight = proxy.size.height }
-//                        .onChange(of: proxy.size.height) { new in headerHeight = new }
-//                }
-//            )
-            // 헤더 컨테이너만 높이 측정
-                       .background(
-                           GeometryReader { proxy in
-                               Color.clear
-                                  .onAppear { headerHeight = proxy.size.height }
-                                   .onChange(of: proxy.size.height) { new in headerHeight = new }
-                           }
-                       )
-
-            // 인디케이터
             VStack {
                 Spacer()
-                PageDots(count: post.pages.count, index: selectedPage)
-                    .padding(.bottom, 44)
+                // Don't show dots if there's only one page
+                if post.pages.count > 1 {
+                    PageDots(count: post.pages.count, index: selectedPage)
+                        .padding(.bottom, 44)
+                }
             }
+        }
+
+        .safeAreaInset(edge: .top) {
+            PostHeader(author: post.author)
         }
     }
 }
@@ -319,29 +315,25 @@ struct WrappingHStack: Layout {
 }
 
 
-// MARK: - single 수평 페이지
-
+// MARK: - Page Cell (Corrected)
 struct PageCell: View {
     let page: Page
-    var topInset: CGFloat = 0
     @State private var highlightedWords: Set<String> = []
 
     var body: some View {
         VStack(spacing: 16) {
-            // safe area 고려해서 (상단 inset)
-            Color.clear.frame(height: topInset)
 
-            // 제목 (세로 중앙 배치)
-            Spacer()
-            Text(page.title)
-                .font(.system(size: 48, weight: .bold, design: .serif))
-                .foregroundStyle(.black)
-                .multilineTextAlignment(.center)
-                .padding(.horizontal, 24)
-            Spacer()
+            if !page.title.isEmpty {
+                Spacer()
+                Text(page.title)
+                    .font(.system(size: 48, weight: .bold, design: .serif))
+                    .foregroundStyle(.black)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 24)
+                Spacer()
+            }
 
-            // 본문 (조금 더 위쪽에서 시작)
-            VStack {
+            if !page.body.isEmpty {
                 let tokens = page.body
                     .components(separatedBy: .whitespacesAndNewlines)
                     .filter { !$0.isEmpty }
@@ -349,35 +341,26 @@ struct PageCell: View {
                 WrappingHStack(hSpacing: 6, vSpacing: 10) {
                     ForEach(tokens, id: \.self) { word in
                         let cleaned = word.trimmingCharacters(in: .punctuationCharacters)
-                        WordTokenView(
-                            originalWord: word,
-                            cleaned: cleaned,
-                            highlighted: $highlightedWords
-                        )
+                        WordTokenView(originalWord: word, cleaned: cleaned, highlighted: $highlightedWords)
                     }
                 }
                 .padding(.horizontal, 24)
-                .padding(.top, 5)
                 .frame(maxWidth: .infinity, alignment: .leading)
-
             }
-            .padding(.top, -150) // ← 제목과 너무 멀면 위로
-
-            Spacer(minLength: 0)
+            
+            // If the cell is only for body content, this spacer pushes it up.
+            // If it has a title, this gives some space at the bottom.
+            if !page.title.isEmpty || !page.body.isEmpty {
+                 Spacer(minLength: 0)
+            }
+           
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color("red: 0.98, green: 0.98, blue: 0.94"))
-    }
-    private func toggleHighlight(for word: String) {
-        let cleanedWord = word.trimmingCharacters(in: .punctuationCharacters)
-        guard !cleanedWord.isEmpty else { return }
-        if highlightedWords.contains(cleanedWord) {
-            highlightedWords.remove(cleanedWord)
-        } else {
-            highlightedWords.insert(cleanedWord)
-        }
+        // Note: The background is already set by the parent views,
+        // so you don't need to set it again here unless it's a different color.
     }
 }
+
 
 //MARK: 인디케이터 점 구현 관련
 struct PageDots: View {
@@ -427,11 +410,25 @@ func lookupWord(_ w: String) -> WordInfo {
                 "Have a word with Pat and see what she thinks."
             ]
         ),
-        "typesetting": .init(
-            word: "typesetting",
-            meanings: ["식자", "조판", "타이프세팅"],
+        "tactic": .init(
+            word: "tactic",
+            meanings: ["전략", "기술"],
             examples: [
-                "Digital typesetting changed publishing forever."
+                "They tried all kinds of tactics to get us to go."
+            ]
+        ),
+        "obvious": .init(
+            word: "obvious",
+            meanings: ["분명한", "확실한", "너무 뻔한"],
+            examples: [
+                "It was obvious to everyone that the child had been badly treated."
+            ]
+        ),
+        "rubber": .init(
+            word: "rubber",
+            meanings: ["고무", "지우개"],
+            examples: [
+                "Rubber clay. Right, rubber clay."
             ]
         )
     ]
@@ -503,6 +500,37 @@ struct WordTokenView: View {
             }
     }
 }
+
+//MARK: 작성자
+private struct PostHeader: View {
+    let author: String
+    var body: some View {
+        VStack(spacing: 0) {
+            HStack(spacing: 12) {
+//               대신 레딧 붙이기 완료 Circle().fill(Color.gray.opacity(0.4)).frame(width: 26, height: 26)
+                Image("Reddit")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 26, height: 26)
+                    .clipShape(Circle())
+                
+                Text(author)
+                    .foregroundStyle(.black.opacity(0.8))
+                    .font(.system(size: 20))
+                Spacer()
+            }
+            .padding(.horizontal, 20)
+            .padding(.top, 60) // Padding for the status bar area
+
+            Divider().padding(.top, 20)
+        }
+        // The header itself needs a background to overlay correctly
+        .background(Color("Ivory"))
+    }
+}
+
+
+
 //MARK: 큰 팝업 파트
 struct WordDetailSheet: View {
     let info: WordInfo
