@@ -55,7 +55,7 @@ class _PostWidgetState extends State<PostWidget> {
           // 2. Post Content (Horizontally Scrollable Pages)
           Container(
             // Use a fixed height based on screen width for a square aspect ratio
-            height: MediaQuery.of(context).size.width*(4/3),
+            height: MediaQuery.of(context).size.width * (4 / 3),
             color: widget.backgroundColor,
             child: PageView.builder(
               controller: _pageController,
@@ -65,8 +65,8 @@ class _PostWidgetState extends State<PostWidget> {
                 switch (index) {
                   case 0:
                     return _TitlePage(
-                        title: widget.post['title'],
-                        textColor: widget.textColor
+                      title: widget.post['title'],
+                      textColor: widget.textColor
                     );
                   case 1:
                     return _BodyPageWithTooltip(
@@ -78,7 +78,7 @@ class _PostWidgetState extends State<PostWidget> {
                     return _CommentsPage(
                       comments: widget.post['comments'],
                       subreddit: widget.post['subreddit'],
-                      textColor: widget.textColor
+                      textColor: widget.textColor,
                     );
                   default:
                   return const SizedBox.shrink();
@@ -255,7 +255,7 @@ class _BodyPageWithTooltipState extends State<_BodyPageWithTooltip> {
                       ),
                     ),
                   ),
-                  SmallTriangle(),
+                  _SmallTriangle(),
                 ],
               )
             ),
@@ -292,8 +292,9 @@ class _BodyPageWithTooltipState extends State<_BodyPageWithTooltip> {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            PostHeading(subreddit: widget.subreddit, textColor: widget.textColor),
+            _PostHeading(subreddit: widget.subreddit, textColor: widget.textColor),
             Divider(color: widget.textColor,),
+            SizedBox(height: 4,),
             Wrap(
               spacing: 4,
               children: words.map((word) {
@@ -313,7 +314,6 @@ class _BodyPageWithTooltipState extends State<_BodyPageWithTooltip> {
                             });
                         },
                         child: Container(
-                          //padding: EdgeInsets.symmetric(horizontal: 2, vertical: 1),
                           color: highlightedWord == word
                             ? Colors.yellow.withOpacity(0.5)
                             : Colors.transparent,
@@ -336,57 +336,225 @@ class _BodyPageWithTooltipState extends State<_BodyPageWithTooltip> {
   }
 }
 
-class _CommentsPage extends StatelessWidget {
+class _CommentsPage extends StatefulWidget {
+  const _CommentsPage({
+    required this.subreddit,
+    required this.textColor,
+    required this.comments,
+  });
   final List<dynamic> comments;
   final String subreddit;
   final Color textColor;
-  const _CommentsPage({required this.comments, required this.subreddit, required this.textColor});
+
+  @override
+  State<_CommentsPage> createState() => _CommentsPageState();
+}
+
+class _CommentsPageState extends State<_CommentsPage> {
+
+  Map<String, Map<String, dynamic>> wordDataAll = {};
+  Map<String, dynamic> wordData = {};
+  String? highlightedWord;
+  OverlayEntry? _overlayEntry;
+  Timer? _hideTimer;
+  double x = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    loadVoca();
+  }
+
+  Future<void> loadVoca() async {
+    final String jsonString = await rootBundle.loadString('assets/voca_all.json');
+    final List<dynamic> jsonData = json.decode(jsonString);
+    Map<String, Map<String, dynamic>> wordMap = {
+      for (var item in jsonData) item['word']: item
+    };
+    setState(() {
+      wordDataAll = wordMap;
+    });
+  }
+
+  void showTooltip(BuildContext context, String word, Offset position) {
+    hideTooltip(); // 기존 툴팁 제거
+    if (wordDataAll[word] == null) return;
+    wordData = wordDataAll[word]!;
+    x = (position.dx - 100);
+    if (x < -42) x = -42;
+    if (x > 220) x = 220;
+    _overlayEntry = OverlayEntry(
+      builder: (context) => Positioned(
+        left: x, // 중앙 정렬
+        top: position.dy - 60,
+        child: Material(
+            color: Colors.transparent,
+            child: SizedBox(
+              height: 60,
+              width: 200,
+              child: Center( // Center로 가운데 정렬
+                  child: Column(
+                    children: [
+                      IntrinsicWidth(
+                        child: Container(
+                          padding: EdgeInsets.only(left: 8, right: 0),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(4),
+                          ),
+                          alignment: Alignment.centerRight,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                wordData['word_meaning'] ?? "",
+                                style: TextStyle(fontSize: 18),
+                              ),
+                              IconButton(
+                                  onPressed: () {
+                                    hideTooltip();
+                                    showDialog(context: context, builder: (dialogContext) =>
+                                        AlertDialog(
+                                          //title:
+                                          content: Column(
+                                            mainAxisSize: MainAxisSize.min,
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            spacing: 4,
+                                            children: [
+                                              Text(word, style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),),
+                                              SizedBox(height: 4,),
+                                              Text(wordData['word_meaning'] ?? ""),
+                                              SizedBox(height: 8,),
+                                              Text("예문", style: TextStyle(fontWeight: FontWeight.bold)),
+                                              Text("• ${wordData['example']?['example_eng'] ?? ""}"),
+                                              Text("  ${wordData['example']?['example_kor'] ?? ""}"),
+                                            ],
+                                          ),
+                                          actions: [
+                                            Column(
+                                              children: [
+                                                Divider(),
+                                                TextButton(
+                                                  onPressed: () {
+                                                    Navigator.pop(dialogContext);
+                                                  },
+                                                  child: const Text('OK', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
+                                                ),
+                                              ],
+                                            )
+                                          ],
+                                          actionsAlignment: MainAxisAlignment.center,
+                                        ),
+                                    );
+                                  },
+                                  padding: EdgeInsets.zero, // 내부 여백 제거
+                                  icon: Icon(Icons.more_horiz)
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                      _SmallTriangle(),
+                    ],
+                  )
+              ),
+            )
+        ),
+      ),
+    );
+
+    Overlay.of(context).insert(_overlayEntry!);
+
+    _hideTimer?.cancel();
+    _hideTimer = Timer(Duration(seconds: 3), hideTooltip);
+  }
+
+  void hideTooltip() {
+    _overlayEntry?.remove();
+    _overlayEntry = null;
+    _hideTimer?.cancel();
+    _hideTimer = null;
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(16.0),
-      child: Column(
-        children: [
-          PostHeading(subreddit: subreddit, textColor: textColor),
-          Divider(color: textColor,),
-          Expanded(
-            child: Container(
-              padding: const EdgeInsets.symmetric(vertical: 12.0),
-              child: ListView.builder(
-                itemCount: comments.length,
-                itemBuilder: (context, index) {
-                  return Padding(
-                    padding: EdgeInsets.symmetric(vertical: 8),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Icon(Icons.comment, color: textColor, size: 20),
-                        const SizedBox(width: 12),
-                        Expanded(
-                          child: Text(
-                            comments[index],
-                            style: TextStyle(
-                              fontSize: 16,
-                              height: 1.4,
-                              color: textColor
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  );
-                },
-              ),
-            ))
-        ],
+    return GestureDetector(
+      behavior: HitTestBehavior.translucent,
+      onTap: () {
+        hideTooltip();
+      },
+      child: Container(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            _PostHeading(subreddit: widget.subreddit, textColor: widget.textColor),
+            Divider(color: widget.textColor,),
+            Expanded(
+              child: Container(
+                padding: const EdgeInsets.symmetric(vertical: 4.0),
+                child: ListView.builder(
+                  itemCount: widget.comments.length,
+                  itemBuilder: (context, index) {
+                    final String comment = widget.comments[index] as String;
+                    return Padding(
+                      padding: EdgeInsets.only(bottom: 16),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Icon(Icons.comment, color: widget.textColor, size: 20),
+                          const SizedBox(width: 12),
+                          Expanded(child: Wrap(
+                            spacing: 4,
+                            children: comment.split(RegExp(r'\s+'))
+                                .map((w) => w.trim())
+                                .where((w) => w.isNotEmpty)
+                                .toList().map((word) {
+                              return Builder(
+                                builder: (wordContext) {
+                                  return GestureDetector(
+                                    onTap: () {
+                                      final RenderBox box = wordContext.findRenderObject() as RenderBox;
+                                      //final position = box.localToGlobal(Offset(box.size.width/2, (-1)*box.size.height/2));
+                                      final position = box.localToGlobal(Offset(box.size.width / 2, 0));
+
+                                      showTooltip(wordContext, word, position);
+                                    },
+                                    onLongPress: () {
+                                      setState(() {
+                                        highlightedWord = highlightedWord == word ? null : word;
+                                      });
+                                    },
+                                    child: Container(
+                                      color: highlightedWord == word
+                                          ? Colors.yellow.withOpacity(0.5)
+                                          : Colors.transparent,
+                                      child: Text(word, style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.w700,
+                                          fontFamily: "Nanum",
+                                          color: widget.textColor
+                                      )),
+                                    ),
+                                  );
+                                },
+                              );
+                            }).toList(),
+                          ),)
+                        ],
+                      ),
+                    );
+                  },
+                ),
+              ))
+          ],
+        )
       )
     );
   }
 }
 
-class PostHeading extends StatelessWidget {
-  const PostHeading({
+class _PostHeading extends StatelessWidget {
+  const _PostHeading({
     super.key,
     required this.subreddit,
     required this.textColor
@@ -422,7 +590,7 @@ class PostHeading extends StatelessWidget {
   }
 }
 
-class TrianglePainter extends CustomPainter {
+class _TrianglePainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
@@ -442,14 +610,14 @@ class TrianglePainter extends CustomPainter {
   bool shouldRepaint(CustomPainter oldDelegate) => false;
 }
 
-class SmallTriangle extends StatelessWidget {
-  const SmallTriangle({super.key});
+class _SmallTriangle extends StatelessWidget {
+  const _SmallTriangle({super.key});
 
   @override
   Widget build(BuildContext context) {
     return CustomPaint(
       size: const Size(20, 10), // 작은 역삼각형 크기
-      painter: TrianglePainter(),
+      painter: _TrianglePainter(),
     );
   }
 }
