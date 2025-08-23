@@ -8,6 +8,15 @@
 import SwiftUI
 import Flow
 
+@main
+struct MyApp: App {
+   var body: some Scene {
+      WindowGroup {
+         FirstView()
+      }
+   }
+}
+
 struct FirstView: View {
     var body: some View {
         NavigationStack {
@@ -168,7 +177,9 @@ struct InlineHighlightView: View {
             HFlow(alignment: .center, itemSpacing: -5, rowSpacing: 8) {
                 ForEach(Array(wordItems.enumerated()), id: \.1.id) { idx, item in
                     Text(item.token)
-                        .background(selectedIndices.contains(idx) ? Color("CustomOrange") : Color.clear)
+                        .font(.system(size: 18))
+                        .background(selectedIndices.contains(idx) ? Color.yellow.opacity(0.5) : Color.clear)
+                        .clipShape(RoundedRectangle(cornerRadius: 5))
                         .padding(.horizontal, 4)
                         .padding(.vertical, 2)
                         .cornerRadius(4)
@@ -295,7 +306,7 @@ struct FourthView: View {
                     .foregroundColor(Color("Navy"))
                     .multilineTextAlignment(.center)
                 Divider().opacity(0).frame(height: 24)
-                NavigationLink(destination: SecondView()) {
+                NavigationLink(destination: ContentView()) {
                     Text("시작하기")
                         .bold()
                         .foregroundColor(.white)
@@ -314,5 +325,5 @@ struct FourthView: View {
 }
 
 #Preview {
-    FourthView()
+    ThirdView()
 }
