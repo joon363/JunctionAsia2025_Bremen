@@ -23,7 +23,7 @@ let sampleWords: [Word] = [
     .init(text: "typography",
           meaning: "활자체 디자인, 조판",
           partOfSpeech: "noun",
-          pronunciation: "ty·POG·ra·phy",
+          pronunciation: "taɪ|pɑːɡrəfi",
           examples: [
             "Good typography improves readability.",
             "She studied typography in art school."
@@ -32,7 +32,7 @@ let sampleWords: [Word] = [
     .init(text: "concise",
           meaning: "간결한",
           partOfSpeech: "adjective",
-          pronunciation: "con·CISE",
+          pronunciation: "kənˈsaɪs",
           examples: [
             "Please write concise explanations.",
             "A concise email is easier to read."
@@ -41,7 +41,7 @@ let sampleWords: [Word] = [
     .init(text: "abandon",
           meaning: "낮추다",
           partOfSpeech: "adjective",
-          pronunciation: "con·CISE",
+          pronunciation: "əˈbændən",
           examples: [
             "The president is not willing to abase himself before the nation, and admit that he made a mistake"
           ],
@@ -49,7 +49,7 @@ let sampleWords: [Word] = [
     .init(text: "abbreviate",
           meaning: "생략하다",
           partOfSpeech: "adjective",
-          pronunciation: "con·CISE",
+          pronunciation: "əˈbriːvieɪt",
           examples: [
             "Please write concise explanations.",
             "A concise email is easier to read."
@@ -58,7 +58,7 @@ let sampleWords: [Word] = [
     .init(text: "baker",
           meaning: "빵 제조 판매인",
           partOfSpeech: "adjective",
-          pronunciation: "con·CISE",
+          pronunciation: "ˈbeɪkə(r)",
           examples: [
             "The baker gets up early every morning to make fresh bread"
           ],
@@ -66,7 +66,7 @@ let sampleWords: [Word] = [
     .init(text: "cacophony",
           meaning: "불협화음",
           partOfSpeech: "adjective",
-          pronunciation: "con·CISE",
+          pronunciation: "kə|kɑːfəni",
           examples: [
             "Please write concise explanations.",
             "A concise email is easier to read."
@@ -75,7 +75,7 @@ let sampleWords: [Word] = [
     .init(text: "dainty",
           meaning: "맛 좋은",
           partOfSpeech: "adjective",
-          pronunciation: "con·CISE",
+          pronunciation: "ˈdeɪnti",
           examples: [
             "We were given tea, and some dainty little cakes"
           ],
@@ -83,7 +83,7 @@ let sampleWords: [Word] = [
     .init(text: "easygoing",
           meaning: "태평한",
           partOfSpeech: "adjective",
-          pronunciation: "con·CISE",
+          pronunciation: "í:ziɡóuiŋ",
           examples: [
             "Please write concise explanations.",
             "A concise email is easier to read."
@@ -92,7 +92,7 @@ let sampleWords: [Word] = [
     .init(text: "ecclesiastic",
           meaning: "성직자",
           partOfSpeech: "adjective",
-          pronunciation: "con·CISE",
+          pronunciation: "ɪˌkliːziˈæstɪk",
           examples: [
             "Please write concise explanations.",
             "A concise email is easier to read."
@@ -101,7 +101,7 @@ let sampleWords: [Word] = [
     .init(text: "eclecticism",
           meaning: "절충주의",
           partOfSpeech: "adjective",
-          pronunciation: "con·CISE",
+          pronunciation: "ɪˈklektɪk",
           examples: [
             "Please write concise explanations.",
             "A concise email is easier to read."
@@ -110,7 +110,7 @@ let sampleWords: [Word] = [
     .init(text: "gallant",
           meaning: "용감한",
           partOfSpeech: "adjective",
-          pronunciation: "con·CISE",
+          pronunciation: "ˈɡælənt",
           examples: [
             "Please write concise explanations.",
             "A concise email is easier to read."
