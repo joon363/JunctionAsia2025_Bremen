@@ -271,7 +271,7 @@ struct PostFullScreenCard: View {
 }
 
 
-// MARK: - 안정적인 줄바꿈 레이아웃
+// MARK: - 줄바꿈 레이아웃
 struct WrappingHStack: Layout {
     var hSpacing: CGFloat = 4
     var vSpacing: CGFloat = 8
@@ -326,48 +326,9 @@ struct PageCell: View {
     var topInset: CGFloat = 0
     @State private var highlightedWords: Set<String> = []
 
-//    var body: some View {
-//        VStack(spacing: 16) {
-//            // 제목
-//            Color.clear.frame(height: topInset)
-//            Spacer()
-//            Text(page.title)
-//                .font(.system(size: 48, weight: .bold, design: .serif))
-//                .foregroundStyle(.black)
-//                .multilineTextAlignment(.center)
-//                .padding(.horizontal, 24)
-//            Spacer()
-//
-//            let tokens = page.body
-//                .components(separatedBy: .whitespacesAndNewlines)
-//                .filter { !$0.isEmpty }
-//
-//            WrappingHStack(hSpacing: 6, vSpacing: 10) {
-//                ForEach(tokens, id: \.self) { word in
-//                    let cleaned = word.trimmingCharacters(in: .punctuationCharacters)
-//
-//                    Text(word)
-//                        .font(.system(size: 24))
-//                        .padding(3)
-//                        .background(
-//                            highlightedWords.contains(cleaned) ? Color.yellow.opacity(0.5) : Color.clear
-//                        )
-//                        .clipShape(RoundedRectangle(cornerRadius: 5))
-//                        .onTapGesture { toggleHighlight(for: word) }
-//                }
-//            }
-//            .padding(.horizontal, 24)
-//            .padding(.top, 5)
-//            .frame(maxWidth: .infinity, alignment: .leading)
-//
-//            Spacer(minLength: 0) // 필요 없으면 이거도 제거 가능
-//        }//
-//        .frame(maxWidth: .infinity, maxHeight: .infinity)
-//        .background(Color("red: 0.98, green: 0.98, blue: 0.94"))
-//    }
     var body: some View {
         VStack(spacing: 16) {
-            // Safe Area 고려 (상단 inset)
+            // safe area 고려해서 (상단 inset)
             Color.clear.frame(height: topInset)
 
             // 제목 (세로 중앙 배치)
@@ -388,20 +349,17 @@ struct PageCell: View {
                 WrappingHStack(hSpacing: 6, vSpacing: 10) {
                     ForEach(tokens, id: \.self) { word in
                         let cleaned = word.trimmingCharacters(in: .punctuationCharacters)
-
-                        Text(word)
-                            .font(.system(size: 24))
-                            .padding(3)
-                            .background(
-                                highlightedWords.contains(cleaned) ? Color.yellow.opacity(0.5) : Color.clear
-                            )
-                            .clipShape(RoundedRectangle(cornerRadius: 5))
-                            .onTapGesture { toggleHighlight(for: word) }
+                        WordTokenView(
+                            originalWord: word,
+                            cleaned: cleaned,
+                            highlighted: $highlightedWords
+                        )
                     }
                 }
                 .padding(.horizontal, 24)
                 .padding(.top, 5)
                 .frame(maxWidth: .infinity, alignment: .leading)
+
             }
             .padding(.top, -150) // ← 제목과 너무 멀면 위로
 
@@ -438,6 +396,189 @@ struct PageDots: View {
         .padding(.horizontal, 12)
         .padding(.vertical, 6)
         .background(.thinMaterial, in: Capsule())
+    }
+}
+
+
+//MARK: 툴팁, 팝업 파트
+
+struct WordInfo: Identifiable, Equatable {
+    let id = UUID()
+    let word: String
+    let meanings: [String]
+    let examples: [String]
+}
+
+func lookupWord(_ w: String) -> WordInfo {
+    // 샘플: 몇 개만 임시 등록
+    let dict: [String: WordInfo] = [
+        "swipe": .init(
+            word: "swipe",
+            meanings: ["비판", "훔치다"],
+            examples: [
+                "He used the interview to take a swipe at his critics."
+            ]
+        ),
+        "word": .init(
+            word: "word",
+            meanings: ["단어", "말을 쓰다", "이야기"],
+            examples: [
+                "Do not write more than 200 words.",
+                "Have a word with Pat and see what she thinks."
+            ]
+        ),
+        "typesetting": .init(
+            word: "typesetting",
+            meanings: ["식자", "조판", "타이프세팅"],
+            examples: [
+                "Digital typesetting changed publishing forever."
+            ]
+        )
+    ]
+    if let found = dict[w.lowercased().trimmingCharacters(in: .punctuationCharacters)] {
+        return found
+    } else {
+        return .init(word: w, meanings: ["준비 중"], examples: [])
+    }
+}
+
+//MARK: 툴팁과 + 버튼 달린 토큰 뷰
+struct WordTokenView: View {
+    let originalWord: String
+    let cleaned: String //점 제거
+    @Binding var highlighted: Set<String>
+
+    @State private var showPopover = false
+    @State private var showDetail = false
+    private var info: WordInfo { lookupWord(cleaned) }
+
+    var isHighlighted: Bool { highlighted.contains(cleaned) }
+
+    var body: some View {
+        Text(originalWord)
+            .font(.system(size: 24))
+            .padding(3)
+            .background(isHighlighted ? Color.yellow.opacity(0.5) : Color.clear)
+            .clipShape(RoundedRectangle(cornerRadius: 5))
+            .contentShape(Rectangle())
+            .onTapGesture {
+                // 형광펜 토글 + 툴팁 열기
+                if isHighlighted { highlighted.remove(cleaned) } else { highlighted.insert(cleaned) }
+                showPopover = true
+            }
+            .popover(isPresented: $showPopover,
+                     attachmentAnchor: .rect(.bounds),
+                     arrowEdge: .top) {
+                // 작은 툴팁 컨텐츠
+                VStack(alignment: .leading, spacing: 10) {
+                    HStack {
+                        Text(info.word)
+                            .font(.system(size: 20, weight: .bold))
+                        Spacer()
+                        Button {
+                            showDetail = true
+                        } label: {
+                            Image(systemName: "plus.circle")
+                                .font(.system(size: 18, weight: .semibold))
+                        }
+                        .buttonStyle(.plain)
+                    }
+
+                    if let first = info.meanings.first {
+                        Text(first)
+                            .font(.system(size: 16))
+                    } else {
+                        Text("뜻 없음")
+                            .font(.system(size: 16))
+                    }
+                }
+                .padding(14)
+                .frame(maxWidth: 260, alignment: .leading)
+                .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12))
+                .presentationCompactAdaptation(.popover)
+            }
+            .sheet(isPresented: $showDetail) {
+                WordDetailSheet(info: info)
+                    .presentationDetents([.medium, .large])
+            }
+    }
+}
+//MARK: 큰 팝업 파트
+struct WordDetailSheet: View {
+    let info: WordInfo
+    @Environment(\.dismiss) private var dismiss
+
+    var body: some View {
+        ZStack {
+            Color.black.opacity(0.05).ignoresSafeArea()
+
+            VStack {
+                Spacer(minLength: 12)
+
+                VStack(alignment: .leading, spacing: 16) {
+                    // 제목
+                    Text(info.word)
+                        .font(.system(size: 28, weight: .heavy))
+
+                    // 1) 의미 리스트
+                    if !info.meanings.isEmpty {
+                        VStack(alignment: .leading, spacing: 8) {
+                            ForEach(Array(info.meanings.enumerated()), id: \.offset) { i, m in
+                                HStack(alignment: .firstTextBaseline, spacing: 8) {
+                                    Text("\(i+1).")
+                                        .font(.system(size: 18, weight: .semibold))
+                                    Text(m)
+                                        .font(.system(size: 18))
+                                }
+                            }
+                        }
+                    }
+
+                    // 2) 예문
+                    if !info.examples.isEmpty {
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("예문")
+                                .font(.system(size: 16, weight: .semibold))
+                                .padding(.top, 4)
+
+                            VStack(alignment: .leading, spacing: 6) {
+                                ForEach(info.examples, id: \.self) { ex in
+                                    HStack(alignment: .top, spacing: 8) {
+                                        Text("•")
+                                        Text(ex)
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    Divider().padding(.vertical, 6)
+
+                    // OK 버튼
+                    Button {
+                        dismiss()
+                    } label: {
+                        Text("OK")
+                            .font(.system(size: 20, weight: .semibold))
+                            .frame(maxWidth: .infinity)
+                    }
+                    .buttonStyle(.plain)
+                    .padding(.bottom, 6)
+                }
+                .padding(22)
+                .background(
+                    RoundedRectangle(cornerRadius: 26)
+                        .fill(Color(red: 1.0, green: 0.98, blue: 0.88)) // 아이보리 톤
+                )
+                .overlay(
+                    RoundedRectangle(cornerRadius: 26)
+                        .stroke(Color("CustomOrange"), lineWidth: 3)
+                )
+                .padding(.horizontal, 24)
+
+                Spacer(minLength: 32)
+            }
+        }
     }
 }
 
