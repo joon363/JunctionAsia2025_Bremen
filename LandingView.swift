@@ -27,13 +27,13 @@ struct FirstView: View {
                     .padding(.top, 50)
                 Text("Enjoy every fandom,\nnow in English.")
                     .padding(.top, -50)
-                    .font(.system(size: 26))
+                    .font(.system(size: 26, design: .serif))
                     .fontWeight(.medium)
                     .foregroundColor(Color("Navy"))
                     .multilineTextAlignment(.center)
                 Divider().opacity(0).frame(height: 24)
                 NavigationLink(destination: SecondView()) {
-                    Text("Join")
+                    Text("시작하기")
                         .bold()
                         .foregroundColor(.white)
                         .padding()
@@ -138,7 +138,7 @@ struct SecondView: View {
                         .fill(Color("CustomOrange")) // Color("CustomOrange") 대신 사용
                         .frame(height: 60) // 버튼 높이 설정
                         .overlay(
-                            Text("Next")
+                            Text("다음")
                                 .bold()
                                 .foregroundColor(.white)
                         )
@@ -267,7 +267,7 @@ struct ThirdView: View {
                         .fill(Color("CustomOrange"))
                         .frame(height: 60) // 버튼 높이 설정
                         .overlay(
-                            Text("Next")
+                            Text("다음")
                                 .bold()
                                 .foregroundColor(.white)
                         )
@@ -308,13 +308,13 @@ struct FourthView: View {
                     .padding(.top, 50)
                 Text("Let's start learning now!")
                     .padding(.top, -50)
-                    .font(.system(size: 24))
+                    .font(.system(size: 24, design: .serif))
                     .fontWeight(.medium)
                     .foregroundColor(Color("Navy"))
                     .multilineTextAlignment(.center)
                 Divider().opacity(0).frame(height: 24)
                 NavigationLink(destination: ContentView()) {
-                    Text("Start")
+                    Text("시작하기")
                         .bold()
                         .foregroundColor(.white)
                         .padding()
