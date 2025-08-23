@@ -211,6 +211,7 @@ struct ContentView: View {
                 }) {
                     Text("Study")
                         .font(.headline)
+                        .font(.system(size: 32))
                         .foregroundColor(Color.orange)
                 }
                 
@@ -233,13 +234,13 @@ struct ContentView: View {
                 TabView {
                     StaticsView()
                         .tabItem {
-                            Image(systemName: "doc.text.below.ecg")
+                            Image(systemName: "chart.bar")
                             Text("Statistics")
                         }
                     
                     StudyTabView()
                         .tabItem {
-                            Image(systemName: "pencil.circle")
+                            Image(systemName: "highlighter")
                             Text("Study")
                         }
                     

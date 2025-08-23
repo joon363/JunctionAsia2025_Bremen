@@ -82,6 +82,42 @@ let sampleWords: [Word] = [
             "Please write concise explanations.",
             "A concise email is easier to read."
           ],
+          synonyms: ["brief", "succinct", "terse"]),
+    .init(text: "concise",
+          meaning: "간결한",
+          partOfSpeech: "adjective",
+          pronunciation: "con·CISE",
+          examples: [
+            "Please write concise explanations.",
+            "A concise email is easier to read."
+          ],
+          synonyms: ["brief", "succinct", "terse"]),
+    .init(text: "concise",
+          meaning: "간결한",
+          partOfSpeech: "adjective",
+          pronunciation: "con·CISE",
+          examples: [
+            "Please write concise explanations.",
+            "A concise email is easier to read."
+          ],
+          synonyms: ["brief", "succinct", "terse"]),
+    .init(text: "concise",
+          meaning: "간결한",
+          partOfSpeech: "adjective",
+          pronunciation: "con·CISE",
+          examples: [
+            "Please write concise explanations.",
+            "A concise email is easier to read."
+          ],
+          synonyms: ["brief", "succinct", "terse"]),
+    .init(text: "concise",
+          meaning: "간결한",
+          partOfSpeech: "adjective",
+          pronunciation: "con·CISE",
+          examples: [
+            "Please write concise explanations.",
+            "A concise email is easier to read."
+          ],
           synonyms: ["brief", "succinct", "terse"])
 ]
 
@@ -99,7 +135,7 @@ struct WordbookView: View {
             }
             .padding(.vertical, 16)
         }
-        .background(WordbookColors.paper.ignoresSafeArea(edges:.top))
+        //.background(WordbookColors.paper.ignoresSafeArea(edges:.top))
         .navigationTitle("Wordbook")
     }
 }
@@ -190,12 +226,12 @@ struct WordDetailCard: View {
                 }
             }
         }
-        .padding(16)
+        .padding(12)
         .frame(maxWidth: 360)
         .background(
-            RoundedRectangle(cornerRadius: 16)
-                .fill(WordbookColors.card)
-                .shadow(color: .black.opacity(0.1), radius: 10, y: 6)
+            //RoundedRectangle(cornerRadius: 16)
+                //.fill(WordbookColors.card)
+                //.shadow(color: .black.opacity(0.1), radius: 10, y: 6)
         )
         .padding(8)
     }
