@@ -32,16 +32,16 @@ class AppTheme {
         ),
       ),
       appBarTheme: AppBarTheme(
-          backgroundColor: Colors.white,
-          scrolledUnderElevation: 0,
-          surfaceTintColor: Colors.transparent,
-          centerTitle: true
+        backgroundColor: Colors.white,
+        scrolledUnderElevation: 0,
+        surfaceTintColor: Colors.transparent,
+        centerTitle: true
       ),
       checkboxTheme: CheckboxThemeData(
         fillColor: WidgetStateProperty.all(Colors.white),
         checkColor: WidgetStateProperty.all(Colors.white),
         overlayColor: WidgetStateProperty.resolveWith<Color?>(
-              (states) {
+          (states) {
             if (states.contains(WidgetState.pressed)) {
               return primaryColorLight;
             }

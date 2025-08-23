@@ -50,33 +50,33 @@ class _WordListPageState extends State<WordListPage> {
     final String response = await rootBundle.loadString('assets/voca_user.json');
     final List<dynamic> data = json.decode(response);
     setState(() {
-      _words = data.map((json) => Word.fromJson(json)).toList();
-    });
+        _words = data.map((json) => Word.fromJson(json)).toList();
+      });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: _words.isEmpty
-          ? const Center(child: CircularProgressIndicator()) // 로딩 중 표시
-          : ListView.builder(
-        itemCount: _words.length,
-        itemBuilder: (context, index) {
-          return ListTile(
-            title: Text(_words[index].word),
-            subtitle: Text(_words[index].wordMeaning, overflow: TextOverflow.ellipsis,),
-            onTap: () {
-              // 단어를 탭하면 상세 페이지로 이동
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => WordDetailPage(word: _words[index]),
-                ),
-              );
-            },
-          );
-        },
-      ),
+        ? const Center(child: CircularProgressIndicator()) // 로딩 중 표시
+        : ListView.builder(
+          itemCount: _words.length,
+          itemBuilder: (context, index) {
+            return ListTile(
+              title: Text(_words[index].word),
+              subtitle: Text(_words[index].wordMeaning, overflow: TextOverflow.ellipsis,),
+              onTap: () {
+                // 단어를 탭하면 상세 페이지로 이동
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => WordDetailPage(word: _words[index]),
+                  ),
+                );
+              },
+            );
+          },
+        ),
     );
   }
 }

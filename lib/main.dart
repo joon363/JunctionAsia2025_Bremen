@@ -57,13 +57,13 @@ class _MainScreenState extends State<MainScreen> {
 
   void _onItemTapped(int index) {
     setState(() {
-      _selectedIndex = index;
-      _pageController.animateToPage(
-        index,
-        duration: const Duration(milliseconds: 300),
-        curve: Curves.easeInOut,
-      );
-    });
+        _selectedIndex = index;
+        _pageController.animateToPage(
+          index,
+          duration: const Duration(milliseconds: 300),
+          curve: Curves.easeInOut,
+        );
+      });
   }
 
   @override
@@ -84,8 +84,8 @@ class _MainScreenState extends State<MainScreen> {
         physics: const NeverScrollableScrollPhysics(), // 스크롤 불가능
         onPageChanged: (index) {
           setState(() {
-            _selectedIndex = index;
-          });
+              _selectedIndex = index;
+            });
         },
         // PageView에 WordListPage 추가
         children: const <Widget>[
@@ -260,7 +260,7 @@ class StatsChart extends StatelessWidget {
         lineBarsData: [
           // User's progress line
           LineChartBarData(
-            spots: const [
+            spots: const[
               FlSpot(0, 4.5), FlSpot(1, 4.2), FlSpot(2.5, 4), FlSpot(4, 3.5), FlSpot(5.5, 3.2),
             ],
             isCurved: true,
@@ -272,7 +272,7 @@ class StatsChart extends StatelessWidget {
           ),
           // Average line
           LineChartBarData(
-            spots: const [
+            spots: const[
               FlSpot(0, 3), FlSpot(1.5, 2.8), FlSpot(3, 2.5), FlSpot(4.5, 2.2), FlSpot(6, 2),
             ],
             isCurved: true,
@@ -321,7 +321,7 @@ class StatsChart extends StatelessWidget {
         text = '저';
         break;
       default:
-        return Container();
+      return Container();
     }
     return Text(text, style: style, textAlign: TextAlign.left);
   }

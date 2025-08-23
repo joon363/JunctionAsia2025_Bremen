@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'dart:convert';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 // A widget representing a single post in the feed
@@ -204,19 +203,19 @@ class _BodyPageWithTooltipState extends State<_BodyPageWithTooltip> {
       for (var item in jsonData) item['word']: item
     };
     setState(() {
-      wordDataAll = wordMap;
+        wordDataAll = wordMap;
       });
   }
 
   void showTooltip(BuildContext context, String word, Offset position) {
     hideTooltip(); // 기존 툴팁 제거
-    if(wordDataAll[word]==null) return;
-    wordData=wordDataAll[word]!;
+    if (wordDataAll[word] == null) return;
+    wordData = wordDataAll[word]!;
     print(position.dx - 100);
     _overlayEntry = OverlayEntry(
       builder: (context) => Positioned(
-        left: (position.dx - 100)<-42?-42:(position.dx - 100), // 중앙 정렬
-        top: position.dy-60,
+        left: (position.dx - 100) < -42 ? -42 : (position.dx - 100), // 중앙 정렬
+        top: position.dy - 60,
         child: Material(
           color: Colors.transparent,
           child: SizedBox(
@@ -225,7 +224,7 @@ class _BodyPageWithTooltipState extends State<_BodyPageWithTooltip> {
             child: Center( // Center로 가운데 정렬
               child: IntrinsicWidth(
                 child: Container(
-                  padding: EdgeInsets.only(left: 8, right:0, top:4, bottom:4),
+                  padding: EdgeInsets.only(left: 8, right: 0, top: 4, bottom: 4),
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(4),
@@ -235,41 +234,41 @@ class _BodyPageWithTooltipState extends State<_BodyPageWithTooltip> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        wordData['word_meaning']??"",
+                        wordData['word_meaning'] ?? "",
                         style: TextStyle(fontSize: 18),
                       ),
                       IconButton(
-                          onPressed: () {
-                            hideTooltip();
-                            showDialog(context: context, builder: (dialogContext) =>
-                                AlertDialog(
-                                  //title:
-                                  content: Column(
-                                    mainAxisSize: MainAxisSize.min,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    spacing: 4,
-                                    children: [
-                                      Text(word, style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),),
-                                      Text(wordData['word_meaning'] ?? ""),
-                                      SizedBox(height: 8,),
-                                      Text("예문", style: TextStyle(fontWeight: FontWeight.bold)),
-                                      Text(wordData['example']?['example_eng'] ?? ""),
-                                      Text(wordData['example']?['example_kor'] ?? ""),
-                                    ],
-                                  ),
-                                  actions: [
-                                    TextButton(
-                                      onPressed: () {
-                                        Navigator.pop(dialogContext);
-                                      },
-                                      child: const Text('닫기'),
-                                    ),
-                                  ],
+                        onPressed: () {
+                          hideTooltip();
+                          showDialog(context: context, builder: (dialogContext) =>
+                            AlertDialog(
+                              //title:
+                              content: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                spacing: 4,
+                                children: [
+                                  Text(word, style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),),
+                                  Text(wordData['word_meaning'] ?? ""),
+                                  SizedBox(height: 8,),
+                                  Text("예문", style: TextStyle(fontWeight: FontWeight.bold)),
+                                  Text(wordData['example']?['example_eng'] ?? ""),
+                                  Text(wordData['example']?['example_kor'] ?? ""),
+                                ],
+                              ),
+                              actions: [
+                                TextButton(
+                                  onPressed: () {
+                                    Navigator.pop(dialogContext);
+                                  },
+                                  child: const Text('닫기'),
                                 ),
-                            );
-                          },
-                          padding: EdgeInsets.zero, // 내부 여백 제거
-                          icon: Icon(Icons.more_horiz)
+                              ],
+                            ),
+                          );
+                        },
+                        padding: EdgeInsets.zero, // 내부 여백 제거
+                        icon: Icon(Icons.more_horiz)
                       )
                     ],
                   ),
@@ -312,31 +311,31 @@ class _BodyPageWithTooltipState extends State<_BodyPageWithTooltip> {
           child: Wrap(
             spacing: 4,
             children: words.map((word) {
-              return Builder(
-                builder: (wordContext) {
-                  return GestureDetector(
-                    onTap: () {
-                      final RenderBox box = wordContext.findRenderObject() as RenderBox;
-                      //final position = box.localToGlobal(Offset(box.size.width/2, (-1)*box.size.height/2));
-                      final position = box.localToGlobal(Offset(box.size.width/2,0));
+                return Builder(
+                  builder: (wordContext) {
+                    return GestureDetector(
+                      onTap: () {
+                        final RenderBox box = wordContext.findRenderObject() as RenderBox;
+                        //final position = box.localToGlobal(Offset(box.size.width/2, (-1)*box.size.height/2));
+                        final position = box.localToGlobal(Offset(box.size.width / 2, 0));
 
-                      showTooltip(wordContext, word, position);
-                    },
-                    onLongPress: () {
-                      setState(() {
-                        highlightedWord = highlightedWord == word ? null : word;
-                      });
-                    },
-                    child: Container(
-                      padding: EdgeInsets.symmetric(horizontal: 2, vertical: 1),
-                      color: highlightedWord == word
+                        showTooltip(wordContext, word, position);
+                      },
+                      onLongPress: () {
+                        setState(() {
+                            highlightedWord = highlightedWord == word ? null : word;
+                          });
+                      },
+                      child: Container(
+                        padding: EdgeInsets.symmetric(horizontal: 2, vertical: 1),
+                        color: highlightedWord == word
                           ? Colors.yellow.withOpacity(0.5)
                           : Colors.transparent,
-                      child: Text(word, style: TextStyle(fontSize: 18)),
-                    ),
-                  );
-                },
-              );
+                        child: Text(word, style: TextStyle(fontSize: 18)),
+                      ),
+                    );
+                  },
+                );
               }).toList(),
           ),
         ),

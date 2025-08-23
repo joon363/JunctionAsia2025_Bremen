@@ -24,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Future<List<dynamic>> _loadPostsData() async {
     // Load the JSON string from the asset bundle
     final String jsonString =
-    await rootBundle.loadString('assets/selected_posts.json');
+      await rootBundle.loadString('assets/selected_posts.json');
     // Decode the JSON string into a List
     final List<dynamic> jsonList = json.decode(jsonString);
     return jsonList;
