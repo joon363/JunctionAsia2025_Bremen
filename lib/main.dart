@@ -1,18 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:fl_chart/fl_chart.dart';
-import 'dart:math';
 import 'words_screen.dart';
 import 'home_screen.dart';
 import 'theme.dart';
 import 'statistics_screen.dart';
 
-// Main function to run the app
 void main() {
   runApp(const MyApp());
 }
 
-// The root widget of the application
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -27,9 +23,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// =================================================================
-// Main Screen with Bottom Navigation
-// =================================================================
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
 
@@ -41,7 +34,6 @@ class _MainScreenState extends State<MainScreen> {
   int _selectedIndex = 1;
   final PageController _pageController = PageController(initialPage: 1);
 
-  // 각 탭에 해당하는 AppBar 제목 리스트
   static const List<String> _appBarTitles = [
     'Statistics',
     'Study',
@@ -71,7 +63,6 @@ class _MainScreenState extends State<MainScreen> {
       top: false,
       child: Scaffold(
         appBar: AppBar(
-          // 선택된 인덱스에 따라 제목을 동적으로 변경
           title: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -89,13 +80,12 @@ class _MainScreenState extends State<MainScreen> {
         ),
         body: PageView(
           controller: _pageController,
-          physics: const NeverScrollableScrollPhysics(), // 스크롤 불가능
+          physics: const NeverScrollableScrollPhysics(),
           onPageChanged: (index) {
             setState(() {
                 _selectedIndex = index;
               });
           },
-          // PageView에 WordListPage 추가
           children: const <Widget>[
             ProfileScreen(),
             HomeScreen(),
@@ -104,7 +94,7 @@ class _MainScreenState extends State<MainScreen> {
         ),
         bottomNavigationBar: Container(
           decoration: BoxDecoration(
-            border: Border(top: BorderSide(color: Colors.black26, width: 1.0)), // 라인효과
+            border: Border(top: BorderSide(color: Colors.black26, width: 1.0)),
           ),
           child: BottomNavigationBar(
             backgroundColor: boxGrayColor,
@@ -116,7 +106,7 @@ class _MainScreenState extends State<MainScreen> {
             ),
             unselectedLabelStyle: TextStyle(
               fontSize: 12,
-              color: Colors.black, // 제목 색
+              color: Colors.black,
             ),
             items: const <BottomNavigationBarItem>[
               BottomNavigationBarItem(

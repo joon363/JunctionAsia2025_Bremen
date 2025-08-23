@@ -2,8 +2,6 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:reelstudy/theme.dart';
-// A widget representing a single post in the feed
 class PostWidget extends StatefulWidget {
   final Map<String, dynamic> post;
   final Color backgroundColor;
@@ -19,13 +17,11 @@ class PostWidget extends StatefulWidget {
 }
 
 class _PostWidgetState extends State<PostWidget> {
-  // Controller to manage the pages and listen for page changes
   final PageController _pageController = PageController();
   int _currentPage = 0;
   @override
   void initState() {
     super.initState();
-    // Add a listener to the controller to update the current page index
     _pageController.addListener(() {
         if (_pageController.page?.round() != _currentPage) {
           setState(() {
@@ -43,7 +39,6 @@ class _PostWidgetState extends State<PostWidget> {
 
   @override
   Widget build(BuildContext context) {
-    // The number of pages is fixed at 3: Title, Body, Comments
     const int pageCount = 3;
 
     return Center(
@@ -51,17 +46,13 @@ class _PostWidgetState extends State<PostWidget> {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-
-          // 2. Post Content (Horizontally Scrollable Pages)
           Container(
-            // Use a fixed height based on screen width for a square aspect ratio
             height: MediaQuery.of(context).size.width * (4 / 3),
             color: widget.backgroundColor,
             child: PageView.builder(
               controller: _pageController,
               itemCount: pageCount,
               itemBuilder: (context, index) {
-                // Return the correct page widget based on the index
                 switch (index) {
                   case 0:
                     return _TitlePage(
@@ -86,8 +77,6 @@ class _PostWidgetState extends State<PostWidget> {
               },
             ),
           ),
-
-          // 3. Action Buttons and Page Indicator
           Padding(
             padding:
             const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
@@ -178,7 +167,7 @@ class _BodyPageWithTooltipState extends State<_BodyPageWithTooltip> {
   }
 
   void showTooltip(BuildContext context, String word, Offset position) {
-    hideTooltip(); // 기존 툴팁 제거
+    hideTooltip();
     if (wordDataAll[word] == null) return;
     wordData = wordDataAll[word]!;
     x = (position.dx - 100);
@@ -186,14 +175,14 @@ class _BodyPageWithTooltipState extends State<_BodyPageWithTooltip> {
     if (x > 220) x = 220;
     _overlayEntry = OverlayEntry(
       builder: (context) => Positioned(
-        left: x, // 중앙 정렬
+        left: x,
         top: position.dy - 60,
         child: Material(
           color: Colors.transparent,
           child: SizedBox(
             height: 60,
             width: 200,
-            child: Center( // Center로 가운데 정렬
+            child: Center(
               child: Column(
                 children: [
                   IntrinsicWidth(
@@ -216,7 +205,6 @@ class _BodyPageWithTooltipState extends State<_BodyPageWithTooltip> {
                               hideTooltip();
                               showDialog(context: context, builder: (dialogContext) =>
                                 AlertDialog(
-                                  //title:
                                   content: Column(
                                     mainAxisSize: MainAxisSize.min,
                                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -248,7 +236,7 @@ class _BodyPageWithTooltipState extends State<_BodyPageWithTooltip> {
                                 ),
                               );
                             },
-                            padding: EdgeInsets.zero, // 내부 여백 제거
+                            padding: EdgeInsets.zero,
                             icon: Icon(Icons.more_horiz)
                           )
                         ],
@@ -303,7 +291,6 @@ class _BodyPageWithTooltipState extends State<_BodyPageWithTooltip> {
                       return GestureDetector(
                         onTap: () {
                           final RenderBox box = wordContext.findRenderObject() as RenderBox;
-                          //final position = box.localToGlobal(Offset(box.size.width/2, (-1)*box.size.height/2));
                           final position = box.localToGlobal(Offset(box.size.width / 2, 0));
 
                           showTooltip(wordContext, word, position);
@@ -372,12 +359,12 @@ class _CommentsPageState extends State<_CommentsPage> {
       for (var item in jsonData) item['word']: item
     };
     setState(() {
-      wordDataAll = wordMap;
-    });
+        wordDataAll = wordMap;
+      });
   }
 
   void showTooltip(BuildContext context, String word, Offset position) {
-    hideTooltip(); // 기존 툴팁 제거
+    hideTooltip();
     if (wordDataAll[word] == null) return;
     wordData = wordDataAll[word]!;
     x = (position.dx - 100);
@@ -385,80 +372,79 @@ class _CommentsPageState extends State<_CommentsPage> {
     if (x > 220) x = 220;
     _overlayEntry = OverlayEntry(
       builder: (context) => Positioned(
-        left: x, // 중앙 정렬
+        left: x,
         top: position.dy - 60,
         child: Material(
-            color: Colors.transparent,
-            child: SizedBox(
-              height: 60,
-              width: 200,
-              child: Center( // Center로 가운데 정렬
-                  child: Column(
-                    children: [
-                      IntrinsicWidth(
-                        child: Container(
-                          padding: EdgeInsets.only(left: 8, right: 0),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(4),
-                          ),
-                          alignment: Alignment.centerRight,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                wordData['word_meaning'] ?? "",
-                                style: TextStyle(fontSize: 18),
-                              ),
-                              IconButton(
-                                  onPressed: () {
-                                    hideTooltip();
-                                    showDialog(context: context, builder: (dialogContext) =>
-                                        AlertDialog(
-                                          //title:
-                                          content: Column(
-                                            mainAxisSize: MainAxisSize.min,
-                                            crossAxisAlignment: CrossAxisAlignment.start,
-                                            spacing: 4,
-                                            children: [
-                                              Text(word, style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),),
-                                              SizedBox(height: 4,),
-                                              Text(wordData['word_meaning'] ?? ""),
-                                              SizedBox(height: 8,),
-                                              Text("예문", style: TextStyle(fontWeight: FontWeight.bold)),
-                                              Text("• ${wordData['example']?['example_eng'] ?? ""}"),
-                                              Text("  ${wordData['example']?['example_kor'] ?? ""}"),
-                                            ],
-                                          ),
-                                          actions: [
-                                            Column(
-                                              children: [
-                                                Divider(),
-                                                TextButton(
-                                                  onPressed: () {
-                                                    Navigator.pop(dialogContext);
-                                                  },
-                                                  child: const Text('OK', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
-                                                ),
-                                              ],
-                                            )
-                                          ],
-                                          actionsAlignment: MainAxisAlignment.center,
-                                        ),
-                                    );
-                                  },
-                                  padding: EdgeInsets.zero, // 내부 여백 제거
-                                  icon: Icon(Icons.more_horiz)
-                              )
-                            ],
-                          ),
-                        ),
+          color: Colors.transparent,
+          child: SizedBox(
+            height: 60,
+            width: 200,
+            child: Center(
+              child: Column(
+                children: [
+                  IntrinsicWidth(
+                    child: Container(
+                      padding: EdgeInsets.only(left: 8, right: 0),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(4),
                       ),
-                      _SmallTriangle(),
-                    ],
-                  )
-              ),
-            )
+                      alignment: Alignment.centerRight,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            wordData['word_meaning'] ?? "",
+                            style: TextStyle(fontSize: 18),
+                          ),
+                          IconButton(
+                            onPressed: () {
+                              hideTooltip();
+                              showDialog(context: context, builder: (dialogContext) =>
+                                AlertDialog(
+                                  content: Column(
+                                    mainAxisSize: MainAxisSize.min,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    spacing: 4,
+                                    children: [
+                                      Text(word, style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),),
+                                      SizedBox(height: 4,),
+                                      Text(wordData['word_meaning'] ?? ""),
+                                      SizedBox(height: 8,),
+                                      Text("예문", style: TextStyle(fontWeight: FontWeight.bold)),
+                                      Text("• ${wordData['example']?['example_eng'] ?? ""}"),
+                                      Text("  ${wordData['example']?['example_kor'] ?? ""}"),
+                                    ],
+                                  ),
+                                  actions: [
+                                    Column(
+                                      children: [
+                                        Divider(),
+                                        TextButton(
+                                          onPressed: () {
+                                            Navigator.pop(dialogContext);
+                                          },
+                                          child: const Text('OK', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
+                                        ),
+                                      ],
+                                    )
+                                  ],
+                                  actionsAlignment: MainAxisAlignment.center,
+                                ),
+                              );
+                            },
+                            padding: EdgeInsets.zero,
+                            icon: Icon(Icons.more_horiz)
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  _SmallTriangle(),
+                ],
+              )
+            ),
+          )
         ),
       ),
     );
@@ -504,42 +490,41 @@ class _CommentsPageState extends State<_CommentsPage> {
                           Icon(Icons.comment, color: widget.textColor, size: 20),
                           const SizedBox(width: 12),
                           Expanded(child: Wrap(
-                            spacing: 4,
-                            children: comment.split(RegExp(r'\s+'))
+                              spacing: 4,
+                              children: comment.split(RegExp(r'\s+'))
                                 .map((w) => w.trim())
                                 .where((w) => w.isNotEmpty)
                                 .toList().map((word) {
-                              return Builder(
-                                builder: (wordContext) {
-                                  return GestureDetector(
-                                    onTap: () {
-                                      final RenderBox box = wordContext.findRenderObject() as RenderBox;
-                                      //final position = box.localToGlobal(Offset(box.size.width/2, (-1)*box.size.height/2));
-                                      final position = box.localToGlobal(Offset(box.size.width / 2, 0));
+                                    return Builder(
+                                      builder: (wordContext) {
+                                        return GestureDetector(
+                                          onTap: () {
+                                            final RenderBox box = wordContext.findRenderObject() as RenderBox;
+                                            final position = box.localToGlobal(Offset(box.size.width / 2, 0));
 
-                                      showTooltip(wordContext, word, position);
-                                    },
-                                    onLongPress: () {
-                                      setState(() {
-                                        highlightedWord = highlightedWord == word ? null : word;
-                                      });
-                                    },
-                                    child: Container(
-                                      color: highlightedWord == word
-                                          ? Colors.yellow.withOpacity(0.5)
-                                          : Colors.transparent,
-                                      child: Text(word, style: TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.w700,
-                                          fontFamily: "Nanum",
-                                          color: widget.textColor
-                                      )),
-                                    ),
-                                  );
-                                },
-                              );
-                            }).toList(),
-                          ),)
+                                            showTooltip(wordContext, word, position);
+                                          },
+                                          onLongPress: () {
+                                            setState(() {
+                                                highlightedWord = highlightedWord == word ? null : word;
+                                              });
+                                          },
+                                          child: Container(
+                                            color: highlightedWord == word
+                                              ? Colors.yellow.withOpacity(0.5)
+                                              : Colors.transparent,
+                                            child: Text(word, style: TextStyle(
+                                                fontSize: 18,
+                                                fontWeight: FontWeight.w700,
+                                                fontFamily: "Nanum",
+                                                color: widget.textColor
+                                              )),
+                                          ),
+                                        );
+                                      },
+                                    );
+                                  }).toList(),
+                            ),)
                         ],
                       ),
                     );
@@ -555,7 +540,6 @@ class _CommentsPageState extends State<_CommentsPage> {
 
 class _PostHeading extends StatelessWidget {
   const _PostHeading({
-    super.key,
     required this.subreddit,
     required this.textColor
   });
@@ -598,9 +582,9 @@ class _TrianglePainter extends CustomPainter {
       ..style = PaintingStyle.fill;
 
     final path = Path();
-    path.moveTo(size.width / 2, size.height); // 아래 중앙
-    path.lineTo(0, 0);                        // 좌측 상단
-    path.lineTo(size.width, 0);               // 우측 상단
+    path.moveTo(size.width / 2, size.height);
+    path.lineTo(0, 0);
+    path.lineTo(size.width, 0);
     path.close();
 
     canvas.drawPath(path, paint);
@@ -611,12 +595,12 @@ class _TrianglePainter extends CustomPainter {
 }
 
 class _SmallTriangle extends StatelessWidget {
-  const _SmallTriangle({super.key});
+  const _SmallTriangle();
 
   @override
   Widget build(BuildContext context) {
     return CustomPaint(
-      size: const Size(20, 10), // 작은 역삼각형 크기
+      size: const Size(20, 10),
       painter: _TrianglePainter(),
     );
   }

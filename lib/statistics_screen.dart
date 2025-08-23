@@ -1,14 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'dart:math';
-import 'words_screen.dart';
-import 'home_screen.dart';
 import 'theme.dart';
 
 final random = Random();
 Color getRandomBlue() {
-  // 0.2, 0.4, 0.6, 0.8, 1.0 중 랜덤 선택
   double opacity = (random.nextInt(5) + 1) * 0.2;
   return Colors.blue.withOpacity(opacity);
 }
@@ -23,8 +19,6 @@ class ProfileScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-
-          // Graph Section
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -51,10 +45,10 @@ class ProfileScreen extends StatelessWidget {
           const SizedBox(height: 16),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [Text("")]+(["May","Jun","July","Aug"]).map((entry) {
-              return Text(entry);
-            }
-            ).toList()+[Text("")],
+            children: [Text("")] + (["May", "Jun", "July", "Aug"]).map((entry) {
+                  return Text(entry);
+                }
+              ).toList() + [Text("")],
           ),
           const SizedBox(height: 4),
           GridView.builder(
@@ -65,11 +59,11 @@ class ProfileScreen extends StatelessWidget {
               crossAxisSpacing: 1,
               mainAxisSpacing: 1,
             ),
-            itemCount: 140, // Example count
+            itemCount: 140,
             itemBuilder: (context, index) {
               return Container(
                 decoration: BoxDecoration(
-                  color: getRandomBlue(), // Example coloring
+                  color: getRandomBlue(),
                   borderRadius: BorderRadius.circular(4),
                 ),
               );
@@ -80,23 +74,6 @@ class ProfileScreen extends StatelessWidget {
     );
   }
 
-  // Helper widget for building a stat row
-  Widget _buildStatRow(String title, String value, String percentage) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(title, style: const TextStyle(fontSize: 16)),
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Text(value, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
-            const SizedBox(width: 8),
-            Text(percentage, style: const TextStyle(fontSize: 14, color: Colors.black87)),
-          ],
-        ),
-      ],
-    );
-  }
 }
 
 class StatsChart extends StatelessWidget {
@@ -141,7 +118,6 @@ class StatsChart extends StatelessWidget {
         minY: 0,
         maxY: 6,
         lineBarsData: [
-          // User's progress line
           LineChartBarData(
             spots: const[
               FlSpot(0, 4.5), FlSpot(1, 4.2), FlSpot(2.5, 4), FlSpot(4, 3.5), FlSpot(5.5, 3.2),
@@ -153,7 +129,6 @@ class StatsChart extends StatelessWidget {
             dotData: const FlDotData(show: false),
             belowBarData: BarAreaData(show: false),
           ),
-          // Average line
           LineChartBarData(
             spots: const[
               FlSpot(0, 3), FlSpot(1.5, 2.8), FlSpot(3, 2.5), FlSpot(4.5, 2.2), FlSpot(6, 2),
@@ -170,7 +145,6 @@ class StatsChart extends StatelessWidget {
     );
   }
 
-  // Helper for bottom titles
   Widget bottomTitleWidgets(double value, TitleMeta meta) {
     const style = TextStyle(
       fontWeight: FontWeight.bold,
@@ -182,11 +156,9 @@ class StatsChart extends StatelessWidget {
     } else {
       text = const Text('', style: style);
     }
-    // FIX: The SideTitleWidget API has changed. We can simply return the Text widget.
     return text;
   }
 
-  // Helper for left titles
   Widget leftTitleWidgets(double value, TitleMeta meta) {
     const style = TextStyle(
       fontWeight: FontWeight.bold,
@@ -204,7 +176,7 @@ class StatsChart extends StatelessWidget {
         text = '저';
         break;
       default:
-        return Container();
+      return Container();
     }
     return Text(text, style: style, textAlign: TextAlign.left);
   }
@@ -219,7 +191,6 @@ class LineChartWidget extends StatelessWidget {
         gridData: FlGridData(
           show: true,
           drawVerticalLine: false,
-          //horizontalInterval: 10,
           verticalInterval: 1,
           getDrawingHorizontalLine: (value) => FlLine(
             color: Colors.grey.withOpacity(0.3),
@@ -250,10 +221,10 @@ class LineChartWidget extends StatelessWidget {
             sideTitles: SideTitles(showTitles: false, interval: 1),
           ),
           rightTitles: AxisTitles(
-            sideTitles: SideTitles(showTitles: false), // 우측 제거
+            sideTitles: SideTitles(showTitles: false),
           ),
           topTitles: AxisTitles(
-            sideTitles: SideTitles(showTitles: false), // 상단 제거
+            sideTitles: SideTitles(showTitles: false),
           ),
         ),
         minX: 0,
@@ -275,17 +246,6 @@ class LineChartWidget extends StatelessWidget {
             barWidth: 2,
             isStrokeCapRound: true,
             dotData: FlDotData(show: true),
-            // belowBarData: BarAreaData(
-            //   show: true,
-            //   gradient: LinearGradient(
-            //     colors: [
-            //       Colors.blue.withOpacity(0.3),
-            //       Colors.purple.withOpacity(0.1)
-            //     ],
-            //     begin: Alignment.topCenter,
-            //     end: Alignment.bottomCenter,
-            //   ),
-            // ),
           ),
           LineChartBarData(
             spots: [
@@ -301,17 +261,6 @@ class LineChartWidget extends StatelessWidget {
             barWidth: 4,
             isStrokeCapRound: true,
             dotData: FlDotData(show: true),
-            // belowBarData: BarAreaData(
-            //   show: true,
-            //   gradient: LinearGradient(
-            //     colors: [
-            //       Colors.blue.withOpacity(0.3),
-            //       Colors.purple.withOpacity(0.1)
-            //     ],
-            //     begin: Alignment.topCenter,
-            //     end: Alignment.bottomCenter,
-            //   ),
-            // ),
           ),
         ],
       ),

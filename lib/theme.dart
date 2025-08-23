@@ -1,22 +1,21 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
-import 'package:flutter/material.dart';
 
 Color getRandomColorBetween(Color start, Color end) {
   final random = Random();
-  double t = random.nextDouble(); // 0.0 ~ 1.0 사이 난수
+  double t = random.nextDouble();
   return Color.lerp(start, end, t)!;
 }
 
 const Color primaryOrange = Color(0xFFFFB823);
 const Color primaryLightOrange = Color(0xFFFFF1CA);
-const Color primaryGreen= Color(0xFF708A58);
+const Color primaryGreen = Color(0xFF708A58);
 const Color primaryDarkGreen = Color(0xFF2D4F2B);
 
-({Color backgroundColor, Color textColor}) RandomColor(){
+({Color backgroundColor, Color textColor}) randomColor() {
   final random = Random();
-  double t = random.nextDouble(); // 0.0 ~ 1.0 사이 난수
-  if(t>0.5) {
+  double t = random.nextDouble();
+  if (t > 0.5) {
     return (backgroundColor: getRandomColorBetween(primaryOrange, primaryLightOrange), textColor: Colors.black);
   } else {
     return (backgroundColor: getRandomColorBetween(primaryGreen, primaryDarkGreen), textColor: Colors.white);
@@ -35,15 +34,15 @@ class AppTheme {
       cardColor: Colors.white,
       unselectedWidgetColor: Colors.white,
       dialogTheme: DialogTheme(
-        backgroundColor: primaryLightOrange, // 배경색
+        backgroundColor: primaryLightOrange,
         titleTextStyle: TextStyle(
           fontSize: 20,
           fontWeight: FontWeight.bold,
-          color: Colors.black, // 제목 색
+          color: Colors.black,
         ),
         contentTextStyle: TextStyle(
           fontSize: 16,
-          color: Colors.black87, // 내용 색
+          color: Colors.black87,
         ),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12),

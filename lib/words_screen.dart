@@ -2,7 +2,6 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-// 단어 데이터 모델 클래스
 class Word {
   final String word;
   final String wordMeaning;
@@ -16,7 +15,6 @@ class Word {
     required this.exampleKor,
   });
 
-  // JSON 데이터로부터 Word 객체를 생성하는 팩토리 생성자
   factory Word.fromJson(Map<String, dynamic> json) {
     return Word(
       word: json['word'],
@@ -27,7 +25,6 @@ class Word {
   }
 }
 
-// 단어 목록 페이지
 class WordListPage extends StatefulWidget {
   const WordListPage({super.key});
 
@@ -36,16 +33,14 @@ class WordListPage extends StatefulWidget {
 }
 
 class _WordListPageState extends State<WordListPage> {
-  // 단어 목록을 저장할 리스트
   List<Word> _words = [];
 
   @override
   void initState() {
     super.initState();
-    _loadWordData(); // 위젯이 생성될 때 JSON 데이터 로드
+    _loadWordData();
   }
 
-  // assets/voca_user.json 파일에서 단어 데이터를 불러오는 함수
   Future<void> _loadWordData() async {
     final String response = await rootBundle.loadString('assets/voca_user.json');
     final List<dynamic> data = json.decode(response);
@@ -58,23 +53,21 @@ class _WordListPageState extends State<WordListPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: _words.isEmpty
-        ? const Center(child: CircularProgressIndicator()) // 로딩 중 표시
+        ? const Center(child: CircularProgressIndicator())
         : ListView.builder(
           itemCount: _words.length,
           itemBuilder: (context, index) {
             return ListTile(
               title: Text(_words[index].word, style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               subtitle: Text(_words[index].wordMeaning, overflow: TextOverflow.ellipsis,),
               onTap: () {
-                // 단어를 탭하면 상세 페이지로 이동
                 showDialog(context: context, builder: (dialogContext) =>
                   AlertDialog(
                     backgroundColor: Colors.white,
-                    //title:
                     content: Column(
                       mainAxisSize: MainAxisSize.min,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -114,7 +107,6 @@ class _WordListPageState extends State<WordListPage> {
   }
 }
 
-// 단어 상세 정보 페이지
 class WordDetailPage extends StatelessWidget {
   final Word word;
 
@@ -124,7 +116,7 @@ class WordDetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(word.word), // 앱바에 현재 단어 표시
+        title: Text(word.word),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
