@@ -143,29 +143,29 @@ class AnswerPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Icon(CupertinoIcons.exclamationmark_square_fill, size: 80, color: primaryLightOrange,),
-        Text(
-          title,
-          style: TextStyle(
-            fontSize: 30,
-            fontWeight: FontWeight.bold,
-            fontFamily: "Nanum",
-            color: primaryLightOrange,
+    return Padding(padding: EdgeInsets.symmetric(horizontal: 16), child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Icon(CupertinoIcons.exclamationmark_square_fill, size: 80, color: primaryLightOrange,),
+          Text(
+            title,
+            style: TextStyle(
+              fontSize: 30,
+              fontWeight: FontWeight.bold,
+              fontFamily: "Nanum",
+              color: primaryLightOrange,
+            ),
           ),
-        ),
-        Text(
-          "넘겨서 다음 퀴즈 보기",
-          style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.w500,
-            fontFamily: "Nanum",
-            color: primaryLightOrange,
+          Text(
+            "넘겨서 다음 퀴즈 보기",
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.w500,
+              fontFamily: "Nanum",
+              color: primaryLightOrange,
+            ),
           ),
-        ),
-      ],
-    );
+        ],
+      ),);
   }
 }
