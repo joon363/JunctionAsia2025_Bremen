@@ -21,6 +21,7 @@ struct StaticsView: View {
                 Image("Graph")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
+                    .padding(.horizontal, 12)
                 Text("  ")
                 Text("  ")
                 HStack {
@@ -31,11 +32,15 @@ struct StaticsView: View {
                         .bold()
                         .foregroundStyle(Color("Orange"))
                         .font(.system(size: 32))
-                }
+                }.padding(.horizontal, 12)
+
 
                 Text("(상위 3.7%)")
                     .frame(maxWidth: .infinity, alignment: .trailing)
+                    .padding(.horizontal, 12)
 
+                Text("  ")
+                Text("  ")
                 HStack{
                     Text("읽은 포스트 수")
                         .font(.system(size: 24))
@@ -47,15 +52,27 @@ struct StaticsView: View {
 
 
                 }.font(.system(size: 24))
+                .padding(.horizontal, 12)
+
 
                 Text("(상위 5.3%)")
                     .frame(maxWidth: .infinity, alignment: .trailing)
+                    .padding(.horizontal, 12)
+                
+                Text("  ")
+
                 Image("Grace")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
+                    .padding(.horizontal, 12)
                 Text("  ")
                 Text("토익 RC Score 420점의 수준이예요")
             }
         }
+    }
+}
+struct StaticsView_Previews: PreviewProvider {
+    static var previews: some View {
+        StaticsView()
     }
 }
