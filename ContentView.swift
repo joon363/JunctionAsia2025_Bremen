@@ -333,6 +333,7 @@ struct QuizPageView: View {
                 Text(page.title)
                     .font(.system(size: 40, weight: .bold, design: .serif))
                     .foregroundStyle(Color("Ivory"))
+                    .multilineTextAlignment(.center)
                     //.padding(.bottom, 100)
                 Text("넘겨서 뜻 보기")
                     .font(.system(size: 20))
@@ -342,7 +343,7 @@ struct QuizPageView: View {
                 Text(page.text)
                     .font(.system(size: 40, weight: .bold, design:.serif))
                     .foregroundStyle(Color("Ivory"))
-                    //.multilineTextAlignment(.center)
+                    .multilineTextAlignment(.center)
                     //.padding(.horizontal)
                 Text("넘겨서 뜻 보기")
                     .font(.system(size: 20))
@@ -803,5 +804,5 @@ struct WordDetailSheet: View {
 //}
 
 #Preview {
-    ContentView()
+    QuizView()
 }
