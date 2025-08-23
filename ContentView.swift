@@ -264,8 +264,10 @@ let endOfFeedPages: [EndPage] = [
 
 // 초록색 퀴즈뷰에 표시할 페이지 데이터
 let quizOfFeedPages: [QuizPage] = [
-    QuizPage(title: "Reminiscence", text: ""),
+    QuizPage(title: "reminiscence", text: ""),
     QuizPage(title: "", text: "추억, 회상"),
+    QuizPage(title: "obvious", text: ""),
+    QuizPage(title: "", text: "분명한, 확실한, 너무 뻔한"),
 
 ]
 
@@ -346,6 +348,7 @@ struct QuizPageView: View {
                     .font(.system(size: 20))
                     .foregroundStyle(Color("Lightgr"))
             }
+            Divider().opacity(0).padding(.vertical, 12)
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -800,5 +803,5 @@ struct WordDetailSheet: View {
 //}
 
 #Preview {
-    QuizView()
+    ContentView()
 }

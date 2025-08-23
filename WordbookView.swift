@@ -20,6 +20,14 @@ struct Word: Identifiable, Hashable {
 
 // MARK: 데이터 더 넣기
 let sampleWords: [Word] = [
+    .init(text: "obvious",
+          meaning: "분명한, 확실한, 너무 뻔한",
+          partOfSpeech: "adjective",
+          pronunciation: "taɪ|pɑːɡrəfi",
+          examples: [
+            "It was obvious to everyone that the child had been badly treated."
+          ],
+          synonyms: ["natural", "logical"]),
     .init(text: "typography",
           meaning: "활자체 디자인, 조판",
           partOfSpeech: "noun",
@@ -160,13 +168,22 @@ struct WordRow: View {
 //                    .font(.footnote)
 //                    .foregroundStyle(.secondary)
 //            }
-            Text(word.meaning)
-                .font(.body)
+            HStack(alignment: .firstTextBaseline) {
+                Text(word.meaning)
+                    .font(.body)
+                Spacer()
+                if word.text == "obvious" {
+                    Text("NEW!")
+                        .font(.subheadline)
+                        .foregroundStyle(.black)
+                        .italic()
+                }
+            }
         }
         .padding(14)
         .background(
             RoundedRectangle(cornerRadius: 14)
-                .fill(WordbookColors.card)
+                .fill(word.text == "obvious" ? Color(red: 255/255, green: 216/255, blue: 133/255) : WordbookColors.card)
                 .strokeBorder(WordbookColors.stroke, lineWidth: 0.6)
         )
         .contentShape(Rectangle()) // 전체 영역 탭 가능
