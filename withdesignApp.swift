@@ -1,6 +1,6 @@
 //
-//  junction2025App.swift
-//  junction2025
+//  withdesignApp.swift
+//  withdesign
 //
 //  Created by 임유리 on 8/23/25.
 //
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct junction2025App: App {
+struct withdesignApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
