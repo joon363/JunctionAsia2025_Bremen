@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'post_widget.dart';
+import 'theme.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -54,7 +55,12 @@ class _HomeScreenState extends State<HomeScreen> {
             itemBuilder: (context, index) {
               // Ensure the post is a Map before passing it to the widget
               final post = postData[index] as Map<String, dynamic>;
-              return PostWidget(post: post);
+              var pair = RandomColor();
+              return PostWidget(
+                post: post,
+                backgroundColor: pair.backgroundColor,
+                textColor: pair.textColor
+              );
             },
           );
         }
