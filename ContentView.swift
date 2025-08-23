@@ -255,7 +255,7 @@ struct PostFullScreenCard: View {
                 // Don't show dots if there's only one page
                 if post.pages.count > 1 {
                     PageDots(count: post.pages.count, index: selectedPage)
-                        .padding(.bottom, 44)
+                        .padding(.bottom, 120)
                 }
             }
         }
