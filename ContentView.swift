@@ -324,15 +324,28 @@ struct QuizPageView: View {
     let page: QuizPage
     var body: some View {
         VStack(spacing: 20) {
-            Image(systemName: "questionmark.app")
-                .resizable()
-                .frame(width: 100, height: 100)
-            Text(page.title)
-                .font(.system(size: 40, weight: .bold, design: .serif))
-            Text(page.text)
-                .font(.system(size: 40, weight: .bold, design:.serif))
-                //.multilineTextAlignment(.center)
-                //.padding(.horizontal)
+            Image(systemName: !page.title.isEmpty ? "questionmark.app" : "exclamationmark.square")
+                .font(.system(size: 80))
+                .foregroundStyle(Color("Ivory"))
+            if !page.title.isEmpty {
+                Text(page.title)
+                    .font(.system(size: 40, weight: .bold, design: .serif))
+                    .foregroundStyle(Color("Ivory"))
+                    //.padding(.bottom, 100)
+                Text("넘겨서 뜻 보기")
+                    .font(.system(size: 20))
+                    .foregroundStyle(Color("Ivory"))
+            }
+            if !page.text.isEmpty {
+                Text(page.text)
+                    .font(.system(size: 40, weight: .bold, design:.serif))
+                    .foregroundStyle(Color("Ivory"))
+                    //.multilineTextAlignment(.center)
+                    //.padding(.horizontal)
+                Text("넘겨서 뜻 보기")
+                    .font(.system(size: 20))
+                    .foregroundStyle(Color("Lightgr"))
+            }
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -779,9 +792,13 @@ struct WordDetailSheet: View {
     }
 }
 
-struct StudyFeedView_Previews: PreviewProvider {
-    static var previews: some View {
-        StudyFeedView()
-            .preferredColorScheme(.light)
-    }
+//struct StudyFeedView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        StudyFeedView()
+//            .preferredColorScheme(.light)
+//    }
+//}
+
+#Preview {
+    QuizView()
 }
