@@ -124,13 +124,18 @@ struct WordbookView: View {
 
     var body: some View {
         ScrollView {
+            Text("Word Count: 187")
+                .font(.system(size: 20))
+                .padding(.top, 12)
+            Divider()
+            
             LazyVStack(spacing: 12) {
                 ForEach(words) { w in
                     WordRow(word: w)
                         .padding(.horizontal, 16)
                 }
             }
-            .padding(.vertical, 16)
+            .padding(.vertical, 12)
         }
         //.background(WordbookColors.paper.ignoresSafeArea(edges:.top))
         .navigationTitle("Wordbook")
@@ -147,12 +152,12 @@ struct WordRow: View {
             HStack(alignment: .firstTextBaseline) {
                 Text(word.text)
                     .font(.title3.weight(.semibold))
+                Spacer()
                 if let pos = word.partOfSpeech, !pos.isEmpty {
-                    Text("· \(pos)")
+                    Text("\(pos)")
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
                 }
-                Spacer()
             }
             //발음은 빼기
 //            if let pr = word.pronunciation, !pr.isEmpty {

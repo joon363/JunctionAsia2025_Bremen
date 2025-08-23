@@ -15,7 +15,7 @@ struct StaticsView: View {
                 Text(" ")
                 
                 HStack(alignment: .center) {
-                    Text("한 문장 속 모르는 단어 수")
+                    Text("문장당 모르는 단어")
                         .font(.system(size: 20))
                         .bold()
                         .lineLimit(1)
@@ -34,7 +34,7 @@ struct StaticsView: View {
                 Divider().padding(.vertical, 6)
                 
                 HStack(alignment: .center) {
-                    Text("학습 단어 수")
+                    Text("학습 단어")
                         .font(.system(size: 20))
                         .bold()
                     Spacer()
@@ -52,7 +52,7 @@ struct StaticsView: View {
                 Divider().padding(.vertical, 6)
                 
                 HStack(alignment: .center) {
-                    Text("읽은 포스트 수")
+                    Text("읽은 포스트")
                         .font(.system(size: 20))
                         .bold()
                     Spacer()
@@ -74,7 +74,7 @@ struct StaticsView: View {
                         .font(.system(size: 20))
                         .bold()
                     Spacer()
-                    Text("87일차")
+                    Text("D+86")
                         .fontWeight(.black)
                         .foregroundStyle(Color("CustomOrange"))
                         .font(.system(size: 28))

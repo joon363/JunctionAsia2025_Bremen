@@ -33,7 +33,7 @@ struct FirstView: View {
                     .multilineTextAlignment(.center)
                 Divider().opacity(0).frame(height: 24)
                 NavigationLink(destination: SecondView()) {
-                    Text("시작하기")
+                    Text("Join")
                         .bold()
                         .foregroundColor(.white)
                         .padding()
@@ -128,7 +128,7 @@ struct SecondView: View {
                         }
                     }
                     .padding(.horizontal)
-                    .padding(.vertical, 12)
+                    .padding(.vertical, 4)
                 }
                 
                 Spacer()
@@ -138,7 +138,7 @@ struct SecondView: View {
                         .fill(Color("CustomOrange")) // Color("CustomOrange") 대신 사용
                         .frame(height: 60) // 버튼 높이 설정
                         .overlay(
-                            Text("다음")
+                            Text("Next")
                                 .bold()
                                 .foregroundColor(.white)
                         )
@@ -246,7 +246,7 @@ struct ThirdView: View {
                                 .frame(width: 28, height: 28)
                         )
                         .padding(.trailing, 12)
-                    Text("레벨 테스트")
+                    Text("모르는 단어 체크")
                         .font(.system(size: 20))
                         .bold()
                 }
@@ -267,7 +267,7 @@ struct ThirdView: View {
                         .fill(Color("CustomOrange"))
                         .frame(height: 60) // 버튼 높이 설정
                         .overlay(
-                            Text("제출하기")
+                            Text("Next")
                                 .bold()
                                 .foregroundColor(.white)
                         )
@@ -314,7 +314,7 @@ struct FourthView: View {
                     .multilineTextAlignment(.center)
                 Divider().opacity(0).frame(height: 24)
                 NavigationLink(destination: ContentView()) {
-                    Text("시작하기")
+                    Text("Start")
                         .bold()
                         .foregroundColor(.white)
                         .padding()
