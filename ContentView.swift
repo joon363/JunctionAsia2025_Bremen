@@ -43,14 +43,13 @@ enum TopBarView {
     case notifications
 }
 
-<<<<<<< HEAD
+
 enum Tab {
     case stats
     case study
     case wordbook
 }
-=======
->>>>>>> e15e106 (highlight)
+
 
 //MARK: 컨텐츠뷰 루트
 struct ContentView: View {
@@ -88,18 +87,13 @@ struct ContentView: View {
                 Button(action: {
                     self.selectedTopView = .study
                 }) {
-<<<<<<< HEAD
+
                     Text(selectedTabTitle)
                         //.font(.headline)
                         .font(.system(size: 20))
                         .bold()
                         .foregroundColor(Color.orange)
-=======
-                    Text("Study")
-                        .font(.headline)
-                        .font(.system(size: 32))
-                        .foregroundColor(.orange)
->>>>>>> e15e106 (highlight)
+
                 }
                 
                 Spacer()
@@ -136,14 +130,9 @@ struct ContentView: View {
                         .tabItem {
                             Image(systemName: "book")
                             Text("Wordbook")
-<<<<<<< HEAD
                         }.tag(Tab.wordbook)
                 }.tint(.orange)
-=======
-                        }
-                }
-                .tint(.orange)
->>>>>>> e15e106 (highlight)
+
                 
             case .profile:
                 ProfileView()
