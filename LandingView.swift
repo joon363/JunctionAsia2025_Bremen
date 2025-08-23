@@ -76,16 +76,6 @@ struct SecondView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                HStack(spacing: 5) {
-                    RoundedRectangle(cornerRadius: 4)
-                        .frame(width: 120, height: 6)
-                        .foregroundColor(Color("CustomOrange"))
-                    RoundedRectangle(cornerRadius: 4)
-                        .frame(width: 120, height: 6)
-                        .foregroundColor(Color("Ivory"))
-                }
-                .padding(.top, 6)
-                .padding(.bottom, 12)
                 HStack{
                     Text("1")
                         .font(.system(size: 16))
@@ -101,7 +91,17 @@ struct SecondView: View {
                         .font(.system(size: 20))
                         .bold()
                 }
-                Divider().padding(.bottom, 12)
+                .padding(.top, 6)
+                .padding(.bottom, 12)
+                HStack(spacing: 5) {
+                    RoundedRectangle(cornerRadius: 4)
+                        .frame(width: 120, height: 6)
+                        .foregroundColor(Color("CustomOrange"))
+                    RoundedRectangle(cornerRadius: 4)
+                        .frame(width: 120, height: 6)
+                        .foregroundColor(Color("Ivory"))
+                }
+                Divider().padding(.vertical, 12)
                 
                 ScrollView {
                     Text("관심사에 맞는 포스트를 보여드릴게요.")
@@ -225,16 +225,6 @@ struct ThirdView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                HStack(spacing: 5) {
-                    RoundedRectangle(cornerRadius: 4)
-                        .frame(width: 120, height: 6)
-                        .foregroundColor(Color("CustomOrange"))
-                    RoundedRectangle(cornerRadius: 4)
-                        .frame(width: 120, height: 6)
-                        .foregroundColor(Color("CustomOrange"))
-                }
-                .padding(.top, 6)
-                .padding(.bottom, 12)
                 HStack{
                     Text("2")
                         .font(.system(size: 16))
@@ -250,7 +240,17 @@ struct ThirdView: View {
                         .font(.system(size: 20))
                         .bold()
                 }
-                Divider().padding(.bottom, 12)
+                .padding(.top, 6)
+                .padding(.bottom, 12)
+                HStack(spacing: 5) {
+                    RoundedRectangle(cornerRadius: 4)
+                        .frame(width: 120, height: 6)
+                        .foregroundColor(Color("CustomOrange"))
+                    RoundedRectangle(cornerRadius: 4)
+                        .frame(width: 120, height: 6)
+                        .foregroundColor(Color("CustomOrange"))
+                }
+                Divider().padding(.vertical, 12)
                 
                 ScrollView {
                     Text("모르는 단어를 탭해서 체크해주세요.")

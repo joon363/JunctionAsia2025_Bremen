@@ -119,7 +119,7 @@ struct WordbookView: View {
 
     var body: some View {
         ScrollView {
-            Text("Word Count: 187")
+            Text("단어 수: 187개")
                 .font(.system(size: 20))
                 .padding(.top, 12)
             Divider()
@@ -202,14 +202,14 @@ struct WordDetailCard: View {
                 Divider()
 
                 VStack(alignment: .leading, spacing: 6) {
-                    Text("Meaning").font(.subheadline.weight(.semibold))
+                    Text("뜻").font(.subheadline.weight(.semibold))
                     Text(word.meaning)
                 }
 
                 if !word.examples.isEmpty {
                     Divider()
                     VStack(alignment: .leading, spacing: 6) {
-                        Text("Examples").font(.subheadline.weight(.semibold))
+                        Text("예문").font(.subheadline.weight(.semibold))
                         ForEach(word.examples, id: \.self) { ex in
                             Text("• \(ex)")
                                 .fixedSize(horizontal: false, vertical: true)
@@ -220,7 +220,7 @@ struct WordDetailCard: View {
                 if !word.synonyms.isEmpty {
                     Divider()
                     VStack(alignment: .leading, spacing: 6) {
-                        Text("Synonyms").font(.subheadline.weight(.semibold))
+                        Text("유의어").font(.subheadline.weight(.semibold))
                         Text(word.synonyms.joined(separator: ", "))
                     }
                 }

@@ -86,6 +86,7 @@ struct StaticsView: View {
                 
                 //Divider().padding(.vertical, 6)
                 //Text("토익 RC Score 420점의 수준이예요")
+                Text(" ")
             }
             .padding(.horizontal, 12)
         }
