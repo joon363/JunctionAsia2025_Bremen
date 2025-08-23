@@ -141,6 +141,7 @@ struct ContentView: View {
                 NotificationsView()
             }
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

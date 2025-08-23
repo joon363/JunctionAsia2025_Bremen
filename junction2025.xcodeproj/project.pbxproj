@@ -12,6 +12,8 @@
 		98438AE42E5964DD00BB1029 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98438ADE2E5964DD00BB1029 /* ContentView.swift */; };
 		98438AE52E5964DD00BB1029 /* withdesignApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98438AE02E5964DD00BB1029 /* withdesignApp.swift */; };
 		98438AE62E5964DD00BB1029 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98438ADD2E5964DD00BB1029 /* Assets.xcassets */; };
+		BF4FD68D2E5983C100B2BDA4 /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4FD68C2E5983BC00B2BDA4 /* LandingView.swift */; };
+		BF4FD6902E59B85700B2BDA4 /* Flow in Frameworks */ = {isa = PBXBuildFile; productRef = BF4FD68F2E59B85700B2BDA4 /* Flow */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,7 @@
 		98438AE02E5964DD00BB1029 /* withdesignApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = withdesignApp.swift; sourceTree = "<group>"; };
 		98438AE12E5964DD00BB1029 /* WordbookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordbookView.swift; sourceTree = "<group>"; };
 		98438AE72E5964F600BB1029 /* junction2025-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "junction2025-Bridging-Header.h"; sourceTree = "<group>"; };
+		BF4FD68C2E5983BC00B2BDA4 /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -37,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF4FD6902E59B85700B2BDA4 /* Flow in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +55,7 @@
 				98438ADD2E5964DD00BB1029 /* Assets.xcassets */,
 				98438ADE2E5964DD00BB1029 /* ContentView.swift */,
 				98438ADF2E5964DD00BB1029 /* StaticsView.swift */,
+				BF4FD68C2E5983BC00B2BDA4 /* LandingView.swift */,
 				98438AE02E5964DD00BB1029 /* withdesignApp.swift */,
 				98438AE12E5964DD00BB1029 /* WordbookView.swift */,
 				98438AE72E5964F600BB1029 /* junction2025-Bridging-Header.h */,
@@ -85,6 +90,7 @@
 			);
 			name = junction2025;
 			packageProductDependencies = (
+				BF4FD68F2E59B85700B2BDA4 /* Flow */,
 			);
 			productName = junction2025;
 			productReference = 98438A872E58D68C00BB1029 /* junction2025.app */;
@@ -115,6 +121,9 @@
 			);
 			mainGroup = 98438A7E2E58D68C00BB1029;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				BF4FD68E2E59B85700B2BDA4 /* XCRemoteSwiftPackageReference "SwiftUI-Flow" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 98438A882E58D68C00BB1029 /* Products */;
 			projectDirPath = "";
@@ -142,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98438AE22E5964DD00BB1029 /* StaticsView.swift in Sources */,
+				BF4FD68D2E5983C100B2BDA4 /* LandingView.swift in Sources */,
 				98438AE32E5964DD00BB1029 /* WordbookView.swift in Sources */,
 				98438AE42E5964DD00BB1029 /* ContentView.swift in Sources */,
 				98438AE52E5964DD00BB1029 /* withdesignApp.swift in Sources */,
@@ -355,6 +365,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BF4FD68E2E59B85700B2BDA4 /* XCRemoteSwiftPackageReference "SwiftUI-Flow" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tevelee/SwiftUI-Flow";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BF4FD68F2E59B85700B2BDA4 /* Flow */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF4FD68E2E59B85700B2BDA4 /* XCRemoteSwiftPackageReference "SwiftUI-Flow" */;
+			productName = Flow;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 98438A7F2E58D68C00BB1029 /* Project object */;
 }
