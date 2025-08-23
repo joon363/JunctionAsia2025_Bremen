@@ -38,40 +38,38 @@ let sampleWords: [Word] = [
             "A concise email is easier to read."
           ],
           synonyms: ["brief", "succinct", "terse"]),
-    .init(text: "abandon",
+    .init(text: "abase",
           meaning: "낮추다",
-          partOfSpeech: "adjective",
-          pronunciation: "əˈbændən",
+          partOfSpeech: "verb",
+          pronunciation: "əˈbeɪs",
           examples: [
             "The president is not willing to abase himself before the nation, and admit that he made a mistake"
           ],
-          synonyms: ["brief", "succinct", "terse"]),
+          synonyms: ["humble", "belittle", "lower"]),
     .init(text: "abbreviate",
           meaning: "생략하다",
-          partOfSpeech: "adjective",
+          partOfSpeech: "verb",
           pronunciation: "əˈbriːvieɪt",
           examples: [
-            "Please write concise explanations.",
-            "A concise email is easier to read."
+            "You are to abbreviate “Avenue” as “Ave.”"
           ],
-          synonyms: ["brief", "succinct", "terse"]),
+          synonyms: ["shorten", "reduce", "cut"]),
     .init(text: "baker",
           meaning: "빵 제조 판매인",
-          partOfSpeech: "adjective",
+          partOfSpeech: "noun",
           pronunciation: "ˈbeɪkə(r)",
           examples: [
             "The baker gets up early every morning to make fresh bread"
           ],
-          synonyms: ["brief", "succinct", "terse"]),
+          synonyms: []),
     .init(text: "cacophony",
           meaning: "불협화음",
-          partOfSpeech: "adjective",
+          partOfSpeech: "noun",
           pronunciation: "kə|kɑːfəni",
           examples: [
-            "Please write concise explanations.",
-            "A concise email is easier to read."
+            "We can't stand the cacophony anymore."
           ],
-          synonyms: ["brief", "succinct", "terse"]),
+          synonyms: ["din", "noise"]),
     .init(text: "dainty",
           meaning: "맛 좋은",
           partOfSpeech: "adjective",
@@ -79,43 +77,40 @@ let sampleWords: [Word] = [
           examples: [
             "We were given tea, and some dainty little cakes"
           ],
-          synonyms: ["brief", "succinct", "terse"]),
+          synonyms: ["tasty", "delicious"]),
     .init(text: "easygoing",
           meaning: "태평한",
           partOfSpeech: "adjective",
           pronunciation: "í:ziɡóuiŋ",
           examples: [
-            "Please write concise explanations.",
-            "A concise email is easier to read."
+            "The people were so friendly and easygoing there.",
+            "Our manager's an easygoing person."
           ],
-          synonyms: ["brief", "succinct", "terse"]),
+          synonyms: []),
     .init(text: "ecclesiastic",
           meaning: "성직자",
-          partOfSpeech: "adjective",
+          partOfSpeech: "noun",
           pronunciation: "ɪˌkliːziˈæstɪk",
           examples: [
-            "Please write concise explanations.",
-            "A concise email is easier to read."
+            "The ecclesiastic meets a member of his church."
           ],
-          synonyms: ["brief", "succinct", "terse"]),
+          synonyms: ["clergyman", "priest"]),
     .init(text: "eclecticism",
           meaning: "절충주의",
-          partOfSpeech: "adjective",
+          partOfSpeech: "noun",
           pronunciation: "ɪˈklektɪk",
           examples: [
-            "Please write concise explanations.",
-            "A concise email is easier to read."
+            "He adopted this policy by a wise eclecticism."
           ],
-          synonyms: ["brief", "succinct", "terse"]),
+          synonyms: ["selecting"]),
     .init(text: "gallant",
           meaning: "용감한",
           partOfSpeech: "adjective",
           pronunciation: "ˈɡælənt",
           examples: [
-            "Please write concise explanations.",
-            "A concise email is easier to read."
+            "She made a gallant attempt to hide her tears."
           ],
-          synonyms: ["brief", "succinct", "terse"])
+          synonyms: ["brave", "courageous"])
 ]
 
 // MARK: - Root 여기가 루트
@@ -176,7 +171,7 @@ struct WordRow: View {
         )
         .contentShape(Rectangle()) // 전체 영역 탭 가능
         .onTapGesture { showPopover = true }
-        .popover(isPresented: $showPopover, attachmentAnchor: .rect(.bounds), arrowEdge: .top) {
+        .popover(isPresented: $showPopover, attachmentAnchor: .rect(.bounds), arrowEdge: nil) {
             WordDetailCard(word: word)
                 .presentationCompactAdaptation(.popover) // iPhone에서도 팝오버 유지
         }
@@ -188,53 +183,56 @@ struct WordDetailCard: View {
     let word: Word
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            HStack(alignment: .firstTextBaseline) {
-                Text(word.text).font(.title3.bold())
-                if let pos = word.partOfSpeech, !pos.isEmpty {
-                    Text("(\(pos))").foregroundStyle(.secondary)
+        ScrollView {
+            VStack(alignment: .leading, spacing: 12) {
+                HStack(alignment: .firstTextBaseline) {
+                    Text(word.text).font(.title3.bold())
+                    if let pos = word.partOfSpeech, !pos.isEmpty {
+                        Text("(\(pos))").foregroundStyle(.secondary)
+                    }
+                    Spacer()
                 }
-                Spacer()
-            }
 
-            if let pr = word.pronunciation, !pr.isEmpty {
-                Label(pr, systemImage: "speaker.wave.2.fill")
-                    .font(.subheadline)
-                    .foregroundStyle(.secondary)
-            }
+                if let pr = word.pronunciation, !pr.isEmpty {
+                    Label(pr, systemImage: "speaker.wave.2.fill")
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
+                }
 
-            Divider()
-
-            VStack(alignment: .leading, spacing: 6) {
-                Text("Meaning").font(.subheadline.weight(.semibold))
-                Text(word.meaning)
-            }
-
-            if !word.examples.isEmpty {
                 Divider()
+
                 VStack(alignment: .leading, spacing: 6) {
-                    Text("Examples").font(.subheadline.weight(.semibold))
-                    ForEach(word.examples, id: \.self) { ex in
-                        Text("• \(ex)")
+                    Text("Meaning").font(.subheadline.weight(.semibold))
+                    Text(word.meaning)
+                }
+
+                if !word.examples.isEmpty {
+                    Divider()
+                    VStack(alignment: .leading, spacing: 6) {
+                        Text("Examples").font(.subheadline.weight(.semibold))
+                        ForEach(word.examples, id: \.self) { ex in
+                            Text("• \(ex)")
+                                .fixedSize(horizontal: false, vertical: true)
+                        }
+                    }
+                }
+
+                if !word.synonyms.isEmpty {
+                    Divider()
+                    VStack(alignment: .leading, spacing: 6) {
+                        Text("Synonyms").font(.subheadline.weight(.semibold))
+                        Text(word.synonyms.joined(separator: ", "))
                     }
                 }
             }
-
-            if !word.synonyms.isEmpty {
-                Divider()
-                VStack(alignment: .leading, spacing: 6) {
-                    Text("Synonyms").font(.subheadline.weight(.semibold))
-                    Text(word.synonyms.joined(separator: ", "))
-                }
-            }
+            .frame(maxWidth: 360)
+            .background(
+                //RoundedRectangle(cornerRadius: 16)
+                    //.fill(WordbookColors.card)
+                    //.shadow(color: .black.opacity(0.1), radius: 10, y: 6)
+            )
+            .padding(12)
         }
-        .padding(12)
-        .frame(maxWidth: 360)
-        .background(
-            //RoundedRectangle(cornerRadius: 16)
-                //.fill(WordbookColors.card)
-                //.shadow(color: .black.opacity(0.1), radius: 10, y: 6)
-        )
         .padding(8)
     }
 }
