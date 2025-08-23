@@ -572,6 +572,9 @@ struct WordDetailSheet: View {
                     // 1) 의미 리스트
                     if !info.meanings.isEmpty {
                         VStack(alignment: .leading, spacing: 8) {
+                            Text("뜻")
+                                .font(.system(size: 16, weight: .semibold))
+                                .padding(.top, 4)
                             ForEach(Array(info.meanings.enumerated()), id: \.offset) { i, m in
                                 HStack(alignment: .firstTextBaseline, spacing: 8) {
                                     Text("\(i+1).")
@@ -605,7 +608,9 @@ struct WordDetailSheet: View {
                     if !info.synonyms.isEmpty {
                         Divider()
                         VStack(alignment: .leading, spacing: 6) {
-                            Text("유의어").font(.subheadline.weight(.semibold))
+                            Text("유의어")
+                                .font(.system(size: 16, weight: .semibold))
+                                .padding(.top, 4)
                             Text(info.synonyms.joined(separator: ", "))
                         }
                     }
