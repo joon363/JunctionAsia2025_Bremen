@@ -186,7 +186,7 @@ struct WordDetailCard: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 12) {
                 HStack(alignment: .firstTextBaseline) {
-                    Text(word.text).font(.title3.bold())
+                    Text(word.text).font(.title3.weight(.bold))
                     if let pos = word.partOfSpeech, !pos.isEmpty {
                         Text("(\(pos))").foregroundStyle(.secondary)
                     }

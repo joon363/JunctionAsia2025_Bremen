@@ -270,7 +270,7 @@ struct PostFullScreenCard: View {
 // MARK: - 줄바꿈 레이아웃
 struct WrappingHStack: Layout {
     var hSpacing: CGFloat = 4
-    var vSpacing: CGFloat = 8
+    var vSpacing: CGFloat = 4
 
     func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize {
         let maxW = proposal.width ?? .infinity
@@ -337,7 +337,7 @@ struct PageCell: View {
                 let tokens = page.body
                     .components(separatedBy: .whitespacesAndNewlines)
                     .filter { !$0.isEmpty }
-
+                Spacer()
                 WrappingHStack(hSpacing: 6, vSpacing: 0) {
                     ForEach(tokens, id: \.self) { word in
                         let cleaned = word.trimmingCharacters(in: .punctuationCharacters)
@@ -346,6 +346,7 @@ struct PageCell: View {
                 }
                 .padding(.horizontal, 24)
                 .frame(maxWidth: .infinity, alignment: .leading)
+                Spacer()
             }
 
             if !page.title.isEmpty || !page.body.isEmpty {
@@ -431,7 +432,7 @@ func lookupWord(_ w: String) -> WordInfo {
     if let found = dict[w.lowercased().trimmingCharacters(in: .punctuationCharacters)] {
         return found
     } else {
-        return .init(word: w, meanings: ["준비 중"], examples: [])
+        return .init(word: w, meanings: ["뜻"], examples: [])
     }
 }
 
@@ -538,7 +539,7 @@ struct WordDetailSheet: View {
             Color.black.opacity(0.05).ignoresSafeArea()
 
             VStack {
-                Spacer(minLength: 12)
+                //Spacer(minLength: 12)
 
                 VStack(alignment: .leading, spacing: 16) {
                     // 제목
@@ -561,6 +562,7 @@ struct WordDetailSheet: View {
 
                     // 2) 예문
                     if !info.examples.isEmpty {
+                        Divider()
                         VStack(alignment: .leading, spacing: 8) {
                             Text("예문")
                                 .font(.system(size: 16, weight: .semibold))
@@ -580,28 +582,28 @@ struct WordDetailSheet: View {
                     Divider().padding(.vertical, 6)
 
                     // OK 버튼
-                    Button {
-                        dismiss()
-                    } label: {
-                        Text("OK")
-                            .font(.system(size: 20, weight: .semibold))
-                            .frame(maxWidth: .infinity)
-                    }
-                    .buttonStyle(.plain)
-                    .padding(.bottom, 6)
+//                    Button {
+//                        dismiss()
+//                    } label: {
+//                        Text("OK")
+//                            .font(.system(size: 20, weight: .semibold))
+//                            .frame(maxWidth: .infinity)
+//                    }
+//                    .buttonStyle(.plain)
+//                    .padding(.bottom, 6)
                 }
                 .padding(22)
-                .background(
-                    RoundedRectangle(cornerRadius: 26)
-                        .fill(Color(red: 1.0, green: 0.98, blue: 0.88)) // 아이보리 톤
-                )
-                .overlay(
-                    RoundedRectangle(cornerRadius: 26)
-                        .stroke(Color("CustomOrange"), lineWidth: 3)
-                )
-                .padding(.horizontal, 24)
+//                .background(
+//                    RoundedRectangle(cornerRadius: 26)
+//                        .fill(Color(red: 1.0, green: 0.98, blue: 0.88)) // 아이보리 톤
+//                )
+//                .overlay(
+//                    RoundedRectangle(cornerRadius: 26)
+//                        .stroke(Color("CustomOrange"), lineWidth: 3)
+//                )
+                .padding(.horizontal, 12)
 
-                Spacer(minLength: 32)
+                Spacer()
             }
         }
     }
