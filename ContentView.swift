@@ -164,18 +164,18 @@ struct Post: Identifiable, Hashable {
 let demoPosts: [Post] = [
     Post(author: "NameNameName", pages: [
         Page(title: "This is an interesting title.", body: ""),
-        Page(title: "", body: "Lord is simply dummy text of the printing and typesetting industry Lord is simply dummy text of the printing and typesetting industry.Lord is simply dummy text of the printing and typesetting industry Lord is simply dummy text of the printing and typesetting industry."),
-        Page(title: "", body: "there are many apples.Lord is simply dummy text of the printing and typesetting industry Lord is simply dummy text of the printing and typesetting industry.Lord is simply dummy text of the printing and typesetting industry Lord is simply dummy text of the printing and typesetting industry.")
+        Page(title: "", body: "Lord is simply dummy text of the printing and typesetting industry Lord is simply dummy text of the printing and typesetting industry. Lord is simply dummy text of the printing and typesetting industry Lord is simply dummy text of the printing and typesetting industry."),
+        Page(title: "", body: "there are many apples.  Lord is simply dummy text of the printing and typesetting industry Lord is simply dummy text of the printing and typesetting industry. Lord is simply dummy text of the printing and typesetting industry Lord is simply dummy text of the printing and typesetting industry.")
     ]),
     Post(author: "NameNameName", pages: [
         Page(title: "Title 2-1", body: ""),
-        Page(title: "", body: "Another page content for the same post.Lord is simply dummy text of the printing and typesetting industry Lord is simply dummy text of the printing and typesetting industry.Lord is simply dummy text of the printing and typesetting industry Lord is simply dummy text of the printing and typesetting industry.")
+        Page(title: "", body: "Another page content for the same post. Lord is simply dummy text of the printing and typesetting industry Lord is simply dummy text of the printing and typesetting industry. Lord is simply dummy text of the printing and typesetting industry Lord is simply dummy text of the printing and typesetting industry.")
     ]),
     Post(author: "NameNameName", pages: [
         Page(title: "Title 3-1", body: ""),
-        Page(title: "", body: "Lord is simply dummy text of the printing and typesetting industry Lord is simply dummy text of the printing and typesetting industry.Lord is simply dummy text of the printing and typesetting industry Lord is simply dummy text of the printing and typesetting industry. Swipe vertically for next post."),
-        Page(title: "", body: "Swipe horizontally for parts.Lord is simply dummy text of the printing and typesetting industry Lord is simply dummy text of the printing and typesetting industry.Lord is simply dummy text of the printing and typesetting industry Lord is simply dummy text of the printing and typesetting industry."),
-        Page(title: "", body: "Lord is simply dummy text of the printing and typesetting industry Lord is simply dummy text of the printing and typesetting industry.Lord is simply dummy text of the printing and typesetting industry Lord is simply dummy text of the printing and typesetting industry.Swipe horizontally for parts.")
+        Page(title: "", body: "Lord is simply dummy text of the printing and typesetting industry Lord is simply dummy text of the printing and typesetting industry. Lord is simply dummy text of the printing and typesetting industry Lord is simply dummy text of the printing and typesetting industry. Swipe vertically for next post."),
+        Page(title: "", body: "Swipe horizontally for parts.Lord is simply dummy text of the printing and typesetting industry Lord is simply dummy text of the printing and typesetting industry. Lord is simply dummy text of the printing and typesetting industry Lord is simply dummy text of the printing and typesetting industry."),
+        Page(title: "", body: "Lord is simply dummy text of the printing and typesetting industry Lord is simply dummy text of the printing and typesetting industry. Lord is simply dummy text of the printing and typesetting industry Lord is simply dummy text of the printing and typesetting industry.Swipe horizontally for parts.")
     ])
 ]
 
