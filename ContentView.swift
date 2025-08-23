@@ -387,6 +387,7 @@ struct WordInfo: Identifiable, Equatable {
     let word: String
     let meanings: [String]
     let examples: [String]
+    let synonyms: [String]
 }
 
 func lookupWord(_ w: String) -> WordInfo {
@@ -397,6 +398,9 @@ func lookupWord(_ w: String) -> WordInfo {
             meanings: ["비판", "훔치다"],
             examples: [
                 "He used the interview to take a swipe at his critics."
+            ],
+            synonyms: [
+                "steal", "strike"
             ]
         ),
         "word": .init(
@@ -405,13 +409,20 @@ func lookupWord(_ w: String) -> WordInfo {
             examples: [
                 "Do not write more than 200 words.",
                 "Have a word with Pat and see what she thinks."
+            ],
+            synonyms: [
+                "term", "phrase"
             ]
         ),
         "tactic": .init(
             word: "tactic",
             meanings: ["전략", "기술"],
             examples: [
-                "They tried all kinds of tactics to get us to go."
+                "They tried all kinds of tactics to get us to go.",
+                "Confrontation is not always the best tactic."
+            ],
+            synonyms: [
+                "device"
             ]
         ),
         "obvious": .init(
@@ -419,6 +430,9 @@ func lookupWord(_ w: String) -> WordInfo {
             meanings: ["분명한", "확실한", "너무 뻔한"],
             examples: [
                 "It was obvious to everyone that the child had been badly treated."
+            ],
+            synonyms: [
+                "natural", "logical"
             ]
         ),
         "rubber": .init(
@@ -426,13 +440,14 @@ func lookupWord(_ w: String) -> WordInfo {
             meanings: ["고무", "지우개"],
             examples: [
                 "Rubber clay. Right, rubber clay."
-            ]
+            ],
+            synonyms: []
         )
     ]
     if let found = dict[w.lowercased().trimmingCharacters(in: .punctuationCharacters)] {
         return found
     } else {
-        return .init(word: w, meanings: ["뜻"], examples: [])
+        return .init(word: w, meanings: ["뜻"], examples: [], synonyms: [])
     }
 }
 
@@ -446,10 +461,18 @@ struct WordTokenView: View {
     @State private var showDetail = false
     private var info: WordInfo { lookupWord(cleaned) }
 
-    var isHighlighted: Bool { highlighted.contains(cleaned) }
+    var isHighlighted: Bool { ["tactic", "rubber"].contains(cleaned) || highlighted.contains(cleaned) }
+//    func insertPreSelectedWords() {
+//        if ["tactic", "rubber"].contains(cleaned) {
+//            highlighted.insert(cleaned)
+//        }
+//    }
 
     var body: some View {
         Text(originalWord)
+//            .onAppear {
+//                insertPreSelectedWords()
+//            }
             .font(.system(size: 24))
             .padding(3)
             .background(isHighlighted ? Color.yellow.opacity(0.5) : Color.clear)
@@ -578,7 +601,15 @@ struct WordDetailSheet: View {
                             }
                         }
                     }
-
+                    // 3) 유의어
+                    if !info.synonyms.isEmpty {
+                        Divider()
+                        VStack(alignment: .leading, spacing: 6) {
+                            Text("유의어").font(.subheadline.weight(.semibold))
+                            Text(info.synonyms.joined(separator: ", "))
+                        }
+                    }
+                    
                     Divider().padding(.vertical, 6)
 
                     // OK 버튼
