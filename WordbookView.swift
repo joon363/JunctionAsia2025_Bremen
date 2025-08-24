@@ -16,6 +16,7 @@ struct Word: Identifiable, Hashable {
     let pronunciation: String?
     let examples: [String]
     let synonyms: [String]
+    let time: String?
 }
 
 // MARK: 데이터 더 넣기
@@ -27,7 +28,9 @@ let sampleWords: [Word] = [
           examples: [
             "It was obvious to everyone that the child had been badly treated."
           ],
-          synonyms: ["natural", "logical"]),
+          synonyms: ["natural", "logical"],
+          time: "3달 전",
+         ),
     .init(text: "typography",
           meaning: "활자체 디자인, 조판",
           partOfSpeech: "noun",
@@ -36,7 +39,10 @@ let sampleWords: [Word] = [
             "Good typography improves readability.",
             "She studied typography in art school."
           ],
-          synonyms: ["typesetting", "printing"]),
+          synonyms: ["typesetting", "printing"],
+          time: "3달 전",
+
+         ),
     .init(text: "concise",
           meaning: "간결한",
           partOfSpeech: "adjective",
@@ -45,7 +51,9 @@ let sampleWords: [Word] = [
             "Please write concise explanations.",
             "A concise email is easier to read."
           ],
-          synonyms: ["brief", "succinct", "terse"]),
+          synonyms: ["brief", "succinct", "terse"],
+          time: "3달 전",
+         ),
     .init(text: "abase",
           meaning: "낮추다",
           partOfSpeech: "verb",
@@ -53,7 +61,9 @@ let sampleWords: [Word] = [
           examples: [
             "The president is not willing to abase himself before the nation, and admit that he made a mistake"
           ],
-          synonyms: ["humble", "belittle", "lower"]),
+          synonyms: ["humble", "belittle", "lower"],
+          time: "1달 전",
+         ),
     .init(text: "abbreviate",
           meaning: "생략하다",
           partOfSpeech: "verb",
@@ -61,7 +71,9 @@ let sampleWords: [Word] = [
           examples: [
             "You are to abbreviate “Avenue” as “Ave.”"
           ],
-          synonyms: ["shorten", "reduce", "cut"]),
+          synonyms: ["shorten", "reduce", "cut"],
+          time: "1달 전",
+         ),
     .init(text: "baker",
           meaning: "빵 제조 판매인",
           partOfSpeech: "noun",
@@ -69,7 +81,9 @@ let sampleWords: [Word] = [
           examples: [
             "The baker gets up early every morning to make fresh bread"
           ],
-          synonyms: []),
+          synonyms: [],
+          time: "1달 전",
+         ),
     .init(text: "cacophony",
           meaning: "불협화음",
           partOfSpeech: "noun",
@@ -77,7 +91,9 @@ let sampleWords: [Word] = [
           examples: [
             "We can't stand the cacophony anymore."
           ],
-          synonyms: ["din", "noise"]),
+          synonyms: ["din", "noise"],
+          time: "14일 전",
+         ),
     .init(text: "dainty",
           meaning: "맛 좋은",
           partOfSpeech: "adjective",
@@ -85,7 +101,9 @@ let sampleWords: [Word] = [
           examples: [
             "We were given tea, and some dainty little cakes"
           ],
-          synonyms: ["tasty", "delicious"]),
+          synonyms: ["tasty", "delicious"],
+          time: "14일 전",
+         ),
     .init(text: "easygoing",
           meaning: "태평한",
           partOfSpeech: "adjective",
@@ -94,7 +112,9 @@ let sampleWords: [Word] = [
             "The people were so friendly and easygoing there.",
             "Our manager's an easygoing person."
           ],
-          synonyms: []),
+          synonyms: [],
+          time: "7일 전",
+         ),
     .init(text: "ecclesiastic",
           meaning: "성직자",
           partOfSpeech: "noun",
@@ -102,7 +122,9 @@ let sampleWords: [Word] = [
           examples: [
             "The ecclesiastic meets a member of his church."
           ],
-          synonyms: ["clergyman", "priest"]),
+          synonyms: ["clergyman", "priest"],
+          time: "5일 전",
+         ),
     .init(text: "eclecticism",
           meaning: "절충주의",
           partOfSpeech: "noun",
@@ -110,7 +132,9 @@ let sampleWords: [Word] = [
           examples: [
             "He adopted this policy by a wise eclecticism."
           ],
-          synonyms: ["selecting"]),
+          synonyms: ["selecting"],
+          time: "3일 전",
+         ),
     .init(text: "gallant",
           meaning: "용감한",
           partOfSpeech: "adjective",
@@ -118,7 +142,9 @@ let sampleWords: [Word] = [
           examples: [
             "She made a gallant attempt to hide her tears."
           ],
-          synonyms: ["brave", "courageous"])
+          synonyms: ["brave", "courageous"],
+          time: "1일 전",
+         )
 ]
 
 // MARK: - Root 여기가 루트
@@ -156,7 +182,7 @@ struct WordRow: View {
                 Text(word.text)
                     .font(.title3.weight(.semibold))
                 Spacer()
-                if let pos = word.partOfSpeech, !pos.isEmpty {
+                if let pos = word.time, !pos.isEmpty {
                     Text("\(pos)")
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
@@ -172,20 +198,27 @@ struct WordRow: View {
                 Text(word.meaning)
                     .font(.body)
                 Spacer()
-                if word.text == "obvious" {
-                    Text("NEW!")
-                        .font(.subheadline)
-                        .foregroundStyle(.black)
-                        .italic()
-                }
+//                if word.text == "obvious" {
+//                    Text("NEW!")
+//                        .font(.subheadline)
+//                        .foregroundStyle(.black)
+//                        .italic()
+//                }
             }
         }
         .padding(14)
         .background(
             RoundedRectangle(cornerRadius: 14)
-                .fill(word.text == "obvious" ? Color(red: 202/255, green: 207/255, blue: 230/255) : WordbookColors.card)
+                .fill(
+                    ["obvious", "typography", "concise"].contains(word.text)
+                    ? Color(red: 202/255, green: 207/255, blue: 230/255)
+                    : WordbookColors.card
+                )
                 .strokeBorder(WordbookColors.stroke, lineWidth: 0.6)
         )
+
+        
+        
         .contentShape(Rectangle()) // 전체 영역 탭 가능
         .onTapGesture { showPopover = true }
         .popover(isPresented: $showPopover, attachmentAnchor: .rect(.bounds), arrowEdge: nil) {
