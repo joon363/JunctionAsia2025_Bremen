@@ -177,7 +177,7 @@ struct Post: Identifiable, Hashable {
     let pages: [Page]
 }
 
-//MARK: 데이터 더 추가하기
+//MARK: 데이터
 let demoPosts: [Post] = [
     Post(author: "Reddit", pages: [
             Page(title: "Why did the CEO gave me a deck of cards to organize during the interview?", body: ""),
@@ -229,7 +229,7 @@ let demoPosts: [Post] = [
 
 
 
-// MARK: - 스터디 피드 뷰 (Corrected)
+// MARK: - 스터디 피드 뷰
 
 struct StudyFeedView: View {
     var body: some View {
@@ -288,7 +288,7 @@ let quizOfFeedPages: [QuizPage] = [
 
 ]
 
-// 마지막 화면의 콘텐츠 뷰 (페이지별)
+// 마지막 화면의 콘텐츠 뷰
 struct EndPageView: View {
     let page: EndPage
     var body: some View {
@@ -311,7 +311,7 @@ struct EndPageView: View {
 }
 
 
-// 마지막 화면의 전체 컨테이너 뷰 (가로 스와이프 기능 포함)
+// 마지막 화면의 전체 컨테이너 뷰
 struct EndView: View {
     @State private var selectedPage: Int = 0
     private let pages = endOfFeedPages
@@ -326,7 +326,6 @@ struct EndView: View {
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
 
-            // 페이지 인디케이터 (점)
             VStack {
                 Spacer()
                 if pages.count > 1 {
@@ -340,7 +339,7 @@ struct EndView: View {
 
 
 
-// 퀴즈뷰 화면의 콘텐츠 뷰 (페이지별)
+// 퀴즈뷰 화면의 콘텐츠 뷰
 struct QuizPageView: View {
     let page: QuizPage
     var body: some View {
@@ -378,7 +377,7 @@ struct QuizPageView: View {
 }
 
 
-// 퀴즈 화면의 전체 컨테이너 뷰 (가로 스와이프 기능 포함)
+// 퀴즈 화면의 전체 컨테이너 뷰
 struct QuizView: View {
     @State private var selectedPage: Int = 0
     private let pages = quizOfFeedPages
@@ -393,7 +392,6 @@ struct QuizView: View {
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
 
-            // 페이지 인디케이터 (점)
             VStack {
                 Spacer()
                 if pages.count > 1 {
@@ -407,7 +405,7 @@ struct QuizView: View {
     }
 }
 
-// MARK: - Post Card (Corrected)
+// MARK: - Post Card
 struct PostFullScreenCard: View {
     let post: Post
     @State private var selectedPage: Int = 0
@@ -563,7 +561,6 @@ struct WordInfo: Identifiable, Equatable {
 }
 
 func lookupWord(_ w: String) -> WordInfo {
-    // 샘플: 몇 개만 임시 등록
     let dict: [String: WordInfo] = [
         "swipe": .init(
             word: "swipe",
@@ -717,7 +714,6 @@ private struct PostHeader: View {
 
             Divider().padding(.top, 20)
         }
-        // The header itself needs a background to overlay correctly
         .background(Color("Ivory"))
     }
 }
@@ -742,7 +738,7 @@ struct WordDetailSheet: View {
                         .font(.system(size: 28, weight: .heavy))
                         .padding(.top, 12)
 
-                    // 1) 의미 리스트
+                    // 1) 뜻
                     if !info.meanings.isEmpty {
                         VStack(alignment: .leading, spacing: 8) {
                             Text("뜻")
@@ -759,7 +755,7 @@ struct WordDetailSheet: View {
                         }
                     }
 
-                    // 2) 예문
+                    // 예문
                     if !info.examples.isEmpty {
                         Divider()
                         VStack(alignment: .leading, spacing: 8) {
