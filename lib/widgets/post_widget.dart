@@ -1,13 +1,10 @@
 import 'dart:async';
-import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:reelstudy/theme.dart';
 import 'base_post_widget.dart';
 import '../models/post.dart';
 import '../models/word.dart';
-import '../viewmodels/posts_view_model.dart';
 import '../viewmodels/words_view_model.dart';
 
 class PostWidget extends BasePostWidget {
@@ -60,15 +57,15 @@ class _PostWidgetState extends BasePostWidgetState<PostWidget> {
             switch (index) {
               case 0:
                 return _TitlePage(
-                    title: widget.post.title,
-                    textColor: widget.textColor
+                  title: widget.post.title,
+                  textColor: widget.textColor
                 );
               case 1:
                 return _BodyPage(
-                    key: ValueKey(widget.post.title),
-                    body: widget.post.body,
-                    subreddit: widget.post.subreddit,
-                    textColor: widget.textColor
+                  key: ValueKey(widget.post.title),
+                  body: widget.post.body,
+                  subreddit: widget.post.subreddit,
+                  textColor: widget.textColor
                 );
               case 2:
                 return _CommentsPage(
@@ -77,7 +74,7 @@ class _PostWidgetState extends BasePostWidgetState<PostWidget> {
                   textColor: widget.textColor,
                 );
               default:
-                return const SizedBox.shrink();
+              return const SizedBox.shrink();
             }
           },
         ),
@@ -143,10 +140,7 @@ abstract class BasePageState<T extends BasePage> extends State<T> {
   }
 
   void showTooltip(BuildContext context, String wordName, Offset position) {
-    final postsVM = Provider.of<PostsViewModel>(context, listen: false);
     final wordsVM = Provider.of<WordsViewModel>(context, listen: false);
-    final posts = postsVM.posts;
-    final userWords = wordsVM.userWords;
     final allWords = wordsVM.allWords;
     Word? word = allWords.cast<Word?>().firstWhere(
       (w) => w!.word == wordName,
@@ -181,7 +175,7 @@ abstract class BasePageState<T extends BasePage> extends State<T> {
                       child: Row(
                         children: [
                           Flexible(child: Text(
-                              shortenString(word.wordMeaning ?? ""),
+                              shortenString(word.wordMeaning),
                               style: TextStyle(fontSize: 18),
                             ),),
                           IconButton(
@@ -196,7 +190,7 @@ abstract class BasePageState<T extends BasePage> extends State<T> {
                                     children: [
                                       Text(word.word, style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),),
                                       SizedBox(height: 4,),
-                                      Text(word.wordMeaning ?? ""),
+                                      Text(word.wordMeaning),
                                       SizedBox(height: 8,),
                                       Text("예문", style: TextStyle(fontWeight: FontWeight.bold)),
                                       Text("  ${word.exampleEng}"),
@@ -297,11 +291,8 @@ class _BodyPageState extends BasePageState<_BodyPage> {
 
   @override
   Widget build(BuildContext context) {
-    final postsVM = context.watch<PostsViewModel>();
     final wordsVM = context.watch<WordsViewModel>();
-    final posts = postsVM.posts;
     final userWords = wordsVM.userWords;
-    final allWords = wordsVM.allWords;
 
     final words = widget.body
       .split(RegExp(r'\s+'))
@@ -338,7 +329,7 @@ class _BodyPageState extends BasePageState<_BodyPage> {
                     },
                     onLongPress: () {
                       setState(() {
-                        wordsVM.toggleUserWord(word);
+                          wordsVM.toggleUserWord(word);
                         });
                     },
                     child: Container(
@@ -369,7 +360,6 @@ class _CommentsPage extends BasePage {
     required this.comments,
     required super.subreddit,
     required super.textColor,
-    super.key,
   });
 
   @override
@@ -380,9 +370,7 @@ class _CommentsPageState extends BasePageState<_CommentsPage> {
 
   @override
   Widget build(BuildContext context) {
-    final postsVM = context.watch<PostsViewModel>();
     final wordsVM = context.watch<WordsViewModel>();
-    final posts = postsVM.posts;
     final userWords = wordsVM.userWords;
 
     final processedComments = widget.comments.map((comment) {
@@ -437,8 +425,8 @@ class _CommentsPageState extends BasePageState<_CommentsPage> {
                                 },
                                 onLongPress: () {
                                   setState(() {
-                                    wordsVM.toggleUserWord(word);
-                                  });
+                                      wordsVM.toggleUserWord(word);
+                                    });
                                 },
                                 child: Container(
                                   color: highlightedWords.contains(word)

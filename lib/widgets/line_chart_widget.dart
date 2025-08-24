@@ -4,13 +4,7 @@ import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/services.dart';
-import 'dart:math';
 import '../theme.dart';
-import 'package:provider/provider.dart';
-import '../viewmodels/posts_view_model.dart';
-import '../viewmodels/words_view_model.dart';
-import '../models/post.dart';
-import '../models/word.dart';
 
 
 class LineChartWidget extends StatefulWidget {
@@ -34,8 +28,8 @@ class _LineChartWidgetState extends State<LineChartWidget> {
     final codec = await ui.instantiateImageCodec(data.buffer.asUint8List());
     final frame = await codec.getNextFrame();
     setState(() {
-      starImage = frame.image;
-    });
+        starImage = frame.image;
+      });
   }
   final List<String> customBottomTitles = [
     "", "8/3", "", "8/20", "", "8/17", "", "8/24"
@@ -186,9 +180,9 @@ class FlDotImagePainter extends FlDotPainter {
 
   @override
   bool hitTest(
-      FlSpot spot, Offset touched, Offset center, double extraThreshold) {
+    FlSpot spot, Offset touched, Offset center, double extraThreshold) {
     final rect =
-    Rect.fromCenter(center: center, width: size.width, height: size.height);
+      Rect.fromCenter(center: center, width: size.width, height: size.height);
     return rect.inflate(extraThreshold).contains(touched);
   }
 

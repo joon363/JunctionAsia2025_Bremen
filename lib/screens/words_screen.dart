@@ -1,12 +1,7 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:reelstudy/theme.dart';
 import 'package:provider/provider.dart';
-import '../viewmodels/posts_view_model.dart';
 import '../viewmodels/words_view_model.dart';
-import '../models/post.dart';
-import '../models/word.dart';
 
 class WordListPage extends StatefulWidget {
   const WordListPage({super.key});
@@ -19,12 +14,8 @@ class _WordListPageState extends State<WordListPage> {
 
   @override
   Widget build(BuildContext context) {
-
-    final postsVM = context.watch<PostsViewModel>();
     final wordsVM = context.watch<WordsViewModel>();
-    final posts = postsVM.posts;
     final userWords = wordsVM.userWords;
-    final allWords = wordsVM.allWords;
 
     return Scaffold(
       appBar: AppBar(
@@ -69,7 +60,7 @@ class _WordListPageState extends State<WordListPage> {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                            Text(userWords[index].lastViewTimestamp??"", style: TextStyle(
+                            Text(userWords[index].lastViewTimestamp ?? "", style: TextStyle(
                                 fontSize: 12,
                               ),
                             ),

@@ -19,7 +19,7 @@ class PostsViewModel extends ChangeNotifier {
   Future<List<Post>> loadPosts() async {
     _isLoading = true;
     final String jsonString =
-    await rootBundle.loadString('assets/datas/kpop_posts.json');
+      await rootBundle.loadString('assets/datas/kpop_posts.json');
     final List<dynamic> jsonList = json.decode(jsonString);
     return jsonList.map((e) => Post.fromJson(e)).toList();
   }

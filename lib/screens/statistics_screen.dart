@@ -1,16 +1,7 @@
-import 'dart:async';
-import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
-import 'package:fl_chart/fl_chart.dart';
-import 'package:flutter/services.dart';
 import 'dart:math';
 import '../theme.dart';
-import 'package:provider/provider.dart';
-import '../viewmodels/posts_view_model.dart';
-import '../viewmodels/words_view_model.dart';
-import '../models/post.dart';
-import '../models/word.dart';
 import '../widgets/line_chart_widget.dart';
 
 
@@ -38,7 +29,7 @@ class ProfileScreen extends StatelessWidget {
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
         child: Column(
-          spacing:2,
+          spacing: 2,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Row(

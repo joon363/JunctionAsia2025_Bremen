@@ -1,8 +1,5 @@
 import '../theme.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import '../viewmodels/posts_view_model.dart';
-import '../viewmodels/words_view_model.dart';
 import 'base_post_widget.dart';
 
 class EndWidget extends BasePostWidget {
@@ -37,7 +34,7 @@ class _EndWidgetState extends BasePostWidgetState<EndWidget> {
   Widget buildMainContent(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          color: primaryLightOrange
+        color: primaryLightOrange
       ),
       child: PageView.builder(
         controller: _pageController,

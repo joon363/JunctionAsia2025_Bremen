@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:math';
 import 'package:flutter/services.dart';
 import 'package:flutter/foundation.dart';
 import '../models/word.dart';
@@ -20,23 +19,23 @@ class WordsViewModel extends ChangeNotifier {
 
     // 1전체 단어 로드
     final String allWordsString =
-    await rootBundle.loadString('assets/datas/voca_all.json');
+      await rootBundle.loadString('assets/datas/voca_all.json');
     final Map<String, dynamic> allWordsMap = json.decode(allWordsString);
 
     _allWords = allWordsMap.entries
-        .map((e) => Word.fromJson(e.key, e.value as Map<String, dynamic>))
-        .toList();
+      .map((e) => Word.fromJson(e.key, e.value as Map<String, dynamic>))
+      .toList();
 
     // 2유저 모르는 단어 로드
     final String userWordsString =
-    await rootBundle.loadString('assets/datas/user_unknown_words.json');
+      await rootBundle.loadString('assets/datas/user_unknown_words.json');
     final List<dynamic> userWordKeys = json.decode(userWordsString);
 
     _userWords = userWordKeys
-        .where((key) => allWordsMap.containsKey(key))
-        .map((key) =>
+      .where((key) => allWordsMap.containsKey(key))
+      .map((key) =>
         Word.fromJson(key as String, allWordsMap[key] as Map<String, dynamic>))
-        .toList();
+      .toList();
 
     _isLoading = false;
     notifyListeners();

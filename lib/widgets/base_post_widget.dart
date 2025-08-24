@@ -1,13 +1,4 @@
-import 'dart:async';
-import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:reelstudy/theme.dart';
-import 'package:provider/provider.dart';
-import '../models/post.dart';
-import '../models/word.dart';
-import '../viewmodels/posts_view_model.dart';
-import '../viewmodels/words_view_model.dart';
 
 abstract class BasePostWidget extends StatefulWidget {
   const BasePostWidget({super.key});
@@ -23,12 +14,12 @@ abstract class BasePostWidgetState<T extends BasePostWidget> extends State<T> {
   void initState() {
     super.initState();
     _pageController.addListener(() {
-      if (_pageController.page?.round() != _currentPage) {
-        setState(() {
-          _currentPage = _pageController.page!.round();
-        });
-      }
-    });
+        if (_pageController.page?.round() != _currentPage) {
+          setState(() {
+              _currentPage = _pageController.page!.round();
+            });
+        }
+      });
   }
 
   @override
@@ -60,12 +51,10 @@ abstract class BasePostWidgetState<T extends BasePostWidget> extends State<T> {
 }
 
 class _RedditOverlay extends StatelessWidget {
+  final widget;
   const _RedditOverlay({
-    super.key,
     required this.widget,
   });
-
-  final  widget;
 
   @override
   Widget build(BuildContext context) {
@@ -108,7 +97,6 @@ class _RedditOverlay extends StatelessWidget {
 
 class _BottomDots extends StatelessWidget {
   const _BottomDots({
-    super.key,
     required this.pageCount,
     required int currentPage,
   }) : _currentPage = currentPage;
@@ -125,16 +113,16 @@ class _BottomDots extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: List.generate(pageCount, (index) {
-            return Container(
-              width: 8.0,
-              height: 8.0,
-              margin: const EdgeInsets.symmetric(horizontal: 2.0),
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: _currentPage == index ? Colors.blue : Colors.grey.shade400,
-              ),
-            );
-          }),
+              return Container(
+                width: 8.0,
+                height: 8.0,
+                margin: const EdgeInsets.symmetric(horizontal: 2.0),
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: _currentPage == index ? Colors.blue : Colors.grey.shade400,
+                ),
+              );
+            }),
         ),
       ),
     );

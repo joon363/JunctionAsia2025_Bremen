@@ -1,9 +1,5 @@
 import '../theme.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import '../viewmodels/posts_view_model.dart';
-import '../viewmodels/words_view_model.dart';
-import '../models/post.dart';
 import '../models/word.dart';
 import 'base_post_widget.dart';
 class QuizWidget extends BasePostWidget {
@@ -43,7 +39,7 @@ class _QuizWidgetState extends BasePostWidgetState<QuizWidget> {
   Widget buildMainContent(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          color: primaryGreen
+        color: primaryGreen
       ),
       child: PageView.builder(
         controller: _pageController,
@@ -61,11 +57,11 @@ class _QuizWidgetState extends BasePostWidgetState<QuizWidget> {
             case 3:
             case 5:
               return AnswerPage(
-                  answerTitle: word.wordMeaning,
-                  isEnd: index == 5
+                answerTitle: word.wordMeaning,
+                isEnd: index == 5
               );
             default:
-              return const SizedBox.shrink();
+            return const SizedBox.shrink();
           }
         },
       ),

@@ -1,8 +1,5 @@
-import 'dart:convert';
-import 'dart:math';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import '../widgets/quiz_widget.dart';
 import '../widgets/post_widget.dart';
 import '../widgets/end_widget.dart';
@@ -57,30 +54,30 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       body: posts.isEmpty
-          ? const Center(child: CircularProgressIndicator())
-          : PageView.builder(
-        scrollDirection: Axis.vertical,
-        itemCount: posts.length + 1, // ✅ 마지막 EndWidget 포함
-        itemBuilder: (context, index) {
-          final wordsVM = context.watch<WordsViewModel>();
-          final userWords = wordsVM.userWords;
-          if (index == posts.length) {
-            return EndWidget();
-          }
+        ? const Center(child: CircularProgressIndicator())
+        : PageView.builder(
+          scrollDirection: Axis.vertical,
+          itemCount: posts.length + 1, // ✅ 마지막 EndWidget 포함
+          itemBuilder: (context, index) {
+            final wordsVM = context.watch<WordsViewModel>();
+            final userWords = wordsVM.userWords;
+            if (index == posts.length) {
+              return EndWidget();
+            }
 
-          final post = posts[index];
+            final post = posts[index];
 
-          if (index != 0 && index % 5 == 0 && userWords.isNotEmpty) {
-            return QuizWidget(words: userWords);
-          } else {
-            return PostWidget(
-              post: post,
-              backgroundColor: post.backgroundColor,
-              textColor: post.textColor,
-            );
-          }
-        },
-      ),
+            if (index != 0 && index % 5 == 0 && userWords.isNotEmpty) {
+              return QuizWidget(words: userWords);
+            } else {
+              return PostWidget(
+                post: post,
+                backgroundColor: post.backgroundColor,
+                textColor: post.textColor,
+              );
+            }
+          },
+        ),
     );
   }
 }
