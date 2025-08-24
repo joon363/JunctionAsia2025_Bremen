@@ -115,12 +115,12 @@ class _WordListPageState extends State<WordListPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Text('WordBook',
-            style: TextStyle(
-                fontWeight: FontWeight.w700,
-                color: Colors.black
-            ),
+        title: Text('WordBook',
+          style: TextStyle(
+            fontWeight: FontWeight.w700,
+            color: Colors.black
           ),
+        ),
       ),
       body: _words.isEmpty
         ? const Center(child: CircularProgressIndicator())
@@ -144,7 +144,7 @@ class _WordListPageState extends State<WordListPage> {
                     child: Container(
                       margin: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                       decoration: BoxDecoration(
-                        color: index<3?primaryMediumBlue:primaryLightBlue,
+                        color: index < 3 ? primaryMediumBlue : primaryLightBlue,
                         borderRadius: BorderRadius.circular(16),
                       ),
                       child: ListTile(

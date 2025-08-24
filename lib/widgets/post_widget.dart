@@ -551,12 +551,11 @@ class _CommentsPageState extends State<_CommentsPage> {
           .toList();
       }).toList();
     final totalWords = processedComments.fold<int>(
-        0, (prev, words) => prev + words.length);
+      0, (prev, words) => prev + words.length);
 
-    // 3️⃣ adaptive font size 계산 (총 단어 수 기준)
     final adaptedFontSize = totalWords <= 75
-        ? 20.0
-        : (20 - (totalWords - 75) * (0.5)).clamp(12.0, 20.0);
+      ? 20.0
+      : (20 - (totalWords - 75) * (0.5)).clamp(12.0, 20.0);
     return GestureDetector(
       behavior: HitTestBehavior.translucent,
       onTap: () {

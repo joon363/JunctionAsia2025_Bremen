@@ -60,39 +60,39 @@ class _HomeScreenState extends State<HomeScreen> {
           final postData = results[0] as List<dynamic>;
           final wordList = results[1] as List<dynamic>;
           return Scaffold(
-              appBar: AppBar(
-                  title: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Container(),
-                      Text('Feed',
-                        style: TextStyle(
-                            fontWeight: FontWeight.w700,
-                            color: Colors.black
-                        ),
-                      ),
-                      EyeToggleButton()
-                    ],
-                  )
-              ),
+            appBar: AppBar(
+              title: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(),
+                  Text('Feed',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w700,
+                      color: Colors.black
+                    ),
+                  ),
+                  EyeToggleButton()
+                ],
+              )
+            ),
             body: PageView.builder(
-                scrollDirection: Axis.vertical,
-                itemCount: postData.length,
-                itemBuilder: (context, index) {
-                  final post = postData[index] as Map<String, dynamic>;
-                  var pair = randomColor();
-                  if (index == postData.length-1) {
-                    return EndWidget();
-                  } else if (index != 0 && index % 5 == 0) {
-                    return QuizWidget(words: wordList);
-                  } else {
-                    return PostWidget(
-                        post: post,
-                        backgroundColor: pair.backgroundColor,
-                        textColor: pair.textColor
-                    );
-                  }
+              scrollDirection: Axis.vertical,
+              itemCount: postData.length,
+              itemBuilder: (context, index) {
+                final post = postData[index] as Map<String, dynamic>;
+                var pair = randomColor();
+                if (index == postData.length - 1) {
+                  return EndWidget();
+                } else if (index != 0 && index % 5 == 0) {
+                  return QuizWidget(words: wordList);
+                } else {
+                  return PostWidget(
+                    post: post,
+                    backgroundColor: pair.backgroundColor,
+                    textColor: pair.textColor
+                  );
                 }
+              }
             )
           );
         }
@@ -117,12 +117,12 @@ class _EyeToggleButtonState extends State<EyeToggleButton> {
 
   void _onTap() {
     setState(() {
-      _toggled = !_toggled;
-    });
+        _toggled = !_toggled;
+      });
 
     if (_toggled) {
       Future.delayed(const Duration(milliseconds: 300), () {
-      });
+        });
     }
   }
 

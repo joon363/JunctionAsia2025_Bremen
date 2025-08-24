@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 
 import '../theme.dart';
 import 'package:flutter/material.dart';
@@ -63,7 +62,7 @@ class _QuizWidgetState extends State<QuizWidget> {
                   case 5:
                     return AnswerPage(
                       title: word['word_meaning'],
-                      isEnd: index==5
+                      isEnd: index == 5
                     );
                   default:
                   return const SizedBox.shrink();
@@ -114,31 +113,31 @@ class QuizPage extends StatelessWidget {
       children: [
         Expanded(child: Container()),
         Expanded(child: SizedBox(
-          child: Image.asset("assets/images/ybm_cat_problem.png", fit: BoxFit.cover,),
-        ),),
+            child: Image.asset("assets/images/ybm_cat_problem.png", fit: BoxFit.cover,),
+          ),),
         Expanded(child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              title,
-              style: TextStyle(
-                fontSize: 45,
-                fontWeight: FontWeight.bold,
-                fontFamily: "Nanum",
-                color: primaryLightOrange,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                title,
+                style: TextStyle(
+                  fontSize: 45,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: "Nanum",
+                  color: primaryLightOrange,
+                ),
               ),
-            ),
-            Text(
-              "넘겨서 뜻 보기 →",
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.w500,
-                fontFamily: "Inter",
-                color: primaryLightOrange,
+              Text(
+                "넘겨서 뜻 보기 →",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w500,
+                  fontFamily: "Inter",
+                  color: primaryLightOrange,
+                ),
               ),
-            ),
-          ],
-        )),
+            ],
+          )),
         Expanded(child: Container()),
       ],
     );
@@ -160,32 +159,31 @@ class AnswerPage extends StatelessWidget {
         children: [
           Expanded(child: Container()),
           Expanded(child: SizedBox(
-            //width: 150,
-            child: Image.asset("assets/images/ybm_cat_answer.png", fit: BoxFit.cover,),
-          ),),
+              child: Image.asset("assets/images/ybm_cat_answer.png", fit: BoxFit.cover,),
+            ),),
           Expanded(child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                title,
-                style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: "Inter",
-                  color: primaryLightOrange,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  title,
+                  style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: "Inter",
+                    color: primaryLightOrange,
+                  ),
                 ),
-              ),
-              Text(
-                isEnd?"수고하셨습니다 👍":"넘겨서 다음 단어 보기 →",
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w500,
-                  fontFamily: "Inter",
-                  color: primaryLightOrange,
+                Text(
+                  isEnd ? "수고하셨습니다 👍" : "넘겨서 다음 단어 보기 →",
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
+                    fontFamily: "Inter",
+                    color: primaryLightOrange,
+                  ),
                 ),
-              ),
-            ],
-          )),
+              ],
+            )),
           Expanded(child: Container()),
 
         ],

@@ -42,7 +42,7 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final List<Widget> _pages = const [
+    final List<Widget> pages = const[
       ProfileScreen(),
       HomeScreen(),
       WordListPage(),
@@ -59,7 +59,7 @@ class _MainScreenState extends State<MainScreen> {
               child: child,
             );
           },
-          child: _pages[_selectedIndex], // 현재 선택된 페이지
+          child: pages[_selectedIndex],
         ),
         bottomNavigationBar: Container(
           decoration: BoxDecoration(
@@ -94,8 +94,8 @@ class _MainScreenState extends State<MainScreen> {
             currentIndex: _selectedIndex,
             onTap: (index) {
               setState(() {
-                _selectedIndex = index; // 누르면 애니메이션과 함께 전환
-              });
+                  _selectedIndex = index;
+                });
             },
           ),
         )

@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 
 import '../theme.dart';
 import 'package:flutter/material.dart';
@@ -93,7 +92,7 @@ class EndPage extends StatelessWidget {
     String imagePath;
     String title;
     String subtitle;
-    switch(index){
+    switch (index){
       case 0:
         imagePath = "assets/images/ybm_cat_final_0.png";
         title = "오늘의 학습 완료!";
@@ -107,17 +106,17 @@ class EndPage extends StatelessWidget {
         title = "새로운 컨텐츠";
         subtitle = "새로운 학습 컨텐츠는 매일 업데이트 됩니다.";
       default:
-        imagePath = "assets/images/ybm_cat_problem.png";
-        title = "Something went wrong";
-        subtitle = "";
+      imagePath = "assets/images/ybm_cat_problem.png";
+      title = "Something went wrong";
+      subtitle = "";
     }
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Expanded(child: Container()),
         Expanded(child: SizedBox(
-          child: Image.asset(imagePath, fit: BoxFit.cover,),
-        ),),
+            child: Image.asset(imagePath, fit: BoxFit.cover,),
+          ),),
         Expanded(child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -161,7 +160,6 @@ class AnswerPage extends StatelessWidget {
         children: [
           Expanded(child: Container()),
           Expanded(child: SizedBox(
-              //width: 150,
               child: Image.asset("assets/images/ybm_cat_answer.png", fit: BoxFit.cover,),
             ),),
           Expanded(child: Column(

@@ -10,7 +10,7 @@ Color getRandomColorBetween(Color start, Color end) {
 Color getRandomColorCloserToFirst(Color start, Color end) {
   final random = Random();
   double t = random.nextDouble();
-  return Color.lerp(start, end, t*t*t)!;
+  return Color.lerp(start, end, t * t * t)!;
 }
 
 const Color primaryOrange = Color(0xFFFFB823);

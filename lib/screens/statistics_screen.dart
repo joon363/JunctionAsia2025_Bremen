@@ -10,7 +10,7 @@ import '../theme.dart';
 final random = Random();
 Color getRandomGrassColor() {
   double opacity = (random.nextInt(100) + 1) * 0.01;
-  double opacity_3 = opacity*opacity*opacity;
+  double opacity_3 = opacity * opacity * opacity;
   return primaryBlue.withAlpha((opacity_3 * 255).round());
 }
 
@@ -21,12 +21,12 @@ class ProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Text('Statistics',
-            style: TextStyle(
-                fontWeight: FontWeight.w700,
-                color: Colors.black
-            ),
+        title: Text('Statistics',
+          style: TextStyle(
+            fontWeight: FontWeight.w700,
+            color: Colors.black
           ),
+        ),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
@@ -59,7 +59,7 @@ class ProfileScreen extends StatelessWidget {
             ),
             Container(
               height: 150,
-              padding: EdgeInsets.only(left:8,right:16),
+              padding: EdgeInsets.only(left: 8, right: 16),
               child: LineChartWidget(),
             ),
             const SizedBox(height: 8),
@@ -128,9 +128,9 @@ class ProfileScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [Text("", style: TextStyle(fontSize: 12),)] + (["May", "Jun", "July", "Aug"]).map((entry) {
-                return Text(entry, style: TextStyle(fontSize: 12));
-              }
-              ).toList() + [Text("")],
+                    return Text(entry, style: TextStyle(fontSize: 12));
+                  }
+                ).toList() + [Text("")],
             ),
             const SizedBox(height: 4),
             GridView.builder(
@@ -180,8 +180,8 @@ class _LineChartWidgetState extends State<LineChartWidget> {
     final codec = await ui.instantiateImageCodec(data.buffer.asUint8List());
     final frame = await codec.getNextFrame();
     setState(() {
-      starImage = frame.image;
-    });
+        starImage = frame.image;
+      });
   }
   final List<String> customBottomTitles = [
     "", "8/3", "", "8/20", "", "8/17", "", "8/24"
@@ -230,7 +230,7 @@ class _LineChartWidgetState extends State<LineChartWidget> {
                     style: const TextStyle(fontSize: 10),
                   );
                 }
-                return const Text(""); // 범위 밖은 빈 문자열
+                return const Text("");
               },
               interval: 1,
             ),
@@ -280,13 +280,11 @@ class _LineChartWidgetState extends State<LineChartWidget> {
             dotData: FlDotData(
               show: true,
               getDotPainter: (spot, percent, barData, index) {
-                // 마지막 점이면 → 이미지 dot
                 if (index == barData.spots.length - 1) {
                   return FlDotImagePainter(
                     starImage!,
                     size: const Size(32, 32),);
                 }
-                // 나머지는 기본 동그라미
                 return FlDotCirclePainter(
                   radius: 4,
                   color: primaryBlue,
@@ -334,9 +332,9 @@ class FlDotImagePainter extends FlDotPainter {
 
   @override
   bool hitTest(
-      FlSpot spot, Offset touched, Offset center, double extraThreshold) {
+    FlSpot spot, Offset touched, Offset center, double extraThreshold) {
     final rect =
-    Rect.fromCenter(center: center, width: size.width, height: size.height);
+      Rect.fromCenter(center: center, width: size.width, height: size.height);
     return rect.inflate(extraThreshold).contains(touched);
   }
 
