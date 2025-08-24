@@ -183,7 +183,7 @@ struct WordRow: View {
         .padding(14)
         .background(
             RoundedRectangle(cornerRadius: 14)
-                .fill(word.text == "obvious" ? Color(red: 255/255, green: 216/255, blue: 133/255) : WordbookColors.card)
+                .fill(word.text == "obvious" ? Color(red: 202/255, green: 207/255, blue: 230/255) : WordbookColors.card)
                 .strokeBorder(WordbookColors.stroke, lineWidth: 0.6)
         )
         .contentShape(Rectangle()) // 전체 영역 탭 가능
@@ -257,7 +257,7 @@ struct WordDetailCard: View {
 // MARK: - Color Theme 컬러 세팅
 enum WordbookColors {
     static let paper = Color(red: 1.0, green: 245/255, blue: 220/255)
-    static let card  = Color(red: 1.0, green: 249/255, blue: 235/255)
+    static let card  = Color(red: 229/255, green: 231/255, blue: 243/255)
     static let stroke = Color.black.opacity(0.1)
 }
 

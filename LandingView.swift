@@ -99,7 +99,7 @@ struct SecondView: View {
                         .foregroundColor(Color("CustomOrange"))
                     RoundedRectangle(cornerRadius: 4)
                         .frame(width: 120, height: 6)
-                        .foregroundColor(Color("Ivory"))
+                        .foregroundColor(Color(red: 202/255, green: 207/255, blue:230/255))
                 }
                 Divider().padding(.vertical, 12)
                 
