@@ -3,6 +3,8 @@ Junction Asia 2025 Team Bremen
 
 **ReelStudy** turns fandom into fluency. Learners consume real native content they already love—K‑POP clips, memes, Reddit threads, short reels—and practice English through a fast, swipe-based flow that feels like scrolling, not studying. The app delivers instant meanings, examples, and AI feedback in context, so motivation stays high and progress compounds.
 
+[Video Demo](https://youtube.com/shorts/ofhwS2YSUHM)
+
 **Problem it solves**
 - After hitting test targets, many learners quit because study feels boring and disconnected from real life. Traditional apps focus on drills, not culture or community, so retention drops and “test English” doesn’t transfer to everyday use.
 - ReelStudy solves the “post-exam drop-off” by anchoring study to intrinsic motivation (fandom) and live language use. It bridges the gap between scores and real-world fluency with engaging, contextual, native content and social learning.
