@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../widgets/quiz_widget.dart';
 import '../widgets/post_widget.dart';
+import '../widgets/end_widget.dart';
 import '../theme.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -26,14 +27,14 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Future<List<dynamic>> _loadPostsData() async {
     final String jsonString =
-      await rootBundle.loadString('assets/selected_posts.json');
+      await rootBundle.loadString('assets/datas/kpop_posts.json');
     final List<dynamic> jsonList = json.decode(jsonString);
     return jsonList;
   }
 
   Future<List<dynamic>> _loadUnknownWords() async {
     final String jsonString =
-      await rootBundle.loadString('assets/voca_user.json');
+      await rootBundle.loadString('assets/datas/voca_user.json');
     final List<dynamic> jsonList = json.decode(jsonString);
     if (jsonList.length <= 3) {
       return jsonList;
@@ -63,16 +64,18 @@ class _HomeScreenState extends State<HomeScreen> {
             itemBuilder: (context, index) {
               final post = postData[index] as Map<String, dynamic>;
               var pair = randomColor();
-              if (index == 0 || index % 5 != 0) {
+              if (index == postData.length-1) {
+                return EndWidget();
+              } else if (index != 0 && index % 5 == 0) {
+                return QuizWidget(words: wordList);
+              } else {
                 return PostWidget(
                   post: post,
                   backgroundColor: pair.backgroundColor,
                   textColor: pair.textColor
                 );
-              } else {
-                return QuizWidget(words: wordList);
               }
-            },
+            }
           );
         }
         else {
