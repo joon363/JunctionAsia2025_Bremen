@@ -164,7 +164,7 @@ class _EyeToggleButtonState extends State<EyeToggleButton> {
         child: Icon(
           _toggled ? CupertinoIcons.eye : CupertinoIcons.eye_slash,
           key: ValueKey<bool>(_toggled),
-          color: _toggled ? Colors.orange : Colors.grey,
+          color: _toggled ? primaryOrange : Colors.grey,
           size: 24,
         ),
       ),

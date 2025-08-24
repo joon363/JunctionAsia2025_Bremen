@@ -1,12 +1,17 @@
+import 'dart:async';
+import 'dart:ui' as ui;
+
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
+import 'package:flutter/services.dart';
 import 'dart:math';
 import '../theme.dart';
 
 final random = Random();
-Color getRandomBlue() {
-  double opacity = (random.nextInt(5) + 1) * 0.2;
-  return Colors.blue.withAlpha((opacity * 255).round());
+Color getRandomGrassColor() {
+  double opacity = (random.nextInt(100) + 1) * 0.01;
+  double opacity_3 = opacity*opacity*opacity;
+  return primaryBlue.withAlpha((opacity_3 * 255).round());
 }
 
 class ProfileScreen extends StatelessWidget {
@@ -28,7 +33,7 @@ class ProfileScreen extends StatelessWidget {
               ),
               const Text(
                 '0.8개',
-                style: TextStyle(fontSize: 28, color: primaryOrange, fontWeight: FontWeight.w700),
+                style: TextStyle(fontSize: 28, color: primaryBlue, fontWeight: FontWeight.w700),
               ),
             ],
           ),
@@ -37,14 +42,15 @@ class ProfileScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             spacing: 2,
             children: [
-              Icon(Icons.circle, color: primaryGreen, size: 20,),
+              Icon(Icons.circle, color: Colors.grey.shade500, size: 20,),
               Text("User Average", style: TextStyle(fontSize: 12)),
-              Icon(Icons.circle, color: primaryOrange, size: 20),
+              Icon(Icons.circle, color: primaryBlue, size: 20),
               Text("Me", style: TextStyle(fontSize: 12)),
             ],
           ),
-          SizedBox(
+          Container(
             height: 150,
+            padding: EdgeInsets.only(right:8),
             child: LineChartWidget(),
           ),
           const SizedBox(height: 8),
@@ -60,7 +66,7 @@ class ProfileScreen extends StatelessWidget {
                 children: [
                   const Text(
                     '187개',
-                    style: TextStyle(fontSize: 24, color: primaryOrange, fontWeight: FontWeight.w700),
+                    style: TextStyle(fontSize: 24, color: primaryBlue, fontWeight: FontWeight.w700),
                   ), const Text(
                     '(상위 3.7%)',
                     style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
@@ -83,7 +89,7 @@ class ProfileScreen extends StatelessWidget {
                 children: [
                   const Text(
                     '213개',
-                    style: TextStyle(fontSize: 24, color: primaryOrange, fontWeight: FontWeight.w700),
+                    style: TextStyle(fontSize: 24, color: primaryBlue, fontWeight: FontWeight.w700),
                   ), const Text(
                     '(상위 5.3%)',
                     style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
@@ -105,7 +111,7 @@ class ProfileScreen extends StatelessWidget {
               ),
               const Text(
                 'D+86',
-                style: TextStyle(fontSize: 24, color: primaryOrange, fontWeight: FontWeight.w900),
+                style: TextStyle(fontSize: 24, color: primaryBlue, fontWeight: FontWeight.w900),
               ),
             ],
           ),
@@ -130,7 +136,7 @@ class ProfileScreen extends StatelessWidget {
             itemBuilder: (context, index) {
               return Container(
                 decoration: BoxDecoration(
-                  color: getRandomBlue(),
+                  color: getRandomGrassColor(),
                   borderRadius: BorderRadius.circular(4),
                 ),
               );
@@ -143,113 +149,30 @@ class ProfileScreen extends StatelessWidget {
 
 }
 
-class StatsChart extends StatelessWidget {
-  const StatsChart({super.key});
+class LineChartWidget extends StatefulWidget {
+  const LineChartWidget({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return LineChart(
-      LineChartData(
-        gridData: const FlGridData(show: false),
-        titlesData: FlTitlesData(
-          show: true,
-          rightTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
-          topTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
-          bottomTitles: AxisTitles(
-            sideTitles: SideTitles(
-              showTitles: true,
-              reservedSize: 30,
-              interval: 1,
-              getTitlesWidget: bottomTitleWidgets,
-            ),
-          ),
-          leftTitles: AxisTitles(
-            sideTitles: SideTitles(
-              showTitles: true,
-              reservedSize: 42,
-              getTitlesWidget: leftTitleWidgets,
-            ),
-          ),
-        ),
-        borderData: FlBorderData(
-          show: true,
-          border: Border(
-            left: BorderSide(color: Colors.grey, width: 1),
-            bottom: BorderSide(color: Colors.grey, width: 1),
-            top: BorderSide(color: Colors.transparent),
-            right: BorderSide(color: Colors.transparent),
-          ),
-        ),
-        minX: 0,
-        maxX: 6,
-        minY: 0,
-        maxY: 6,
-        lineBarsData: [
-          LineChartBarData(
-            spots: const[
-              FlSpot(0, 4.5), FlSpot(1, 4.2), FlSpot(2.5, 4), FlSpot(4, 3.5), FlSpot(5.5, 3.2),
-            ],
-            isCurved: true,
-            color: Colors.purple,
-            barWidth: 4,
-            isStrokeCapRound: true,
-            dotData: const FlDotData(show: false),
-            belowBarData: BarAreaData(show: false),
-          ),
-          LineChartBarData(
-            spots: const[
-              FlSpot(0, 3), FlSpot(1.5, 2.8), FlSpot(3, 2.5), FlSpot(4.5, 2.2), FlSpot(6, 2),
-            ],
-            isCurved: true,
-            color: Colors.blue,
-            barWidth: 4,
-            isStrokeCapRound: true,
-            dotData: const FlDotData(show: false),
-            belowBarData: BarAreaData(show: false),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget bottomTitleWidgets(double value, TitleMeta meta) {
-    const style = TextStyle(
-      fontWeight: FontWeight.bold,
-      fontSize: 16,
-    );
-    Widget text;
-    if (value.toInt() == 5) {
-      text = const Text('t', style: style);
-    } else {
-      text = const Text('', style: style);
-    }
-    return text;
-  }
-
-  Widget leftTitleWidgets(double value, TitleMeta meta) {
-    const style = TextStyle(
-      fontWeight: FontWeight.bold,
-      fontSize: 15,
-    );
-    String text;
-    switch (value.toInt()) {
-      case 2:
-        text = '평균';
-        break;
-      case 3:
-        text = '나';
-        break;
-      case 4:
-        text = '저';
-        break;
-      default:
-      return Container();
-    }
-    return Text(text, style: style, textAlign: TextAlign.left);
-  }
+  State<LineChartWidget> createState() => _LineChartWidgetState();
 }
-class LineChartWidget extends StatelessWidget {
-  const LineChartWidget({super.key});
+
+class _LineChartWidgetState extends State<LineChartWidget> {
+  ui.Image? starImage;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadImage();
+  }
+
+  Future<void> _loadImage() async {
+    final data = await rootBundle.load('assets/images/ybm_cat_face.png');
+    final codec = await ui.instantiateImageCodec(data.buffer.asUint8List());
+    final frame = await codec.getNextFrame();
+    setState(() {
+      starImage = frame.image;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -288,7 +211,7 @@ class LineChartWidget extends StatelessWidget {
             sideTitles: SideTitles(showTitles: false, interval: 1),
           ),
           rightTitles: AxisTitles(
-            sideTitles: SideTitles(showTitles: false),
+            sideTitles: SideTitles(showTitles: false,),
           ),
           topTitles: AxisTitles(
             sideTitles: SideTitles(showTitles: false),
@@ -309,7 +232,7 @@ class LineChartWidget extends StatelessWidget {
               FlSpot(5, 2.2),
               FlSpot(6, 2.2),
             ],
-            color: primaryGreen,
+            color: Colors.grey.shade500,
             barWidth: 2,
             isStrokeCapRound: true,
             dotData: FlDotData(show: true),
@@ -324,13 +247,72 @@ class LineChartWidget extends StatelessWidget {
               FlSpot(5, 0.9),
               FlSpot(6, 0.8),
             ],
-            color: primaryOrange,
+            color: primaryBlue,
             barWidth: 4,
             isStrokeCapRound: true,
-            dotData: FlDotData(show: true),
+            dotData: FlDotData(
+              show: true,
+              getDotPainter: (spot, percent, barData, index) {
+                // 마지막 점이면 → 이미지 dot
+                if (index == barData.spots.length - 1) {
+                  return FlDotImagePainter(
+                    starImage!,
+                    size: const Size(32, 32),);
+                }
+                // 나머지는 기본 동그라미
+                return FlDotCirclePainter(
+                  radius: 4,
+                  color: primaryBlue,
+                  strokeWidth: 0,
+                  strokeColor: Colors.transparent,
+                );
+              },
+            ),
           ),
         ],
       ),
     );
   }
+}
+
+class FlDotImagePainter extends FlDotPainter {
+  final ui.Image image;
+  final Size size;
+
+  FlDotImagePainter(this.image, {this.size = const Size(24, 24)});
+
+  @override
+  void draw(Canvas canvas, FlSpot spot, Offset offsetInCanvas) {
+    final rect = Rect.fromCenter(
+      center: offsetInCanvas,
+      width: size.width,
+      height: size.height,
+    );
+    paintImage(
+      canvas: canvas,
+      rect: rect,
+      image: image,
+      fit: BoxFit.contain,
+    );
+  }
+
+  @override
+  Size getSize(FlSpot spot) => size;
+
+  @override
+  Color get mainColor => Colors.transparent;
+
+  @override
+  FlDotPainter lerp(FlDotPainter a, FlDotPainter b, double t) => this;
+
+  @override
+  bool hitTest(
+      FlSpot spot, Offset touched, Offset center, double extraThreshold) {
+    final rect =
+    Rect.fromCenter(center: center, width: size.width, height: size.height);
+    return rect.inflate(extraThreshold).contains(touched);
+  }
+
+  @override
+  List<Object?> get props => [image, size];
 }

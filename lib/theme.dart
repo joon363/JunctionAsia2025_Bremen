@@ -7,18 +7,27 @@ Color getRandomColorBetween(Color start, Color end) {
   return Color.lerp(start, end, t)!;
 }
 
+Color getRandomColorCloserToFirst(Color start, Color end) {
+  final random = Random();
+  double t = random.nextDouble();
+  return Color.lerp(start, end, t*t*t)!;
+}
+
 const Color primaryOrange = Color(0xFFFFB823);
 const Color primaryLightOrange = Color(0xFFFFF9EB);
 const Color primaryGreen = Color(0xFF708A58);
 const Color primaryDarkGreen = Color(0xFF2D4F2B);
+const Color primaryBlue = Color(0xFF7A86C0);
+const Color primaryMediumBlue = Color(0xFFA5B1E8);
+const Color primaryLightBlue = Color(0xFFE5E5FF);
 
 ({Color backgroundColor, Color textColor}) randomColor() {
   final random = Random();
   double t = random.nextDouble();
   if (t > 0.5) {
-    return (backgroundColor: getRandomColorBetween(primaryOrange, primaryLightOrange), textColor: Colors.black);
+    return (backgroundColor: getRandomColorCloserToFirst(primaryLightOrange, primaryOrange), textColor: Colors.black);
   } else {
-    return (backgroundColor: getRandomColorBetween(primaryGreen, primaryDarkGreen), textColor: Colors.white);
+    return (backgroundColor: getRandomColorCloserToFirst(primaryGreen, primaryDarkGreen), textColor: Colors.white);
   }
 }
 
