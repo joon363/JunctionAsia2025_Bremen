@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:math';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../widgets/quiz_widget.dart';
@@ -58,30 +59,89 @@ class _HomeScreenState extends State<HomeScreen> {
           final results = snapshot.data as List<dynamic>;
           final postData = results[0] as List<dynamic>;
           final wordList = results[1] as List<dynamic>;
-          return PageView.builder(
-            scrollDirection: Axis.vertical,
-            itemCount: postData.length,
-            itemBuilder: (context, index) {
-              final post = postData[index] as Map<String, dynamic>;
-              var pair = randomColor();
-              if (index == postData.length-1) {
-                return EndWidget();
-              } else if (index != 0 && index % 5 == 0) {
-                return QuizWidget(words: wordList);
-              } else {
-                return PostWidget(
-                  post: post,
-                  backgroundColor: pair.backgroundColor,
-                  textColor: pair.textColor
-                );
-              }
-            }
+          return Scaffold(
+              appBar: AppBar(
+                  title: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(),
+                      Text('Feed',
+                        style: TextStyle(
+                            fontWeight: FontWeight.w700,
+                            color: Colors.black
+                        ),
+                      ),
+                      EyeToggleButton()
+                    ],
+                  )
+              ),
+            body: PageView.builder(
+                scrollDirection: Axis.vertical,
+                itemCount: postData.length,
+                itemBuilder: (context, index) {
+                  final post = postData[index] as Map<String, dynamic>;
+                  var pair = randomColor();
+                  if (index == postData.length-1) {
+                    return EndWidget();
+                  } else if (index != 0 && index % 5 == 0) {
+                    return QuizWidget(words: wordList);
+                  } else {
+                    return PostWidget(
+                        post: post,
+                        backgroundColor: pair.backgroundColor,
+                        textColor: pair.textColor
+                    );
+                  }
+                }
+            )
           );
         }
         else {
           return const Center(child: Text('No posts found.'));
         }
       },
+    );
+  }
+}
+
+
+class EyeToggleButton extends StatefulWidget {
+  const EyeToggleButton({super.key});
+
+  @override
+  State<EyeToggleButton> createState() => _EyeToggleButtonState();
+}
+
+class _EyeToggleButtonState extends State<EyeToggleButton> {
+  bool _toggled = false;
+
+  void _onTap() {
+    setState(() {
+      _toggled = !_toggled;
+    });
+
+    if (_toggled) {
+      Future.delayed(const Duration(milliseconds: 300), () {
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: _onTap,
+      child: AnimatedSwitcher(
+        duration: const Duration(milliseconds: 500),
+        transitionBuilder: (child, animation) {
+          return FadeTransition(opacity: animation, child: child);
+        },
+        child: Icon(
+          _toggled ? CupertinoIcons.eye : CupertinoIcons.eye_slash,
+          key: ValueKey<bool>(_toggled),
+          color: _toggled ? primaryOrange : Colors.grey,
+          size: 24,
+        ),
+      ),
     );
   }
 }

@@ -229,7 +229,7 @@ class _BodyPageWithTooltipState extends State<_BodyPageWithTooltip> {
     if (wordDataAll[word] == null) return;
     wordData = wordDataAll[word]!;
     x = (position.dx - 100);
-    if (x < -42) x = -42;
+    if (x < -20) x = -20;
     if (x > 220) x = 220;
     _overlayEntry = OverlayEntry(
       builder: (context) => Positioned(
@@ -570,7 +570,6 @@ class _CommentsPageState extends State<_CommentsPage> {
           physics: const NeverScrollableScrollPhysics(),
           itemCount: widget.comments.length,
           itemBuilder: (context, index) {
-            final String comment = widget.comments[index] as String;
             return Padding(
               padding: EdgeInsets.only(bottom: 16),
               child: Row(

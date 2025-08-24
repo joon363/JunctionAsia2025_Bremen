@@ -19,130 +19,140 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      padding: const EdgeInsets.all(16.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const Text(
-                '문장당 모르는 단어',
-                style: TextStyle(fontSize: 16, letterSpacing: 0, fontWeight: FontWeight.w700),
-              ),
-              const Text(
-                '0.8개',
-                style: TextStyle(fontSize: 28, color: primaryBlue, fontWeight: FontWeight.w700),
-              ),
-            ],
-          ),
-          const SizedBox(height: 16),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            spacing: 2,
-            children: [
-              Icon(Icons.circle, color: Colors.grey.shade500, size: 20,),
-              Text("User Average", style: TextStyle(fontSize: 12)),
-              Icon(Icons.circle, color: primaryBlue, size: 20),
-              Text("Me", style: TextStyle(fontSize: 12)),
-            ],
-          ),
-          Container(
-            height: 150,
-            padding: EdgeInsets.only(right:8),
-            child: LineChartWidget(),
-          ),
-          const SizedBox(height: 8),
-          const SizedBox(height: 2),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const Text(
-                '학습 단어',
-                style: TextStyle(fontSize: 16, letterSpacing: 0, fontWeight: FontWeight.w700),
-              ),
-              Column(
-                children: [
-                  const Text(
-                    '187개',
-                    style: TextStyle(fontSize: 24, color: primaryBlue, fontWeight: FontWeight.w700),
-                  ), const Text(
-                    '(상위 3.7%)',
-                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
-                  ),
-                ],
-              )
-            ],
-          ),
-          const SizedBox(height: 2),
-          Divider(),
-          const SizedBox(height: 2),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const Text(
-                '읽은 포스트',
-                style: TextStyle(fontSize: 16, letterSpacing: 0, fontWeight: FontWeight.w700),
-              ),
-              Column(
-                children: [
-                  const Text(
-                    '213개',
-                    style: TextStyle(fontSize: 24, color: primaryBlue, fontWeight: FontWeight.w700),
-                  ), const Text(
-                    '(상위 5.3%)',
-                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
-                  ),
-                ],
-              )
-            ],
-          ),
-          const SizedBox(height: 2),
-          Divider(),
-          const SizedBox(height: 2),
-
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const Text(
-                '학습 기록',
-                style: TextStyle(fontSize: 16, letterSpacing: 0, fontWeight: FontWeight.w700),
-              ),
-              const Text(
-                'D+86',
-                style: TextStyle(fontSize: 24, color: primaryBlue, fontWeight: FontWeight.w900),
-              ),
-            ],
-          ),
-          const SizedBox(height: 16),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [Text("")] + (["May", "Jun", "July", "Aug"]).map((entry) {
-                  return Text(entry);
-                }
-              ).toList() + [Text("")],
-          ),
-          const SizedBox(height: 4),
-          GridView.builder(
-            shrinkWrap: true,
-            physics: const NeverScrollableScrollPhysics(),
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 20,
-              crossAxisSpacing: 1,
-              mainAxisSpacing: 1,
+    return Scaffold(
+      appBar: AppBar(
+          title: Text('Statistics',
+            style: TextStyle(
+                fontWeight: FontWeight.w700,
+                color: Colors.black
             ),
-            itemCount: 140,
-            itemBuilder: (context, index) {
-              return Container(
-                decoration: BoxDecoration(
-                  color: getRandomGrassColor(),
-                  borderRadius: BorderRadius.circular(4),
-                ),
-              );
-            },
           ),
-        ],
+      ),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text(
+                  '문장당 모르는 단어',
+                  style: TextStyle(fontSize: 16, letterSpacing: 0, fontWeight: FontWeight.w700),
+                ),
+                const Text(
+                  '0.8개',
+                  style: TextStyle(fontSize: 28, color: primaryBlue, fontWeight: FontWeight.w700),
+                ),
+              ],
+            ),
+            const SizedBox(height: 16),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              spacing: 2,
+              children: [
+                Icon(Icons.circle, color: Colors.grey.shade500, size: 20,),
+                Text("User Average", style: TextStyle(fontSize: 12)),
+                Icon(Icons.circle, color: primaryBlue, size: 20),
+                Text("Me", style: TextStyle(fontSize: 12)),
+              ],
+            ),
+            Container(
+              height: 150,
+              padding: EdgeInsets.only(left:8,right:16),
+              child: LineChartWidget(),
+            ),
+            const SizedBox(height: 8),
+            const SizedBox(height: 2),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text(
+                  '학습 단어',
+                  style: TextStyle(fontSize: 16, letterSpacing: 0, fontWeight: FontWeight.w700),
+                ),
+                Column(
+                  children: [
+                    const Text(
+                      '187개',
+                      style: TextStyle(fontSize: 24, color: primaryBlue, fontWeight: FontWeight.w700),
+                    ), const Text(
+                      '(상위 3.7%)',
+                      style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+                    ),
+                  ],
+                )
+              ],
+            ),
+            const SizedBox(height: 2),
+            Divider(),
+            const SizedBox(height: 2),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text(
+                  '읽은 포스트',
+                  style: TextStyle(fontSize: 16, letterSpacing: 0, fontWeight: FontWeight.w700),
+                ),
+                Column(
+                  children: [
+                    const Text(
+                      '213개',
+                      style: TextStyle(fontSize: 24, color: primaryBlue, fontWeight: FontWeight.w700),
+                    ), const Text(
+                      '(상위 5.3%)',
+                      style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+                    ),
+                  ],
+                )
+              ],
+            ),
+            const SizedBox(height: 2),
+            Divider(),
+            const SizedBox(height: 2),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text(
+                  '학습 기록',
+                  style: TextStyle(fontSize: 16, letterSpacing: 0, fontWeight: FontWeight.w700),
+                ),
+                const Text(
+                  'D+86',
+                  style: TextStyle(fontSize: 24, color: primaryBlue, fontWeight: FontWeight.w900),
+                ),
+              ],
+            ),
+            const SizedBox(height: 16),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [Text("", style: TextStyle(fontSize: 12),)] + (["May", "Jun", "July", "Aug"]).map((entry) {
+                return Text(entry, style: TextStyle(fontSize: 12));
+              }
+              ).toList() + [Text("")],
+            ),
+            const SizedBox(height: 4),
+            GridView.builder(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 20,
+                crossAxisSpacing: 1,
+                mainAxisSpacing: 1,
+              ),
+              itemCount: 140,
+              itemBuilder: (context, index) {
+                return Container(
+                  decoration: BoxDecoration(
+                    color: getRandomGrassColor(),
+                    borderRadius: BorderRadius.circular(4),
+                  ),
+                );
+              },
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -173,7 +183,9 @@ class _LineChartWidgetState extends State<LineChartWidget> {
       starImage = frame.image;
     });
   }
-
+  final List<String> customBottomTitles = [
+    "", "8/3", "", "8/20", "", "8/17", "", "8/24"
+  ];
   @override
   Widget build(BuildContext context) {
     return LineChart(
@@ -202,13 +214,26 @@ class _LineChartWidgetState extends State<LineChartWidget> {
               getTitlesWidget: (value, meta) {
                 return Text(
                   value.toStringAsFixed(1),
-                  style: TextStyle(fontSize: 12),
+                  style: TextStyle(fontSize: 10),
                 );
               },
             ),
           ),
           bottomTitles: AxisTitles(
-            sideTitles: SideTitles(showTitles: false, interval: 1),
+            sideTitles: SideTitles(
+              showTitles: true,
+              getTitlesWidget: (value, meta) {
+                int index = value.toInt();
+                if (index >= 0 && index < customBottomTitles.length) {
+                  return Text(
+                    customBottomTitles[index],
+                    style: const TextStyle(fontSize: 10),
+                  );
+                }
+                return const Text(""); // 범위 밖은 빈 문자열
+              },
+              interval: 1,
+            ),
           ),
           rightTitles: AxisTitles(
             sideTitles: SideTitles(showTitles: false,),
@@ -218,19 +243,20 @@ class _LineChartWidgetState extends State<LineChartWidget> {
           ),
         ),
         minX: 0,
-        maxX: 6,
+        maxX: 7,
         minY: 0,
         maxY: 4,
         lineBarsData: [
           LineChartBarData(
             spots: [
               FlSpot(0, 3.1),
-              FlSpot(1, 2.5),
+              FlSpot(1, 2.8),
               FlSpot(2, 2.5),
               FlSpot(3, 2.4),
               FlSpot(4, 2.3),
               FlSpot(5, 2.2),
               FlSpot(6, 2.2),
+              FlSpot(7, 2.1),
             ],
             color: Colors.grey.shade500,
             barWidth: 2,
@@ -246,6 +272,7 @@ class _LineChartWidgetState extends State<LineChartWidget> {
               FlSpot(4, 1.2),
               FlSpot(5, 0.9),
               FlSpot(6, 0.8),
+              FlSpot(7, 0.8),
             ],
             color: primaryBlue,
             barWidth: 4,

@@ -114,17 +114,25 @@ class _WordListPageState extends State<WordListPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+          title: Text('WordBook',
+            style: TextStyle(
+                fontWeight: FontWeight.w700,
+                color: Colors.black
+            ),
+          ),
+      ),
       body: _words.isEmpty
         ? const Center(child: CircularProgressIndicator())
         : Column(
           children: [
             Column(
               children: [
-                Divider(),
+                Divider(thickness: 0.5,),
                 Text("단어 수: 187개", style: TextStyle(
                     fontSize: 16, fontWeight: FontWeight.w700),
                 ),
-                Divider(),
+                Divider(thickness: 0.5,),
 
               ],
             ),

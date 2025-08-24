@@ -133,7 +133,7 @@ class QuizPage extends StatelessWidget {
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w500,
-                fontFamily: "Nanum",
+                fontFamily: "Inter",
                 color: primaryLightOrange,
               ),
             ),
@@ -171,7 +171,7 @@ class AnswerPage extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
-                  fontFamily: "Nanum",
+                  fontFamily: "Inter",
                   color: primaryLightOrange,
                 ),
               ),
@@ -180,7 +180,7 @@ class AnswerPage extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w500,
-                  fontFamily: "Nanum",
+                  fontFamily: "Inter",
                   color: primaryLightOrange,
                 ),
               ),
