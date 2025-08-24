@@ -24,7 +24,7 @@ class _PostWidgetState extends State<PostWidget> {
 
   Future<void> _loadUnknownWords() async {
     final String jsonString =
-      await rootBundle.loadString('assets/voca_user.json');
+      await rootBundle.loadString('assets/datas/voca_user.json');
     final List<dynamic> jsonList = json.decode(jsonString);
     final List<String> words = jsonList.map((item) => item['word'] as String).toList();
     unknownWords = words;
@@ -188,7 +188,7 @@ class _BodyPageWithTooltipState extends State<_BodyPageWithTooltip> {
   }
 
   Future<void> loadVoca() async {
-    final String jsonString = await rootBundle.loadString('assets/voca_all.json');
+    final String jsonString = await rootBundle.loadString('assets/datas/voca_all.json');
     final List<dynamic> jsonData = json.decode(jsonString);
     Map<String, Map<String, dynamic>> wordMap = {
       for (var item in jsonData) item['word']: item
@@ -212,7 +212,7 @@ class _BodyPageWithTooltipState extends State<_BodyPageWithTooltip> {
 
   Future<List<String>> _loadUnknownWords() async {
     final String jsonString =
-      await rootBundle.loadString('assets/voca_user.json');
+      await rootBundle.loadString('assets/datas/voca_user.json');
     final List<dynamic> jsonList = json.decode(jsonString);
     final List<String> words = jsonList.map((item) => item['word'] as String).toList();
     return words;
@@ -328,6 +328,9 @@ class _BodyPageWithTooltipState extends State<_BodyPageWithTooltip> {
       .map((w) => w.trim())
       .where((w) => w.isNotEmpty)
       .toList();
+    final adaptedFontSize = words.length <= 75
+      ? 20.0
+      : (20 - (words.length - 75) * (0.05)).clamp(12.0, 20.0);
     return GestureDetector(
       behavior: HitTestBehavior.translucent,
       onTap: () {
@@ -361,7 +364,7 @@ class _BodyPageWithTooltipState extends State<_BodyPageWithTooltip> {
                         ? widget.textColor == Colors.black ? primaryGreen.withAlpha((0.5 * 255).round()) : Colors.yellow.withAlpha((0.5 * 255).round())
                         : Colors.transparent,
                       child: Text(word, style: TextStyle(
-                          fontSize: 20,
+                          fontSize: adaptedFontSize,
                           fontWeight: FontWeight.w700,
                           fontFamily: "Nanum",
                           color: widget.textColor
@@ -410,7 +413,7 @@ class _CommentsPageState extends State<_CommentsPage> {
   }
 
   Future<void> loadVoca() async {
-    final String jsonString = await rootBundle.loadString('assets/voca_all.json');
+    final String jsonString = await rootBundle.loadString('assets/datas/voca_all.json');
     final List<dynamic> jsonData = json.decode(jsonString);
     Map<String, Map<String, dynamic>> wordMap = {
       for (var item in jsonData) item['word']: item
@@ -540,6 +543,20 @@ class _CommentsPageState extends State<_CommentsPage> {
 
   @override
   Widget build(BuildContext context) {
+    final processedComments = widget.comments.map((comment) {
+        return (comment as String)
+          .split(RegExp(r'\s+'))
+          .map((w) => w.trim())
+          .where((w) => w.isNotEmpty)
+          .toList();
+      }).toList();
+    final totalWords = processedComments.fold<int>(
+        0, (prev, words) => prev + words.length);
+
+    // 3️⃣ adaptive font size 계산 (총 단어 수 기준)
+    final adaptedFontSize = totalWords <= 75
+        ? 20.0
+        : (20 - (totalWords - 75) * (0.5)).clamp(12.0, 20.0);
     return GestureDetector(
       behavior: HitTestBehavior.translucent,
       onTap: () {
@@ -563,43 +580,40 @@ class _CommentsPageState extends State<_CommentsPage> {
                   const SizedBox(width: 12),
                   Expanded(child: Wrap(
                       spacing: 4,
-                      children: comment.split(RegExp(r'\s+'))
-                        .map((w) => w.trim())
-                        .where((w) => w.isNotEmpty)
-                        .toList().map((word) {
-                            return Builder(
-                              builder: (wordContext) {
-                                return GestureDetector(
-                                  onTap: () {
-                                    final RenderBox box = wordContext.findRenderObject() as RenderBox;
-                                    final position = box.localToGlobal(Offset(box.size.width / 2, 0));
+                      children: processedComments[index].map((word) {
+                          return Builder(
+                            builder: (wordContext) {
+                              return GestureDetector(
+                                onTap: () {
+                                  final RenderBox box = wordContext.findRenderObject() as RenderBox;
+                                  final position = box.localToGlobal(Offset(box.size.width / 2, 0));
 
-                                    showTooltip(wordContext, word, position);
-                                  },
-                                  onLongPress: () {
-                                    setState(() {
-                                        if (highlightedWords.contains(word)) {
-                                          highlightedWords.remove(word);
-                                        } else {
-                                          highlightedWords.add(word);
-                                        }
-                                      });
-                                  },
-                                  child: Container(
-                                    color: highlightedWords.contains(word)
-                                      ? widget.textColor == Colors.black ? primaryGreen.withAlpha((0.5 * 255).round()) : Colors.yellow.withAlpha((0.5 * 255).round())
-                                      : Colors.transparent,
-                                    child: Text(word, style: TextStyle(
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.w700,
-                                        fontFamily: "Nanum",
-                                        color: widget.textColor
-                                      )),
-                                  ),
-                                );
-                              },
-                            );
-                          }).toList(),
+                                  showTooltip(wordContext, word, position);
+                                },
+                                onLongPress: () {
+                                  setState(() {
+                                      if (highlightedWords.contains(word)) {
+                                        highlightedWords.remove(word);
+                                      } else {
+                                        highlightedWords.add(word);
+                                      }
+                                    });
+                                },
+                                child: Container(
+                                  color: highlightedWords.contains(word)
+                                    ? widget.textColor == Colors.black ? primaryGreen.withAlpha((0.5 * 255).round()) : Colors.yellow.withAlpha((0.5 * 255).round())
+                                    : Colors.transparent,
+                                  child: Text(word, style: TextStyle(
+                                      fontSize: adaptedFontSize,
+                                      fontWeight: FontWeight.w700,
+                                      fontFamily: "Nanum",
+                                      color: widget.textColor
+                                    )),
+                                ),
+                              );
+                            },
+                          );
+                        }).toList(),
                     ),)
                 ],
               ),
@@ -627,7 +641,7 @@ class _PostHeading extends StatelessWidget {
         const CircleAvatar(
           radius: 18,
           backgroundColor: Colors.transparent,
-          backgroundImage: AssetImage('assets/reddit_logo.png'),
+          backgroundImage: AssetImage('assets/images/reddit_logo.png'),
         ),
         const SizedBox(width: 10),
         Expanded(
