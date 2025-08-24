@@ -65,7 +65,7 @@ struct ContentView: View {
 
                     Text(selectedTabTitle)
                         //.font(.headline)
-                        .font(.system(size: 20))
+                        .font(.system(size: 18))
                         .bold()
                         .foregroundColor(.black)
 
@@ -274,9 +274,9 @@ struct QuizPage: Identifiable, Hashable {
 
 // 마지막 화면에 표시할 페이지 데이터
 let endOfFeedPages: [EndPage] = [
-    EndPage(title: "오늘의 학습 완료!", text: "오늘 학습할 콘텐츠를 완벽하게 학습하셨습니다.", iconName: "checkmark.circle.fill"),
-    EndPage(title: "다음 학습은?", text: "단어장을 복습하거나 통계 화면으로 이동해 보세요.", iconName: "arrow.forward.circle.fill"),
-    EndPage(title: "새로운 콘텐츠", text: "새로운 학습 콘텐츠는 매일 업데이트 됩니다.", iconName: "sparkles")
+    EndPage(title: "오늘의 학습 완료!", text: "오늘의 콘텐츠를 완벽하게 학습하셨습니다.", iconName: "YBMcool"),
+    EndPage(title: "다음 학습은?", text: "단어장을 복습하거나 통계 화면으로 이동해 보세요.", iconName: "YBMyay"),
+    EndPage(title: "새로운 콘텐츠", text: "새로운 학습 콘텐츠는 매일 업데이트 됩니다.", iconName: "YBMsleep")
 ]
 
 // 초록색 퀴즈뷰에 표시할 페이지 데이터
@@ -293,8 +293,10 @@ struct EndPageView: View {
     let page: EndPage
     var body: some View {
         VStack(spacing: 20) {
-            Image(systemName: page.iconName)
-                .font(.system(size: 80))
+            Image(page.iconName)
+//                .font(.system(size: 80))
+                .resizable()
+                .frame(width: 150, height: 150)
                 .foregroundStyle(Color.orange.opacity(0.8))
             Text(page.title)
                 .font(.system(size: 32, weight: .bold, design: .serif))
@@ -345,7 +347,7 @@ struct QuizPageView: View {
         VStack(spacing: 20) {
             Image(!page.title.isEmpty ? "YBMpencil" : "YBMcheers")
                 .resizable()
-                .frame(width: 200, height: 200)
+                .frame(width: 150, height: 150)
                 //.font(.system(size: 80))
                 //.foregroundStyle(Color("Ivory"))
             if !page.title.isEmpty {
@@ -824,5 +826,5 @@ struct WordDetailSheet: View {
 //}
 
 #Preview {
-    ContentView()
+    EndView()
 }
