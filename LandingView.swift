@@ -135,15 +135,15 @@ struct SecondView: View {
                 
                 NavigationLink(destination: ThirdView()) {
                     RoundedRectangle(cornerRadius: 20)
-                        .fill(Color("CustomOrange")) // Color("CustomOrange") 대신 사용
-                        .frame(height: 60) // 버튼 높이 설정
+                        .fill(Color("CustomOrange"))
+                        .frame(height: 60)
                         .overlay(
                             Text("다음")
                                 .bold()
                                 .foregroundColor(.white)
                         )
-                        .frame(maxWidth: .infinity) // 버튼의 너비를 가능한 한 최대화
-                        .padding(.horizontal) // 좌우 여백 추가
+                        .frame(maxWidth: .infinity)
+                        .padding(.horizontal)
                 }
             }
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -176,7 +176,7 @@ struct InlineHighlightView: View {
 
     struct WordItem: Identifiable {
         let id = UUID()
-        let token: String   // now every chunk (word or punctuation) is a token
+        let token: String
     }
 
     var body: some View {
@@ -265,14 +265,14 @@ struct ThirdView: View {
                 NavigationLink(destination: FourthView()) {
                     RoundedRectangle(cornerRadius: 20)
                         .fill(Color("CustomOrange"))
-                        .frame(height: 60) // 버튼 높이 설정
+                        .frame(height: 60)
                         .overlay(
                             Text("다음")
                                 .bold()
                                 .foregroundColor(.white)
                         )
-                        .frame(maxWidth: .infinity) // 버튼의 너비를 가능한 한 최대화
-                        .padding(.horizontal) // 좌우 여백 추가
+                        .frame(maxWidth: .infinity)
+                        .padding(.horizontal)
                 }
             }
             .frame(maxWidth: .infinity, alignment: .leading)
