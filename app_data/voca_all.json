@@ -1,0 +1,4362 @@
+{
+  "abandon": {
+    "word_meaning": "버리다, 포기하다, 넘겨주다",
+    "example": {
+      "example_eng": "When the rebel troops arrived, the village had already been abandoned.",
+      "example_kor": "반란군이 도착했을 때 사람들은 이미 그 마을을 버리고 떠난 뒤였다."
+    },
+    "last_view_timestamp": "2025-08-03T18:10:21.000837"
+  },
+  "abase": {
+    "word_meaning": "낮추다, 창피를 주다",
+    "example": {
+      "example_eng": "The president is not willing to abase himself before the nation, and admit that he made a mistake.",
+      "example_kor": "대통령은 국민 앞에 자신을 낮추려 하지 않았으며 자기가 저지른 실수를 인정하려 하지 않았다."
+    },
+    "last_view_timestamp": "2025-07-13T14:32:51.000901"
+  },
+  "abash": {
+    "word_meaning": "당황케 하다, 부끄럽게 하다",
+    "example": {
+      "example_eng": "She was not at all abashed by his open admiration.",
+      "example_kor": "그녀는 그의 노골적인 감탄에도 전혀 부끄러워하지 않았다."
+    },
+    "last_view_timestamp": "2025-08-22T14:28:34.000914"
+  },
+  "abashed": {
+    "word_meaning": "겸연쩍어 하는",
+    "example": {
+      "example_eng": "He looked rather abashed at her criticisms.",
+      "example_kor": "그는 그녀의 비판에 다소 당황한 듯 보였다."
+    },
+    "last_view_timestamp": "2025-08-11T03:24:32.000921"
+  },
+  "abashment": {
+    "word_meaning": "겸연쩍어 함, 부끄러움, 당혹",
+    "example": {
+      "example_eng": "To her abashment, she realized she had forgotten his name.",
+      "example_kor": "당혹스럽게도 그녀는 그의 이름을 잊어버렸다는 것을 깨달았다."
+    },
+    "last_view_timestamp": "2025-07-10T13:25:07.000926"
+  },
+  "abate": {
+    "word_meaning": "삭감하다, 제거하다, 진정시키다",
+    "example": {
+      "example_eng": "The nurses’ concern about cuts in funding for hospitals has not abated.",
+      "example_kor": "병원 재정 지원 삭감에 대한 간호사들의 우려는 진정되지 않았다."
+    },
+    "last_view_timestamp": "2025-07-19T15:07:06.000932"
+  },
+  "abbreviate": {
+    "word_meaning": "생략하다, 단축하다, 간략하게 하다",
+    "example": {
+      "example_eng": "The name Susan is often abbreviated to Sue.",
+      "example_kor": "수전이라는 이름은 수우로 줄여 부르는 경우가 많다."
+    },
+    "last_view_timestamp": "2025-07-28T09:38:13.000937"
+  },
+  "abdicate": {
+    "word_meaning": "포기하다, 사임하다, 양도하다",
+    "example": {
+      "example_eng": "He abdicated his right to a share in the profits.",
+      "example_kor": "그는 자기 몫의 이익에 대한 권리를 포기했다."
+    },
+    "last_view_timestamp": "2025-06-01T08:15:05.000941"
+  },
+  "abduct": {
+    "word_meaning": "유괴하다",
+    "example": {
+      "example_eng": "The company director was abducted from his car by terrorists.",
+      "example_kor": "그 회사의 중역이 테러리스트에 의해 자신의 차에서 유괴되었다."
+    },
+    "last_view_timestamp": "2025-06-16T06:07:41.000960"
+  },
+  "abduction": {
+    "word_meaning": "유괴, 납치",
+    "example": {
+      "example_eng": "There has been a series of abductions of young children from schools in the area.",
+      "example_kor": "그 지역에서 어린이들이 학교에서 유괴되는 사건이 연이어 일어났다."
+    },
+    "last_view_timestamp": "2025-07-03T21:03:39.000965"
+  },
+  "abed": {
+    "word_meaning": "침대에, 잠자리에",
+    "example": {
+      "example_eng": "It's past noon and he's still abed.",
+      "example_kor": "정오가 지났는데도 그는 여전히 잠자리에 있다."
+    },
+    "last_view_timestamp": "2025-06-19T03:00:29.000970"
+  },
+  "aberration": {
+    "word_meaning": "정도를 벗어남, 탈선",
+    "example": {
+      "example_eng": "He said that the decline in the company’ s sales last month was just a temporary aberration.",
+      "example_kor": "그는 지난 달 회사의 판매 부진은 일시적 이상 현상이라고 말했다."
+    },
+    "last_view_timestamp": "2025-06-15T09:42:13.000974"
+  },
+  "abhor": {
+    "word_meaning": "몹시 싫어하다, 혐오하다, 질색하다",
+    "example": {
+      "example_eng": "They abhor all forms of racism.",
+      "example_kor": "그들은 모든 종류의 인종 차별주의를 혐오한다."
+    },
+    "last_view_timestamp": "2025-07-24T03:44:40.000978"
+  },
+  "abhorrent": {
+    "word_meaning": "몹시 싫은, 어긋나는",
+    "example": {
+      "example_eng": "His cynicism is abhorrent to me.",
+      "example_kor": "나는 그의 냉소주의가 몹시 싫다."
+    },
+    "last_view_timestamp": "2025-08-20T12:18:31.000983"
+  },
+  "abide": {
+    "word_meaning": "머무르다, 살다, 지속하다",
+    "example": {
+      "example_eng": "He abided in the wilderness for forty days.",
+      "example_kor": "그는 40일 동안을 광야에서 생활했다."
+    },
+    "last_view_timestamp": "2025-06-21T17:39:25.000988"
+  },
+  "ability": {
+    "word_meaning": "능력",
+    "example": {
+      "example_eng": "His failure was not due to lack of ability.",
+      "example_kor": "그의 실패는 능력 부족 때문이 아니었다."
+    },
+    "last_view_timestamp": "2025-06-02T16:08:40.000992"
+  },
+  "abject": {
+    "word_meaning": "비참한, 비열한, 비굴한",
+    "example": {
+      "example_eng": "The conditions that these people live in are abject and shocking.",
+      "example_kor": "이 사람들의 생활상은 비참하고 충격적이다."
+    },
+    "last_view_timestamp": "2025-08-03T00:30:01.000997"
+  },
+  "able": {
+    "word_meaning": "~할 수 있는",
+    "example": {
+      "example_eng": "You are able to do anything.",
+      "example_kor": "너는 무엇이든 할 수 있다."
+    },
+    "last_view_timestamp": "2025-08-05T18:00:55.001001"
+  },
+  "about": {
+    "word_meaning": "~에 대하여",
+    "example": {
+      "example_eng": "We talked about our future.",
+      "example_kor": "우리는 우리의 미래에 대해 이야기했다."
+    },
+    "last_view_timestamp": "2025-08-16T21:37:16.001020"
+  },
+  "add": {
+    "word_meaning": "더하다",
+    "example": {
+      "example_eng": "Add some sugar to your tea.",
+      "example_kor": "차에 설탕을 좀 넣으세요."
+    },
+    "last_view_timestamp": "2025-07-01T05:40:05.001025"
+  },
+  "allow": {
+    "word_meaning": "허락하다",
+    "example": {
+      "example_eng": "Smoking is not allowed here.",
+      "example_kor": "이곳에서는 흡연이 허용되지 않습니다."
+    },
+    "last_view_timestamp": "2025-08-18T12:35:10.001029"
+  },
+  "always": {
+    "word_meaning": "항상",
+    "example": {
+      "example_eng": "I always drink coffee in the morning.",
+      "example_kor": "나는 아침에 항상 커피를 마신다."
+    },
+    "last_view_timestamp": "2025-08-19T01:35:33.001034"
+  },
+  "and": {
+    "word_meaning": "그리고",
+    "example": {
+      "example_eng": "I like bread and butter.",
+      "example_kor": "나는 빵과 버터를 좋아한다."
+    },
+    "last_view_timestamp": "2025-08-20T17:47:31.001039"
+  },
+  "appear": {
+    "word_meaning": "나타나다",
+    "example": {
+      "example_eng": "A ship appeared on the horizon.",
+      "example_kor": "수평선 위로 배 한 척이 나타났다."
+    },
+    "last_view_timestamp": "2025-06-13T07:39:08.001043"
+  },
+  "area": {
+    "word_meaning": "지역",
+    "example": {
+      "example_eng": "This area is famous for its beaches.",
+      "example_kor": "이 지역은 해변으로 유명하다."
+    },
+    "last_view_timestamp": "2025-06-28T07:20:34.001048"
+  },
+  "ask": {
+    "word_meaning": "묻다, 요청하다",
+    "example": {
+      "example_eng": "Don't be afraid to ask for help.",
+      "example_kor": "도움을 요청하는 것을 두려워하지 마세요."
+    },
+    "last_view_timestamp": "2025-08-20T07:11:08.001053"
+  },
+  "at": {
+    "word_meaning": "~에",
+    "example": {
+      "example_eng": "Let's meet at the station.",
+      "example_kor": "역에서 만나자."
+    },
+    "last_view_timestamp": "2025-06-24T03:19:49.001058"
+  },
+  "backbreaking": {
+    "word_meaning": "매우 힘이 드는, 인내가 필요한",
+    "example": {
+      "example_eng": "Digging the garden was backbreaking work.",
+      "example_kor": "마당을 파는 것은 매우 힘든 일이었다."
+    },
+    "last_view_timestamp": "2025-08-09T08:41:26.001063"
+  },
+  "bad": {
+    "word_meaning": "나쁜",
+    "example": {
+      "example_eng": "That was a bad movie.",
+      "example_kor": "그것은 나쁜 영화였다."
+    },
+    "last_view_timestamp": "2025-07-03T21:23:59.001068"
+  },
+  "bake": {
+    "word_meaning": "굽다",
+    "example": {
+      "example_eng": "I'm going to bake a cake for her birthday.",
+      "example_kor": "나는 그녀의 생일을 위해 케이크를 구울 것이다."
+    },
+    "last_view_timestamp": "2025-07-24T04:04:57.001072"
+  },
+  "baker": {
+    "word_meaning": "빵 제조 판매인",
+    "example": {
+      "example_eng": "The baker gets up early every morning to make fresh bread.",
+      "example_kor": "제빵사는 신선한 빵을 만들기 위해 매일 아침 일찍 일어난다."
+    },
+    "last_view_timestamp": "2025-07-23T09:06:39.001077"
+  },
+  "bakery": {
+    "word_meaning": "제과점",
+    "example": {
+      "example_eng": "She used to work in the local bakery.",
+      "example_kor": "그녀는 그 지방의 제과점에서 일했었다."
+    },
+    "last_view_timestamp": "2025-06-02T13:49:32.001082"
+  },
+  "baking": {
+    "word_meaning": "빵 굽기",
+    "example": {
+      "example_eng": "She spent the afternoon baking some bread.",
+      "example_kor": "그녀는 빵을 구우면서 오후를 보냈다."
+    },
+    "last_view_timestamp": "2025-08-01T11:49:32.001087"
+  },
+  "ban": {
+    "word_meaning": "금지(령), 반대, 비난, 금지하다",
+    "example": {
+      "example_eng": "Smoking is banned in this restaurant.",
+      "example_kor": "이 식당에서는 흡연이 금지되어 있다."
+    },
+    "last_view_timestamp": "2025-08-09T14:19:35.001092"
+  },
+  "banal": {
+    "word_meaning": "진부한, 흔해빠진",
+    "example": {
+      "example_eng": "He just sat there making banal remarks all evening.",
+      "example_kor": "그는 거기 앉아 저녁 내내 진부한 이야기를 늘어 놓았다."
+    },
+    "last_view_timestamp": "2025-07-07T09:23:03.001096"
+  },
+  "banality": {
+    "word_meaning": "진부(한 말)",
+    "example": {
+      "example_eng": "The film is predictable, full of banalities and tediously dull.",
+      "example_kor": "그 영화는 예측 가능한 내용과 진부한 대사로 진저리 날 만큼 단조롭다."
+    },
+    "last_view_timestamp": "2025-08-23T13:36:33.001101"
+  },
+  "bandit": {
+    "word_meaning": "산적, 노상 강도, 깡패",
+    "example": {
+      "example_eng": "The stagecoach was held up by a notorious bandit.",
+      "example_kor": "그 역마차는 악명 높은 산적에게 강탈당했다."
+    },
+    "last_view_timestamp": "2025-07-05T06:46:26.001106"
+  },
+  "banish": {
+    "word_meaning": "추방하다, 쫓아내다",
+    "example": {
+      "example_eng": "They were banished from their country for criticizing the government.",
+      "example_kor": "그들은 정부를 비판했다는 이유로 그 나라에서 추방되었다."
+    },
+    "last_view_timestamp": "2025-07-10T12:38:51.001110"
+  },
+  "bankrupt": {
+    "word_meaning": "파산한, 파탄한, 파산자, 파산시키다",
+    "example": {
+      "example_eng": "He went bankrupt after only a year in business.",
+      "example_kor": "그는 사업을 한 지 불과 1년 후에 파산했다."
+    },
+    "last_view_timestamp": "2025-05-31T19:20:00.001117"
+  },
+  "bankruptcy": {
+    "word_meaning": "파산, 도산, 파탄, 실추",
+    "example": {
+      "example_eng": "The company was forced into bankruptcy.",
+      "example_kor": "그 회사는 어쩔 수 없이 파산하게 됐다."
+    },
+    "last_view_timestamp": "2025-08-24T05:24:16.001122"
+  },
+  "banner": {
+    "word_meaning": "국기, 문장이 든 깃발, 표지",
+    "example": {
+      "example_eng": "The demonstrators walked along the street, waving banners and shouting angrily.",
+      "example_kor": "시위자들은 깃발을 흔들고 분노의 함성을 지르며 거리를 활보했다."
+    },
+    "last_view_timestamp": "2025-07-24T19:41:07.001127"
+  },
+  "banter": {
+    "word_meaning": "놀리다, (악의 없는) 희롱",
+    "example": {
+      "example_eng": "I grew weary of his bantering style of conversation.",
+      "example_kor": "나는 조롱하는 듯한 그의 대화 스타일에 싫증이 났다."
+    },
+    "last_view_timestamp": "2025-06-25T12:31:02.001131"
+  },
+  "bantering": {
+    "word_meaning": "놀리는",
+    "example": {
+      "example_eng": "We stood around bantering while we waited.",
+      "example_kor": "우리는 기다리는 동안 까불거리며 주위를 서성였다."
+    },
+    "last_view_timestamp": "2025-07-26T16:23:06.001136"
+  },
+  "bar": {
+    "word_meaning": "빗장, 막다",
+    "example": {
+      "example_eng": "He put a bar across the door to keep it shut.",
+      "example_kor": "그는 문을 닫아두기 위해 빗장을 걸었다."
+    },
+    "last_view_timestamp": "2025-05-30T14:28:45.001141"
+  },
+  "barbaric": {
+    "word_meaning": "미개한, 야만적인",
+    "example": {
+      "example_eng": "She found the idea of killing animals for pleasure barbaric.",
+      "example_kor": "그녀는 재미로 동물을 죽일 수 있다는 생각을 미개하다고 보았다."
+    },
+    "last_view_timestamp": "2025-07-20T02:49:21.001145"
+  },
+  "be": {
+    "word_meaning": "~이다, 있다",
+    "example": {
+      "example_eng": "She is a doctor.",
+      "example_kor": "그녀는 의사입니다."
+    },
+    "last_view_timestamp": "2025-06-08T05:26:59.001150"
+  },
+  "beautiful": {
+    "word_meaning": "아름다운",
+    "example": {
+      "example_eng": "She is a beautiful woman.",
+      "example_kor": "그녀는 아름다운 여성이다."
+    },
+    "last_view_timestamp": "2025-06-05T07:09:44.001155"
+  },
+  "because": {
+    "word_meaning": "왜냐하면",
+    "example": {
+      "example_eng": "I was late because the traffic was bad.",
+      "example_kor": "교통이 막혀서 나는 늦었다."
+    },
+    "last_view_timestamp": "2025-07-02T19:52:27.001159"
+  },
+  "become": {
+    "word_meaning": "~이 되다",
+    "example": {
+      "example_eng": "He wants to become a pilot.",
+      "example_kor": "그는 조종사가 되고 싶어 해요."
+    },
+    "last_view_timestamp": "2025-07-11T22:10:35.001164"
+  },
+  "begin": {
+    "word_meaning": "시작하다",
+    "example": {
+      "example_eng": "The movie will begin at 7 PM.",
+      "example_kor": "영화는 저녁 7시에 시작할 거예요."
+    },
+    "last_view_timestamp": "2025-07-08T18:44:37.001183"
+  },
+  "believe": {
+    "word_meaning": "믿다",
+    "example": {
+      "example_eng": "I believe everything will be okay.",
+      "example_kor": "모든 것이 괜찮을 거라고 믿어요."
+    },
+    "last_view_timestamp": "2025-07-30T16:50:52.001187"
+  },
+  "big": {
+    "word_meaning": "큰",
+    "example": {
+      "example_eng": "An elephant is a big animal.",
+      "example_kor": "코끼리는 큰 동물이다."
+    },
+    "last_view_timestamp": "2025-08-20T03:11:50.001191"
+  },
+  "book": {
+    "word_meaning": "책",
+    "example": {
+      "example_eng": "I am reading a book.",
+      "example_kor": "나는 책을 읽고 있다."
+    },
+    "last_view_timestamp": "2025-07-19T21:53:29.001196"
+  },
+  "bring": {
+    "word_meaning": "가져오다",
+    "example": {
+      "example_eng": "Don't forget to bring your umbrella.",
+      "example_kor": "우산 가져오는 것을 잊지 마세요."
+    },
+    "last_view_timestamp": "2025-06-26T07:35:02.001200"
+  },
+  "build": {
+    "word_meaning": "짓다",
+    "example": {
+      "example_eng": "They are building a new bridge.",
+      "example_kor": "그들은 새로운 다리를 짓고 있다."
+    },
+    "last_view_timestamp": "2025-08-13T17:46:35.001204"
+  },
+  "business": {
+    "word_meaning": "사업",
+    "example": {
+      "example_eng": "He runs his own business.",
+      "example_kor": "그는 자신의 사업을 운영한다."
+    },
+    "last_view_timestamp": "2025-06-12T01:21:17.001209"
+  },
+  "but": {
+    "word_meaning": "그러나",
+    "example": {
+      "example_eng": "I want to go, but I'm busy.",
+      "example_kor": "가고 싶지만, 나는 바쁘다."
+    },
+    "last_view_timestamp": "2025-06-29T08:09:02.001213"
+  },
+  "buy": {
+    "word_meaning": "사다",
+    "example": {
+      "example_eng": "I buy a pen.",
+      "example_kor": "나는 펜을 산다."
+    },
+    "last_view_timestamp": "2025-06-07T04:17:03.001218"
+  },
+  "by": {
+    "word_meaning": "~옆에, ~에 의해",
+    "example": {
+      "example_eng": "The house is by the river.",
+      "example_kor": "그 집은 강 옆에 있다."
+    },
+    "last_view_timestamp": "2025-07-03T11:01:56.001222"
+  },
+  "cabaret": {
+    "word_meaning": "카바레(에 출입하다)",
+    "example": {
+      "example_eng": "She is appearing in cabaret for the next three weeks.",
+      "example_kor": "그녀는 다음 3주 동안 카바레에 출연할 것이다."
+    },
+    "last_view_timestamp": "2025-07-31T21:13:12.001227"
+  },
+  "cache": {
+    "word_meaning": "저장소, 저장물, 은익 물자, 저장하다, 숨기다",
+    "example": {
+      "example_eng": "The squirrel has a cache of nuts for the winter.",
+      "example_kor": "다람쥐는 겨울을 대비해 견과류 저장소를 가지고 있다."
+    },
+    "last_view_timestamp": "2025-06-09T10:11:17.001231"
+  },
+  "cachet": {
+    "word_meaning": "봉인, 인가의 도장, 특징",
+    "example": {
+      "example_eng": "They have the international cachet that comes from wealth.",
+      "example_kor": "그들은 부유함에서 나오는 국제적 특징을 풍기고 있다."
+    },
+    "last_view_timestamp": "2025-05-30T13:58:39.001235"
+  },
+  "cacophony": {
+    "word_meaning": "불협화음",
+    "example": {
+      "example_eng": "As we entered the farmyard, we were met with a cacophony of animal sound.",
+      "example_kor": "농가 마당에 들어서자 동물들이 내는 불협화음이 우리를 맞았다."
+    },
+    "last_view_timestamp": "2025-08-13T01:11:49.001240"
+  },
+  "cadaver": {
+    "word_meaning": "시체",
+    "example": {
+      "example_eng": "The medical students studied the cadaver to learn about human anatomy.",
+      "example_kor": "의대생들은 인체 해부학을 배우기 위해 시체를 연구했다."
+    },
+    "last_view_timestamp": "2025-06-13T08:25:44.001258"
+  },
+  "cadaverous": {
+    "word_meaning": "창백한, 시체의, 죽은 사람 같은",
+    "example": {
+      "example_eng": "His long illness had left him looking pale and cadaverous.",
+      "example_kor": "오랜 투병 생활로 그는 창백하고 시체처럼 보였다."
+    },
+    "last_view_timestamp": "2025-05-30T20:08:04.001263"
+  },
+  "cadence": {
+    "word_meaning": "억양, 운율, 박자, 리듬",
+    "example": {
+      "example_eng": "He spoke in the soothing cadence of a storyteller.",
+      "example_kor": "그는 이야기꾼의 차분한 억양으로 말했다."
+    },
+    "last_view_timestamp": "2025-08-16T01:26:56.001268"
+  },
+  "calamity": {
+    "word_meaning": "재앙, 재난, 참화",
+    "example": {
+      "example_eng": "A series of calamities ruined them -- floods, a failed harvest and the death of a son.",
+      "example_kor": "홍수, 흉작, 아들의 죽음으로 줄줄이 이어진 재난이 그들을 파멸시켰다."
+    },
+    "last_view_timestamp": "2025-07-31T16:04:37.001273"
+  },
+  "call": {
+    "word_meaning": "부르다, 전화하다",
+    "example": {
+      "example_eng": "I will call you later.",
+      "example_kor": "나중에 전화할게요."
+    },
+    "last_view_timestamp": "2025-05-29T12:13:53.001278"
+  },
+  "car": {
+    "word_meaning": "자동차",
+    "example": {
+      "example_eng": "I drive a blue car.",
+      "example_kor": "나는 파란색 차를 운전한다."
+    },
+    "last_view_timestamp": "2025-08-15T15:49:57.001282"
+  },
+  "case": {
+    "word_meaning": "사건, 경우",
+    "example": {
+      "example_eng": "The police are investigating the case.",
+      "example_kor": "경찰이 그 사건을 조사하고 있다."
+    },
+    "last_view_timestamp": "2025-07-17T17:11:04.001287"
+  },
+  "change": {
+    "word_meaning": "바꾸다",
+    "example": {
+      "example_eng": "People can change.",
+      "example_kor": "사람은 변할 수 있다."
+    },
+    "last_view_timestamp": "2025-06-08T02:51:43.001292"
+  },
+  "child": {
+    "word_meaning": "아이",
+    "example": {
+      "example_eng": "The child is playing with a toy.",
+      "example_kor": "아이가 장난감을 가지고 놀고 있다."
+    },
+    "last_view_timestamp": "2025-08-14T07:16:09.001297"
+  },
+  "city": {
+    "word_meaning": "도시",
+    "example": {
+      "example_eng": "Paris is a beautiful city.",
+      "example_kor": "파리는 아름다운 도시이다."
+    },
+    "last_view_timestamp": "2025-06-27T06:58:38.001301"
+  },
+  "close": {
+    "word_meaning": "닫다",
+    "example": {
+      "example_eng": "Close the window.",
+      "example_kor": "창문을 닫아라."
+    },
+    "last_view_timestamp": "2025-08-03T21:37:31.001306"
+  },
+  "cold": {
+    "word_meaning": "추운, 차가운",
+    "example": {
+      "example_eng": "It's cold outside.",
+      "example_kor": "밖은 춥다."
+    },
+    "last_view_timestamp": "2025-06-07T12:48:48.001325"
+  },
+  "come": {
+    "word_meaning": "오다",
+    "example": {
+      "example_eng": "Can you come to my party on Saturday?",
+      "example_kor": "토요일에 제 파티에 올 수 있나요?"
+    },
+    "last_view_timestamp": "2025-06-08T02:40:37.001329"
+  },
+  "company": {
+    "word_meaning": "회사",
+    "example": {
+      "example_eng": "He works for a big company.",
+      "example_kor": "그는 큰 회사에서 일한다."
+    },
+    "last_view_timestamp": "2025-08-09T06:29:00.001353"
+  },
+  "consider": {
+    "word_meaning": "고려하다",
+    "example": {
+      "example_eng": "You should consider his feelings.",
+      "example_kor": "너는 그의 감정을 고려해야 한다."
+    },
+    "last_view_timestamp": "2025-08-02T08:31:38.001362"
+  },
+  "continue": {
+    "word_meaning": "계속하다",
+    "example": {
+      "example_eng": "Please continue your story.",
+      "example_kor": "이야기를 계속해주세요."
+    },
+    "last_view_timestamp": "2025-06-26T07:05:09.001385"
+  },
+  "country": {
+    "word_meaning": "나라",
+    "example": {
+      "example_eng": "Korea is my country.",
+      "example_kor": "한국은 나의 나라이다."
+    },
+    "last_view_timestamp": "2025-08-20T10:22:32.001396"
+  },
+  "create": {
+    "word_meaning": "창조하다",
+    "example": {
+      "example_eng": "He created a masterpiece.",
+      "example_kor": "그는 걸작을 창조했다."
+    },
+    "last_view_timestamp": "2025-08-03T01:44:07.001401"
+  },
+  "cut": {
+    "word_meaning": "자르다",
+    "example": {
+      "example_eng": "Be careful when you cut the paper.",
+      "example_kor": "종이를 자를 때 조심하세요."
+    },
+    "last_view_timestamp": "2025-08-02T13:22:05.001406"
+  },
+  "dainty": {
+    "word_meaning": "맛 좋은, 고상한, 우아한",
+    "example": {
+      "example_eng": "We were given tea, and some dainty little cakes.",
+      "example_kor": "우리는 차와 맛 좋은 작은 케이크들을 받았다."
+    },
+    "last_view_timestamp": "2025-06-13T23:18:52.001411"
+  },
+  "damage": {
+    "word_meaning": "손해(를 입히다)",
+    "example": {
+      "example_eng": "Many buildings were badly damaged during the war.",
+      "example_kor": "많은 건물이 전쟁 중에 심하게 손상되었다."
+    },
+    "last_view_timestamp": "2025-07-28T23:50:07.001415"
+  },
+  "damn": {
+    "word_meaning": "비난하다",
+    "example": {
+      "example_eng": "The novel has been unanimously damned by the critics.",
+      "example_kor": "그 소설은 비평가들에게서 만장일치로 비난을 받았다."
+    },
+    "last_view_timestamp": "2025-08-03T06:57:02.001420"
+  },
+  "damnation": {
+    "word_meaning": "비난, 저주",
+    "example": {
+      "example_eng": "He believed that he would be condemned to eternal damnation for what he had done.",
+      "example_kor": "그는 자신이 저지른 일로 영원한 저주를 받을 것이라고 믿었다."
+    },
+    "last_view_timestamp": "2025-07-17T01:19:16.001425"
+  },
+  "damned": {
+    "word_meaning": "비난 받은, 지독한",
+    "example": {
+      "example_eng": "I can't get this damned machine to work!",
+      "example_kor": "이 지독한 기계를 도저히 작동시킬 수가 없어!"
+    },
+    "last_view_timestamp": "2025-07-16T20:20:50.001443"
+  },
+  "dandelion": {
+    "word_meaning": "민들레",
+    "example": {
+      "example_eng": "She blew on the dandelion clock to tell the time.",
+      "example_kor": "그녀는 시간을 알기 위해 민들레 씨앗을 불었다."
+    },
+    "last_view_timestamp": "2025-07-30T00:38:48.001447"
+  },
+  "dare": {
+    "word_meaning": "감히 ~하다, 해보다, 도전하다",
+    "example": {
+      "example_eng": "Everyone in the office complains that he smells awful but nobody dares actually mention it to him.",
+      "example_kor": "사무실의 모든 사람들이 그 사람한테서 심한 냄새가 난다고 불평하지만 아무도 실제로 감히 그 점을 그에게 얘기하지 못한다."
+    },
+    "last_view_timestamp": "2025-08-10T22:33:07.001466"
+  },
+  "daring": {
+    "word_meaning": "대담(한), 두려움을 모르는",
+    "example": {
+      "example_eng": "In a daring rescue operation, police entered the building and liberated the hostages.",
+      "example_kor": "경찰은 과감한 구조 작전을 펼치며 그 건물로 들어가 인질을 구출했다."
+    },
+    "last_view_timestamp": "2025-07-31T11:56:34.001474"
+  },
+  "dastard": {
+    "word_meaning": "비겁한 사람, 비겁자",
+    "example": {
+      "example_eng": "Only a dastard would abandon his comrades in battle.",
+      "example_kor": "비겁자만이 전투에서 동료를 버릴 것이다."
+    },
+    "last_view_timestamp": "2025-06-11T01:14:48.001479"
+  },
+  "dastardly": {
+    "word_meaning": "비겁한, 소심한",
+    "example": {
+      "example_eng": "The bombing of the houses is yet another dastardly attack on innocent people.",
+      "example_kor": "그 주택들에 대한 폭격은 무고한 사람들에 대한 또 하나의 비겁한 공격이다."
+    },
+    "last_view_timestamp": "2025-08-18T02:00:06.001484"
+  },
+  "data": {
+    "word_meaning": "자료, 재료",
+    "example": {
+      "example_eng": "The data were collected by various researchers.",
+      "example_kor": "그 자료는 여러 연구자들이 수집한 것이다."
+    },
+    "last_view_timestamp": "2025-08-06T19:24:52.001488"
+  },
+  "date": {
+    "word_meaning": "날짜, 시대, 만날 약속",
+    "example": {
+      "example_eng": "We’ ve agreed to meet again at a later date.",
+      "example_kor": "우리는 나중에 다시 만나기로 합의했다."
+    },
+    "last_view_timestamp": "2025-07-07T14:31:53.001494"
+  },
+  "dative": {
+    "word_meaning": "여격(의)",
+    "example": {
+      "example_eng": "This should be in the dative because it’ s the indirect object of the verb.",
+      "example_kor": "이것은 동사의 간접목적어이므로 여격임에 틀림없다."
+    },
+    "last_view_timestamp": "2025-07-26T08:17:26.001498"
+  },
+  "day": {
+    "word_meaning": "날, 하루",
+    "example": {
+      "example_eng": "Today is a beautiful day.",
+      "example_kor": "오늘은 아름다운 날이다."
+    },
+    "last_view_timestamp": "2025-08-08T11:48:06.001503"
+  },
+  "die": {
+    "word_meaning": "죽다",
+    "example": {
+      "example_eng": "All living things eventually die.",
+      "example_kor": "모든 생명체는 결국 죽는다."
+    },
+    "last_view_timestamp": "2025-06-25T20:44:25.001508"
+  },
+  "different": {
+    "word_meaning": "다른",
+    "example": {
+      "example_eng": "We have different opinions.",
+      "example_kor": "우리는 다른 의견을 가지고 있다."
+    },
+    "last_view_timestamp": "2025-08-24T13:56:51.001512"
+  },
+  "difficult": {
+    "word_meaning": "어려운",
+    "example": {
+      "example_eng": "This math problem is difficult.",
+      "example_kor": "이 수학 문제는 어렵다."
+    },
+    "last_view_timestamp": "2025-06-24T08:14:06.001531"
+  },
+  "do": {
+    "word_meaning": "하다",
+    "example": {
+      "example_eng": "What are you going to do today?",
+      "example_kor": "오늘 무엇을 할 건가요?"
+    },
+    "last_view_timestamp": "2025-08-22T16:51:42.001535"
+  },
+  "drink": {
+    "word_meaning": "마시다",
+    "example": {
+      "example_eng": "She drinks water every morning.",
+      "example_kor": "그녀는 매일 아침 물을 마신다."
+    },
+    "last_view_timestamp": "2025-07-03T01:47:30.001554"
+  },
+  "earldom": {
+    "word_meaning": "백작의 지위",
+    "example": {
+      "example_eng": "An earldom is the rank or lands of an earl or countess.",
+      "example_kor": "Earldom이란 백작 또는 백작 부인의 지위 또는 영지를 말한다."
+    },
+    "last_view_timestamp": "2025-06-22T20:54:15.001559"
+  },
+  "earliest": {
+    "word_meaning": "가장 이른",
+    "example": {
+      "example_eng": "I’ m very busy, so I won’ t be with you till 4 o’ clock at the earliest.",
+      "example_kor": "너무 바빠서 아무리 일러도 4시 전에는 너와 함께 있을 수 없어."
+    },
+    "last_view_timestamp": "2025-06-06T11:32:36.001564"
+  },
+  "early": {
+    "word_meaning": "일찍, 초기에",
+    "example": {
+      "example_eng": "The team captain scored two wonderful goals early in the game.",
+      "example_kor": "그 팀의 주장은 경기 초반에 두 골을 멋지게 넣었다."
+    },
+    "last_view_timestamp": "2025-07-10T22:53:41.001568"
+  },
+  "earth": {
+    "word_meaning": "지구, 묻다",
+    "example": {
+      "example_eng": "Earth looks incredibly beautiful from the space.",
+      "example_kor": "우주에서 바라본 지구는 믿을 수 없이 아름답다."
+    },
+    "last_view_timestamp": "2025-07-11T05:07:59.001573"
+  },
+  "earthen": {
+    "word_meaning": "흙으로 만든",
+    "example": {
+      "example_eng": "The hut has an earthen floor and a thatched roof.",
+      "example_kor": "그 오두막은 흙 바닥과 짚으로 이은 지붕이 있었다."
+    },
+    "last_view_timestamp": "2025-05-29T16:51:34.001578"
+  },
+  "earthly": {
+    "word_meaning": "지구의, 이승의, 현세의",
+    "example": {
+      "example_eng": "He’ s worshipped as a god who performed many miracles during his earthly existence.",
+      "example_kor": "그는 이승에서 사는 동안 많은 기적을 행한 신으로 숭배받았다."
+    },
+    "last_view_timestamp": "2025-06-26T21:06:54.001583"
+  },
+  "earthy": {
+    "word_meaning": "세련되지 못한, 거친",
+    "example": {
+      "example_eng": "He has a wonderfully earthy sense of humor.",
+      "example_kor": "그는 놀라울 정도로 꾸밈없는 유머 감각을 가지고 있다."
+    },
+    "last_view_timestamp": "2025-07-04T13:49:35.001587"
+  },
+  "easy": {
+    "word_meaning": "쉬운",
+    "example": {
+      "example_eng": "The test was very easy.",
+      "example_kor": "시험은 매우 쉬웠다."
+    },
+    "last_view_timestamp": "2025-06-16T17:17:47.001592"
+  },
+  "easygoing": {
+    "word_meaning": "태평한, 느긋한, 게으른",
+    "example": {
+      "example_eng": "He has an easygoing attitude and never seems to get stressed.",
+      "example_kor": "그는 성격이 느긋해서 좀처럼 스트레스를 받는 것 같지 않다."
+    },
+    "last_view_timestamp": "2025-05-30T08:57:07.001597"
+  },
+  "eat": {
+    "word_meaning": "먹다",
+    "example": {
+      "example_eng": "I eat breakfast at 7 am.",
+      "example_kor": "나는 7시에 아침을 먹는다."
+    },
+    "last_view_timestamp": "2025-06-28T09:26:20.001601"
+  },
+  "ebullient": {
+    "word_meaning": "용솟음치는, 열광적인, 비등하는",
+    "example": {
+      "example_eng": "Our ebullient host couldn’ t stop laughing and talking.",
+      "example_kor": "우리의 정열적인 사회자는 웃고 말하는 것을 멈출 수 없었다."
+    },
+    "last_view_timestamp": "2025-06-20T05:26:45.001606"
+  },
+  "eccentric": {
+    "word_meaning": "별난, 괴벽스러운, 기인, 괴짜",
+    "example": {
+      "example_eng": "Don’ t you think it’ s eccentric to keep a pet crocodile in the bath?",
+      "example_kor": "애완용 악어를 욕조에서 키우는 건 별난 일이라고 생각지 않으십니까?"
+    },
+    "last_view_timestamp": "2025-08-24T04:58:08.001611"
+  },
+  "eccentricity": {
+    "word_meaning": "남다름, 별남, 엉뚱함, 가행(奇行)",
+    "example": {
+      "example_eng": "His eccentricity now extends to never washing or changing his clothes.",
+      "example_kor": "그의 괴벽은 이제 옷을 절대로 빨지 않거나 옷을 갈아입지 않는 데로 확장해 가고 있다."
+    },
+    "last_view_timestamp": "2025-08-19T12:56:07.001616"
+  },
+  "ecclesiastic": {
+    "word_meaning": "성직자, 교역자, 목사",
+    "example": {
+      "example_eng": "An ecclesiastic is a Christian priest or other Christian official.",
+      "example_kor": "성직자란 기독교의 사제이거나 다른 기독교 교역자를 말한다."
+    },
+    "last_view_timestamp": "2025-08-13T17:11:26.001621"
+  },
+  "eclecticism": {
+    "word_meaning": "절충주의",
+    "example": {
+      "example_eng": "The album is a brilliant exercise in eclecticism, blending rock, jazz, and folk music.",
+      "example_kor": "그 앨범은 록, 재즈, 포크 음악을 혼합한 절충주의의 훌륭한 실천이다."
+    },
+    "last_view_timestamp": "2025-06-15T17:22:49.001625"
+  },
+  "ecologically": {
+    "word_meaning": "생태학적으로",
+    "example": {
+      "example_eng": "The new building was designed to be ecologically sustainable.",
+      "example_kor": "그 새로운 건물은 생태학적으로 지속 가능하도록 설계되었다."
+    },
+    "last_view_timestamp": "2025-05-27T05:58:52.001630"
+  },
+  "ecology": {
+    "word_meaning": "생태(학)",
+    "example": {
+      "example_eng": "She hopes to study ecology at college.",
+      "example_kor": "그녀는 대학에서 생태학을 공부하고 싶어한다."
+    },
+    "last_view_timestamp": "2025-06-16T06:44:08.001634"
+  },
+  "end": {
+    "word_meaning": "끝",
+    "example": {
+      "example_eng": "This is the end of the road.",
+      "example_kor": "이것이 길의 끝이다."
+    },
+    "last_view_timestamp": "2025-07-11T23:14:01.001639"
+  },
+  "expect": {
+    "word_meaning": "기대하다",
+    "example": {
+      "example_eng": "I expect you to be on time.",
+      "example_kor": "나는 네가 제시간에 오기를 기대한다."
+    },
+    "last_view_timestamp": "2025-07-31T06:33:54.001644"
+  },
+  "eye": {
+    "word_meaning": "눈",
+    "example": {
+      "example_eng": "She has blue eyes.",
+      "example_kor": "그녀는 파란 눈을 가졌다."
+    },
+    "last_view_timestamp": "2025-06-05T23:46:48.001649"
+  },
+  "fable": {
+    "word_meaning": "우화, 신화, 전설, 우화를 이야기하다",
+    "example": {
+      "example_eng": "Even adults have a taste for fable, fantasy and magic.",
+      "example_kor": "성인들도 우화와 팬터지, 마술에 취미를 가진다."
+    },
+    "last_view_timestamp": "2025-06-06T04:13:21.001668"
+  },
+  "fabric": {
+    "word_meaning": "뼈대, 구조, 직물, 옷감",
+    "example": {
+      "example_eng": "We must invest in the fabric of our hospitals and start rebuilding them.",
+      "example_kor": "우리는 병원 건물 구조에 투자하여 병원을 재건축해야 한다."
+    },
+    "last_view_timestamp": "2025-07-14T05:46:25.001673"
+  },
+  "fabricate": {
+    "word_meaning": "조립하다, 거짓말하다, 날조하다",
+    "example": {
+      "example_eng": "He was late, so he fabricated an excuse to avoid trouble.",
+      "example_kor": "그는 늦었는데, 말썽을 피하기 위해 변명을 지어냈다."
+    },
+    "last_view_timestamp": "2025-06-27T20:42:17.001677"
+  },
+  "fabrication": {
+    "word_meaning": "조립, 위조, 지어낸 이야기, 허구",
+    "example": {
+      "example_eng": "The report submitted by the police officer was a clear fabrication.",
+      "example_kor": "그 경찰관이 제출한 보고서는 명백한 위조물이다."
+    },
+    "last_view_timestamp": "2025-08-02T09:38:52.001681"
+  },
+  "fabulous": {
+    "word_meaning": "믿을 수 없는, 놀라운",
+    "example": {
+      "example_eng": "The unicorn is a fabulous creature.",
+      "example_kor": "유니콘은 전설 속의 동물이다."
+    },
+    "last_view_timestamp": "2025-06-11T15:07:22.001703"
+  },
+  "facade": {
+    "word_meaning": "(건물의) 정면",
+    "example": {
+      "example_eng": "The building has nine large arches along the length of its facade.",
+      "example_kor": "그 건물 정면을 따라 아홉 개의 아치가 있다."
+    },
+    "last_view_timestamp": "2025-08-12T14:00:52.001718"
+  },
+  "face": {
+    "word_meaning": "얼굴, 향하다",
+    "example": {
+      "example_eng": "She had a a puzzled expression on her face.",
+      "example_kor": "그녀는 얼굴에 당황한 표정을 하고 있었다."
+    },
+    "last_view_timestamp": "2025-07-04T04:37:57.001734"
+  },
+  "facet": {
+    "word_meaning": "면, 일면, 국면",
+    "example": {
+      "example_eng": "The facets of a precious stone are the small flat surfaces cut on to it.",
+      "example_kor": "보석의 단면이란 보석을 자르고 난 작고 편평한 표면을 말한다."
+    },
+    "last_view_timestamp": "2025-07-18T02:30:37.001751"
+  },
+  "facetious": {
+    "word_meaning": "우스운, 농담의, 허튼 소리의",
+    "example": {
+      "example_eng": "We grew tired of his frequent facetious remarks.",
+      "example_kor": "우리는 그가 빈번하게 늘어 놓는 소리에 싫증이 났다."
+    },
+    "last_view_timestamp": "2025-07-12T10:37:02.001759"
+  },
+  "facile": {
+    "word_meaning": "용이한, 유창한, 평이한",
+    "example": {
+      "example_eng": "It is facile of reviewers to point out every misprint in a book.",
+      "example_kor": "검열자가 책의 모든 오식을 지적하는 것은 쉬운 일이다."
+    },
+    "last_view_timestamp": "2025-07-04T08:15:38.001764"
+  },
+  "facilitate": {
+    "word_meaning": "용이하게 하다, ~을 촉진하다",
+    "example": {
+      "example_eng": "The company offered to facilitate an international conference in the following year.",
+      "example_kor": "그 회사는 다음 해에 국제 회의를 촉진하겠다고 말했다."
+    },
+    "last_view_timestamp": "2025-08-01T16:45:34.001769"
+  },
+  "facility": {
+    "word_meaning": "용이함, 편의, 편리, 숙련, 유순",
+    "example": {
+      "example_eng": "This phone has a memory facility.",
+      "example_kor": "이 전화에는 기억 장치가 있다."
+    },
+    "last_view_timestamp": "2025-06-03T23:38:43.001774"
+  },
+  "facsimile": {
+    "word_meaning": "정확한, 복사, 사진 전송",
+    "example": {
+      "example_eng": "It is on display in a facsimile version.",
+      "example_kor": "그것은 모사본으로 전시되고 있는 중이다."
+    },
+    "last_view_timestamp": "2025-06-08T06:19:33.001779"
+  },
+  "fact": {
+    "word_meaning": "사실, 실제, 현실",
+    "example": {
+      "example_eng": "Can I regard what you have just told me as fact?",
+      "example_kor": "방금 당신이 말해 준 것을 사실로 간주해도 될까요?"
+    },
+    "last_view_timestamp": "2025-07-18T16:48:32.001783"
+  },
+  "facticide": {
+    "word_meaning": "증거 인멸, 사실 말살",
+    "example": {
+      "example_eng": "The life-long rivalry between the brothers ended tragically in fratricide.",
+      "example_kor": "형제들 간의 일생에 걸친 경쟁은 형제살해라는 비극으로 막을 내렸다."
+    },
+    "last_view_timestamp": "2025-07-28T13:15:57.001788"
+  },
+  "faction": {
+    "word_meaning": "당파, 분파, 내분",
+    "example": {
+      "example_eng": "The party split on that issue and is now in danger of breaking into two or more factions.",
+      "example_kor": "당은 그 문제로 분열되어 지금은 두 개 내지 그 이상의 분파로 쪼개질 위기에 처했다."
+    },
+    "last_view_timestamp": "2025-07-09T05:58:03.001792"
+  },
+  "fall": {
+    "word_meaning": "떨어지다",
+    "example": {
+      "example_eng": "Leaves fall from the trees in autumn.",
+      "example_kor": "가을에는 나뭇잎이 떨어진다."
+    },
+    "last_view_timestamp": "2025-06-16T14:15:42.001797"
+  },
+  "false": {
+    "word_meaning": "그릇된, 거짓의, 가짜의, 불성실하게",
+    "example": {
+      "example_eng": "The news report about the explosion turned out to be false.",
+      "example_kor": "그 폭발에 관한 뉴스 보도는 거짓으로 드러났다."
+    },
+    "last_view_timestamp": "2025-06-11T16:24:46.001802"
+  },
+  "father": {
+    "word_meaning": "아버지",
+    "example": {
+      "example_eng": "My father is a doctor.",
+      "example_kor": "나의 아버지는 의사이다."
+    },
+    "last_view_timestamp": "2025-05-27T23:20:19.001807"
+  },
+  "feel": {
+    "word_meaning": "느끼다",
+    "example": {
+      "example_eng": "How do you feel today?",
+      "example_kor": "오늘 기분이 어때요?"
+    },
+    "last_view_timestamp": "2025-07-09T11:24:50.001814"
+  },
+  "few": {
+    "word_meaning": "소수의",
+    "example": {
+      "example_eng": "I have a few friends.",
+      "example_kor": "나는 친구가 몇 명 있다."
+    },
+    "last_view_timestamp": "2025-08-14T11:36:54.001819"
+  },
+  "find": {
+    "word_meaning": "찾다, 발견하다",
+    "example": {
+      "example_eng": "I can't find my keys anywhere.",
+      "example_kor": "열쇠를 어디에서도 찾을 수가 없어요."
+    },
+    "last_view_timestamp": "2025-08-02T13:35:20.001824"
+  },
+  "finish": {
+    "word_meaning": "끝내다",
+    "example": {
+      "example_eng": "Finish your homework.",
+      "example_kor": "숙제를 끝내라."
+    },
+    "last_view_timestamp": "2025-08-09T11:25:30.001829"
+  },
+  "first": {
+    "word_meaning": "첫 번째의",
+    "example": {
+      "example_eng": "This is my first time here.",
+      "example_kor": "여기 온 것은 이번이 처음이다."
+    },
+    "last_view_timestamp": "2025-07-28T07:23:24.001834"
+  },
+  "follow": {
+    "word_meaning": "따라가다",
+    "example": {
+      "example_eng": "Follow me, please.",
+      "example_kor": "저를 따라오세요."
+    },
+    "last_view_timestamp": "2025-07-05T13:21:22.001839"
+  },
+  "for": {
+    "word_meaning": "~을 위해",
+    "example": {
+      "example_eng": "This gift is for you.",
+      "example_kor": "이 선물은 너를 위한 것이다."
+    },
+    "last_view_timestamp": "2025-07-18T21:11:47.001844"
+  },
+  "friend": {
+    "word_meaning": "친구",
+    "example": {
+      "example_eng": "He is my best friend.",
+      "example_kor": "그는 나의 가장 친한 친구다."
+    },
+    "last_view_timestamp": "2025-07-25T15:21:51.001848"
+  },
+  "from": {
+    "word_meaning": "~로부터",
+    "example": {
+      "example_eng": "I got a letter from him.",
+      "example_kor": "나는 그에게서 편지를 받았다."
+    },
+    "last_view_timestamp": "2025-08-24T07:28:12.001853"
+  },
+  "gag": {
+    "word_meaning": "재갈, 언론 탄압, 입을 막다, 언론을 탄압하다",
+    "example": {
+      "example_eng": "The media have obviously been gagged about the incident because nothing has been reported.",
+      "example_kor": "아무 것도 보도되지 않은 것을 미루어 보아 언론은 분명히 그 사건에 대해 재갈이 물려져 있다."
+    },
+    "last_view_timestamp": "2025-06-20T05:46:10.001858"
+  },
+  "gain": {
+    "word_meaning": "얻다, 이익",
+    "example": {
+      "example_eng": "The Nationalist Party have gained a lot of support in the south of the country.",
+      "example_kor": "민족주의당은 남부 지방에서 많은 지지를 얻었다."
+    },
+    "last_view_timestamp": "2025-08-20T01:15:56.001862"
+  },
+  "gainsay": {
+    "word_meaning": "부인(하다), 부정(하다), 부정, 반대",
+    "example": {
+      "example_eng": "There’ s no gainsaying the technical brilliance of his performance but one might have hoped for a little more feeling.",
+      "example_kor": "그의 연기가 기술적으로 뛰어났다는 것을 부정할 수 없지만 조금 더 감정 몰입에 충실하지 못한 것이 아쉽다."
+    },
+    "last_view_timestamp": "2025-06-16T21:08:21.001881"
+  },
+  "gala": {
+    "word_meaning": "유쾌한, 축제의, 화려한",
+    "example": {
+      "example_eng": "A number of luminaries from the opera world were performing -- it was a real gala affair.",
+      "example_kor": "오페라계의 기라성 같은 많은 가수들이 공연을 하고 있었다. 그것은 정말 화려한 공연이었다."
+    },
+    "last_view_timestamp": "2025-07-10T02:32:40.001885"
+  },
+  "galactic": {
+    "word_meaning": "젖의, 은하의",
+    "example": {
+      "example_eng": "We are still many years away from realizing the possibility of inter-galactic travel.",
+      "example_kor": "아직도 많은 세월이 지나야 우리는 은하계 간의 여행을 실현할 수 있을 것이다."
+    },
+    "last_view_timestamp": "2025-07-31T20:01:08.001889"
+  },
+  "galaxy": {
+    "word_meaning": "은하수",
+    "example": {
+      "example_eng": "Astronomers at the university of California discovered one of the most distant galaxies known.",
+      "example_kor": "캘리포니아 대학의 천문학자들이 이제까지 알려진 가장 멀리 떨어진 은하계 중 하나를 발견했다."
+    },
+    "last_view_timestamp": "2025-06-05T19:39:05.001894"
+  },
+  "gallant": {
+    "word_meaning": "용감한, 씩씩한",
+    "example": {
+      "example_eng": "Despite fierce competition she made a gallant effort to win the first medal of the championships.",
+      "example_kor": "치열한 경쟁에도 불구하고 그녀는 첫 챔피언 메달을 따기 위해 당당하게 맞섰다."
+    },
+    "last_view_timestamp": "2025-07-12T17:27:15.001898"
+  },
+  "gallop": {
+    "word_meaning": "질주, 급속도",
+    "example": {
+      "example_eng": "A horse naturally shifts from a trot to a gallop.",
+      "example_kor": "말은 자연스럽게 속보에서 질주로 속도를 바꾼다."
+    },
+    "last_view_timestamp": "2025-06-12T09:59:41.001902"
+  },
+  "gambol": {
+    "word_meaning": "뛰놀다, 장난치다, 야단법석",
+    "example": {
+      "example_eng": "Lambs were gamboling in the green fields.",
+      "example_kor": "어린 양들이 푸른 들판에서 뛰놀고 있었다."
+    },
+    "last_view_timestamp": "2025-08-20T08:11:52.001907"
+  },
+  "game": {
+    "word_meaning": "게임, 경기",
+    "example": {
+      "example_eng": "Let's play a game.",
+      "example_kor": "게임하자."
+    },
+    "last_view_timestamp": "2025-07-20T01:25:36.001911"
+  },
+  "garish": {
+    "word_meaning": "반짝이는, 화려한",
+    "example": {
+      "example_eng": "He was wearing garish Bermuda shorts and training shoes.",
+      "example_kor": "그는 화려한 버뮤다식 반바지를 입고 훈련용 신발을 신고 있었다."
+    },
+    "last_view_timestamp": "2025-08-18T05:22:28.001916"
+  },
+  "garnish": {
+    "word_meaning": "장식하다, 꾸미다",
+    "example": {
+      "example_eng": "Garnish the dish with parsley and serve.",
+      "example_kor": "요리에 파슬리를 곁들여서 상에 내시오."
+    },
+    "last_view_timestamp": "2025-08-23T22:18:47.001920"
+  },
+  "garrulity": {
+    "word_meaning": "수다, 다변(多辯)",
+    "example": {
+      "example_eng": "I was driven to distraction by his garrulity.",
+      "example_kor": "나는 그의 수다스러움 때문에 정신이 산만해질 지경이었다."
+    },
+    "last_view_timestamp": "2025-06-14T18:29:34.001925"
+  },
+  "get": {
+    "word_meaning": "얻다, 받다",
+    "example": {
+      "example_eng": "I need to get some milk from the store.",
+      "example_kor": "가게에서 우유를 좀 사 와야 해요."
+    },
+    "last_view_timestamp": "2025-07-06T19:43:56.001929"
+  },
+  "give": {
+    "word_meaning": "주다",
+    "example": {
+      "example_eng": "Can you give me that book?",
+      "example_kor": "그 책 좀 줄 수 있어요?"
+    },
+    "last_view_timestamp": "2025-06-19T10:31:54.001934"
+  },
+  "go": {
+    "word_meaning": "가다",
+    "example": {
+      "example_eng": "We will go to the park tomorrow.",
+      "example_kor": "우리는 내일 공원에 갈 거예요."
+    },
+    "last_view_timestamp": "2025-08-22T21:06:15.001938"
+  },
+  "good": {
+    "word_meaning": "좋은",
+    "example": {
+      "example_eng": "This is a good book.",
+      "example_kor": "이것은 좋은 책이다."
+    },
+    "last_view_timestamp": "2025-06-25T13:10:19.001942"
+  },
+  "government": {
+    "word_meaning": "정부",
+    "example": {
+      "example_eng": "The government made a new law.",
+      "example_kor": "정부는 새로운 법을 만들었다."
+    },
+    "last_view_timestamp": "2025-06-06T13:31:01.001947"
+  },
+  "great": {
+    "word_meaning": "위대한, 훌륭한",
+    "example": {
+      "example_eng": "He was a great leader.",
+      "example_kor": "그는 위대한 지도자였다."
+    },
+    "last_view_timestamp": "2025-06-07T19:07:51.001951"
+  },
+  "group": {
+    "word_meaning": "그룹, 집단",
+    "example": {
+      "example_eng": "A group of students entered the room.",
+      "example_kor": "한 그룹의 학생들이 방으로 들어왔다."
+    },
+    "last_view_timestamp": "2025-06-16T21:38:54.001955"
+  },
+  "grow": {
+    "word_meaning": "자라다",
+    "example": {
+      "example_eng": "Plants need water to grow.",
+      "example_kor": "식물은 자라기 위해 물이 필요하다."
+    },
+    "last_view_timestamp": "2025-06-16T06:26:41.001959"
+  },
+  "habeas corpus": {
+    "word_meaning": "((법률))인신 보호 영장",
+    "example": {
+      "example_eng": "The applicant sought writ of habeas corpus for his release.",
+      "example_kor": "그 지원자는 자신의 석방을 위한 출정 영장(구속 적부 심사를 위해 피구속자를 법정에 출두시키는 영장)을 신청했다."
+    },
+    "last_view_timestamp": "2025-05-31T13:09:57.001964"
+  },
+  "habiliment": {
+    "word_meaning": "복장, 제복",
+    "example": {
+      "example_eng": "The judge entered the courtroom in his official habiliments.",
+      "example_kor": "판사는 공식적인 제복을 입고 법정에 들어섰다."
+    },
+    "last_view_timestamp": "2025-06-21T20:15:50.001968"
+  },
+  "habit": {
+    "word_meaning": "버릇, 습관, 기질, 성질, 체질",
+    "example": {
+      "example_eng": "I always buy the same brand of toothpaste just out of habit.",
+      "example_kor": "나는 그냥 습관적으로 언제나 같은 상표의 치약을 산다."
+    },
+    "last_view_timestamp": "2025-07-22T13:57:38.001972"
+  },
+  "habitable": {
+    "word_meaning": "거주할 수 있는, 살기에 알맞은",
+    "example": {
+      "example_eng": "A lot of improvements would have to be made before the building was habitable.",
+      "example_kor": "그 건물이 사람이 살 만한 상태가 되기까지는 많은 개선이 이루어져야 할 것이다."
+    },
+    "last_view_timestamp": "2025-07-27T08:27:09.001977"
+  },
+  "habitant": {
+    "word_meaning": "거주자",
+    "example": {
+      "example_eng": "With so many areas of woodland being cut down, a lot of wildlife is losing its natural habitat.",
+      "example_kor": "너무나 많은 삼림 지역이 벌채되고 있기 때문에 많은 야생 동물들이 천연 서식지를 잃고 있다."
+    },
+    "last_view_timestamp": "2025-06-23T06:31:19.001981"
+  },
+  "habitat": {
+    "word_meaning": "서식지, 본고장, 주소",
+    "example": {
+      "example_eng": "The panda's natural habitat is the bamboo forests of China.",
+      "example_kor": "판다의 자연 서식지는 중국의 대나무 숲이다."
+    },
+    "last_view_timestamp": "2025-08-17T21:28:43.001985"
+  },
+  "habitation": {
+    "word_meaning": "거주, 주소, 주택, 살기",
+    "example": {
+      "example_eng": "The report described the houses as unfit for human habitation.",
+      "example_kor": "보도에서 그 집들은 사람의 거주에 적당치 않은 곳으로 묘사되었다."
+    },
+    "last_view_timestamp": "2025-06-14T19:10:38.001990"
+  },
+  "habitual": {
+    "word_meaning": "습관적인, 상습적인, 평소의",
+    "example": {
+      "example_eng": "He was a habitual liar who could not be trusted.",
+      "example_kor": "그는 믿을 수 없는 상습적인 거짓말쟁이였다."
+    },
+    "last_view_timestamp": "2025-07-01T13:32:20.001994"
+  },
+  "habitue": {
+    "word_meaning": "단골 손님, 마약 상습자",
+    "example": {
+      "example_eng": "In the sixties, she was a habitue of all international night-clubs.",
+      "example_kor": "60년대에 그녀는 모든 국제적 나이트 클럽의 단골 손님이었다."
+    },
+    "last_view_timestamp": "2025-06-10T09:56:33.001998"
+  },
+  "halfheartedly": {
+    "word_meaning": "열의 없는",
+    "example": {
+      "example_eng": "He made a halfhearted attempt to clean his room.",
+      "example_kor": "그는 마지못해 자기 방을 청소하려는 시늉만 했다."
+    },
+    "last_view_timestamp": "2025-05-27T12:09:01.002002"
+  },
+  "hallucinogen": {
+    "word_meaning": "환각제",
+    "example": {
+      "example_eng": "He used to use hallucinogens like acid and ecstasy.",
+      "example_kor": "그는 애시드나 엑스터시 같은 환각제를 이용하곤 했다."
+    },
+    "last_view_timestamp": "2025-08-10T05:15:22.002021"
+  },
+  "hand": {
+    "word_meaning": "손",
+    "example": {
+      "example_eng": "She has small hands.",
+      "example_kor": "그녀는 손이 작다."
+    },
+    "last_view_timestamp": "2025-08-06T19:48:37.002026"
+  },
+  "handicraft": {
+    "word_meaning": "수세공, 수공",
+    "example": {
+      "example_eng": "Each village has its own traditional dress, cuisine, folklore and handicrafts.",
+      "example_kor": "마을마다 각자의 전통적 의상과 음식, 민속, 수공예품이 있다."
+    },
+    "last_view_timestamp": "2025-08-03T20:44:38.002031"
+  },
+  "hap": {
+    "word_meaning": "우연, 운, 행운, 우연히 일어나다",
+    "example": {
+      "example_eng": "By happy hap, I found my lost keys in the street.",
+      "example_kor": "운 좋게도 길에서 잃어버린 열쇠를 찾았다."
+    },
+    "last_view_timestamp": "2025-08-09T22:26:27.002036"
+  },
+  "haphazard": {
+    "word_meaning": "우연의, 함부로, 되는 대로의, 우연",
+    "example": {
+      "example_eng": "He tackled the problem in a typically haphazard manner.",
+      "example_kor": "그는 특유의 되는 대로의 방식으로 그 문제에 뛰어들었다."
+    },
+    "last_view_timestamp": "2025-06-09T16:29:22.002041"
+  },
+  "happen": {
+    "word_meaning": "발생하다, 일어나다",
+    "example": {
+      "example_eng": "What happened to your arm?",
+      "example_kor": "팔에 무슨 일이 있었어요?"
+    },
+    "last_view_timestamp": "2025-06-16T06:52:28.002046"
+  },
+  "happy": {
+    "word_meaning": "행복한",
+    "example": {
+      "example_eng": "I'm so happy to see you.",
+      "example_kor": "너를 보니 정말 행복해."
+    },
+    "last_view_timestamp": "2025-08-22T04:28:50.002051"
+  },
+  "have": {
+    "word_meaning": "가지다, 소유하다",
+    "example": {
+      "example_eng": "I have a new book.",
+      "example_kor": "나는 새 책을 가지고 있어요."
+    },
+    "last_view_timestamp": "2025-07-17T00:52:58.002055"
+  },
+  "head": {
+    "word_meaning": "머리",
+    "example": {
+      "example_eng": "My head hurts.",
+      "example_kor": "머리가 아프다."
+    },
+    "last_view_timestamp": "2025-07-18T13:52:30.002060"
+  },
+  "hear": {
+    "word_meaning": "듣다",
+    "example": {
+      "example_eng": "I can hear music from next door.",
+      "example_kor": "옆집에서 음악 소리가 들려요."
+    },
+    "last_view_timestamp": "2025-07-16T18:34:10.002065"
+  },
+  "help": {
+    "word_meaning": "돕다",
+    "example": {
+      "example_eng": "Can you help me with this box?",
+      "example_kor": "이 상자 옮기는 것 좀 도와줄 수 있어요?"
+    },
+    "last_view_timestamp": "2025-07-19T15:35:01.002070"
+  },
+  "here": {
+    "word_meaning": "여기에",
+    "example": {
+      "example_eng": "Please come here.",
+      "example_kor": "이리 오세요."
+    },
+    "last_view_timestamp": "2025-06-10T09:05:35.002075"
+  },
+  "high": {
+    "word_meaning": "높은",
+    "example": {
+      "example_eng": "The mountain is very high.",
+      "example_kor": "그 산은 매우 높다."
+    },
+    "last_view_timestamp": "2025-06-22T20:36:39.002081"
+  },
+  "hold": {
+    "word_meaning": "잡다, 개최하다",
+    "example": {
+      "example_eng": "Please hold my hand.",
+      "example_kor": "제 손을 잡아주세요."
+    },
+    "last_view_timestamp": "2025-06-17T10:22:31.002087"
+  },
+  "home": {
+    "word_meaning": "집",
+    "example": {
+      "example_eng": "I want to go home.",
+      "example_kor": "나는 집에 가고 싶다."
+    },
+    "last_view_timestamp": "2025-06-01T18:46:33.002091"
+  },
+  "hour": {
+    "word_meaning": "시간",
+    "example": {
+      "example_eng": "I will be back in an hour.",
+      "example_kor": "한 시간 후에 돌아올게."
+    },
+    "last_view_timestamp": "2025-08-15T13:31:19.002097"
+  },
+  "house": {
+    "word_meaning": "집",
+    "example": {
+      "example_eng": "They live in a big house.",
+      "example_kor": "그들은 큰 집에 산다."
+    },
+    "last_view_timestamp": "2025-07-24T23:50:41.002101"
+  },
+  "how": {
+    "word_meaning": "어떻게",
+    "example": {
+      "example_eng": "How are you?",
+      "example_kor": "어떻게 지내세요?"
+    },
+    "last_view_timestamp": "2025-06-05T14:32:08.002106"
+  },
+  "icon": {
+    "word_meaning": "상(像), 초상화, 성상, 성화, 우상",
+    "example": {
+      "example_eng": "Elvis Presley, Marilyn Monore and James Dean are still icons for many young people.",
+      "example_kor": "엘비스 프레슬리, 마릴린 먼로, 제임스 딘은 여전히 많은 젊은이에게 우상이다."
+    },
+    "last_view_timestamp": "2025-07-24T06:53:53.002111"
+  },
+  "iconic": {
+    "word_meaning": "초상화의, 인습적인",
+    "example": {
+      "example_eng": "John Lennon gained iconic status following his death.",
+      "example_kor": "존 레넌은 사후에 우상화되었다."
+    },
+    "last_view_timestamp": "2025-07-31T13:13:00.002115"
+  },
+  "iconoclast": {
+    "word_meaning": "우상 파괴주의자, 인습 타파론자",
+    "example": {
+      "example_eng": "Rogers, an iconoclast in architecture, is sometimes described as putting the insides of buildings on the outside.",
+      "example_kor": "건축계의 인습타파자인 로저스는 때로 건물 내부를 외부에 붙여 놓았다고 묘사된다."
+    },
+    "last_view_timestamp": "2025-07-01T14:31:55.002120"
+  },
+  "iconoclastic": {
+    "word_meaning": "성상 파괴의, 인습 타파의",
+    "example": {
+      "example_eng": "Tom is an irreverent, iconoclastic figure who refuses to conform.",
+      "example_kor": "탐은 순응을 거부하는 불손하고 인습 타파적 인물이다."
+    },
+    "last_view_timestamp": "2025-06-13T20:33:04.002126"
+  },
+  "iconography": {
+    "word_meaning": "그림 풀이, 도해, 성상학",
+    "example": {
+      "example_eng": "The iconography of this picture is fascinating.",
+      "example_kor": "이 그림의 도상학은 매혹적이다."
+    },
+    "last_view_timestamp": "2025-06-13T01:14:00.002131"
+  },
+  "identify": {
+    "word_meaning": "동일시하다",
+    "example": {
+      "example_eng": "Many football fans are unfairly identified with violent behavior.",
+      "example_kor": "많은 축구팬들이 부당하게도 폭력적 행동과 동일시되고 있다."
+    },
+    "last_view_timestamp": "2025-07-15T13:02:00.002136"
+  },
+  "ideology": {
+    "word_meaning": "이념, 이데올로기, 관념학",
+    "example": {
+      "example_eng": "She was against all ideology.",
+      "example_kor": "그녀는 모든 이념에 반대했다."
+    },
+    "last_view_timestamp": "2025-07-04T17:55:59.002142"
+  },
+  "idiom": {
+    "word_meaning": "관용 어법, 숙어",
+    "example": {
+      "example_eng": "The expression 'kick the bucket' is an idiom that means 'to die'.",
+      "example_kor": "'kick the bucket'이라는 표현은 '죽다'를 의미하는 관용어이다."
+    },
+    "last_view_timestamp": "2025-07-28T22:31:40.002147"
+  },
+  "idiomatic": {
+    "word_meaning": "특유의, 독특한",
+    "example": {
+      "example_eng": "To “bite the buillet” is an idiomatic expression that means to accept something unpleasant without complaining.",
+      "example_kor": "“bite a bullet”은 불쾌한 일을 불평하지 않고 받아들이는 것을 의미하는 숙어적 표현이다."
+    },
+    "last_view_timestamp": "2025-05-30T14:37:12.002165"
+  },
+  "important": {
+    "word_meaning": "중요한",
+    "example": {
+      "example_eng": "This is an important meeting.",
+      "example_kor": "이것은 중요한 회의이다."
+    },
+    "last_view_timestamp": "2025-07-16T12:39:51.002170"
+  },
+  "in": {
+    "word_meaning": "~안에",
+    "example": {
+      "example_eng": "The cat is in the box.",
+      "example_kor": "고양이가 상자 안에 있다."
+    },
+    "last_view_timestamp": "2025-07-21T05:56:57.002174"
+  },
+  "include": {
+    "word_meaning": "포함하다",
+    "example": {
+      "example_eng": "The price includes tax.",
+      "example_kor": "그 가격은 세금을 포함합니다."
+    },
+    "last_view_timestamp": "2025-06-28T21:40:34.002193"
+  },
+  "jealous": {
+    "word_meaning": "시기하는, 질투심 많은",
+    "example": {
+      "example_eng": "Her colleagues are jealous of her success.",
+      "example_kor": "그녀의 동료들은 그녀의 성공을 질투한다."
+    },
+    "last_view_timestamp": "2025-07-18T08:06:15.002199"
+  },
+  "jejune": {
+    "word_meaning": "불모의, 빈약한, 재미 없는",
+    "example": {
+      "example_eng": "He made jejune generalizations about how all students were lazy and never did any work.",
+      "example_kor": "그는 전체 학생이 얼마나 게으르며 공부를 전혀 하지 않는가를 막연하게 설명했다."
+    },
+    "last_view_timestamp": "2025-06-23T10:27:01.002204"
+  },
+  "jeopardize": {
+    "word_meaning": "위태롭게 하다",
+    "example": {
+      "example_eng": "She knew that by failing her exams she could jeopardize her whole future.",
+      "example_kor": "그녀는 시험에 떨어지면 자신의 장래가 위태로울 수 있음을 알고 있었다."
+    },
+    "last_view_timestamp": "2025-05-28T21:33:03.002209"
+  },
+  "jeopardy": {
+    "word_meaning": "위험, 위난",
+    "example": {
+      "example_eng": "Bad management has put the company’ s future in jeopardy.",
+      "example_kor": "부실 경영으로 그 회사의 미래는 위기에 처했다."
+    },
+    "last_view_timestamp": "2025-07-06T00:19:03.002214"
+  },
+  "jet": {
+    "word_meaning": "분출, 분사",
+    "example": {
+      "example_eng": "A jet of water shot out from the broken pipe.",
+      "example_kor": "부서진 파이프에서 물줄기가 뿜어져 나왔다."
+    },
+    "last_view_timestamp": "2025-05-27T09:09:26.002219"
+  },
+  "jettison": {
+    "word_meaning": "투하, 짐을 버리다, 내던지다, 포기",
+    "example": {
+      "example_eng": "The company has been forced to jettison 200 employees due to financial problems.",
+      "example_kor": "그 회사는 재정 문제 때문에 200명의 고용인을 해고하지 않을 수 없었다."
+    },
+    "last_view_timestamp": "2025-06-29T21:23:08.002224"
+  },
+  "jewel": {
+    "word_meaning": "보석, 소중한 사람, 보석으로 장식하다",
+    "example": {
+      "example_eng": "She was wearing a large gold necklace set with jewels.",
+      "example_kor": "그녀는 보석이 박힌 큰 금 목걸이를 하고 있었다."
+    },
+    "last_view_timestamp": "2025-08-06T08:58:56.002230"
+  },
+  "job": {
+    "word_meaning": "직업",
+    "example": {
+      "example_eng": "He is looking for a new job.",
+      "example_kor": "그는 새로운 직업을 찾고 있다."
+    },
+    "last_view_timestamp": "2025-06-18T14:54:05.002235"
+  },
+  "jocose": {
+    "word_meaning": "우스꽝스런, 익살 맞은, 까부는",
+    "example": {
+      "example_eng": "His jocose manner was unsuitable for such a solemn occasion.",
+      "example_kor": "그의 익살맞은 태도는 그런 엄숙한 행사에는 어울리지 않았다."
+    },
+    "last_view_timestamp": "2025-07-11T16:08:56.002240"
+  },
+  "jocular": {
+    "word_meaning": "익살 맞은, 농담의",
+    "example": {
+      "example_eng": "Our next-door neighbor is a very cheerful, jocular man.",
+      "example_kor": "우리 옆집 사는 사람은 매우 유쾌하고 명랑한 사람이다"
+    },
+    "last_view_timestamp": "2025-06-27T11:36:27.002245"
+  },
+  "jocund": {
+    "word_meaning": "명랑한, 유쾌한",
+    "example": {
+      "example_eng": "It was a jocund party, full of laughter and good cheer.",
+      "example_kor": "그것은 웃음과 환호가 가득한 명랑한 파티였다."
+    },
+    "last_view_timestamp": "2025-06-21T06:14:20.002250"
+  },
+  "joie de vivre": {
+    "word_meaning": "삶의 기쁨",
+    "example": {
+      "example_eng": "She is very high-spirited person and is always full of joie de vivre.",
+      "example_kor": "그녀는 매우 기운찬 사람으로 언제나 삶의 기쁨으로 충만해 있다."
+    },
+    "last_view_timestamp": "2025-06-27T05:34:18.002254"
+  },
+  "join": {
+    "word_meaning": "결합하다, 합류하다, 접합",
+    "example": {
+      "example_eng": "A long suspension bridge joins the two islands.",
+      "example_kor": "긴 현수교가 두 섬을 연결한다."
+    },
+    "last_view_timestamp": "2025-06-30T00:40:31.002259"
+  },
+  "joint": {
+    "word_meaning": "관절, 이음새, 공동의, 연대의, 접합하다",
+    "example": {
+      "example_eng": "The police and social workers are conducting a joint investgation into teenage crime in the area.",
+      "example_kor": "경찰과 사회 복지사들은 그 지역의 청소년 범죄에 대한 공동 조사를 실시하고 있다."
+    },
+    "last_view_timestamp": "2025-08-14T08:47:32.002264"
+  },
+  "joke": {
+    "word_meaning": "농담(을 하다), 놀리다",
+    "example": {
+      "example_eng": "Did I tell you the joke about the chicken crossing the road?",
+      "example_kor": "길을 건너는 닭에 대한 농담을 내가 당신에게 말해 주었던가요?"
+    },
+    "last_view_timestamp": "2025-06-02T15:18:58.002269"
+  },
+  "kaleidoscope": {
+    "word_meaning": "만화경",
+    "example": {
+      "example_eng": "The street bazaar was a kaleidoscope of colors, smells and sounds.",
+      "example_kor": "그 거리 시장은 색깔과 냄새, 소리의 만화경이었다."
+    },
+    "last_view_timestamp": "2025-06-27T14:49:30.002275"
+  },
+  "keep": {
+    "word_meaning": "지니다, 지키다, 유지하다, 가두다",
+    "example": {
+      "example_eng": "I told him to keep the book as long as he liked.",
+      "example_kor": "나는 그에게 원하는 만큼 오래 그 책을 간직하라고 말했다."
+    },
+    "last_view_timestamp": "2025-07-01T06:22:15.002280"
+  },
+  "keeper": {
+    "word_meaning": "보호자, 관리인, 수비자",
+    "example": {
+      "example_eng": "“Am I my brother’ s keeper?”",
+      "example_kor": "“내가 우리 형의 보호자야?”"
+    },
+    "last_view_timestamp": "2025-07-15T18:12:45.002286"
+  },
+  "keepsake": {
+    "word_meaning": "기념품, 유품",
+    "example": {
+      "example_eng": "Her aunt gave her a little wooden elephant as a keepsake.",
+      "example_kor": "그녀의 이모는 그녀에게 작은 목각 코끼리를 기념품으로 주었다."
+    },
+    "last_view_timestamp": "2025-06-26T05:45:01.002291"
+  },
+  "kill": {
+    "word_meaning": "죽이다",
+    "example": {
+      "example_eng": "He killed the insect with a spray.",
+      "example_kor": "그는 스프레이로 그 벌레를 죽였다."
+    },
+    "last_view_timestamp": "2025-07-31T08:56:56.002297"
+  },
+  "kind": {
+    "word_meaning": "종류",
+    "example": {
+      "example_eng": "What kind of music do you like?",
+      "example_kor": "어떤 종류의 음악을 좋아하세요?"
+    },
+    "last_view_timestamp": "2025-06-22T00:37:41.002303"
+  },
+  "kinetic": {
+    "word_meaning": "운동의, 운동상의",
+    "example": {
+      "example_eng": "Kinetic energy is the energy produced by something moving.",
+      "example_kor": "운동 에너지는 무언가 움직이는 것에 의해 발생하는 에너지이다."
+    },
+    "last_view_timestamp": "2025-05-30T09:15:55.002308"
+  },
+  "kinetics": {
+    "word_meaning": "동력학",
+    "example": {
+      "example_eng": "Kinetics is the scientific study of forces on things that are moving.",
+      "example_kor": "동력학은 움직이는 물체의 힘을 과학적으로 연구하는 것이다."
+    },
+    "last_view_timestamp": "2025-07-29T18:05:51.002313"
+  },
+  "kitchen": {
+    "word_meaning": "부엌, 취사장, 주방",
+    "example": {
+      "example_eng": "We often eat breakfast and lunch at the kitchen table.",
+      "example_kor": "우리는 부엌 탁자에서 아침과 점심을 먹는 경우가 많다."
+    },
+    "last_view_timestamp": "2025-07-27T19:51:37.002322"
+  },
+  "kleptomaniac": {
+    "word_meaning": "절도광 환자, 병적 도벽자",
+    "example": {
+      "example_eng": "The wealthy woman was a kleptomaniac who stole cheap trinkets.",
+      "example_kor": "그 부유한 여성은 값싼 장신구를 훔치는 병적 도벽자였다."
+    },
+    "last_view_timestamp": "2025-06-08T05:10:08.002328"
+  },
+  "know": {
+    "word_meaning": "알다",
+    "example": {
+      "example_eng": "She knows the names of every kid in the school.",
+      "example_kor": "그녀는 학교 아이들의 이름을 다 알고 있다."
+    },
+    "last_view_timestamp": "2025-06-24T01:40:44.002333"
+  },
+  "knowing": {
+    "word_meaning": "빈틈 없는, 아는 체하는",
+    "example": {
+      "example_eng": "As soon as I mentioned her, Colin started giving me knowing looks.",
+      "example_kor": "내가 그녀의 이름을 말하자마자, 콜린은 나에게 아는 체하는 표정을 짓기 시작했다."
+    },
+    "last_view_timestamp": "2025-06-11T14:05:06.002338"
+  },
+  "knowledge": {
+    "word_meaning": "인식, 이해, 지식",
+    "example": {
+      "example_eng": "Her knowledge of English grammar is very extensive.",
+      "example_kor": "영어 문법에 대한 그녀의 지식은 매우 해박하다."
+    },
+    "last_view_timestamp": "2025-06-08T04:11:53.002342"
+  },
+  "labor": {
+    "word_meaning": "노동(하다), 자세히 설명하다",
+    "example": {
+      "example_eng": "People doing jobs that involve manual labor use up a lot of energy.",
+      "example_kor": "손으로 하는 노동과 관련된 일을 하는 사람들은 많은 에너지를 다 써버린다."
+    },
+    "last_view_timestamp": "2025-08-18T12:03:14.002347"
+  },
+  "laboratory": {
+    "word_meaning": "실험(실), 어학 실습실, 실험의",
+    "example": {
+      "example_eng": "Laboratory tests suggest that the new drug may be used to treat cancer.",
+      "example_kor": "실험실 테스트는 그 신약이 암을 치료하는 데 쓰일 수 있다는 것을 암시했다."
+    },
+    "last_view_timestamp": "2025-07-24T07:19:11.002352"
+  },
+  "labored": {
+    "word_meaning": "애쓴, 어색한, 힘드는",
+    "example": {
+      "example_eng": "Her breathing was heavy and labored and she was sweating.",
+      "example_kor": "그녀는 매우 무겁고 힘들게 숨을 쉬었으며 땀도 흘리고 있었다."
+    },
+    "last_view_timestamp": "2025-08-04T11:30:49.002357"
+  },
+  "laborer": {
+    "word_meaning": "노동자, 인부",
+    "example": {
+      "example_eng": "The construction site was full of laborers.",
+      "example_kor": "공사장은 인부들로 가득했다."
+    },
+    "last_view_timestamp": "2025-06-18T08:33:49.002377"
+  },
+  "laborious": {
+    "word_meaning": "힘드는, 수고스러운, 근면한",
+    "example": {
+      "example_eng": "Checking the entire report for mistakes was a laborious business.",
+      "example_kor": "실수를 찾아내기 위해 전체 보고서를 다 검토하는 것은 힘든 일이었다."
+    },
+    "last_view_timestamp": "2025-06-27T03:41:49.002383"
+  },
+  "labyrinth": {
+    "word_meaning": "미로, 분규",
+    "example": {
+      "example_eng": "We got lost in the labyrinth of narrow streets in the old city.",
+      "example_kor": "우리는 구시가지의 좁은 거리들이 얽힌 미로에서 길을 잃었다."
+    },
+    "last_view_timestamp": "2025-06-02T16:24:04.002402"
+  },
+  "labyrinthine": {
+    "word_meaning": "미로, 분규",
+    "example": {
+      "example_eng": "It takes a fair amount of concentration to follow the film’ s labyrinthine plot.",
+      "example_kor": "그 영화의 미로 같은 플롯을 따라가려면 상당한 집중력이 필요하다."
+    },
+    "last_view_timestamp": "2025-08-10T07:07:14.002407"
+  },
+  "lachrymose": {
+    "word_meaning": "눈물을 자아내는, 가엾은",
+    "example": {
+      "example_eng": "Julia Moreno plays the lachrymose heroine of the film.",
+      "example_kor": "줄리아 모레노는 그 영화에서 눈물을 자아내는 여주인공 역을 연기한다."
+    },
+    "last_view_timestamp": "2025-06-11T00:49:05.002411"
+  },
+  "lackluster": {
+    "word_meaning": "빛이 없는, 윤기가 없는, 생기 없는",
+    "example": {
+      "example_eng": "Britain’ s number-one tennis player gave a disappointingly lackluster performance.",
+      "example_kor": "영국 최고의 테니스 선수가 실망스럽게도 맥 없는 경기를 펼쳤다."
+    },
+    "last_view_timestamp": "2025-08-09T10:55:59.002416"
+  },
+  "laconic": {
+    "word_meaning": "간결한, 말수가 적은",
+    "example": {
+      "example_eng": "She had a laconic sense of humor.",
+      "example_kor": "그녀는 간결한 유머감각을 지니고 있다."
+    },
+    "last_view_timestamp": "2025-07-13T02:42:49.002422"
+  },
+  "large": {
+    "word_meaning": "큰",
+    "example": {
+      "example_eng": "We need a large table.",
+      "example_kor": "우리는 큰 테이블이 필요하다."
+    },
+    "last_view_timestamp": "2025-07-15T19:00:20.002427"
+  },
+  "last": {
+    "word_meaning": "마지막의",
+    "example": {
+      "example_eng": "It's the last day of the year.",
+      "example_kor": "올해의 마지막 날이다."
+    },
+    "last_view_timestamp": "2025-07-08T15:15:57.002432"
+  },
+  "lead": {
+    "word_meaning": "이끌다",
+    "example": {
+      "example_eng": "She will lead the team.",
+      "example_kor": "그녀가 팀을 이끌 것이다."
+    },
+    "last_view_timestamp": "2025-08-09T03:57:07.002437"
+  },
+  "learn": {
+    "word_meaning": "배우다",
+    "example": {
+      "example_eng": "I want to learn English.",
+      "example_kor": "나는 영어를 배우고 싶다."
+    },
+    "last_view_timestamp": "2025-07-28T09:33:06.002442"
+  },
+  "leave": {
+    "word_meaning": "떠나다, 남기다",
+    "example": {
+      "example_eng": "The train will leave in five minutes.",
+      "example_kor": "기차는 5분 후에 떠날 것입니다."
+    },
+    "last_view_timestamp": "2025-07-27T23:57:13.002447"
+  },
+  "let": {
+    "word_meaning": "~하게 하다, 허락하다",
+    "example": {
+      "example_eng": "My parents let me stay out late on weekends.",
+      "example_kor": "부모님은 주말에 제가 늦게까지 밖에 있는 것을 허락하세요."
+    },
+    "last_view_timestamp": "2025-08-09T07:35:49.002452"
+  },
+  "life": {
+    "word_meaning": "삶, 인생",
+    "example": {
+      "example_eng": "Life is short.",
+      "example_kor": "인생은 짧다."
+    },
+    "last_view_timestamp": "2025-08-02T13:23:53.002467"
+  },
+  "like": {
+    "word_meaning": "좋아하다",
+    "example": {
+      "example_eng": "I really like this song.",
+      "example_kor": "저는 이 노래를 정말 좋아해요."
+    },
+    "last_view_timestamp": "2025-07-24T02:26:45.002498"
+  },
+  "line": {
+    "word_meaning": "선, 줄",
+    "example": {
+      "example_eng": "Please stand in line.",
+      "example_kor": "줄을 서세요."
+    },
+    "last_view_timestamp": "2025-08-02T23:05:32.002524"
+  },
+  "listen": {
+    "word_meaning": "듣다, 경청하다",
+    "example": {
+      "example_eng": "Listen to me.",
+      "example_kor": "내 말을 들어보세요."
+    },
+    "last_view_timestamp": "2025-07-31T05:13:17.002538"
+  },
+  "little": {
+    "word_meaning": "작은",
+    "example": {
+      "example_eng": "She lives in a little house.",
+      "example_kor": "그녀는 작은 집에 산다."
+    },
+    "last_view_timestamp": "2025-06-20T00:40:02.002549"
+  },
+  "live": {
+    "word_meaning": "살다, 거주하다",
+    "example": {
+      "example_eng": "They live in a small town.",
+      "example_kor": "그들은 작은 마을에 살아요."
+    },
+    "last_view_timestamp": "2025-08-09T11:52:38.002562"
+  },
+  "long": {
+    "word_meaning": "긴",
+    "example": {
+      "example_eng": "It was a long journey.",
+      "example_kor": "그것은 긴 여정이었다."
+    },
+    "last_view_timestamp": "2025-08-05T09:24:03.002575"
+  },
+  "look": {
+    "word_meaning": "보다, ~처럼 보이다",
+    "example": {
+      "example_eng": "Look at the beautiful sunset!",
+      "example_kor": "아름다운 일몰을 봐!"
+    },
+    "last_view_timestamp": "2025-06-26T02:25:39.002587"
+  },
+  "lose": {
+    "word_meaning": "잃다",
+    "example": {
+      "example_eng": "Don't lose your passport.",
+      "example_kor": "여권을 잃어버리지 마세요."
+    },
+    "last_view_timestamp": "2025-08-01T16:28:26.002601"
+  },
+  "love": {
+    "word_meaning": "사랑하다",
+    "example": {
+      "example_eng": "She loves her family.",
+      "example_kor": "그녀는 가족을 사랑한다."
+    },
+    "last_view_timestamp": "2025-06-01T12:09:29.002618"
+  },
+  "machine": {
+    "word_meaning": "기계 (장치), 기관, 기구",
+    "example": {
+      "example_eng": "Eggs are sorted into different sizes by a machine.",
+      "example_kor": "계란은 기계에 의해 각각 다른 크기로 분류된다."
+    },
+    "last_view_timestamp": "2025-06-26T16:05:03.002628"
+  },
+  "machinery": {
+    "word_meaning": "기계(류), 줄거리",
+    "example": {
+      "example_eng": "People are sometimes frightened by all the machinery that there is in hospitals.",
+      "example_kor": "사람들은 때로 병원에 있는 모든 기계류를 보고 무서워한다."
+    },
+    "last_view_timestamp": "2025-07-03T07:50:24.002634"
+  },
+  "macrocosm": {
+    "word_meaning": "우주",
+    "example": {
+      "example_eng": "Some sociologists view society as a macrocosm.",
+      "example_kor": "어떤 사회학자들은 사회를 하나의 우주로 본다."
+    },
+    "last_view_timestamp": "2025-07-11T19:14:22.002638"
+  },
+  "magnanimity": {
+    "word_meaning": "아량, 관대",
+    "example": {
+      "example_eng": "The soldiers have promised to treat the hostages that they capture with magnanimity.",
+      "example_kor": "군인들은 생포한 인질들을 관대하게 다루겠다고 약속했다."
+    },
+    "last_view_timestamp": "2025-06-13T08:46:10.002643"
+  },
+  "make": {
+    "word_meaning": "만들다",
+    "example": {
+      "example_eng": "Let's make a snowman.",
+      "example_kor": "눈사람을 만들자."
+    },
+    "last_view_timestamp": "2025-07-30T07:47:30.002648"
+  },
+  "man": {
+    "word_meaning": "남자",
+    "example": {
+      "example_eng": "A man is walking down the street.",
+      "example_kor": "한 남자가 길을 걷고 있다."
+    },
+    "last_view_timestamp": "2025-08-07T15:46:07.002653"
+  },
+  "mean": {
+    "word_meaning": "의미하다",
+    "example": {
+      "example_eng": "What does this word mean?",
+      "example_kor": "이 단어는 무슨 의미인가요?"
+    },
+    "last_view_timestamp": "2025-06-07T11:18:02.002658"
+  },
+  "meet": {
+    "word_meaning": "만나다",
+    "example": {
+      "example_eng": "Nice to meet you.",
+      "example_kor": "만나서 반갑습니다."
+    },
+    "last_view_timestamp": "2025-08-13T22:43:06.002663"
+  },
+  "money": {
+    "word_meaning": "돈",
+    "example": {
+      "example_eng": "I don't have enough money.",
+      "example_kor": "나는 돈이 충분하지 않다."
+    },
+    "last_view_timestamp": "2025-05-28T03:39:44.002668"
+  },
+  "month": {
+    "word_meaning": "달",
+    "example": {
+      "example_eng": "January is the first month of the year.",
+      "example_kor": "1월은 한 해의 첫 번째 달이다."
+    },
+    "last_view_timestamp": "2025-07-01T02:50:02.002672"
+  },
+  "mother": {
+    "word_meaning": "어머니",
+    "example": {
+      "example_eng": "My mother is a nurse.",
+      "example_kor": "나의 어머니는 간호사이다."
+    },
+    "last_view_timestamp": "2025-08-23T15:37:49.002677"
+  },
+  "move": {
+    "word_meaning": "움직이다, 이사하다",
+    "example": {
+      "example_eng": "We are going to move to a new house next month.",
+      "example_kor": "우리는 다음 달에 새 집으로 이사 갈 거예요."
+    },
+    "last_view_timestamp": "2025-07-02T02:13:53.002682"
+  },
+  "naive": {
+    "word_meaning": "순진한, 순박한, 고지식한",
+    "example": {
+      "example_eng": "Young, naive and trusting as I was, I believed every lying word he said.",
+      "example_kor": "나는 어리고 순진한데다 의심할 줄 모르는 성격이어서 그가 하는 모든 거짓말을 다 믿었다."
+    },
+    "last_view_timestamp": "2025-07-30T07:22:56.002687"
+  },
+  "naivete": {
+    "word_meaning": "순진함, 솔직함",
+    "example": {
+      "example_eng": "I think her naivete is charming -- she’ s so unspoilt and fresh.",
+      "example_kor": "나는 그녀의 순진함이 매력이라고 생각한다. 그녀는 정말 때묻지 않은 순수함과 생기가 있었다."
+    },
+    "last_view_timestamp": "2025-07-09T07:22:44.002691"
+  },
+  "nascent": {
+    "word_meaning": "초기의, 발생기의",
+    "example": {
+      "example_eng": "The country's nascent democracy is facing many challenges.",
+      "example_kor": "그 나라의 초기 민주주의는 많은 도전에 직면해 있다."
+    },
+    "last_view_timestamp": "2025-08-20T01:24:46.002696"
+  },
+  "natal": {
+    "word_meaning": "출생의, 고향의",
+    "example": {
+      "example_eng": "She returned to her natal village after many years abroad.",
+      "example_kor": "그녀는 해외에서 수년을 보낸 후 자신의 고향 마을로 돌아왔다."
+    },
+    "last_view_timestamp": "2025-07-02T09:46:24.002701"
+  },
+  "natation": {
+    "word_meaning": "수영",
+    "example": {
+      "example_eng": "The school's natation team won the championship.",
+      "example_kor": "그 학교 수영팀이 선수권 대회에서 우승했다."
+    },
+    "last_view_timestamp": "2025-06-10T12:45:17.002707"
+  },
+  "nation": {
+    "word_meaning": "국민, 국가",
+    "example": {
+      "example_eng": "Practically the whole nation watched the ceremony on television.",
+      "example_kor": "실제로 그 나라 전체가 텔레비전으로 그 의식을 지켜보았다."
+    },
+    "last_view_timestamp": "2025-07-03T04:19:34.002716"
+  },
+  "national": {
+    "word_meaning": "국가의, 전국의, 국유의, 국립의, 애국적인",
+    "example": {
+      "example_eng": "The government’ s view is that raising taxes now would not be in the national interest.",
+      "example_kor": "정부의 견해는 지금 세금을 올리는 것은 국가에 이익이 되지 않으리라는 것이다."
+    },
+    "last_view_timestamp": "2025-06-21T13:42:27.002725"
+  },
+  "nationalism": {
+    "word_meaning": "국가주의, 국수주의, 애국심",
+    "example": {
+      "example_eng": "The book documented the rise of the political right with its accompanying strands of nationalism and racism.",
+      "example_kor": "그 책은 정치적 권리의 상승과 그에 따른 국가주의 및 인종차별주의의 요소를 입증했다."
+    },
+    "last_view_timestamp": "2025-05-29T17:02:14.002733"
+  },
+  "nationalist": {
+    "word_meaning": "민족주의자, 국가주의의, 민족주의의",
+    "example": {
+      "example_eng": "Nationalists want political independence for their country.",
+      "example_kor": "민족주의자들은 자국의 정치적 독립을 원한다."
+    },
+    "last_view_timestamp": "2025-06-14T10:38:12.002738"
+  },
+  "nationality": {
+    "word_meaning": "국적, 국가",
+    "example": {
+      "example_eng": "At the International School they have pupils of 46 different nationality.",
+      "example_kor": "국제 학교에는 마흔 여섯 개 나라 출신의 학생들이 있다."
+    },
+    "last_view_timestamp": "2025-08-05T12:30:27.002743"
+  },
+  "native": {
+    "word_meaning": "출생지의, 타고난, 원주민",
+    "example": {
+      "example_eng": "After stepping off the plane she knelt down to kiss her native soil.",
+      "example_kor": "비행기에서 내려서자 그녀는 무릎을 꿇고 그녀가 태어난 고국 땅에 입을 맞추었다."
+    },
+    "last_view_timestamp": "2025-08-01T02:51:24.002747"
+  },
+  "natural": {
+    "word_meaning": "타고난, 야생의, 자연의, 보통의",
+    "example": {
+      "example_eng": "People say that breast-feeding is better than bottle-feeding because it’ s more natural.",
+      "example_kor": "사람들은 모유로 키우는 것이 더 자연스러운 것이므로 분유로 키우는 것보다 더 낫다고 말한다."
+    },
+    "last_view_timestamp": "2025-07-17T08:50:39.002752"
+  },
+  "naturalize": {
+    "word_meaning": "귀화시키다, 순응시키다, 자연에 따르게 하다",
+    "example": {
+      "example_eng": "She has lived in the States for a long time, and recently she was naturalized.",
+      "example_kor": "그녀는 미국에서 오랫동안 살았고 최근에는 귀화했다."
+    },
+    "last_view_timestamp": "2025-08-17T13:00:06.002757"
+  },
+  "nature": {
+    "word_meaning": "자연, 본성, 특질, 활력",
+    "example": {
+      "example_eng": "He is by nature inclined to be rather lazy.",
+      "example_kor": "그는 천성적으로 좀 게으른 편이다."
+    },
+    "last_view_timestamp": "2025-06-24T00:57:23.002762"
+  },
+  "need": {
+    "word_meaning": "필요하다",
+    "example": {
+      "example_eng": "I need some fresh air.",
+      "example_kor": "신선한 공기가 좀 필요해요."
+    },
+    "last_view_timestamp": "2025-07-13T22:39:09.002767"
+  },
+  "never": {
+    "word_meaning": "결코 ~않다",
+    "example": {
+      "example_eng": "I will never forget you.",
+      "example_kor": "나는 결코 너를 잊지 않을 것이다."
+    },
+    "last_view_timestamp": "2025-07-31T11:15:33.002771"
+  },
+  "new": {
+    "word_meaning": "새로운",
+    "example": {
+      "example_eng": "I bought a new car.",
+      "example_kor": "나는 새 차를 샀다."
+    },
+    "last_view_timestamp": "2025-06-16T21:34:22.002776"
+  },
+  "next": {
+    "word_meaning": "다음의",
+    "example": {
+      "example_eng": "See you next week.",
+      "example_kor": "다음 주에 봐요."
+    },
+    "last_view_timestamp": "2025-06-20T13:44:10.002784"
+  },
+  "now": {
+    "word_meaning": "지금",
+    "example": {
+      "example_eng": "I have to go now.",
+      "example_kor": "나는 지금 가야 한다."
+    },
+    "last_view_timestamp": "2025-05-30T04:10:52.002790"
+  },
+  "number": {
+    "word_meaning": "숫자, 번호",
+    "example": {
+      "example_eng": "My favorite number is seven.",
+      "example_kor": "내가 가장 좋아하는 숫자는 7이다."
+    },
+    "last_view_timestamp": "2025-07-09T14:47:36.002794"
+  },
+  "obdurate": {
+    "word_meaning": "완고한",
+    "example": {
+      "example_eng": "The President remains obdurate on the question of cutting taxes.",
+      "example_kor": "대통령은 세금 삭감 문제에 대해 완고한 입장을 고수하고 있다."
+    },
+    "last_view_timestamp": "2025-08-14T03:26:31.002799"
+  },
+  "obedience": {
+    "word_meaning": "복종, 순종, 순응, 준수",
+    "example": {
+      "example_eng": "They demand unquestioning obedience from every follower.",
+      "example_kor": "그들은 모든 추종자로부터 절대적인 복종을 요구한다."
+    },
+    "last_view_timestamp": "2025-07-05T20:43:31.002804"
+  },
+  "obedient": {
+    "word_meaning": "순종하는, 순응하는",
+    "example": {
+      "example_eng": "Students are expected to be quiet and obedient in the classroom.",
+      "example_kor": "학생들은 교실에서 조용하고 순종적이지 않으면 안 된다."
+    },
+    "last_view_timestamp": "2025-07-30T18:46:55.002809"
+  },
+  "obediently": {
+    "word_meaning": "고분고분하게",
+    "example": {
+      "example_eng": "I pulled on the reins and the horse obediently slowed down.",
+      "example_kor": "내가 고삐를 당기자 말은 고분고분하게 속도를 늦추었다."
+    },
+    "last_view_timestamp": "2025-06-29T17:07:30.002813"
+  },
+  "obeisance": {
+    "word_meaning": "존경, 복종, 절, 경례, 인사",
+    "example": {
+      "example_eng": "He attacks the newspapers for their uncritical obeisance to the rich and the powerful.",
+      "example_kor": "그는 신문이 부유하고 권력 있는 사람들에게 무비판적인 경의를 표한다는 것에 대해 공격을 가했다."
+    },
+    "last_view_timestamp": "2025-07-14T00:00:36.002818"
+  },
+  "obese": {
+    "word_meaning": "몹시 살찐, 뚱뚱한",
+    "example": {
+      "example_eng": "Obese people are more at risk from diabetes and heart disease.",
+      "example_kor": "비만한 사람들은 당뇨병과 심장병에 걸릴 위험이 더 많다."
+    },
+    "last_view_timestamp": "2025-06-21T05:40:30.002823"
+  },
+  "obesity": {
+    "word_meaning": "비만, 지나치게 뚱뚱함",
+    "example": {
+      "example_eng": "A diet that is high in fat can lead to obesity.",
+      "example_kor": "지방이 많은 식단은 비만을 초래할 수 있다."
+    },
+    "last_view_timestamp": "2025-07-01T17:32:14.002828"
+  },
+  "obey": {
+    "word_meaning": "따르다, 복종하다",
+    "example": {
+      "example_eng": "The soldiers refused to obey orders.",
+      "example_kor": "군인들은 명령에 복종하기를 거부했다."
+    },
+    "last_view_timestamp": "2025-06-03T20:15:43.002833"
+  },
+  "obfuscate": {
+    "word_meaning": "혼란시키다, 당황케하다",
+    "example": {
+      "example_eng": "Then she was criticized for using arguments that obfuscated the main issue.",
+      "example_kor": "그 때 그녀는 주요 문제를 혼란시키는 논거를 사용했다고 비난받았다."
+    },
+    "last_view_timestamp": "2025-06-13T03:08:19.002837"
+  },
+  "obituary": {
+    "word_meaning": "사망의, 사망 기사",
+    "example": {
+      "example_eng": "I read his obituary in the morning paper.",
+      "example_kor": "나는 아침 신문에서 그의 사망 기사를 읽었다."
+    },
+    "last_view_timestamp": "2025-06-24T05:36:27.002842"
+  },
+  "object": {
+    "word_meaning": "물체, 목적, 반대하다",
+    "example": {
+      "example_eng": "The object of their expedition was to discover the source of the River Nile.",
+      "example_kor": "그들이 기획한 원정의 목적은 나일강의 원류를 찾는 것이었다."
+    },
+    "last_view_timestamp": "2025-07-29T20:47:59.002847"
+  },
+  "objection": {
+    "word_meaning": "항의, 반대, 결점",
+    "example": {
+      "example_eng": "Her objection against the plan is based on incorrect facts.",
+      "example_kor": "그녀가 그 계획에 대해 반대하는 것은 정확하지 않은 사실에 근거하고 있다."
+    },
+    "last_view_timestamp": "2025-08-19T12:51:33.002851"
+  },
+  "objective": {
+    "word_meaning": "객관적인, 목표",
+    "example": {
+      "example_eng": "It’ s an admirably objective and impartial report.",
+      "example_kor": "그것은 존경스러울만큼 객관적이고 공정한 보도이다."
+    },
+    "last_view_timestamp": "2025-08-16T10:06:27.002856"
+  },
+  "objurgate": {
+    "word_meaning": "몹시 꾸짖다, 비난하다",
+    "example": {
+      "example_eng": "The teacher had to objurgate the student for his constant disruptions.",
+      "example_kor": "선생님은 계속해서 수업을 방해하는 그 학생을 심하게 꾸짖어야 했다."
+    },
+    "last_view_timestamp": "2025-07-03T17:51:15.002861"
+  },
+  "objurgation": {
+    "word_meaning": "비난",
+    "example": {
+      "example_eng": "He endured a lengthy objurgation from his father for crashing the car.",
+      "example_kor": "그는 차를 망가뜨린 것 때문에 아버지로부터 긴 비난을 견뎌야 했다."
+    },
+    "last_view_timestamp": "2025-06-05T03:08:03.002865"
+  },
+  "obligate": {
+    "word_meaning": "~에게 의무를 지우다",
+    "example": {
+      "example_eng": "The contract will obligate the company to provide health insurance.",
+      "example_kor": "그 계약은 회사가 건강 보험을 제공하도록 의무를 지울 것이다."
+    },
+    "last_view_timestamp": "2025-07-15T12:54:16.002870"
+  },
+  "obligation": {
+    "word_meaning": "의무",
+    "example": {
+      "example_eng": "If you have not signed a contract, you are under no obligation to pay them any money.",
+      "example_kor": "계약에 아직 서명하지 않았다면, 그들에게 돈을 지불할 어떤 의무도 없다."
+    },
+    "last_view_timestamp": "2025-07-20T21:19:10.002875"
+  },
+  "obligatory": {
+    "word_meaning": "요구되는, 의무적인, 필수의",
+    "example": {
+      "example_eng": "The medical examination before you start work is obligatory.",
+      "example_kor": "일을 시작하기 전에 의학 시험을 보는 것이 의무이다."
+    },
+    "last_view_timestamp": "2025-08-09T05:49:00.002879"
+  },
+  "oblige": {
+    "word_meaning": "강요하다, 기쁘게 해주다",
+    "example": {
+      "example_eng": "The law obliges companies to pay decent wages to their employees.",
+      "example_kor": "법에 따라 회사들은 고용인에게 적절한 임금을 지불하지 않으면 안 된다."
+    },
+    "last_view_timestamp": "2025-07-01T19:51:12.002884"
+  },
+  "of": {
+    "word_meaning": "~의",
+    "example": {
+      "example_eng": "This is a picture of my family.",
+      "example_kor": "이것은 나의 가족 사진이다."
+    },
+    "last_view_timestamp": "2025-08-13T02:18:25.002889"
+  },
+  "offer": {
+    "word_meaning": "제공하다",
+    "example": {
+      "example_eng": "They offered me a job.",
+      "example_kor": "그들은 나에게 일자리를 제안했다."
+    },
+    "last_view_timestamp": "2025-06-02T10:12:34.002893"
+  },
+  "often": {
+    "word_meaning": "자주",
+    "example": {
+      "example_eng": "I often go to the movies.",
+      "example_kor": "나는 영화를 보러 자주 간다."
+    },
+    "last_view_timestamp": "2025-07-21T22:19:04.002898"
+  },
+  "old": {
+    "word_meaning": "오래된, 늙은",
+    "example": {
+      "example_eng": "My grandfather is very old.",
+      "example_kor": "나의 할아버지는 매우 늙으셨다."
+    },
+    "last_view_timestamp": "2025-07-08T15:52:55.002903"
+  },
+  "on": {
+    "word_meaning": "~위에",
+    "example": {
+      "example_eng": "The book is on the desk.",
+      "example_kor": "책이 책상 위에 있다."
+    },
+    "last_view_timestamp": "2025-08-12T02:40:50.002907"
+  },
+  "open": {
+    "word_meaning": "열다",
+    "example": {
+      "example_eng": "Open the box.",
+      "example_kor": "상자를 열어라."
+    },
+    "last_view_timestamp": "2025-07-07T01:40:39.002912"
+  },
+  "or": {
+    "word_meaning": "또는",
+    "example": {
+      "example_eng": "Do you want coffee or tea?",
+      "example_kor": "커피를 원하세요, 아니면 차를 원하세요?"
+    },
+    "last_view_timestamp": "2025-06-08T04:00:33.002916"
+  },
+  "other": {
+    "word_meaning": "다른",
+    "example": {
+      "example_eng": "Do you have any other questions?",
+      "example_kor": "다른 질문 있나요?"
+    },
+    "last_view_timestamp": "2025-07-26T18:42:20.002921"
+  },
+  "pace": {
+    "word_meaning": "걸음, 속도, 천천히 걷다",
+    "example": {
+      "example_eng": "If you’ re going to walk a long way, it’ s better to start out at a fairly slow pace.",
+      "example_kor": "먼 길을 걸을 예정이라면 매우 느린 속도로 시작하는 것이 좋다."
+    },
+    "last_view_timestamp": "2025-08-16T10:38:23.002926"
+  },
+  "pachyderm": {
+    "word_meaning": "후피 동물, 둔감한 사람, 철면피, 코끼리",
+    "example": {
+      "example_eng": "The zookeeper gently fed the giant pachyderm a bundle of hay.",
+      "example_kor": "사육사는 그 거대한 후피 동물에게 건초 한 다발을 조심스럽게 먹였다."
+    },
+    "last_view_timestamp": "2025-07-30T09:35:58.002930"
+  },
+  "pacific": {
+    "word_meaning": "화해적인, 평화로운",
+    "example": {
+      "example_eng": "The new government appears to have more pacific views than the previous one.",
+      "example_kor": "새 정부는 이전 정부보다 좀 더 평화적인 견해를 지니고 있는 것처럼 보인다."
+    },
+    "last_view_timestamp": "2025-06-24T01:27:16.002935"
+  },
+  "pacifier": {
+    "word_meaning": "화해자, 달래는 사람, 고무 젖꼭지",
+    "example": {
+      "example_eng": "I don’ t believe in the old view that men are fighters and women are pacifiers.",
+      "example_kor": "나는 남성은 전사고 여성은 화해자라는 오래된 견해를 믿지 않는다."
+    },
+    "last_view_timestamp": "2025-07-30T00:10:46.002940"
+  },
+  "pacifist": {
+    "word_meaning": "평화주의자, 양심적 병역 거부자, 부전론자(不戰論者)",
+    "example": {
+      "example_eng": "The pacifist movement is gaining increasing support among young people.",
+      "example_kor": "평화주의 운동은 젊은이들 사이에서 점점 더 많은 지지를 얻고 있다."
+    },
+    "last_view_timestamp": "2025-07-30T13:46:36.002945"
+  },
+  "pacify": {
+    "word_meaning": "달래다, 진정시키다, 평화를 회복시키다",
+    "example": {
+      "example_eng": "It was difficult for the police to pacify the angry crowd.",
+      "example_kor": "경찰이 성난 군중을 진정시키기란 힘든 일이었다."
+    },
+    "last_view_timestamp": "2025-06-14T02:03:22.002950"
+  },
+  "pact": {
+    "word_meaning": "계약, 협정",
+    "example": {
+      "example_eng": "The United States and Canada have signed a free-trade pact.",
+      "example_kor": "미국과 캐나다는 자유 무역 협정에 서명했다."
+    },
+    "last_view_timestamp": "2025-07-05T14:34:36.002954"
+  },
+  "padre": {
+    "word_meaning": "신부, 목사",
+    "example": {
+      "example_eng": "The service will be conducted by the RAF padre.",
+      "example_kor": "영국 공군 목사가 예배를 주관할 것이다."
+    },
+    "last_view_timestamp": "2025-07-01T22:52:05.002959"
+  },
+  "painful": {
+    "word_meaning": "아픈, 괴로운",
+    "example": {
+      "example_eng": "The old photograph brought back painful memories.",
+      "example_kor": "그 오래된 사진은 고통스러운 기억을 상기시켰다."
+    },
+    "last_view_timestamp": "2025-07-16T02:26:54.002964"
+  },
+  "pair": {
+    "word_meaning": "짝, 한 쌍, 한 벌, 부부, 짝을 짓다",
+    "example": {
+      "example_eng": "I can’ t find a matching pair of socks.",
+      "example_kor": "양말의 나머지 한 짝을 찾을 수가 없다."
+    },
+    "last_view_timestamp": "2025-07-07T00:17:01.002968"
+  },
+  "palace": {
+    "word_meaning": "궁전",
+    "example": {
+      "example_eng": "Demonstrators gathered in front of the presidential palace.",
+      "example_kor": "시위자들은 대통령궁 앞에 모였다."
+    },
+    "last_view_timestamp": "2025-07-25T03:04:41.002973"
+  },
+  "palatable": {
+    "word_meaning": "입에 맞는, 맛 좋은, 유쾌한, 취미에 맞는",
+    "example": {
+      "example_eng": "The meal was barely palatable -- in fact, I thought it was disgusting.",
+      "example_kor": "그 식사는 거의 입에 맞지 않았다. 사실 역겹다는 생각이 들었다."
+    },
+    "last_view_timestamp": "2025-07-29T16:09:11.002978"
+  },
+  "palate": {
+    "word_meaning": "입천장, 기호, 미각, 심미안",
+    "example": {
+      "example_eng": "The disease causes ulcers to appear on the tongue and palate and leads to lack of appetite.",
+      "example_kor": "그 질병은 혀와 입천장에 궤양이 나타나게 하고 식욕결핍으로 이어진다."
+    },
+    "last_view_timestamp": "2025-07-02T21:27:01.002983"
+  },
+  "palatial": {
+    "word_meaning": "웅장한",
+    "example": {
+      "example_eng": "The magazine showed lavish pictures of their palatial country residence.",
+      "example_kor": "그 잡지는 그들의 웅장한 시골집 사진을 지나치게 많이 게재했다."
+    },
+    "last_view_timestamp": "2025-06-15T15:49:54.002987"
+  },
+  "part": {
+    "word_meaning": "부분",
+    "example": {
+      "example_eng": "This is the best part of the movie.",
+      "example_kor": "이것이 영화의 최고의 부분이다."
+    },
+    "last_view_timestamp": "2025-07-06T17:16:16.002992"
+  },
+  "pay": {
+    "word_meaning": "지불하다",
+    "example": {
+      "example_eng": "I'll pay for dinner.",
+      "example_kor": "저녁은 제가 살게요."
+    },
+    "last_view_timestamp": "2025-07-31T10:27:33.002997"
+  },
+  "person": {
+    "word_meaning": "사람",
+    "example": {
+      "example_eng": "He is a kind person.",
+      "example_kor": "그는 친절한 사람이다."
+    },
+    "last_view_timestamp": "2025-08-20T10:55:56.003002"
+  },
+  "place": {
+    "word_meaning": "장소",
+    "example": {
+      "example_eng": "This is a quiet place.",
+      "example_kor": "이곳은 조용한 장소다."
+    },
+    "last_view_timestamp": "2025-05-29T18:25:33.003007"
+  },
+  "play": {
+    "word_meaning": "놀다, 연주하다, 경기하다",
+    "example": {
+      "example_eng": "The children are playing in the garden.",
+      "example_kor": "아이들이 정원에서 놀고 있어요."
+    },
+    "last_view_timestamp": "2025-06-27T01:39:49.003012"
+  },
+  "point": {
+    "word_meaning": "점, 요점",
+    "example": {
+      "example_eng": "What is your point?",
+      "example_kor": "당신의 요점은 무엇입니까?"
+    },
+    "last_view_timestamp": "2025-08-24T04:46:14.003019"
+  },
+  "power": {
+    "word_meaning": "힘, 권력",
+    "example": {
+      "example_eng": "Knowledge is power.",
+      "example_kor": "아는 것이 힘이다."
+    },
+    "last_view_timestamp": "2025-08-11T00:28:51.003027"
+  },
+  "problem": {
+    "word_meaning": "문제",
+    "example": {
+      "example_eng": "I have a problem with my car.",
+      "example_kor": "내 차에 문제가 있다."
+    },
+    "last_view_timestamp": "2025-07-23T10:32:02.003038"
+  },
+  "provide": {
+    "word_meaning": "제공하다",
+    "example": {
+      "example_eng": "The hotel will provide towels.",
+      "example_kor": "호텔에서 수건을 제공할 것입니다."
+    },
+    "last_view_timestamp": "2025-06-04T10:14:45.003046"
+  },
+  "public": {
+    "word_meaning": "공공의",
+    "example": {
+      "example_eng": "This is a public library.",
+      "example_kor": "이곳은 공공 도서관이다."
+    },
+    "last_view_timestamp": "2025-08-20T16:37:01.003055"
+  },
+  "put": {
+    "word_meaning": "놓다, 두다",
+    "example": {
+      "example_eng": "Please put the books on the shelf.",
+      "example_kor": "책을 선반 위에 놓아주세요."
+    },
+    "last_view_timestamp": "2025-07-10T01:14:15.003063"
+  },
+  "quadrilateral": {
+    "word_meaning": "4변형(의)",
+    "example": {
+      "example_eng": "Squares and rectangles are quadrilaterals.",
+      "example_kor": "정사각형과 직사각형은 4변형이다."
+    },
+    "last_view_timestamp": "2025-06-14T09:33:50.003070"
+  },
+  "quadriplegic": {
+    "word_meaning": "사지 마비 환자",
+    "example": {
+      "example_eng": "The multiple sclerosis that has already made her a quadriplegic is beginning to destroy her lungs.",
+      "example_kor": "그녀를 사지 마비 환자로 만든 다발성 경화증은 그녀의 폐를 파괴하기 시작하고 있다."
+    },
+    "last_view_timestamp": "2025-08-05T22:35:56.003078"
+  },
+  "quadruped": {
+    "word_meaning": "네 발을 가진, 네발 짐승",
+    "example": {
+      "example_eng": "Horses, lions and dogs are quadrupeds, but humans are bipeds.",
+      "example_kor": "말, 사자, 개는 네 발이지만 사람은 두 발이다."
+    },
+    "last_view_timestamp": "2025-07-29T22:12:05.003087"
+  },
+  "quagmire": {
+    "word_meaning": "수렁, 습지, 곤경, 궁지",
+    "example": {
+      "example_eng": "At the end of the match, the pitch was real quagmire.",
+      "example_kor": "시합의 막바지에 이르자 경기장은 진짜 아수라장이 되었다."
+    },
+    "last_view_timestamp": "2025-08-19T22:02:05.003096"
+  },
+  "quail": {
+    "word_meaning": "기가 죽다, 움츠리다, 주눅 들다",
+    "example": {
+      "example_eng": "I was quailing with fear as I opened the envelope containing my exam results.",
+      "example_kor": "시험 성적표가 담긴 봉투를 열 때 나는 두려워서 주눅이 들었다."
+    },
+    "last_view_timestamp": "2025-07-28T11:16:45.003102"
+  },
+  "quaint": {
+    "word_meaning": "진기한, 별나고 아름다운",
+    "example": {
+      "example_eng": "“What a quaint idea!” she said, laughing at him.",
+      "example_kor": "“정말 진기한 생각이야!”라고 그녀는 그를 비웃으며 말했다."
+    },
+    "last_view_timestamp": "2025-06-30T01:28:53.003106"
+  },
+  "qualification": {
+    "word_meaning": "자격, 면허(장), 제한",
+    "example": {
+      "example_eng": "Previous experience is a necessary qualification for this job.",
+      "example_kor": "이전의 경험은 이 직업에 필요한 자격 요건이다."
+    },
+    "last_view_timestamp": "2025-08-13T05:01:32.003111"
+  },
+  "qualify": {
+    "word_meaning": "자격을 주다, 간주하다, 완화하다",
+    "example": {
+      "example_eng": "Chris has just qualified as a doctor.",
+      "example_kor": "크리스는 이제 막 의사 자격을 얻었다."
+    },
+    "last_view_timestamp": "2025-08-11T14:07:05.003116"
+  },
+  "quantify": {
+    "word_meaning": "양을 정하다",
+    "example": {
+      "example_eng": "It’ s difficult to quantify how many people will be affected by the change in the law.",
+      "example_kor": "법이 바뀜으로써 얼마나 많은 사람들이 영향을 받을지 양적으로 계산하기 어렵다."
+    },
+    "last_view_timestamp": "2025-07-28T14:47:57.003121"
+  },
+  "quarantine": {
+    "word_meaning": "격리, 검역(소)",
+    "example": {
+      "example_eng": "The horse had to spend several months in quarantine when it reached Britain.",
+      "example_kor": "그 말은 영국에 도착하자 검역소에서 여러 달을 보내야 했다."
+    },
+    "last_view_timestamp": "2025-06-24T09:56:44.003126"
+  },
+  "quarrel": {
+    "word_meaning": "말다툼(하다), 불화(하다)",
+    "example": {
+      "example_eng": "They had a quarrel three years ago and haven’ t spoken to each other since.",
+      "example_kor": "그들은 3년 전에 말다툼을 벌였는데 그 이후 서로에게 말을 하지 않는다."
+    },
+    "last_view_timestamp": "2025-07-23T04:31:58.003130"
+  },
+  "quarrelsome": {
+    "word_meaning": "말다툼을 좋아하는, 싸우기 좋아하는",
+    "example": {
+      "example_eng": "They’ ve got very quarrelsome kids, as I remember.",
+      "example_kor": "내가 기억하기로, 그들에게는 싸우기 좋아하는 아이들이 있다."
+    },
+    "last_view_timestamp": "2025-06-11T07:51:11.003135"
+  },
+  "raconteur": {
+    "word_meaning": "이야기꾼",
+    "example": {
+      "example_eng": "He knew many jokes and was an excellent raconteur.",
+      "example_kor": "그는 많은 농담을 알았으며 뛰어난 이야기꾼이었다."
+    },
+    "last_view_timestamp": "2025-08-22T19:18:44.003140"
+  },
+  "radiant": {
+    "word_meaning": "빛나는, 환한, 복사의",
+    "example": {
+      "example_eng": "He gave a radiant smile when he heard the news.",
+      "example_kor": "그는 그 소식을 듣자 환하게 웃어 보였다."
+    },
+    "last_view_timestamp": "2025-07-31T07:17:47.003145"
+  },
+  "radiate": {
+    "word_meaning": "빛을 내다",
+    "example": {
+      "example_eng": "A single beam of light radiated from the lighthouse.",
+      "example_kor": "한줄기 빛이 등대로부터 비추었다."
+    },
+    "last_view_timestamp": "2025-07-14T10:41:15.003150"
+  },
+  "radiation": {
+    "word_meaning": "방사선, 발산",
+    "example": {
+      "example_eng": "With nuclear power, there is always the fear that there will be an escape of harmful radiation.",
+      "example_kor": "원자력에 관해서는, 해로운 방사능 누출이 있을 것이라는 공포가 언제나 존재한다."
+    },
+    "last_view_timestamp": "2025-07-12T08:43:52.003155"
+  },
+  "radical": {
+    "word_meaning": "근본적인, 철저한, 극단적인, 과격한, 뿌리의",
+    "example": {
+      "example_eng": "He was known as a radical reformer.",
+      "example_kor": "그는 급진적인 개혁가로 알려져 있다."
+    },
+    "last_view_timestamp": "2025-07-16T02:37:17.003160"
+  },
+  "radioactive": {
+    "word_meaning": "방사성의, 방사능이 있는",
+    "example": {
+      "example_eng": "The production and storage of radioactive waste is a major international environmental issue.",
+      "example_kor": "방사능 폐기물의 생산과 보관은 주요한 국제적 환경 문제이다."
+    },
+    "last_view_timestamp": "2025-08-02T20:29:21.003165"
+  },
+  "radish": {
+    "word_meaning": "무",
+    "example": {
+      "example_eng": "He added sliced radish to the salad for a crunchy texture.",
+      "example_kor": "그는 아삭한 식감을 위해 샐러드에 얇게 썬 무를 추가했다."
+    },
+    "last_view_timestamp": "2025-06-26T07:34:19.003170"
+  },
+  "radium": {
+    "word_meaning": "라듐",
+    "example": {
+      "example_eng": "Radium was discovered by Marie and Pierre Curie.",
+      "example_kor": "라듐은 마리 퀴리와 피에르 퀴리에 의해 발견되었다."
+    },
+    "last_view_timestamp": "2025-08-08T18:26:06.003175"
+  },
+  "radius": {
+    "word_meaning": "반경(의 길이), 항속 거리",
+    "example": {
+      "example_eng": "The radius of this wheel is 30.",
+      "example_kor": "이 바퀴의 반경은 30이다."
+    },
+    "last_view_timestamp": "2025-08-05T14:50:50.003180"
+  },
+  "raid": {
+    "word_meaning": "수색, 급습(하다), 침입(하다)",
+    "example": {
+      "example_eng": "The commandos made a daring raid.",
+      "example_kor": "그 특별 공격대원들은 대담하게 습격을 감행했다."
+    },
+    "last_view_timestamp": "2025-07-16T08:27:05.003185"
+  },
+  "rail": {
+    "word_meaning": "난간, 울타리, 철도",
+    "example": {
+      "example_eng": "Environmentalists argue that more goods should be transported by rail.",
+      "example_kor": "환경론자들은 더 많은 물건을 철도로 운송해야 한다고 주장한다."
+    },
+    "last_view_timestamp": "2025-07-11T17:48:04.003190"
+  },
+  "raise": {
+    "word_meaning": "올리다, 기르다",
+    "example": {
+      "example_eng": "Please raise your hand.",
+      "example_kor": "손을 들어주세요."
+    },
+    "last_view_timestamp": "2025-07-24T03:16:14.003194"
+  },
+  "raisondetre": {
+    "word_meaning": "존재 이유",
+    "example": {
+      "example_eng": "After his wife died, his children became his raison d’ tre.",
+      "example_kor": "그의 아내가 죽은 후 아이들은 그의 존재 이유가 되었다."
+    },
+    "last_view_timestamp": "2025-06-02T09:06:42.003199"
+  },
+  "rally": {
+    "word_meaning": "다시 모으다, 집합시키다, 회복하다, 되찾다",
+    "example": {
+      "example_eng": "Each candidate will have to rally their supporters to vote.",
+      "example_kor": "각 후보는 지지자들을 투표에 불러 모아야 할 것이다."
+    },
+    "last_view_timestamp": "2025-08-17T14:11:51.003204"
+  },
+  "ramification": {
+    "word_meaning": "분지(分支), 갈래",
+    "example": {
+      "example_eng": "Have you considered all the ramifications of your suggestion?",
+      "example_kor": "당신의 제안에서 파생될 모든 일을 고려해 보셨습니까?"
+    },
+    "last_view_timestamp": "2025-05-29T09:32:58.003209"
+  },
+  "reach": {
+    "word_meaning": "도달하다",
+    "example": {
+      "example_eng": "We will reach the summit tomorrow.",
+      "example_kor": "우리는 내일 정상에 도달할 것이다."
+    },
+    "last_view_timestamp": "2025-07-25T19:05:26.003214"
+  },
+  "read": {
+    "word_meaning": "읽다",
+    "example": {
+      "example_eng": "I read a book yesterday.",
+      "example_kor": "나는 어제 책을 읽었다."
+    },
+    "last_view_timestamp": "2025-07-17T13:11:20.003218"
+  },
+  "really": {
+    "word_meaning": "정말로",
+    "example": {
+      "example_eng": "I'm really sorry.",
+      "example_kor": "정말로 미안해."
+    },
+    "last_view_timestamp": "2025-06-26T13:13:41.003223"
+  },
+  "remember": {
+    "word_meaning": "기억하다",
+    "example": {
+      "example_eng": "I remember his face.",
+      "example_kor": "나는 그의 얼굴을 기억한다."
+    },
+    "last_view_timestamp": "2025-07-11T07:11:45.003228"
+  },
+  "right": {
+    "word_meaning": "오른쪽의, 옳은",
+    "example": {
+      "example_eng": "That's the right answer.",
+      "example_kor": "그것이 정답이다."
+    },
+    "last_view_timestamp": "2025-07-13T05:34:31.003233"
+  },
+  "room": {
+    "word_meaning": "방",
+    "example": {
+      "example_eng": "This is my room.",
+      "example_kor": "여기는 내 방이다."
+    },
+    "last_view_timestamp": "2025-06-11T11:51:24.003238"
+  },
+  "run": {
+    "word_meaning": "달리다",
+    "example": {
+      "example_eng": "I like to run in the morning.",
+      "example_kor": "저는 아침에 달리는 것을 좋아해요."
+    },
+    "last_view_timestamp": "2025-05-28T12:54:56.003243"
+  },
+  "sacerdotal": {
+    "word_meaning": "성직자의, 사제의",
+    "example": {
+      "example_eng": "He wore the sacerdotal robes of his office.",
+      "example_kor": "그는 자신의 직책에 맞는 사제복을 입고 있었다."
+    },
+    "last_view_timestamp": "2025-07-18T03:25:56.003248"
+  },
+  "sacred": {
+    "word_meaning": "신성한",
+    "example": {
+      "example_eng": "They visited the sacred places of Islam.",
+      "example_kor": "그들은 이슬람 성지를 방문했다."
+    },
+    "last_view_timestamp": "2025-06-28T08:31:53.003253"
+  },
+  "sacrifice": {
+    "word_meaning": "희생(하다), 제물을 바치다",
+    "example": {
+      "example_eng": "It was the practice of these people to sacrifice to their gods when rain had not fallen.",
+      "example_kor": "비가 오지 않을 때 그들이 섬기는 신에게 희생 제물을 바치는 것이 이 사람들의 관습이었다."
+    },
+    "last_view_timestamp": "2025-08-17T12:44:37.003258"
+  },
+  "sacrilege": {
+    "word_meaning": "신성 모독",
+    "example": {
+      "example_eng": "Muslims consider it sacrilege to wear shoes inside a mosque.",
+      "example_kor": "회교도들은 사원 내부에서 신발을 신는 것을 신성 모독이라 여긴다."
+    },
+    "last_view_timestamp": "2025-07-10T13:07:16.003263"
+  },
+  "sacrilegious": {
+    "word_meaning": "모독의, 교회를 터는",
+    "example": {
+      "example_eng": "It is considered sacrilegious to deface a holy book.",
+      "example_kor": "성스러운 책을 훼손하는 것은 신성모독으로 간주된다."
+    },
+    "last_view_timestamp": "2025-06-17T23:38:56.003267"
+  },
+  "sacrosanct": {
+    "word_meaning": "지성의, 신성 불가침의, 신성한",
+    "example": {
+      "example_eng": "I’ m willing to help on any weekday, but I’ m afraid my weekends are sacrosanct.",
+      "example_kor": "나는 주중에는 언제라도 도울 용의가 있지만, 주말은 신성 불가침이랍니다."
+    },
+    "last_view_timestamp": "2025-08-18T00:08:47.003272"
+  },
+  "sadism": {
+    "word_meaning": "가학성 음란증",
+    "example": {
+      "example_eng": "The violence, sadism and brutality in the film was horrific.",
+      "example_kor": "그 영화 속의 폭력과 가학성 음란증, 잔혹함은 무시무시했다."
+    },
+    "last_view_timestamp": "2025-06-18T22:42:20.003277"
+  },
+  "sadist": {
+    "word_meaning": "가학성 음란증의 (사람)",
+    "example": {
+      "example_eng": "These killings seem to be the work of a sadist.",
+      "example_kor": "이 살인은 가학성 음란증 환자의 소행같다."
+    },
+    "last_view_timestamp": "2025-06-08T09:02:33.003282"
+  },
+  "sadistic": {
+    "word_meaning": "잔혹한, 변태 성욕의",
+    "example": {
+      "example_eng": "The captured soldiers were subjected to sadistic tortures by their captors.",
+      "example_kor": "포로로 잡힌 군인들은 포획자들에게 가학적인 고문을 당했다."
+    },
+    "last_view_timestamp": "2025-07-11T18:31:34.003287"
+  },
+  "safeguard": {
+    "word_meaning": "보호, 방호, 지키다, 보증하다",
+    "example": {
+      "example_eng": "Does the new law provide an adequate safeguard for customers?",
+      "example_kor": "새 법이 고객들의 안전에 어느 정도 대비하는가?"
+    },
+    "last_view_timestamp": "2025-06-10T14:15:34.003292"
+  },
+  "sagacious": {
+    "word_meaning": "현명한, 기민한",
+    "example": {
+      "example_eng": "He is a sagacious person.",
+      "example_kor": "그는 현명한 사람이다."
+    },
+    "last_view_timestamp": "2025-06-10T22:26:29.003297"
+  },
+  "sage": {
+    "word_meaning": "현명한, 현인",
+    "example": {
+      "example_eng": "The sages will tell you that when you can see those distant hills, it’ s going to rain.",
+      "example_kor": "현인들은 당신에게 저 멀리있는 언덕들이 보이면 비가 오리라는 것을 말해 줄 것이다."
+    },
+    "last_view_timestamp": "2025-07-17T10:09:45.003306"
+  },
+  "saint": {
+    "word_meaning": "성인(聖人), 성자",
+    "example": {
+      "example_eng": "Saint Peter was one of Christ’ s disciples.",
+      "example_kor": "성 베드로는 그리스도의 제자 중 한 사람이었다."
+    },
+    "last_view_timestamp": "2025-08-21T19:24:49.003334"
+  },
+  "sale": {
+    "word_meaning": "판매, 매각",
+    "example": {
+      "example_eng": "The sale of cigarettes to children is forbidden in many countries.",
+      "example_kor": "아동에게 담배를 판매하는 것은 많은 나라에서 금지돼 있다."
+    },
+    "last_view_timestamp": "2025-08-14T12:52:18.003348"
+  },
+  "salesman": {
+    "word_meaning": "판매원, 점원, 외판원",
+    "example": {
+      "example_eng": "He got a job as a door-to-door salesman with a double-glazing company.",
+      "example_kor": "그는 이중 유리 회사의 방문 판매사원으로 취직했다."
+    },
+    "last_view_timestamp": "2025-08-22T13:02:22.003366"
+  },
+  "salient": {
+    "word_meaning": "현저한, 두드러진, 도약하는, 분출하는",
+    "example": {
+      "example_eng": "Remind me of the salient features of the proposal.",
+      "example_kor": "그 제안의 주목할만한 점이 무엇인지 알려주십시오."
+    },
+    "last_view_timestamp": "2025-08-09T08:03:52.003378"
+  },
+  "saline": {
+    "word_meaning": "소금의, 짠",
+    "example": {
+      "example_eng": "The Gulf is more saline than the Indian Ocean.",
+      "example_kor": "페르시아 만은 인도양보다 더 염분이 많다."
+    },
+    "last_view_timestamp": "2025-07-01T17:00:43.003390"
+  },
+  "sally": {
+    "word_meaning": "출격, 돌격",
+    "example": {
+      "example_eng": "The troops made a sally into enemy territory, returning with ten prisoners.",
+      "example_kor": "그 군대는 적의 진영으로 출격해 포로 열 명을 잡아왔다."
+    },
+    "last_view_timestamp": "2025-07-29T07:10:20.003404"
+  },
+  "saltatory": {
+    "word_meaning": "도약하는, 춤의, 무용의",
+    "example": {
+      "example_eng": "Kangaroos move with a saltatory motion.",
+      "example_kor": "캥거루는 도약하는 동작으로 움직인다."
+    },
+    "last_view_timestamp": "2025-08-13T05:13:58.003417"
+  },
+  "same": {
+    "word_meaning": "같은",
+    "example": {
+      "example_eng": "We are the same age.",
+      "example_kor": "우리는 동갑이다."
+    },
+    "last_view_timestamp": "2025-06-18T15:00:24.003430"
+  },
+  "say": {
+    "word_meaning": "말하다",
+    "example": {
+      "example_eng": "Please say your name clearly.",
+      "example_kor": "이름을 명확하게 말해주세요."
+    },
+    "last_view_timestamp": "2025-07-30T04:04:24.003447"
+  },
+  "school": {
+    "word_meaning": "학교",
+    "example": {
+      "example_eng": "My sister goes to elementary school.",
+      "example_kor": "내 여동생은 초등학교에 다닌다."
+    },
+    "last_view_timestamp": "2025-07-27T13:45:20.003455"
+  },
+  "see": {
+    "word_meaning": "보다",
+    "example": {
+      "example_eng": "Did you see that beautiful bird?",
+      "example_kor": "저 아름다운 새를 봤어요?"
+    },
+    "last_view_timestamp": "2025-08-13T01:30:00.003460"
+  },
+  "seem": {
+    "word_meaning": "~처럼 보이다",
+    "example": {
+      "example_eng": "You seem happy today.",
+      "example_kor": "오늘 행복해 보이네요."
+    },
+    "last_view_timestamp": "2025-07-03T08:13:57.003465"
+  },
+  "sell": {
+    "word_meaning": "팔다",
+    "example": {
+      "example_eng": "They sell fruits.",
+      "example_kor": "그들은 과일을 판다."
+    },
+    "last_view_timestamp": "2025-06-27T20:02:27.003470"
+  },
+  "send": {
+    "word_meaning": "보내다",
+    "example": {
+      "example_eng": "I will send you an email.",
+      "example_kor": "이메일을 보내드릴게요."
+    },
+    "last_view_timestamp": "2025-08-23T08:05:41.003474"
+  },
+  "set": {
+    "word_meaning": "설정하다, 놓다",
+    "example": {
+      "example_eng": "He set a new record.",
+      "example_kor": "그는 새로운 기록을 세웠다."
+    },
+    "last_view_timestamp": "2025-06-23T18:53:06.003479"
+  },
+  "show": {
+    "word_meaning": "보여주다",
+    "example": {
+      "example_eng": "Can you show me how to use this?",
+      "example_kor": "이것을 어떻게 사용하는지 보여줄 수 있나요?"
+    },
+    "last_view_timestamp": "2025-08-24T15:06:51.003486"
+  },
+  "side": {
+    "word_meaning": "쪽, 편",
+    "example": {
+      "example_eng": "Which side are you on?",
+      "example_kor": "너는 어느 편이니?"
+    },
+    "last_view_timestamp": "2025-05-29T11:44:32.003506"
+  },
+  "sit": {
+    "word_meaning": "앉다",
+    "example": {
+      "example_eng": "Please sit down and make yourself comfortable.",
+      "example_kor": "편안하게 앉으세요."
+    },
+    "last_view_timestamp": "2025-07-25T23:45:59.003520"
+  },
+  "sleep": {
+    "word_meaning": "자다",
+    "example": {
+      "example_eng": "I sleep eight hours every night.",
+      "example_kor": "나는 매일 밤 8시간 잔다."
+    },
+    "last_view_timestamp": "2025-06-09T22:24:00.003531"
+  },
+  "small": {
+    "word_meaning": "작은",
+    "example": {
+      "example_eng": "An ant is a small insect.",
+      "example_kor": "개미는 작은 곤충이다."
+    },
+    "last_view_timestamp": "2025-07-31T03:04:32.003539"
+  },
+  "so": {
+    "word_meaning": "그래서",
+    "example": {
+      "example_eng": "It was raining, so I took an umbrella.",
+      "example_kor": "비가 와서, 나는 우산을 가져갔다."
+    },
+    "last_view_timestamp": "2025-06-20T20:59:11.003551"
+  },
+  "sometimes": {
+    "word_meaning": "때때로",
+    "example": {
+      "example_eng": "Sometimes I feel lonely.",
+      "example_kor": "나는 때때로 외로움을 느낀다."
+    },
+    "last_view_timestamp": "2025-08-01T06:17:21.003561"
+  },
+  "speak": {
+    "word_meaning": "말하다",
+    "example": {
+      "example_eng": "He speaks three languages.",
+      "example_kor": "그는 3개 국어를 한다."
+    },
+    "last_view_timestamp": "2025-06-04T04:27:31.003572"
+  },
+  "spend": {
+    "word_meaning": "쓰다, 보내다",
+    "example": {
+      "example_eng": "How do you spend your free time?",
+      "example_kor": "여가 시간을 어떻게 보내세요?"
+    },
+    "last_view_timestamp": "2025-06-05T12:59:36.003582"
+  },
+  "stand": {
+    "word_meaning": "서다",
+    "example": {
+      "example_eng": "We had to stand on the bus because it was full.",
+      "example_kor": "버스가 꽉 차서 우리는 서 있어야만 했어요."
+    },
+    "last_view_timestamp": "2025-07-25T00:12:22.003594"
+  },
+  "start": {
+    "word_meaning": "시작하다",
+    "example": {
+      "example_eng": "Let's start the meeting now.",
+      "example_kor": "이제 회의를 시작합시다."
+    },
+    "last_view_timestamp": "2025-08-09T19:49:30.003602"
+  },
+  "stay": {
+    "word_meaning": "머무르다",
+    "example": {
+      "example_eng": "I will stay at a hotel.",
+      "example_kor": "나는 호텔에 머무를 것이다."
+    },
+    "last_view_timestamp": "2025-06-28T17:39:58.003609"
+  },
+  "stop": {
+    "word_meaning": "멈추다",
+    "example": {
+      "example_eng": "The bus stopped suddenly.",
+      "example_kor": "버스가 갑자기 멈췄다."
+    },
+    "last_view_timestamp": "2025-06-07T18:39:55.003620"
+  },
+  "story": {
+    "word_meaning": "이야기",
+    "example": {
+      "example_eng": "He told me an interesting story.",
+      "example_kor": "그는 나에게 재미있는 이야기를 해주었다."
+    },
+    "last_view_timestamp": "2025-06-06T04:38:11.003628"
+  },
+  "strong": {
+    "word_meaning": "강한",
+    "example": {
+      "example_eng": "He has a strong body.",
+      "example_kor": "그는 강한 몸을 가지고 있다."
+    },
+    "last_view_timestamp": "2025-06-29T05:43:05.003635"
+  },
+  "student": {
+    "word_meaning": "학생",
+    "example": {
+      "example_eng": "I am a college student.",
+      "example_kor": "나는 대학생이다."
+    },
+    "last_view_timestamp": "2025-07-25T12:29:39.003642"
+  },
+  "tacit": {
+    "word_meaning": "무언의, 조용한",
+    "example": {
+      "example_eng": "She gave her tacit approval by smiling and nodding.",
+      "example_kor": "그녀는 미소를 짓고 고개를 끄덕임으로써 무언의 승인을 보냈다."
+    },
+    "last_view_timestamp": "2025-08-08T20:06:40.003650"
+  },
+  "tacitly": {
+    "word_meaning": "잠자코",
+    "example": {
+      "example_eng": "By not objecting, he tacitly agreed to the plan.",
+      "example_kor": "반대하지 않음으로써 그는 그 계획에 암묵적으로 동의했다."
+    },
+    "last_view_timestamp": "2025-07-21T00:16:10.003658"
+  },
+  "taciturn": {
+    "word_meaning": "말없는, 입이 무거운, 말수가 적은",
+    "example": {
+      "example_eng": "He was a reserved, taciturn person when I first knew him.",
+      "example_kor": "내가 그를 처음 알았을 때에 그는 내성적이고 말수가 적은 사람이었다."
+    },
+    "last_view_timestamp": "2025-07-01T21:24:02.003668"
+  },
+  "tact": {
+    "word_meaning": "감촉, 재치, 요령",
+    "example": {
+      "example_eng": "The young nurse showed great tact in dealing with worried parents.",
+      "example_kor": "그 젊은 간호사는 걱정에 찬 부모들을 대하는 데 대단한 재치를 보여 주었다."
+    },
+    "last_view_timestamp": "2025-08-22T06:49:10.003679"
+  },
+  "tactful": {
+    "word_meaning": "재치있는, 약삭빠른",
+    "example": {
+      "example_eng": "Mentioning his baldness wasn’ t very tactful.",
+      "example_kor": "그가 대머리라는 사실을 언급한 것은 그리 재치있는 일은 아니었다."
+    },
+    "last_view_timestamp": "2025-06-01T10:16:24.003690"
+  },
+  "tactical": {
+    "word_meaning": "전술의, 약삭빠른",
+    "example": {
+      "example_eng": "There can be a lot of tactical voting in some elections, when people vote for a party they do not normally support to try to beat a third party.",
+      "example_kor": "어떤 선거에서는 전술적 투표가 많이 나올 수 있는데, 사람들이 제3당을 무찌르기 위해 자기들이 별로 지지하지 않는 당에 투표하는 경우가 그것이다."
+    },
+    "last_view_timestamp": "2025-06-17T16:00:15.003703"
+  },
+  "tactics": {
+    "word_meaning": "전술, 병법",
+    "example": {
+      "example_eng": "I don’ t like his tactics, he sets one person against another.",
+      "example_kor": "그는 사람들끼리 반감을 품게 하는데, 나는 그의 이런 전술이 마음에 들지 않는다."
+    },
+    "last_view_timestamp": "2025-06-30T18:26:28.003713"
+  },
+  "tactile": {
+    "word_meaning": "촉감의, 촉각의",
+    "example": {
+      "example_eng": "The right hemisphere of the brain is specialized for the perception of complex patterns, both visual and tactile.",
+      "example_kor": "우뇌는 시각적으로 또 촉각적으로 복잡한 패턴을 인식하는 기능을 전담한다."
+    },
+    "last_view_timestamp": "2025-06-11T13:00:24.003722"
+  },
+  "tactless": {
+    "word_meaning": "서투른, 재치없는",
+    "example": {
+      "example_eng": "It was rather tactless of you to invite his ex-girlfriend.",
+      "example_kor": "당신이 그의 옛 여자친구를 초대한 것은 좀 서투른 행동이었다."
+    },
+    "last_view_timestamp": "2025-07-06T04:40:12.003729"
+  },
+  "take": {
+    "word_meaning": "가져가다",
+    "example": {
+      "example_eng": "Take this bag.",
+      "example_kor": "이 가방을 가져가라."
+    },
+    "last_view_timestamp": "2025-08-15T20:10:52.003736"
+  },
+  "talk": {
+    "word_meaning": "이야기하다",
+    "example": {
+      "example_eng": "We need to talk about our plans.",
+      "example_kor": "우리는 우리의 계획에 대해 이야기해야 해요."
+    },
+    "last_view_timestamp": "2025-06-18T04:48:46.003743"
+  },
+  "tell": {
+    "word_meaning": "말하다, 알려주다",
+    "example": {
+      "example_eng": "Please tell me the truth.",
+      "example_kor": "진실을 말해주세요."
+    },
+    "last_view_timestamp": "2025-06-27T10:07:55.003750"
+  },
+  "then": {
+    "word_meaning": "그때",
+    "example": {
+      "example_eng": "I was very young then.",
+      "example_kor": "나는 그때 매우 어렸다."
+    },
+    "last_view_timestamp": "2025-08-17T09:19:56.003757"
+  },
+  "there": {
+    "word_meaning": "거기에",
+    "example": {
+      "example_eng": "My bag is over there.",
+      "example_kor": "내 가방은 저기에 있다."
+    },
+    "last_view_timestamp": "2025-06-08T22:29:55.003767"
+  },
+  "thing": {
+    "word_meaning": "것, 물건",
+    "example": {
+      "example_eng": "What is that thing?",
+      "example_kor": "저것은 무엇인가요?"
+    },
+    "last_view_timestamp": "2025-08-13T20:43:40.003779"
+  },
+  "think": {
+    "word_meaning": "생각하다",
+    "example": {
+      "example_eng": "I think it's going to rain.",
+      "example_kor": "비가 올 것 같다고 생각해요."
+    },
+    "last_view_timestamp": "2025-05-29T01:00:50.003791"
+  },
+  "time": {
+    "word_meaning": "시간",
+    "example": {
+      "example_eng": "What time is it?",
+      "example_kor": "지금 몇 시인가요?"
+    },
+    "last_view_timestamp": "2025-07-17T06:14:07.003806"
+  },
+  "to": {
+    "word_meaning": "~로",
+    "example": {
+      "example_eng": "I'm going to the store.",
+      "example_kor": "나는 가게에 가고 있다."
+    },
+    "last_view_timestamp": "2025-06-06T00:17:03.003815"
+  },
+  "true": {
+    "word_meaning": "진실의, 충실의",
+    "example": {
+      "example_eng": "It is certainly true that the risks associated with pregnancy increase with age.",
+      "example_kor": "임신과 관련된 위험이 나이를 먹음에 따라 늘어난다는 것은 확실한 사실이다."
+    },
+    "last_view_timestamp": "2025-07-23T18:41:03.003820"
+  },
+  "try": {
+    "word_meaning": "시도하다, 노력하다",
+    "example": {
+      "example_eng": "You should try this new restaurant.",
+      "example_kor": "이 새로운 식당에 한번 가봐야 해요."
+    },
+    "last_view_timestamp": "2025-07-04T05:46:51.003825"
+  },
+  "turn": {
+    "word_meaning": "돌다, 바꾸다",
+    "example": {
+      "example_eng": "Turn right at the next corner.",
+      "example_kor": "다음 모퉁이에서 오른쪽으로 도세요."
+    },
+    "last_view_timestamp": "2025-06-24T03:28:22.003830"
+  },
+  "ubiquitous": {
+    "word_meaning": "편재하는, 도처에 존재하는",
+    "example": {
+      "example_eng": "The radio, that most ubiquitous of consumer-electronic appliances, is about to enter a new age.",
+      "example_kor": "가장 흔히 볼 수 있는 소비자 전자제품인 라디오가 이제 새로운 시대에 진입하려 하고 있다."
+    },
+    "last_view_timestamp": "2025-07-06T09:12:39.003837"
+  },
+  "ubiquity": {
+    "word_meaning": "편재(성)",
+    "example": {
+      "example_eng": "These days it’ s possible to travel in any developed country without ever tasting the native cuisine, thanks to the ubiquity of fast-food outlets.",
+      "example_kor": "요즘에는 패스트푸드점이 어디나 흔히 있기 때문에 웬만한 선진국에서는 그 곳의 토속 음식을 먹지 않고도 여행할 수 있다."
+    },
+    "last_view_timestamp": "2025-07-12T21:14:26.003842"
+  },
+  "ulterior": {
+    "word_meaning": "저쪽의, 감추어진, 숨은",
+    "example": {
+      "example_eng": "He claims that his attempts to depose the leader were only for the good of the party, but I suspect he may have some ulterior motive.",
+      "example_kor": "그는 자신이 당수를 물러나게 하려고 한 것은 오직 당의 이익을 위한 것이었다고 강변하지만 나는 그에게 숨은 동기가 있을 거라는 의심이 든다."
+    },
+    "last_view_timestamp": "2025-07-04T05:22:07.003847"
+  },
+  "ultimate": {
+    "word_meaning": "최후의, 궁극의, 기본적인",
+    "example": {
+      "example_eng": "Although other people can advise him, the ultimate decision about whom to employ lies with Andrew.",
+      "example_kor": "다른 사람들이 충고를 할 수는 있지만 누구를 고용할 것인가를 최후로 결정하는 사람은 앤드류이다."
+    },
+    "last_view_timestamp": "2025-06-28T04:24:30.003851"
+  },
+  "ultimately": {
+    "word_meaning": "최후로, 궁극적으로",
+    "example": {
+      "example_eng": "Everything will ultimately depend on what is said at the meeting with the directors next week.",
+      "example_kor": "모든 것은 궁극적으로 다음 주에 이사들과의 회의에서 무슨 얘기가 오가느냐에 달려 있다."
+    },
+    "last_view_timestamp": "2025-07-26T23:07:56.003856"
+  },
+  "ultimatum": {
+    "word_meaning": "최후 통첩, 최종 제안, 마지막 결론, 근본 원리",
+    "example": {
+      "example_eng": "He gave her an ultimatum -- she could either stop seeing her other man and come back to him or it was divorce.",
+      "example_kor": "그는 그녀에게 최후통첩을 보냈다. 외간 남자와 만나는 것을 그만두고 그에게 돌아오든가 아니면 이혼하든가."
+    },
+    "last_view_timestamp": "2025-05-26T19:51:49.003861"
+  },
+  "understand": {
+    "word_meaning": "이해하다",
+    "example": {
+      "example_eng": "I don't understand the question.",
+      "example_kor": "질문을 이해하지 못하겠습니다."
+    },
+    "last_view_timestamp": "2025-06-05T09:53:22.003865"
+  },
+  "use": {
+    "word_meaning": "사용하다",
+    "example": {
+      "example_eng": "You can use my pen if you need one.",
+      "example_kor": "필요하면 제 펜을 사용해도 돼요."
+    },
+    "last_view_timestamp": "2025-07-15T22:13:28.003870"
+  },
+  "vacancy": {
+    "word_meaning": "공허, 공백, 공간, 빈 방, 결원, 방심",
+    "example": {
+      "example_eng": "We wanted to book a hotel room in July, but there were no vacancies.",
+      "example_kor": "우리는 7월에 호텔방을 예약하고 싶었는데 빈 방이 전혀 없었다."
+    },
+    "last_view_timestamp": "2025-08-08T05:13:53.003874"
+  },
+  "vacant": {
+    "word_meaning": "공허한, 빈, 결원의, 공석 중인",
+    "example": {
+      "example_eng": "The hospital has no vacant beds.",
+      "example_kor": "그 병원에는 현재 빈 침상이 없다."
+    },
+    "last_view_timestamp": "2025-07-08T23:26:51.003879"
+  },
+  "vacate": {
+    "word_meaning": "~을 비우다, 떠나다, 사임하다",
+    "example": {
+      "example_eng": "Hotel guests are requested to vacate their rooms by noon.",
+      "example_kor": "호텔 손님들은 정오까지 방을 비워달라고 요청받는다."
+    },
+    "last_view_timestamp": "2025-07-04T13:42:38.003884"
+  },
+  "vacation": {
+    "word_meaning": "방학, 휴가, 휴일, 휴식, 사직",
+    "example": {
+      "example_eng": "We’ re taking a vacation in June.",
+      "example_kor": "우리는 6월에 휴가를 보낼 것이다."
+    },
+    "last_view_timestamp": "2025-06-09T08:43:55.003888"
+  },
+  "vacillate": {
+    "word_meaning": "흔들리다, 머뭇거리다, 변동하다",
+    "example": {
+      "example_eng": "He vacillated for too long and the opportunity to accept was lost.",
+      "example_kor": "그는 너무 오랫동안 머뭇거렸고 받아들일 기회를 잃었다."
+    },
+    "last_view_timestamp": "2025-06-15T20:49:04.003893"
+  },
+  "vacillation": {
+    "word_meaning": "동요, 주저, 변화",
+    "example": {
+      "example_eng": "His vacillation between the two job offers cost him both opportunities.",
+      "example_kor": "두 가지 일자리 제안 사이에서의 그의 망설임은 그에게 두 기회 모두를 잃게 했다."
+    },
+    "last_view_timestamp": "2025-08-04T08:29:10.003897"
+  },
+  "vacuous": {
+    "word_meaning": "빈, 공허한, 내용이 없는, 무의미한",
+    "example": {
+      "example_eng": "He had a vacuous smile on his face.",
+      "example_kor": "그는 얼굴에 멍한 미소를 띠고 있었다."
+    },
+    "last_view_timestamp": "2025-07-03T02:45:56.003902"
+  },
+  "vacuum": {
+    "word_meaning": "진공, 공허, 공백, 진공 청소기",
+    "example": {
+      "example_eng": "Sound waves cannot travel through a vacuum.",
+      "example_kor": "음파는 진공을 통과할 수 없다."
+    },
+    "last_view_timestamp": "2025-06-20T09:31:51.003907"
+  },
+  "vagabond": {
+    "word_meaning": "유랑하는, 방랑자, 건달, 방랑하다",
+    "example": {
+      "example_eng": "They live a vagabond life, traveling around in a caravan.",
+      "example_kor": "그들은 이동 주택을 타고 여기저기 돌아다니는 방랑의 삶을 산다."
+    },
+    "last_view_timestamp": "2025-07-31T03:26:36.003912"
+  },
+  "vagary": {
+    "word_meaning": "별난 생각, 엉뚱한 행위, 변덕",
+    "example": {
+      "example_eng": "She has her own style and is not influenced by the vagaries of fashion.",
+      "example_kor": "그녀는 자기만의 스타일이 있어서 유행의 변덕에 영향을 받지 않는다."
+    },
+    "last_view_timestamp": "2025-07-10T17:37:07.003916"
+  },
+  "vagrant": {
+    "word_meaning": "방랑자, 방랑의",
+    "example": {
+      "example_eng": "Vagrants and drunks hang around the bars at the end of the street.",
+      "example_kor": "길 끝에 있는 여러 술집에는 방랑자와 주정뱅이가 배회한다."
+    },
+    "last_view_timestamp": "2025-07-07T13:12:27.003923"
+  },
+  "very": {
+    "word_meaning": "매우",
+    "example": {
+      "example_eng": "She is very smart.",
+      "example_kor": "그녀는 매우 똑똑하다."
+    },
+    "last_view_timestamp": "2025-07-16T13:36:45.003942"
+  },
+  "waggish": {
+    "word_meaning": "장난을 좋아하는, 익살스러운",
+    "example": {
+      "example_eng": "He has a very waggish approach to song writing.",
+      "example_kor": "그는 작곡하는 데 매우 익살스러운 방법으로 접근한다."
+    },
+    "last_view_timestamp": "2025-06-23T01:07:47.003960"
+  },
+  "wait": {
+    "word_meaning": "기다리다",
+    "example": {
+      "example_eng": "Wait for me!",
+      "example_kor": "나를 기다려!"
+    },
+    "last_view_timestamp": "2025-06-28T10:27:24.003975"
+  },
+  "walk": {
+    "word_meaning": "걷다",
+    "example": {
+      "example_eng": "Walk slowly.",
+      "example_kor": "천천히 걸어라."
+    },
+    "last_view_timestamp": "2025-07-13T01:09:12.003992"
+  },
+  "want": {
+    "word_meaning": "원하다",
+    "example": {
+      "example_eng": "I want a cup of coffee.",
+      "example_kor": "커피 한 잔 원해요."
+    },
+    "last_view_timestamp": "2025-07-21T22:46:29.004009"
+  },
+  "warfare": {
+    "word_meaning": "전쟁, 교전",
+    "example": {
+      "example_eng": "He wrote of the horrors of modern warfare.",
+      "example_kor": "그는 현대 전쟁의 참사에 대해 썼다."
+    },
+    "last_view_timestamp": "2025-07-27T11:58:07.004025"
+  },
+  "wary": {
+    "word_meaning": "주의깊은, 세심한, 신중한",
+    "example": {
+      "example_eng": "I’ m a bit wary of giving people my address when I don’ t know them very well.",
+      "example_kor": "나는 잘 모르는 사람들에게 내 주소를 주는 것을 좀 경계하는 편이다."
+    },
+    "last_view_timestamp": "2025-06-20T22:19:53.004035"
+  },
+  "waste": {
+    "word_meaning": "낭비(하다), 쓰레기의",
+    "example": {
+      "example_eng": "You waste a lot of water washing vegetables under running water at the sink.",
+      "example_kor": "개수대에서 흐르는 물에 채소를 씻으면 물을 많이 낭비하게 됩니다."
+    },
+    "last_view_timestamp": "2025-07-28T12:32:54.004048"
+  },
+  "wasteful": {
+    "word_meaning": "낭비의, 비경제적인",
+    "example": {
+      "example_eng": "He is particularly critical of what he sees as wasteful public spending.",
+      "example_kor": "그는 자신이 낭비적인 공공지출로 간주하는 것에 대해 특히 비판적이었다."
+    },
+    "last_view_timestamp": "2025-06-07T23:44:08.004061"
+  },
+  "wastrel": {
+    "word_meaning": "낭비자",
+    "example": {
+      "example_eng": "His son turned to be a bit of a wastrel who drank and gambled away the family fortune.",
+      "example_kor": "그의 아들은 술 마시고 노름으로 가산을 탕진한 건달같은 사람이 되었다."
+    },
+    "last_view_timestamp": "2025-07-17T01:57:41.004070"
+  },
+  "watch": {
+    "word_meaning": "보다, 관찰하다",
+    "example": {
+      "example_eng": "I watch TV every evening.",
+      "example_kor": "나는 매일 저녁 TV를 본다."
+    },
+    "last_view_timestamp": "2025-08-13T06:09:43.004082"
+  },
+  "water": {
+    "word_meaning": "물",
+    "example": {
+      "example_eng": "I am thirsty. I need some water.",
+      "example_kor": "목이 마르다. 물이 좀 필요하다."
+    },
+    "last_view_timestamp": "2025-08-14T01:03:32.004095"
+  },
+  "waterproof": {
+    "word_meaning": "방수의",
+    "example": {
+      "example_eng": "Canvas boots are all right, but they’ re not as waterproof as leather.",
+      "example_kor": "캔버스 천으로 된 장화도 괜찮긴 하지만, 가죽처럼 방수가 되지는 않는다."
+    },
+    "last_view_timestamp": "2025-07-24T07:40:44.004107"
+  },
+  "way": {
+    "word_meaning": "방법, 길",
+    "example": {
+      "example_eng": "Is this the right way?",
+      "example_kor": "이 길이 맞나요?"
+    },
+    "last_view_timestamp": "2025-08-15T21:40:50.004116"
+  },
+  "week": {
+    "word_meaning": "주",
+    "example": {
+      "example_eng": "There are seven days in a week.",
+      "example_kor": "일주일은 7일이다."
+    },
+    "last_view_timestamp": "2025-05-30T01:32:41.004131"
+  },
+  "welcome": {
+    "word_meaning": "환영(받는), 마음대로 써도 좋은, 환영(하다)",
+    "example": {
+      "example_eng": "They were given a warm welcome.",
+      "example_kor": "그들은 따뜻하게 환영받았다."
+    },
+    "last_view_timestamp": "2025-08-14T23:12:52.004142"
+  },
+  "welfare": {
+    "word_meaning": "복지 (사업), 번영, 행복",
+    "example": {
+      "example_eng": "These organizations have fought very hard for the rights and welfare of immigrants.",
+      "example_kor": "이 조직들은 이민자들의 권리와 복지를 위해 매우 열심히 싸워 왔다."
+    },
+    "last_view_timestamp": "2025-08-02T23:01:07.004153"
+  },
+  "what": {
+    "word_meaning": "무엇",
+    "example": {
+      "example_eng": "What is your name?",
+      "example_kor": "당신의 이름은 무엇입니까?"
+    },
+    "last_view_timestamp": "2025-07-20T07:49:30.004168"
+  },
+  "when": {
+    "word_meaning": "언제",
+    "example": {
+      "example_eng": "When is your birthday?",
+      "example_kor": "너의 생일은 언제니?"
+    },
+    "last_view_timestamp": "2025-07-12T05:16:29.004179"
+  },
+  "where": {
+    "word_meaning": "어디",
+    "example": {
+      "example_eng": "Where are you from?",
+      "example_kor": "어디에서 오셨어요?"
+    },
+    "last_view_timestamp": "2025-05-30T08:03:38.004190"
+  },
+  "who": {
+    "word_meaning": "누구",
+    "example": {
+      "example_eng": "Who is that person?",
+      "example_kor": "저 사람은 누구입니까?"
+    },
+    "last_view_timestamp": "2025-07-26T14:35:51.004202"
+  },
+  "wholeheartedly": {
+    "word_meaning": "성실히, 진심으로",
+    "example": {
+      "example_eng": "I wholeheartedly support your decision.",
+      "example_kor": "저는 당신의 결정을 진심으로 지지합니다."
+    },
+    "last_view_timestamp": "2025-08-19T10:02:37.004212"
+  },
+  "why": {
+    "word_meaning": "왜",
+    "example": {
+      "example_eng": "Why are you crying?",
+      "example_kor": "왜 울고 있니?"
+    },
+    "last_view_timestamp": "2025-07-11T15:29:27.004223"
+  },
+  "wide": {
+    "word_meaning": "넓은",
+    "example": {
+      "example_eng": "Her eyes were wide with surprise.",
+      "example_kor": "놀라서 그녀의 눈은 커졌다."
+    },
+    "last_view_timestamp": "2025-06-30T22:37:13.004248"
+  },
+  "widely": {
+    "word_meaning": "널리",
+    "example": {
+      "example_eng": "They travelled widely in Asia during their retirement.",
+      "example_kor": "그들은 은퇴한 기간 동안 아시아를 널리 돌아다녔다."
+    },
+    "last_view_timestamp": "2025-08-11T21:16:24.004258"
+  },
+  "widen": {
+    "word_meaning": "넓히다",
+    "example": {
+      "example_eng": "As it approaches the sea, the river begins to widen.",
+      "example_kor": "강은 바다에 가까와짐에 따라 넓어지기 시작한다."
+    },
+    "last_view_timestamp": "2025-06-24T23:46:43.004265"
+  },
+  "widespread": {
+    "word_meaning": "널리 퍼진",
+    "example": {
+      "example_eng": "Widespread rioting in the area led to 25 deaths.",
+      "example_kor": "그 지역에서 광범위하게 폭동이 일어나 스물 다섯 명의 사망자를 낳았다."
+    },
+    "last_view_timestamp": "2025-06-11T08:36:54.004273"
+  },
+  "width": {
+    "word_meaning": "폭, 나비",
+    "example": {
+      "example_eng": "The length of the rectangle is 10cm and the width is 6cm.",
+      "example_kor": "그 직사각형의 길이는 10센티미터이고 나비는 6센티미터이다."
+    },
+    "last_view_timestamp": "2025-08-16T10:16:19.004297"
+  },
+  "win": {
+    "word_meaning": "이기다",
+    "example": {
+      "example_eng": "I hope our team will win.",
+      "example_kor": "우리 팀이 이기기를 바란다."
+    },
+    "last_view_timestamp": "2025-06-27T12:37:39.004308"
+  },
+  "wisdom": {
+    "word_meaning": "현명함, 지혜, 명언, 지식, 학식",
+    "example": {
+      "example_eng": "One certainly hopes to gain a little wisdom as one grows older.",
+      "example_kor": "사람은 나이를 먹으면서 조금이라도 지혜를 얻게 되기를 정말로 바란다."
+    },
+    "last_view_timestamp": "2025-07-29T12:02:58.004320"
+  },
+  "wise": {
+    "word_meaning": "슬기로운, 현명한, 박식한",
+    "example": {
+      "example_eng": "Looking at the weather, I think we made a wise decision not to go to the coast this weekend.",
+      "example_kor": "날씨를 보니, 우리가 이번 주말에 바닷가에 가지 않기로 한 것은 현명한 결정이었다는 생각이 든다."
+    },
+    "last_view_timestamp": "2025-07-26T05:25:24.004338"
+  },
+  "wit": {
+    "word_meaning": "기지, 재치, 재주꾼",
+    "example": {
+      "example_eng": "Her conversation sparkled with her own subtle blend of wit and charm.",
+      "example_kor": "그녀의 대화는 자신만의 재치와 매력의 미묘한 조화로 인해 빛이 났다."
+    },
+    "last_view_timestamp": "2025-07-01T18:20:28.004347"
+  },
+  "with": {
+    "word_meaning": "~와 함께",
+    "example": {
+      "example_eng": "I went to the park with my friend.",
+      "example_kor": "나는 친구와 함께 공원에 갔다."
+    },
+    "last_view_timestamp": "2025-07-06T05:37:07.004363"
+  },
+  "woman": {
+    "word_meaning": "여자",
+    "example": {
+      "example_eng": "That woman is my mother.",
+      "example_kor": "저 여자는 나의 어머니다."
+    },
+    "last_view_timestamp": "2025-06-18T00:49:17.004376"
+  },
+  "word": {
+    "word_meaning": "단어",
+    "example": {
+      "example_eng": "This word is difficult to pronounce.",
+      "example_kor": "이 단어는 발음하기 어렵다."
+    },
+    "last_view_timestamp": "2025-08-13T15:02:51.004382"
+  },
+  "work": {
+    "word_meaning": "일하다",
+    "example": {
+      "example_eng": "I have to work late tonight.",
+      "example_kor": "저는 오늘 밤 늦게까지 일해야 해요."
+    },
+    "last_view_timestamp": "2025-08-09T02:35:58.004388"
+  },
+  "world": {
+    "word_meaning": "세계",
+    "example": {
+      "example_eng": "We live in a beautiful world.",
+      "example_kor": "우리는 아름다운 세상에 살고 있다."
+    },
+    "last_view_timestamp": "2025-07-15T05:42:54.004393"
+  },
+  "write": {
+    "word_meaning": "쓰다, 편지를 쓰다",
+    "example": {
+      "example_eng": "She likes to write stories.",
+      "example_kor": "그녀는 이야기 쓰는 것을 좋아해요."
+    },
+    "last_view_timestamp": "2025-07-02T08:27:05.004398"
+  },
+  "xenophobia": {
+    "word_meaning": "외국인 공포증",
+    "example": {
+      "example_eng": "My grandparents are suspicious of foreigners to the point of xenophobia.",
+      "example_kor": "우리 조부모님은 외국인 공포증이라고 말해도 좋을 정도로 외국인을 공연히 의심하신다."
+    },
+    "last_view_timestamp": "2025-06-30T11:04:57.004404"
+  },
+  "year": {
+    "word_meaning": "년, 해",
+    "example": {
+      "example_eng": "I will graduate next year.",
+      "example_kor": "나는 내년에 졸업할 것이다."
+    },
+    "last_view_timestamp": "2025-07-26T00:38:55.004416"
+  },
+  "young": {
+    "word_meaning": "어린, 젊은",
+    "example": {
+      "example_eng": "He is too young to drive.",
+      "example_kor": "그는 운전하기에는 너무 어리다."
+    },
+    "last_view_timestamp": "2025-06-19T01:31:45.004432"
+  },
+  "zeal": {
+    "word_meaning": "열중, 열심, 열의, 집착",
+    "example": {
+      "example_eng": "They are pursuing their aims with a determined zeal.",
+      "example_kor": "그들은 결연한 열정으로 자신들의 목표를 추구하고 있다."
+    },
+    "last_view_timestamp": "2025-06-03T10:10:29.004439"
+  },
+  "zealot": {
+    "word_meaning": "열성자, 열광자, 광신자",
+    "example": {
+      "example_eng": "A zealot is a person who has very strong opinions about something, and tries to make other people have them too.",
+      "example_kor": "열성분자란 무언가에 대해 매우 강력한 의견을 갖고 있으며 다른 사람들도 역시 그런 의견을 갖게 만들려는 사람을 말한다."
+    },
+    "last_view_timestamp": "2025-06-09T23:33:45.004444"
+  },
+  "zealous": {
+    "word_meaning": "열성적인, 열광적인",
+    "example": {
+      "example_eng": "He has remained a zealous supporter of the government’ s policies.",
+      "example_kor": "그는 정부 정책의 열성적 지지자로 남아 있었다."
+    },
+    "last_view_timestamp": "2025-06-20T16:56:26.004449"
+  },
+  "zodiac": {
+    "word_meaning": "12궁도",
+    "example": {
+      "example_eng": "The astrologer used a zodiac to prepare my horoscope.",
+      "example_kor": "그 점성술사는 내 별점을 준비하기 위해 12궁도를 사용했다."
+    },
+    "last_view_timestamp": "2025-05-30T06:03:01.004455"
+  },
+  "zoo": {
+    "word_meaning": "동물원",
+    "example": {
+      "example_eng": "I think zoos should let their animals roam around as freely as possible, not keep them in cages.",
+      "example_kor": "동물원들은 동물들을 우리에 가두지 말고 가능한 한 자유롭게 돌아다니게 해야 한다고 나는 생각한다."
+    },
+    "last_view_timestamp": "2025-07-29T17:51:38.004464"
+  },
+  "zoological": {
+    "word_meaning": "동물의, 동물에 관한",
+    "example": {
+      "example_eng": "They went to the zoological park to see the animals.",
+      "example_kor": "그들은 동물들을 보기 위해 동물원에 갔다."
+    },
+    "last_view_timestamp": "2025-06-24T11:41:07.004473"
+  },
+  "zoologist": {
+    "word_meaning": "동물 학자",
+    "example": {
+      "example_eng": "Charles Darwin was a famous zoologist.",
+      "example_kor": "찰즈 다윈은 유명한 동물학자였다."
+    },
+    "last_view_timestamp": "2025-05-30T21:34:18.004484"
+  },
+  "zoology": {
+    "word_meaning": "동물학",
+    "example": {
+      "example_eng": "His work in zoology focused on the primates of Africa.",
+      "example_kor": "그의 동물학 연구는 아프리카의 영장류에 초점을 맞추었다."
+    },
+    "last_view_timestamp": "2025-07-22T00:57:12.004502"
+  },
+  "tactic": {
+    "word_meaning": "전술, 전략",
+    "example": {
+      "example_eng": "He used a clever tactic to win the game.",
+      "example_kor": "그는 경기를 이기기 위해 영리한 전술을 사용했다."
+    },
+    "last_view_timestamp": "2025-07-31T23:55:44.004522"
+  },
+  "online": {
+    "word_meaning": "온라인의, 인터넷상의",
+    "example": {
+      "example_eng": "She bought clothes online.",
+      "example_kor": "그녀는 옷을 온라인으로 샀다."
+    },
+    "last_view_timestamp": "2025-06-22T18:18:07.004540"
+  },
+  "obvious": {
+    "word_meaning": "분명한, 명백한",
+    "example": {
+      "example_eng": "It was obvious that he was tired.",
+      "example_kor": "그가 피곤하다는 것은 분명했다."
+    },
+    "last_view_timestamp": "2025-07-31T19:07:26.004547"
+  },
+  "optical": {
+    "word_meaning": "광학의, 시각적인",
+    "example": {
+      "example_eng": "The microscope uses an optical lens.",
+      "example_kor": "그 현미경은 광학 렌즈를 사용한다."
+    },
+    "last_view_timestamp": "2025-08-04T10:37:11.004553"
+  },
+  "photodiode": {
+    "word_meaning": "포토다이오드 (빛에 반응하는 반도체 소자)",
+    "example": {
+      "example_eng": "The photodiode detects light intensity.",
+      "example_kor": "포토다이오드는 빛의 세기를 감지한다."
+    },
+    "last_view_timestamp": "2025-07-08T22:49:54.004557"
+  },
+  "crumpled": {
+    "word_meaning": "구겨진, 쭈글쭈글한",
+    "example": {
+      "example_eng": "He threw a crumpled paper into the bin.",
+      "example_kor": "그는 구겨진 종이를 휴지통에 던졌다."
+    },
+    "last_view_timestamp": "2025-08-14T12:42:22.004562"
+  },
+  "cigarette": {
+    "word_meaning": "담배",
+    "example": {
+      "example_eng": "Smoking a cigarette is harmful to health.",
+      "example_kor": "담배를 피우는 것은 건강에 해롭다."
+    },
+    "last_view_timestamp": "2025-05-26T15:40:06.004567"
+  },
+  "stain": {
+    "word_meaning": "얼룩, 더럽히다",
+    "example": {
+      "example_eng": "There is a coffee stain on the shirt.",
+      "example_kor": "셔츠에 커피 얼룩이 있다."
+    },
+    "last_view_timestamp": "2025-08-11T22:00:04.004572"
+  },
+  "prenups": {
+    "word_meaning": "혼전 계약서",
+    "example": {
+      "example_eng": "They signed prenups before marriage.",
+      "example_kor": "그들은 결혼 전에 혼전 계약서를 작성했다."
+    },
+    "last_view_timestamp": "2025-08-04T07:34:31.004580"
+  },
+  "inheritance": {
+    "word_meaning": "상속, 유산",
+    "example": {
+      "example_eng": "She received a house as her inheritance.",
+      "example_kor": "그녀는 유산으로 집을 물려받았다."
+    },
+    "last_view_timestamp": "2025-08-14T21:10:57.004599"
+  },
+  "assets": {
+    "word_meaning": "자산, 재산",
+    "example": {
+      "example_eng": "The company has many valuable assets.",
+      "example_kor": "그 회사는 많은 귀중한 자산을 가지고 있다."
+    },
+    "last_view_timestamp": "2025-06-14T14:44:22.004612"
+  },
+  "decipher": {
+    "word_meaning": "해독하다, 판독하다",
+    "example": {
+      "example_eng": "He tried to decipher the old handwriting.",
+      "example_kor": "그는 오래된 필체를 해독하려 했다."
+    },
+    "last_view_timestamp": "2025-07-10T09:45:47.004625"
+  },
+  "drain": {
+    "word_meaning": "배수하다, 고갈시키다",
+    "example": {
+      "example_eng": "The work began to drain his energy.",
+      "example_kor": "그 일은 그의 에너지를 고갈시키기 시작했다."
+    },
+    "last_view_timestamp": "2025-08-14T14:59:21.004635"
+  },
+  "appetites": {
+    "word_meaning": "식욕, 욕구",
+    "example": {
+      "example_eng": "The meal increased our appetites.",
+      "example_kor": "그 식사는 우리의 식욕을 자극했다."
+    },
+    "last_view_timestamp": "2025-07-02T23:42:15.004646"
+  },
+  "doomscrolling": {
+    "word_meaning": "부정적인 뉴스만 계속해서 읽는 행위",
+    "example": {
+      "example_eng": "He stayed up late doomscrolling on his phone.",
+      "example_kor": "그는 휴대폰으로 부정적인 뉴스만 보며 늦게까지 깨어 있었다."
+    },
+    "last_view_timestamp": "2025-06-08T13:14:05.004661"
+  },
+  "flesh": {
+    "word_meaning": "살, 고기",
+    "example": {
+      "example_eng": "The dog tore the meat from the bone and ate the flesh.",
+      "example_kor": "개가 뼈에서 고기를 뜯어내 살을 먹었다."
+    },
+    "last_view_timestamp": "2025-06-19T02:31:19.004674"
+  },
+  "numeric": {
+    "word_meaning": "숫자의, 수와 관련된",
+    "example": {
+      "example_eng": "The data is stored in numeric form.",
+      "example_kor": "그 데이터는 숫자 형태로 저장되어 있다."
+    },
+    "last_view_timestamp": "2025-08-16T21:35:40.004680"
+  },
+  "instinct": {
+    "word_meaning": "본능, 직감",
+    "example": {
+      "example_eng": "Birds build nests by instinct.",
+      "example_kor": "새들은 본능적으로 둥지를 짓는다."
+    },
+    "last_view_timestamp": "2025-07-29T10:29:38.004686"
+  },
+  "lol": {
+    "word_meaning": "웃김, 'laugh out loud'의 약어",
+    "example": {
+      "example_eng": "He sent me a funny meme and I replied with 'lol'.",
+      "example_kor": "그가 재미있는 밈을 보내서 나는 'lol'이라고 답했다."
+    },
+    "last_view_timestamp": "2025-08-14T07:10:10.004703"
+  },
+  "venues": {
+    "word_meaning": "행사 장소, 공연장",
+    "example": {
+      "example_eng": "The concert will be held at several venues across the city.",
+      "example_kor": "콘서트는 도시 곳곳의 여러 장소에서 열릴 것이다."
+    },
+    "last_view_timestamp": "2025-07-01T20:39:30.004717"
+  },
+  "halitosis": {
+    "word_meaning": "입 냄새, 구취",
+    "example": {
+      "example_eng": "Regular brushing can help prevent halitosis.",
+      "example_kor": "규칙적인 양치질은 입 냄새를 예방하는 데 도움이 된다."
+    },
+    "last_view_timestamp": "2025-06-13T02:37:55.004730"
+  },
+  "bragging": {
+    "word_meaning": "자랑, 떠벌리기",
+    "example": {
+      "example_eng": "He's always bragging about his new car.",
+      "example_kor": "그는 항상 자신의 새 차를 자랑한다."
+    },
+    "last_view_timestamp": "2025-08-02T21:25:41.004786"
+  },
+  "investments": {
+    "word_meaning": "투자",
+    "example": {
+      "example_eng": "She made several smart investments in the stock market.",
+      "example_kor": "그녀는 주식 시장에 몇 가지 현명한 투자를 했다."
+    },
+    "last_view_timestamp": "2025-05-31T20:33:29.004809"
+  },
+  "guarantee": {
+    "word_meaning": "보장, 보증",
+    "example": {
+      "example_eng": "The product comes with a two-year guarantee.",
+      "example_kor": "이 제품은 2년 보증이 제공된다."
+    },
+    "last_view_timestamp": "2025-07-07T10:30:28.004830"
+  },
+  "industry": {
+    "word_meaning": "산업, 업계",
+    "example": {
+      "example_eng": "The tech industry is growing rapidly.",
+      "example_kor": "기술 산업은 빠르게 성장하고 있다."
+    },
+    "last_view_timestamp": "2025-06-24T22:58:45.004841"
+  },
+  "gymnastics": {
+    "word_meaning": "체조",
+    "example": {
+      "example_eng": "She has been practicing gymnastics since she was five.",
+      "example_kor": "그녀는 다섯 살 때부터 체조를 연습해왔다."
+    },
+    "last_view_timestamp": "2025-07-29T06:09:16.004852"
+  },
+  "instead": {
+    "word_meaning": "대신에",
+    "example": {
+      "example_eng": "I didn't go to the park; I stayed home instead.",
+      "example_kor": "나는 공원에 가지 않고 대신 집에 있었다."
+    },
+    "last_view_timestamp": "2025-08-22T16:16:01.004863"
+  },
+  "fortune": {
+    "word_meaning": "운, 재산",
+    "example": {
+      "example_eng": "She made a fortune in real estate.",
+      "example_kor": "그녀는 부동산으로 큰 재산을 벌었다."
+    },
+    "last_view_timestamp": "2025-07-16T09:28:54.004871"
+  },
+  "bias": {
+    "word_meaning": "편견, 선입견",
+    "example": {
+      "example_eng": "We should avoid bias when making decisions.",
+      "example_kor": "우리는 결정을 내릴 때 편견을 피해야 한다."
+    },
+    "last_view_timestamp": "2025-06-05T03:20:09.004878"
+  },
+  "apparently": {
+    "word_meaning": "분명히, 보아하니",
+    "example": {
+      "example_eng": "Apparently, he missed the meeting.",
+      "example_kor": "보아하니 그는 회의에 참석하지 못했다."
+    },
+    "last_view_timestamp": "2025-08-02T17:11:43.004898"
+  },
+  "naturally": {
+    "word_meaning": "자연스럽게, 당연히",
+    "example": {
+      "example_eng": "She naturally excels at singing.",
+      "example_kor": "그녀는 당연히 노래를 잘한다."
+    },
+    "last_view_timestamp": "2025-07-05T16:41:30.004904"
+  }
+}
