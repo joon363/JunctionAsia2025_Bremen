@@ -1,17 +1,18 @@
-
 import '../theme.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import '../viewmodels/posts_view_model.dart';
+import '../viewmodels/words_view_model.dart';
+import 'base_post_widget.dart';
 
-class EndWidget extends StatefulWidget {
-  const EndWidget({
-    super.key
-  });
+class EndWidget extends BasePostWidget {
+  const EndWidget({super.key});
 
   @override
   State<EndWidget> createState() => _EndWidgetState();
 }
 
-class _EndWidgetState extends State<EndWidget> {
+class _EndWidgetState extends BasePostWidgetState<EndWidget> {
   final PageController _pageController = PageController();
   int _currentPage = 0;
   @override
@@ -33,51 +34,26 @@ class _EndWidgetState extends State<EndWidget> {
   }
 
   @override
-  Widget build(BuildContext context) {
-    const int pageCount = 3;
-
-    return Center(
-      child: Stack(
-        children: [
-          Container(
-            decoration: BoxDecoration(
-              color: primaryLightOrange
-            ),
-            child: PageView.builder(
-              controller: _pageController,
-              itemCount: pageCount,
-              itemBuilder: (context, index) {
-                return EndPage(index: index);
-              },
-            ),
-          ),
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: Padding(
-              padding:
-              const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: List.generate(pageCount, (index) {
-                    return Container(
-                      width: 8.0,
-                      height: 8.0,
-                      margin: const EdgeInsets.symmetric(horizontal: 2.0),
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: _currentPage == index
-                          ? Colors.grey.shade800
-                          : Colors.grey.shade400,
-                      ),
-                    );
-                  }),
-              ),
-            ),
-          )
-        ],
+  Widget buildMainContent(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+          color: primaryLightOrange
+      ),
+      child: PageView.builder(
+        controller: _pageController,
+        itemCount: pageCount,
+        itemBuilder: (context, index) {
+          return EndPage(index: index);
+        },
       ),
     );
   }
+
+  @override
+  bool get isOverlay => false;
+
+  @override
+  int get pageCount => 3;
 }
 
 
@@ -142,52 +118,5 @@ class EndPage extends StatelessWidget {
         Expanded(child: Container()),
       ],
     );
-  }
-}
-
-class AnswerPage extends StatelessWidget {
-  final String title;
-  final bool isEnd;
-  const AnswerPage({super.key,
-    required this.title,
-    required this.isEnd,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(padding: EdgeInsets.symmetric(horizontal: 16), child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Expanded(child: Container()),
-          Expanded(child: SizedBox(
-              child: Image.asset("assets/images/ybm_cat_answer.png", fit: BoxFit.cover,),
-            ),),
-          Expanded(child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  title,
-                  style: TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                    fontFamily: "Inter",
-                    color: primaryLightOrange,
-                  ),
-                ),
-                Text(
-                  isEnd ? "수고하셨습니다 👍" : "넘겨서 다음 단어 보기 →",
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w500,
-                    fontFamily: "Inter",
-                    color: primaryLightOrange,
-                  ),
-                ),
-              ],
-            )),
-          Expanded(child: Container()),
-
-        ],
-      ),);
   }
 }
