@@ -64,14 +64,14 @@ class _HomeScreenState extends State<HomeScreen> {
               title: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(),
-                  Text('Feed',
+                  Expanded(child: Container()),
+                  Expanded(child: Text('Feed',
                     style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      color: Colors.black
+                        fontWeight: FontWeight.w700,
+                        color: Colors.black
                     ),
-                  ),
-                  EyeToggleButton()
+                  ),),
+                  Expanded(child: EyeToggleButton()),
                 ],
               )
             ),
