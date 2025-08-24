@@ -120,7 +120,7 @@ struct ContentView: View {
                             Image(systemName: "book")
                             Text("Wordbook")
                         }.tag(Tab.wordbook)
-                }.tint(.orange)
+                }.tint(Color("CustomOrange"))
 
                 
             case .profile:
@@ -301,7 +301,7 @@ struct EndPageView: View {
             Text(page.title)
                 .font(.system(size: 32, weight: .bold, design: .serif))
             Text(page.text)
-                .font(.system(size: 20))
+                .font(.system(size: 20, design: .serif))
                 .multilineTextAlignment(.center)
                 .padding(.horizontal)
         }
