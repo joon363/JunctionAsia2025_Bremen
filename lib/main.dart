@@ -1,12 +1,34 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'viewmodels/posts_view_model.dart';
+import 'viewmodels/words_view_model.dart';
 import 'screens/words_screen.dart';
 import 'screens/home_screen.dart';
-import 'theme.dart';
 import 'screens/statistics_screen.dart';
+import 'theme.dart';
 
-void main() {
-  runApp(const MyApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  final postsVM = PostsViewModel();
+  final wordsVM = WordsViewModel();
+
+  final posts = await postsVM.loadPosts();
+  await wordsVM.loadAllWordsAndUserWords();
+
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (_) => PostsViewModel()..setInitialPosts(posts),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => wordsVM,
+        ),
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -50,7 +72,6 @@ class _MainScreenState extends State<MainScreen> {
     return SafeArea(
       top: false,
       child: Scaffold(
-
         body: AnimatedSwitcher(
           duration: const Duration(milliseconds: 300),
           transitionBuilder: (child, animation) {
@@ -103,4 +124,3 @@ class _MainScreenState extends State<MainScreen> {
     );
   }
 }
-

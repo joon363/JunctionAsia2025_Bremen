@@ -7,6 +7,9 @@ import '../widgets/quiz_widget.dart';
 import '../widgets/post_widget.dart';
 import '../widgets/end_widget.dart';
 import '../theme.dart';
+import 'package:provider/provider.dart';
+import '../viewmodels/posts_view_model.dart';
+import '../viewmodels/words_view_model.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -16,90 +19,68 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  late Future<List<dynamic>> _postsFuture;
-  late Future<List<dynamic>> _wordsFuture;
 
   @override
   void initState() {
     super.initState();
-    _postsFuture = _loadPostsData();
-    _wordsFuture = _loadUnknownWords();
-  }
-
-  Future<List<dynamic>> _loadPostsData() async {
-    final String jsonString =
-      await rootBundle.loadString('assets/datas/kpop_posts.json');
-    final List<dynamic> jsonList = json.decode(jsonString);
-    return jsonList;
-  }
-
-  Future<List<dynamic>> _loadUnknownWords() async {
-    final String jsonString =
-      await rootBundle.loadString('assets/datas/voca_user.json');
-    final List<dynamic> jsonList = json.decode(jsonString);
-    if (jsonList.length <= 3) {
-      return jsonList;
-    }
-    jsonList.shuffle(Random());
-    return jsonList.take(3).toList();
   }
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder(
-      future: Future.wait([_postsFuture, _wordsFuture]),
-      builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting) {
-          return const Center(child: CircularProgressIndicator());
-        }
-        else if (snapshot.hasError) {
-          return Center(child: Text('Error: ${snapshot.error}'));
-        }
-        else if (snapshot.hasData) {
-          final results = snapshot.data as List<dynamic>;
-          final postData = results[0] as List<dynamic>;
-          final wordList = results[1] as List<dynamic>;
-          return Scaffold(
-            appBar: AppBar(
-              title: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Expanded(child: Container()),
-                  Expanded(child: Text('Feed',
-                    style: TextStyle(
-                        fontWeight: FontWeight.w700,
-                        color: Colors.black
-                    ),
-                  ),),
-                  Expanded(child: EyeToggleButton()),
-                ],
-              )
+    final postsVM = context.watch<PostsViewModel>();
+    final posts = postsVM.posts;
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            const Expanded(child: SizedBox()), // 왼쪽 빈 공간
+            const Expanded(
+              child: Center(
+                child: Text(
+                  'Feed',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w700,
+                    color: Colors.black,
+                  ),
+                ),
+              ),
             ),
-            body: PageView.builder(
-              scrollDirection: Axis.vertical,
-              itemCount: postData.length,
-              itemBuilder: (context, index) {
-                final post = postData[index] as Map<String, dynamic>;
-                var pair = randomColor();
-                if (index == postData.length - 1) {
-                  return EndWidget();
-                } else if (index != 0 && index % 5 == 0) {
-                  return QuizWidget(words: wordList);
-                } else {
-                  return PostWidget(
-                    post: post,
-                    backgroundColor: pair.backgroundColor,
-                    textColor: pair.textColor
-                  );
-                }
-              }
-            )
-          );
-        }
-        else {
-          return const Center(child: Text('No posts found.'));
-        }
-      },
+            const Expanded(
+              child: Align(
+                alignment: Alignment.centerRight,
+                child: EyeToggleButton(),
+              ),
+            ),
+          ],
+        ),
+      ),
+      body: posts.isEmpty
+          ? const Center(child: CircularProgressIndicator())
+          : PageView.builder(
+        scrollDirection: Axis.vertical,
+        itemCount: posts.length + 1, // ✅ 마지막 EndWidget 포함
+        itemBuilder: (context, index) {
+          final wordsVM = context.watch<WordsViewModel>();
+          final userWords = wordsVM.userWords;
+          if (index == posts.length) {
+            return EndWidget();
+          }
+
+          final post = posts[index];
+
+          if (index != 0 && index % 5 == 0 && userWords.isNotEmpty) {
+            return QuizWidget(words: userWords);
+          } else {
+            return PostWidget(
+              post: post,
+              backgroundColor: post.backgroundColor,
+              textColor: post.textColor,
+            );
+          }
+        },
+      ),
     );
   }
 }

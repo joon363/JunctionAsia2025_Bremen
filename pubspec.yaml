@@ -35,6 +35,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   fl_chart: ^1.0.0
+  provider: ^6.1.5+1
 
 dev_dependencies:
   flutter_test:
@@ -62,7 +63,7 @@ flutter:
   assets:
   - assets/datas/selected_posts.json
   - assets/datas/kpop_posts.json
-  - assets/datas/voca_user.json
+  - assets/datas/user_unknown_words.json
   - assets/datas/voca_all.json
   - assets/images/reddit_logo.png
   - assets/images/ybm_cat_answer.png

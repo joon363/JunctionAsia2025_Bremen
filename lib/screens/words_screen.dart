@@ -2,89 +2,11 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:reelstudy/theme.dart';
-
-final List<String> times = [
-  "3 months ago",
-  "3 months ago",
-  "3 months ago",
-  "2 months ago",
-  "2 months ago",
-  "2 months ago",
-  "2 months ago",
-  "2 months ago",
-  "2 months ago",
-  "1 month ago",
-  "1 month ago",
-  "1 month ago",
-  "1 month ago",
-  "1 month ago",
-  "1 month ago",
-  "29 days ago",
-  "29 days ago",
-  "29 days ago",
-  "29 days ago",
-  "29 days ago",
-  "29 days ago",
-  "29 days ago",
-  "22 days ago",
-  "22 days ago",
-  "22 days ago",
-  "21 days ago",
-  "21 days ago",
-  "20 days ago",
-  "19 days ago",
-  "19 days ago",
-  "19 days ago",
-  "19 days ago",
-  "18 days ago",
-  "13 days ago",
-  "13 days ago",
-  "13 days ago",
-  "13 days ago",
-  "13 days ago",
-  "12 days ago",
-  "11 days ago",
-  "11 days ago",
-  "10 days ago",
-  "10 days ago",
-  "4 days ago",
-  "4 days ago",
-  "3 days ago",
-  "3 days ago",
-  "3 days ago",
-  "2 days ago",
-  "1 day ago",
-  "1 day ago",
-  "1 day ago",
-  "1 day ago",
-  "1 day ago"
-  "1 day ago"
-];
-
-
-
-class Word {
-  final String word;
-  final String wordMeaning;
-  final String exampleEng;
-  final String exampleKor;
-
-  Word({
-    required this.word,
-    required this.wordMeaning,
-    required this.exampleEng,
-    required this.exampleKor,
-  });
-
-  factory Word.fromJson(Map<String, dynamic> json) {
-    return Word(
-      word: json['word'],
-      wordMeaning: json['word_meaning'],
-      exampleEng: json['example']['example_eng'],
-      exampleKor: json['example']['example_kor'],
-    );
-  }
-}
+import 'package:provider/provider.dart';
+import '../viewmodels/posts_view_model.dart';
+import '../viewmodels/words_view_model.dart';
+import '../models/post.dart';
+import '../models/word.dart';
 
 class WordListPage extends StatefulWidget {
   const WordListPage({super.key});
@@ -94,25 +16,16 @@ class WordListPage extends StatefulWidget {
 }
 
 class _WordListPageState extends State<WordListPage> {
-  List<Word> _words = [];
-
-  @override
-  void initState() {
-    super.initState();
-    _loadWordData();
-  }
-
-  Future<void> _loadWordData() async {
-    final String response = await rootBundle.loadString('assets/datas/voca_user.json');
-    final List<dynamic> data = json.decode(response);
-    setState(() {
-        _words = data.map((json) => Word.fromJson(json)).toList();
-        _words.shuffle();
-      });
-  }
 
   @override
   Widget build(BuildContext context) {
+
+    final postsVM = context.watch<PostsViewModel>();
+    final wordsVM = context.watch<WordsViewModel>();
+    final posts = postsVM.posts;
+    final userWords = wordsVM.userWords;
+    final allWords = wordsVM.allWords;
+
     return Scaffold(
       appBar: AppBar(
         title: Text('WordBook',
@@ -122,7 +35,7 @@ class _WordListPageState extends State<WordListPage> {
           ),
         ),
       ),
-      body: _words.isEmpty
+      body: userWords.isEmpty
         ? const Center(child: CircularProgressIndicator())
         : Column(
           children: [
@@ -137,7 +50,7 @@ class _WordListPageState extends State<WordListPage> {
               ],
             ),
             Expanded(child: ListView.builder(
-                itemCount: _words.length,
+                itemCount: userWords.length,
                 itemBuilder: (context, index) {
                   return Material(
                     elevation: 5,
@@ -151,18 +64,18 @@ class _WordListPageState extends State<WordListPage> {
                         title: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text(_words[index].word, style: TextStyle(
+                            Text(userWords[index].word, style: TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                            Text(times[index], style: TextStyle(
+                            Text(userWords[index].lastViewTimestamp??"", style: TextStyle(
                                 fontSize: 12,
                               ),
                             ),
                           ],
                         ),
-                        subtitle: Text(_words[index].wordMeaning, overflow: TextOverflow.ellipsis,),
+                        subtitle: Text(userWords[index].wordMeaning, overflow: TextOverflow.ellipsis,),
                         onTap: () {
                           showDialog(context: context, builder: (dialogContext) =>
                             AlertDialog(
@@ -172,14 +85,14 @@ class _WordListPageState extends State<WordListPage> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 spacing: 4,
                                 children: [
-                                  Text(_words[index].word, style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),),
+                                  Text(userWords[index].word, style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),),
                                   Divider(),
                                   Text("뜻"),
-                                  Text(_words[index].wordMeaning),
+                                  Text(userWords[index].wordMeaning),
                                   Divider(),
                                   Text("예문", style: TextStyle(fontWeight: FontWeight.bold)),
-                                  Text("• ${_words[index].exampleEng}"),
-                                  Text("• ${_words[index].exampleKor}"),
+                                  Text("• ${userWords[index].exampleEng}"),
+                                  Text("• ${userWords[index].exampleKor}"),
                                 ],
                               ),
                               actions: [
