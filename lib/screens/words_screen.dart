@@ -3,6 +3,66 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:reelstudy/theme.dart';
 
+final List<String> times = [
+  "3 months ago",
+  "3 months ago",
+  "3 months ago",
+  "2 months ago",
+  "2 months ago",
+  "2 months ago",
+  "2 months ago",
+  "2 months ago",
+  "2 months ago",
+  "1 month ago",
+  "1 month ago",
+  "1 month ago",
+  "1 month ago",
+  "1 month ago",
+  "1 month ago",
+  "29 days ago",
+  "29 days ago",
+  "29 days ago",
+  "29 days ago",
+  "29 days ago",
+  "29 days ago",
+  "29 days ago",
+  "22 days ago",
+  "22 days ago",
+  "22 days ago",
+  "21 days ago",
+  "21 days ago",
+  "20 days ago",
+  "19 days ago",
+  "19 days ago",
+  "19 days ago",
+  "19 days ago",
+  "18 days ago",
+  "13 days ago",
+  "13 days ago",
+  "13 days ago",
+  "13 days ago",
+  "13 days ago",
+  "12 days ago",
+  "11 days ago",
+  "11 days ago",
+  "10 days ago",
+  "10 days ago",
+  "4 days ago",
+  "4 days ago",
+  "3 days ago",
+  "3 days ago",
+  "3 days ago",
+  "2 days ago",
+  "1 day ago",
+  "1 day ago",
+  "1 day ago",
+  "1 day ago",
+  "1 day ago"
+  "1 day ago"
+];
+
+
+
 class Word {
   final String word;
   final String wordMeaning;
@@ -43,10 +103,11 @@ class _WordListPageState extends State<WordListPage> {
   }
 
   Future<void> _loadWordData() async {
-    final String response = await rootBundle.loadString('assets/voca_user.json');
+    final String response = await rootBundle.loadString('assets/datas/voca_user.json');
     final List<dynamic> data = json.decode(response);
     setState(() {
         _words = data.map((json) => Word.fromJson(json)).toList();
+        _words.shuffle();
       });
   }
 
@@ -75,14 +136,23 @@ class _WordListPageState extends State<WordListPage> {
                     child: Container(
                       margin: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                       decoration: BoxDecoration(
-                        color: primaryLightOrange,
+                        color: index<3?primaryMediumBlue:primaryLightBlue,
                         borderRadius: BorderRadius.circular(16),
                       ),
                       child: ListTile(
-                        title: Text(_words[index].word, style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                          ),
+                        title: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(_words[index].word, style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Text(times[index], style: TextStyle(
+                                fontSize: 12,
+                              ),
+                            ),
+                          ],
                         ),
                         subtitle: Text(_words[index].wordMeaning, overflow: TextOverflow.ellipsis,),
                         onTap: () {
@@ -134,49 +204,3 @@ class _WordListPageState extends State<WordListPage> {
   }
 }
 
-class WordDetailPage extends StatelessWidget {
-  final Word word;
-
-  const WordDetailPage({super.key, required this.word});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(word.word),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              word.word,
-              style: const TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(height: 10),
-            Text(
-              word.wordMeaning,
-              style: const TextStyle(fontSize: 18),
-            ),
-            const Divider(height: 40),
-            const Text(
-              'Example',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(height: 10),
-            Text(
-              word.exampleEng,
-              style: const TextStyle(fontSize: 16),
-            ),
-            const SizedBox(height: 5),
-            Text(
-              word.exampleKor,
-              style: const TextStyle(fontSize: 16, color: Colors.blueGrey),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
